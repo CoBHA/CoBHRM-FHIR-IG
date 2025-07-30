@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "fsh-sushi": "^3.16.3"
+  },
+  "scripts": {
+    "sushi": "sushi"
+  }
+}
