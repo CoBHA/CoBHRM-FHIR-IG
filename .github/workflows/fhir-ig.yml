@@ -12,6 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: pull image
+        run: |
+          docker pull ghcr.io/ratiopbc/fhir-ig-publisher:2.0.17
+
       - name: build
         run: |
           docker run --rm ghcr.io/ratiopbc/fhir-ig-publisher:2.0.17 \
