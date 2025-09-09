@@ -1,6 +1,6 @@
 # BHA Test Implementation Guide
 
-This is a simplified test Implementation Guide demonstrating the SUSHI/FSH toolkit for creating FHIR Implementation Guides, using a subset of BHA's CCAR requirements.
+This is a simplified testing Implementation Guide demonstrating the SUSHI/FSH toolkit for creating FHIR Implementation Guides, using a subset of BHA's CCAR requirements.
 
 ## Overview
 
