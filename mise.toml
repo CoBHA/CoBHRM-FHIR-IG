@@ -2,10 +2,17 @@
 nodejs = "24.4.1"
 
 [tasks.publisher]
-description = "fhir-ig-publisher"
+description = "run fhir-ig-publisher on current files"
 run = """
-docker compose -f .devcontainer/compose.yml exec -it fhir-ig-publisher \
-  java -jar /app/org.hl7.fhir.publisher.cli.jar \
+docker compose -f .devcontainer/compose.yml \
+  run --rm \
+  --entrypoint /opt/java/openjdk/bin/java \
+  fhir-ig-publisher \
+  -jar /app/org.hl7.fhir.publisher.cli.jar \
   -ig /workspaces/bha-test-ig \
   -tx n/a
 """
+
+[tasks.pull]
+description = "pull fhir-ig-publisher image"
+run = "docker compose -f .devcontainer/compose.yml pull"
