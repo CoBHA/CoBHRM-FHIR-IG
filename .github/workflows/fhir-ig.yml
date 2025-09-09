@@ -22,7 +22,7 @@ jobs:
         run: docker pull ghcr.io/ratiopbc/fhir-ig-publisher:2.0.17
 
       - name: make cache dir
-        run: mdkir -p /tmp/dot_fhir
+        run: mkdir -p /tmp/dot_fhir
 
       - uses: actions/cache@v4
         id: cache-elixir-build-deps
