@@ -2,7 +2,6 @@ CodeSystem: BHACountiesCS
 Id: bha-counties-cs
 Title: "BHA County Codes"
 Description: "County codes used by BHA"
-
 * 01 Adams
 * 02 Alamosa
 * 03 Arapahoe

@@ -2,8 +2,8 @@
 id: bha-test-ig
 canonical: http://bha.colorado.gov/fhir/test
 name: BHATestIG
-title: "BHA Test Implementation Guide"
-description: "A test FHIR IG demonstrating BHA CCAR data elements"
+title: "BHA FHIR Implementation Guide"
+description: "A FHIR implementation guide to enable standardized behavioral health data exchange and reduce provider administrative burden throughout Colorado's behavioral health ecosystem"
 status: draft
 version: 0.1.0
 fhirVersion: 4.0.1
@@ -18,8 +18,8 @@ publisher:
 
 # Dependencies
 dependencies:
-  hl7.fhir.us.core: 6.0.0
-
+  hl7.fhir.us.core: 6.1.0
+  
 # Global settings
 parameters:
   show-inherited-invariants: false

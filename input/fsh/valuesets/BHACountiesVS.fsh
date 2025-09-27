@@ -9,9 +9,7 @@ Description: "Allowed client county values for BHA reporting"
 * ^date = "2025-09-27"
 * ^publisher = "Colorado BHA"
 
-
 //* include codes from system BHACountiesCS
-
 * 01 Adams
 * 02 Alamosa
 * 03 Arapahoe
