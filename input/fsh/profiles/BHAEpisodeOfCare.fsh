@@ -1,5 +1,5 @@
 Profile: BHAEpisodeOfCare
-Parent: https://hl7.org/fhir/R4/episodeofcare.html
+Parent: http://hl7.org/fhir/StructureDefinition/EpisodeOfCare
 Id: bha-episodeofcare
 Title: "BHA Episode of Care Profile"
 Description: "Episode of Care profile for BHA client treatment programs"
