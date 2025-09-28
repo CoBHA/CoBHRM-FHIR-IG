@@ -49,7 +49,7 @@ Description: "Client profile for BHA CCAR reporting with required demographics"
 //* extension contains BHAEthnicity named ethnicity 1..1 MS
 
 // Address for county determination
-* address 1..1 MS
+* address MS
 * address.postalCode 1..1 MS
 * address.district 1..1 MS
 * address.district from BHACountiesVS 

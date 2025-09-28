@@ -15,7 +15,7 @@ Description: "Example Client"
   * given[0] = "Emma"
 
 * birthDate = "1980-05-15" 
-* gender = #female 1..1 
+* gender = #female 
 * address[+]
 * address[=].line = "123 Main St"
 * address[=].city = "Denver"
