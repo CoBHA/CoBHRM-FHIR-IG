@@ -4,20 +4,9 @@ Title: "Example BHA Client"
 Description: "Example Client"
 
 // Required Identifiers (1..* MS)
-* identifier[0]
-  // BHASO Client ID (Required 1..1 MS)
-  * id = "clientId"
-  * type = http://terminology.hl7.org/CodeSystem/v2-0203#PI
-  * value = "C123456789" // 10 characters max
-  * system = "http://bha.colorado.gov/identifiers/client-id" // Required by US Core Patient
-
-* identifier[+]
-  // Social Security Number (Optional 0..1 MS - included for completeness)
-  * id = "SSN"
-  * type = http://terminology.hl7.org/CodeSystem/v2-0203#SS
-  * value = "999887777" // SSN value
-  * system = "http://hl7.org/fhir/sid/us-ssn"
-
+* identifier[clientId].type = http://terminology.hl7.org/CodeSystem/v2-0203#PI
+* identifier[clientId].value = "C123456789"
+* identifier[clientID].system = "http://bha.colorado.gov/identifiers/client-id" 
 
 // Demographics
 * name[0] 
@@ -39,17 +28,18 @@ Description: "Example Client"
 
 * extension[birthsex].url = http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex
 * extension[birthsex].valueCode = #F // Code for Female
+* extension[+].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+* extension[=].valueCode = #F
 
 // Required Address (1..1 MS)
 * address[0]
-  * use = #home
-  * line[0] = "123 Main St"
-  * city = "Denver"
-  * state = "CO"
-  * postalCode = "80205" 
+* address[=].line = "123 Main St"
+* address[=].city = "Denver"
+* address[=].state = "CO"
+* address[=].postalCode = "80205" 
   // address.district must be from BHACountiesVS
-  * district = #01 "Adams" 
-  * period.start = "2023-01-01"
+* address[=].district = #01 "Adams" 
+* address[=].period.start = "2023-01-01"
 
 
 //* identifier[clientId].value = "ABC1234567"

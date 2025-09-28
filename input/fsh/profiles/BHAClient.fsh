@@ -37,12 +37,13 @@ Description: "Client profile for BHA CCAR reporting with required demographics"
 
 
 // Required demographics
+// NOTE: Race, Ethnicity, and BirthSex should be restored to 1..1 when I can debug the example Client 
 * name 1..* MS
 * birthDate 1..1 MS
 * gender 1..1 MS
-* extension[race] 1..1
-* extension[ethnicity] 1..1
-* extension[birthsex] 1..1
+* extension[race] 0..1
+* extension[ethnicity] 0..1
+* extension[birthsex] 0..1
 
 // Extension for ethnicity (Hispanic/Latino)
 //* extension contains BHAEthnicity named ethnicity 1..1 MS
