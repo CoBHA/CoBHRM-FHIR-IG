@@ -10,10 +10,11 @@ Description: "Episode of Care profile for BHA client treatment programs"
 * identifier ^slicing.rules = #open
 
 // BHASO Encounter ID - required
-* identifier contains clientId 1..1 MS
-* identifier[clientId].type = http://terminology.hl7.org/CodeSystem/encounter-type
-* identifier[clientId].value 1..1 MS
-* identifier[clientId] ^short = "BHASO Encounter ID (10 characters max)"
+* identifier contains BHASOEncounterId 1..1 MS
+* identifier[BHASOEncounterId].type from EncounterIdTypeVS required
+* identifier[BHASOEncounterId].type = BHAEncounterIdTypeCS#BHASOID "BHASO Encounter ID"
+* identifier[BHASOEncounterId].value 1..1 MS
+* identifier[BHASOEncounterId] ^short = "BHASO Encounter ID (10 characters max)"
 
 * status MS
 * type MS
