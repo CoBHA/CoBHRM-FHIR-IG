@@ -23,6 +23,7 @@ Description: "Example Client"
 * address[=].postalCode = "80205" 
 * address[=].district = #01 "Adams" 
 * address[=].period.start = "2023-01-01"
+* maritalStatus = #M
 
 // Required Extensions (1..1)
 * extension[race].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"

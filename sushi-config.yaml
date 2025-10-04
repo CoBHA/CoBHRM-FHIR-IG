@@ -19,6 +19,7 @@ publisher:
 # Dependencies
 dependencies:
   hl7.fhir.us.core: 6.1.0
+  hl7.fhir.us.military-service: 1.0.0
   
 # Global settings
 parameters:

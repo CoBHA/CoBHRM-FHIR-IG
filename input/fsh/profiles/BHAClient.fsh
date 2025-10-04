@@ -39,6 +39,7 @@ Description: "Client profile for BHA CCAR reporting with required demographics"
 // Required demographics
 // NOTE: Race, Ethnicity, and BirthSex should be restored to 1..1 when I can debug the example Client 
 * name 1..* MS
+* name ^short = "A name associated with the Client."
 * birthDate 1..1 MS
 * gender 1..1 MS
 * extension[race] 0..1
@@ -47,10 +48,20 @@ Description: "Client profile for BHA CCAR reporting with required demographics"
 
 // Extension for ethnicity (Hispanic/Latino)
 //* extension contains BHAEthnicity named ethnicity 1..1 MS
-
 // Address for county determination
 * address MS
 * address.postalCode 1..1 MS
 * address.district 1..1 MS
 * address.district from BHACountiesVS 
-
+* maritalStatus 1..1 MS
+* contact.telecom 1..* MS
+* contact.telecom ^slicing.discriminator.type = #pattern
+* contact.telecom ^slicing.discriminator.path = "type"
+* contact.telecom ^slicing.rules = #open
+* contact.telecom contains phone 0..1 MS
+* contact.telecom[phone].system = #phone
+* contact.telecom[phone].value 0..1 MS
+* contact.telecom contains email 0..1 MS
+* contact.telecom[email].system = #email
+* contact.telecom[email].value 0..1 MS
+* extension contains http://hl7.org/fhir/us/military-service/StructureDefinition/military-service-veteran-status named USVeteranStatus 0..1 MS
