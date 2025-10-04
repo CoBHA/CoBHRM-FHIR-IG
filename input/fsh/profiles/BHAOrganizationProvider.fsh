@@ -5,9 +5,9 @@ Title: "BHA Provider Organization Profile"
 Description: "Provider Organization profile for BHASO Providers"
 
 * identifier 1..* MS
-* identifier ^slicing.discriminator.type = #pattern
-* identifier ^slicing.discriminator.path = "type"
-* identifier ^slicing.rules = #open
+//* identifier ^slicing.discriminator.type = #pattern
+//* identifier ^slicing.discriminator.path = "$this"
+//* identifier ^slicing.rules = #open
 
 // BHASO Provider ID - required for Admission data
 * identifier contains ProviderId 1..1 MS
