@@ -31,7 +31,6 @@ Description: "Example Client"
 * extension[race].extension[text].valueString = "Asian"
 
 * extension[bharace].valueCodeableConcept = BHARaceCS#02 "Asian"
-* extension[bharace].extension[text].valueString = "Asian"
 
 * extension[ethnicity].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
 * extension[ethnicity].extension[ombCategory].valueCoding = http://hl7.org/fhir/v3/Ethnicity#2186-5
@@ -39,8 +38,6 @@ Description: "Example Client"
 
 * extension[birthsex].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
 * extension[birthsex].valueCode = #F // Code for Female
-* extension[+].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
-* extension[=].valueCode = #F
 
 //* identifier[clientId].value = "ABC1234567"
 //* identifier[clientId].type = http://terminology.hl7.org/CodeSystem/v2-0203#PI
