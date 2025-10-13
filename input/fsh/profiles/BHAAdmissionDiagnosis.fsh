@@ -8,5 +8,6 @@ Description: "Admission Diagnosis profile for BHA client encounters"
 * extension contains 
     BHADiagnosisType named diagnosisType 1..1 MS
 
-* extension[diagnosisType] ^short = "Diagnosis Type (01=Mental Health, 02=Substance Use Disorder)"
+* extension[diagnosisType] ^short = "Diagnosis Type (MH, SUD)"
+* encounter only Reference(bha-encounter)
 * encounter 1..1
