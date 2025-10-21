@@ -1,7 +1,7 @@
 Profile: BHABaby
 Parent: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
 Id: bha-baby
-Title: "Colorado BHA Special Connections-Baby Baby Profile"
+Title: "Colorado BHA Special Connections-Baby Profile"
 Description: "Client profile for BHA CCAR reporting with required demographics"
 
 // Required demographics
