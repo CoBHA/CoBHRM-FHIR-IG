@@ -47,7 +47,7 @@ Description: "Example Client"
 //* birthDate = "1985-06-15"
 //* birthSex = #female
 //* gender = #female
-//* ethnicity = #2135-2
+//* ethnicity =  #2135-2
 //* race = #2028-9
 
 //* extension[ethnicity].valueCodeableConcept = BHAEthnicityCS#1 "Hispanic/Latino (Mexican)"

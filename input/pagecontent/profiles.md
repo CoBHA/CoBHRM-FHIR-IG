@@ -1,12 +1,19 @@
 Note that the text on this page is placeholder for now and will be updated after the artifacts are built. If you are seeing this message, please refer to the Artifacts page via the link in the page header.
 
 # Profiles
+The following profiles have been defined for this implementation guide.
 
-## BHA Patient Profile
-Extends the base Patient resource with BHA-specific requirements for CCAR reporting.
+### BHA Admission Diagnosis Profile
+[BHA Admission Diagnosis Profile](StructureDefinition-bha-admission-diagnosis.html)
 
-## BHA Encounter Profile  
-Defines encounter structure for BHA episodes of care.
+### BHA Admission Encounter Profile
+[BHA Admission Encounter Profile](StructureDefinition-bha-admission-encountger.html)
 
-## BHA Organization Profile
-Basic organization profile for BHA service providers.
+### BHA Baby Profile  
+[BHA Baby Profile](StructureDefinition-bha-baby.html)
+
+### BHA Client Profile
+[BHA Client Profile](StructureDefinition-bha-client.html)
+
+### BHA Service Profile
+[BHA Service Profile](StructureDefinition-bha-service.html)

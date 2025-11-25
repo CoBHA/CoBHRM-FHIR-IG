@@ -1,8 +1,8 @@
-Profile: BHAAdmission  
+Profile: BHAAdmissionEncounter  
 Parent: http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
-Id: bha-encounter
-Title: "Colorado BHA Admission Profile"
-Description: "Episode of Care profile for BHA client admissions and discharges"
+Id: bha-admission-encounter
+Title: "Colorado BHA Admission Encounter Profile"
+Description: "Encounter profile for BHA client admissions and discharges"
 // * status MS
 // * class MS
 // * subject 1..1 MS
