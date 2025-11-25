@@ -24,21 +24,11 @@ for Colorado BHA clients in order to support the BHA's annual reporting requirem
 
 // Social Security number when applicable  
 * identifier contains SSN 0..1 MS
-//* identifier[SSN].system = "http://hl7.org/fhir/sid/us-ssn" KEEP THIS COMMENTED
-//* identifier[SSN].value 1..1 MS
-//* identifier[SSN].type = http://terminology.hl7.org/CodeSystem/v2-0203#SS
-//* identifier[SSN] ^short = "The client's Social Security number"
-//* identifier[SSN].value ^extension[0].url = http://hl7.org/fhir/StructureDefinition/data-absent-reason
-
-//* identifier[SSN].value ^extension[0].valueCode = #unknown
-
 * identifier[SSN].system 1..1 MS
 * identifier[SSN].system = "http://hl7.org/fhir/sid/us-ssn"
 * identifier[SSN].value 1..1 MS
 * identifier[SSN].type = http://terminology.hl7.org/CodeSystem/v2-0203#SS
 * identifier[SSN] ^short = "The client's Social Security number"
-* identifier[SSN].extension contains 
-    http://hl7.org/fhir/StructureDefinition/data-absent-reason named data-absent-reason 0..1 MS
 
 // Required demographics
 // NOTE: Race, Ethnicity, and BirthSex should be restored to 1..1 when I can debug the example Client 
@@ -60,11 +50,4 @@ for Colorado BHA clients in order to support the BHA's annual reporting requirem
 * address.district 1..1 MS
 * address.district from BHACountiesVS 
 * maritalStatus 1..1 MS
-* contact.telecom 1..* MS
-* contact.telecom ^slicing.discriminator.type = #pattern
-* contact.telecom ^slicing.discriminator.path = "type"
-* contact.telecom ^slicing.rules = #open
-* contact.telecom contains phone 0..1 MS
-* contact.telecom[phone].system = #phone
-* contact.telecom[phone].value 0..1 MS
 * extension contains http://hl7.org/fhir/us/military-service/StructureDefinition/military-service-veteran-status named USVeteranStatus 0..1 MS
