@@ -21,6 +21,11 @@ captured and transmitted from provider sites to Behavior Health Administrative S
 
 [ When available, this section will include a table mapping from UDM data elements to FHIR data elements in this IG. ]
 
+| UDM                   | FHIR                                        |   |   |   |
+|:----------------------|:--------------------------------------------|:--|:--|:--|
+| Client>Effective Date | Provenance.recorded                         |   |   |   |
+| Client>PEAK ID        | Patient.identifier OR QuestionnaireResponse |   |   |   |
+| Client>TRAILS ID      | Patient.identifier OR QuestionnaireResponse |   |   |   |
 
 ### Key US Core Profiles
 
