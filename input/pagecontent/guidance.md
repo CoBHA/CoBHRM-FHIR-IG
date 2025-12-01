@@ -21,11 +21,47 @@ captured and transmitted from provider sites to Behavior Health Administrative S
 
 [ When available, this section will include a table mapping from UDM data elements to FHIR data elements in this IG. ]
 
-| UDM                   | FHIR                                        |   |   |   |
-|:----------------------|:--------------------------------------------|:--|:--|:--|
-| Client>Effective Date | Provenance.recorded                         |   |   |   |
-| Client>PEAK ID        | Patient.identifier OR QuestionnaireResponse |   |   |   |
-| Client>TRAILS ID      | Patient.identifier OR QuestionnaireResponse |   |   |   |
+
+| UDM File | UDM Field Name                           | FHIR Path                                         | FHIR Profile or Resource                             |
+| :------- | :--------------------------------------- | :------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Client   | Effective Date                           | Provenance.recorded                               | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-provenance.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-provenance.html)                                         |
+| Client   | Colorado PEAK State ID<br>/ Universal ID | Patient.identifier<br>QuestionnaireResponse       | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html)                                               |
+| Client   | Trails Identifier                        | Patient.identifier<br>QuestionnaireResponse       | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html)                                               |
+| Client   | CCAR Client Identifier                   | Patient.identifier<br>QuestionnaireResponse       | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html)                                               |
+| Client   | DACODS Client Identifier                 | Patient.identifier<br>QuestionnaireResponse       | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html)                                               |
+| Client   | DOB                                      | Patient.birthDate                                 | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html)                                               |
+| Client   | Last Name                                | Patient.name.family                               | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html)                                               |
+| Client   | First Name                               | Patient.name.given                                | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html)                                               |
+| Client   | Middle Name/Initial                      | Patient.name.given                                | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html)                                               |
+| Client   | Name Suffix                              | Patient.name.suffix                               | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html)                                               |
+| Client   | Social Security Number                   | Patient.identifier                                | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html)                                               |
+| Client   | County of Residence                      | Patient.address.district                          | [https://hl7.org/fhir/R4/datatypes.html#Address](https://hl7.org/fhir/R4/datatypes.html#Address)                                                                                                           |
+| Client   | Zip Code of Residence                    | Patient.address.postalCode                        | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html)                                               |
+| Client   | Race Codes                               | Patient.extension:race                            | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html)                                               |
+| Client   | Ethnicity                                | Patient.extension:ethnicity                       | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html)                                               |
+| Client   | Household Language                       | Patient.communication.language                    | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html)                                               |
+| Client   | Sex at Birth                             | Patient.extension:birthsex                        | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html)                                               |
+| Client   | Gender Identity                          | Patient.extension:gender                          | [https://hl7.org/fhir/extensions/StructureDefinition-individual-genderIdentity.html](https://hl7.org/fhir/extensions/StructureDefinition-individual-genderIdentity.html)                                   |
+| Client   | Sexual Orientation                       | Observation                                       | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-sexual-orientation.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-sexual-orientation.html) |
+| Client   | Child Welfare Involvement                | QuestionnaireResponse                             | [http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html](http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html)                     |
+| Client   | Disability Code(s)                       | QuestionnaireResponse                             | [http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html](http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html)                     |
+| Client   | Veteran Status                           | Patient.extension:military-service-veteran-status | https://hl7.org/fhir/us/military-service/StructureDefinition-usveteran.html<br>https://build.fhir.org/ig/HL7/us-behavioral-health-profiles/Patient-bh-patient-example.json.html                            |
+| Client   | Last known address line 1                | Patient.address.line                              | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html)                                               |
+| Client   | Last known address line 2                | Patient.address.line                              | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html)                                               |
+| Client   | Last known city                          | Patient.address.city                              | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html)                                               |
+📋 Copy
+Clear
+Buy Me a Coffee at ko-fi.com
+
+// Note to maintainers: To update or recreate the table above, I suggest using a spreadsheet-to-Markdown converter, such as the one
+at https://tabletomarkdown.com/convert-spreadsheet-to-markdown/ 
+
+#### CCAR and DACODS
+
+The CCAR and DACODS user manuals provide additional guidance and context for the information gathered by Colorado BHA, including the 
+information modeled using the FHIR QuestionnaireResponse resource in this implementation guide.
+ - [2025 CCAR User Manual](https://drive.google.com/file/d/123ft3adXsXXWpHKpT3G5YjTozXbcXvmv/view) | [CO BHA resource page](https://bha.colorado.gov/for-service-providers/technology-and-data-systems/colorado-client-assessment-record-ccar)
+ - [2025 DACODS User Manual](https://drive.google.com/file/d/1hCSoQW7Nx5XidqqcSIfTQ9cBGlsrF_hC/view) | [CO BHA resource page](https://bha.colorado.gov/help/provider-support/technology-and-data-systems-support/treatment-management-system-tms)
 
 ### Key US Core Profiles
 
