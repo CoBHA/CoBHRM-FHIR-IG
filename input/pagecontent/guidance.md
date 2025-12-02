@@ -86,6 +86,6 @@ The US Core profiles that are used for BHA reporting without further constraint 
 - [US Core Organization Profile](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-organization.html)
 - [US Core Provenance Profile](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-provenance.html)
 - [US Core QuestionnaireResponse Profile](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html)
-- [US Core RelatedPerson Profile](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-relatedperson.html)
+<!-- - [US Core RelatedPerson Profile](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-relatedperson.html) -->
 
-See the [Examples](/artifacts.html#example-example-instances) for instances of how those profiles are used.
+See the examples listed on the [Artifacts](/artifacts.html) page for instances of how those profiles are used.
