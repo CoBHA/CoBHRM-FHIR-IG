@@ -4,13 +4,11 @@ Usage: #example
 * meta.profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
 * questionnaire = "http://hl7.org/fhir/us/core/Questionnaire/admission-example"
 * status = #completed
-* subject = Reference(Patient/example) "Emma Jones"
+* subject = Reference(Patient/example) "Mickey Mouse"
 * authored = "2025-10-28T18:30:40-07:00"
 * author = Reference(Practitioner/practitioner-1)
-//* item.linkId = "/admission"
-//* item.text = "Colorado BHA Admission Questionnaire"
-* item.item[0].linkId = "/FIRST_CONTACT_DATE"
-* item.item[=].text = "Date of First Contact"
+* item[0].linkId = "/FIRST_CONTACT_DATE"
+* item[=].text = "Date of First Contact"
 * item[=].answer.valueDateTime = "2025-07-01"
 * item[+].linkId = "/FIRST_APPOINTMENT_OFFERED_DATE"
 * item[=].text = "Date of First Appointment Offered"
