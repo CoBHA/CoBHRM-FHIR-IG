@@ -11,10 +11,11 @@ Description: "BHA client services profile"
 
 // BHASO Encounter ID - required
 * identifier contains BHASOEncounterId 1..1 MS
-* identifier[BHASOEncounterId].type from https://ratiopbc.github.io/bha-test-ig/ValueSet-bha-encounter-id-type-vs
+* identifier[BHASOEncounterId].type from https://ratiopbc.github.io/bha-test-ig/ValueSet-bha-encounter-id-type-vs (required)
 * identifier[BHASOEncounterId].type = BHAEncounterIdTypeCS#BHASOID "BHASO Encounter ID"
 * identifier[BHASOEncounterId].value 1..1 MS
 * identifier[BHASOEncounterId] ^short = "BHASO Encounter ID (10 characters max)"
+
 
 * status MS
 * type MS

@@ -19,9 +19,6 @@ captured and transmitted from provider sites to Behavior Health Administrative S
 
 #### UDM to FHIR Mapping
 
-[ When available, this section will include a table mapping from UDM data elements to FHIR data elements in this IG. ]
-
-
 | UDM File | UDM Field Name                           | FHIR Path                                         | FHIR Profile or Resource                                                                                                                                                                                   |
 | -------- | ---------------------------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Client   | Effective Date                           | Provenance.recorded                               | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-provenance.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-provenance.html)                                         |
@@ -50,15 +47,19 @@ captured and transmitted from provider sites to Behavior Health Administrative S
 | Client   | Last known address line 2                | Patient.address.line                              | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html)                                               |
 | Client   | Last known city                          | Patient.address.city                              | [https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-patient.html)                                               |
 
-// Note to maintainers: To update or recreate the table above, I suggest using a spreadsheet-to-Markdown converter, such as the one
+/*
+ Note to maintainers: To update or recreate the table above, I suggest using a spreadsheet-to-Markdown converter, such as the one
 at https://tabletomarkdown.com/convert-spreadsheet-to-markdown/ 
+*/
 
 #### CCAR and DACODS
 
 The CCAR and DACODS user manuals provide additional guidance and context for the information gathered by Colorado BHA, including the 
 information modeled using the FHIR QuestionnaireResponse resource in this implementation guide.
- - [2025 CCAR User Manual](https://drive.google.com/file/d/123ft3adXsXXWpHKpT3G5YjTozXbcXvmv/view) | [CO BHA resource page](https://bha.colorado.gov/for-service-providers/technology-and-data-systems/colorado-client-assessment-record-ccar)
- - [2025 DACODS User Manual](https://drive.google.com/file/d/1hCSoQW7Nx5XidqqcSIfTQ9cBGlsrF_hC/view) | [CO BHA resource page](https://bha.colorado.gov/help/provider-support/technology-and-data-systems-support/treatment-management-system-tms)
+ - [2025 CCAR User Manual](https://drive.google.com/file/d/123ft3adXsXXWpHKpT3G5YjTozXbcXvmv/view)
+ - [Colorado Client Assessment Record (CCAR) resource page](https://bha.colorado.gov/for-service-providers/technology-and-data-systems/colorado-client-assessment-record-ccar)
+ - [2025 DACODS User Manual](https://drive.google.com/file/d/1hCSoQW7Nx5XidqqcSIfTQ9cBGlsrF_hC/view) 
+ - [CO BHA Treatment Management System (TMS) resource page](https://bha.colorado.gov/help/provider-support/technology-and-data-systems-support/treatment-management-system-tms)
 
 ### Key US Core Profiles
 
@@ -74,4 +75,4 @@ The US Core profiles that are used for BHA reporting without further constraint 
 - [US Core QuestionnaireResponse Profile](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html)
 - [US Core RelatedPerson Profile](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-relatedperson.html)
 
-See the Examples for instances of how those profiles are used.
+See the [Examples](/artifacts.html#example-example-instances) for instances of how those profiles are used.

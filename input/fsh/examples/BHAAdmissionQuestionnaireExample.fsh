@@ -1,5 +1,7 @@
 Instance: BHAAdmissionQuestionnaireExample
 InstanceOf: QuestionnaireResponse
+Description: "Example Responses to Admission Questionnaire Questions"
+
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
 * questionnaire = "http://hl7.org/fhir/us/core/Questionnaire/admission-example"

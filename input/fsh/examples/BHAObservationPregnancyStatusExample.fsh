@@ -4,6 +4,8 @@ Alias: $sct = http://snomed.info/sct
 
 Instance: BHAObservationPregnancyStatusExample
 InstanceOf: Observation
+Description: "Example Observation Record for pregnancy status"
+
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-pregnancystatus"
 * status = #final
