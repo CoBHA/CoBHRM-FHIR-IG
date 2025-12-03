@@ -7,7 +7,7 @@ Usage: #example
 
 // * status = #final
 // Optional BHASO Admission Identifier -- not expected from point of care systems
-* identifier[BHASOEpisodeId].type.coding[0].system = "http://bha.colorado.gov/fhir/test/CodeSystem/bha-encounter-id-type-cs"
+* identifier[BHASOEpisodeId].type.coding[0].system = "http://bha.colorado.gov/fhir/test/CodeSystem/bha-episode-id-type-cs"
 * identifier[BHASOEpisodeId].type.coding[0].code = #BHASOID
 * identifier[BHASOEpisodeId].value = "111"
 * identifier[BHASOEpisodeId].system = "http://bha.colorado.gov/fhir/test/CodeSystem/bha-episode-id-type-cs" 
