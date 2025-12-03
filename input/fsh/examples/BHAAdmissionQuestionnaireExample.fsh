@@ -8,7 +8,7 @@ Usage: #example
 * status = #completed
 * subject = Reference(Patient/example) "Mickey Mouse"
 * authored = "2025-10-28T18:30:40-07:00"
-* author = Reference(Practitioner/practitioner-1)
+// * author = Reference(Practitioner/practitioner-1)
 * item[0].linkId = "/FIRST_CONTACT_DATE"
 * item[=].text = "Date of First Contact"
 * item[=].answer.valueDateTime = "2025-07-01"

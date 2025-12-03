@@ -1,0 +1,35 @@
+Instance: BHADischargeQuestionnaireExample
+InstanceOf: QuestionnaireResponse
+Description: "Example Responses to Discharge Questionnaire Questions"
+
+Usage: #example
+// * meta.profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse"
+// * questionnaire = "http://hl7.org/fhir/us/core/Questionnaire/discharge-example"
+* status = #completed
+* subject = Reference(Patient/example) "Mickey Mouse"
+* authored = "2025-10-28T18:30:40-07:00"
+//* author = Reference(Practitioner/practitioner-1)
+* item[+].linkId = "/END_OF_TREATMENT_REASON"
+* item[=].text = "End of Treatment Reason"
+* item[=].answer.valueString = "02"
+* item[+].linkId = "/ARRESTS_PAST_30_DAYS"
+* item[=].text = "Arrests in Past 30 Days"
+* item[=].answer.valueString = "3"
+* item[+].linkId = "/EMPLOYMENT_STATUS"
+* item[=].text = "Employment Status"
+* item[=].answer.valueString = "01"
+* item[+].linkId = "/LIVING_SITUATION"
+* item[=].text = "Living Situation"
+* item[=].answer.valueString = "01"
+* item[+].linkId = "/SELFHELP_ATTENDANCE"
+* item[=].text = "Self Help Attendance/ Peer Support Attendance (Last 30 days at discharge)"
+* item[=].answer.valueString = "0"
+* item[+].linkId = "/EDUCATION_LEVEL"
+* item[=].text = "Education Level"
+* item[=].answer.valueString = "14"
+* item[+].linkId = "/SCHOOL_ATTENDANCE"
+* item[=].text = "School Attendance Status (in the previous 3 months)"
+* item[=].answer.valueString = "03"
+* item[+].linkId = "/LEGAL_STATUS"
+* item[=].text = "Legal Status"
+* item[=].answer.valueString = "02"
