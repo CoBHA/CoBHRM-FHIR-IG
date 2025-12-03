@@ -15,5 +15,5 @@ The following profiles have been defined for this implementation guide.
 ### BHA Client Profile
 [BHA Client Profile](StructureDefinition-bha-client.html)
 
-### BHA Service Profile
-[BHA Service Profile](StructureDefinition-bha-service.html)
+### BHA Episode Profile
+[BHA Episode Profile](StructureDefinition-bha-episode.html)

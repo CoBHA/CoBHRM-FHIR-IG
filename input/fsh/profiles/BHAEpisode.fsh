@@ -1,8 +1,8 @@
-Profile: BHAService
+Profile: BHAEpisode
 Parent: http://hl7.org/fhir/StructureDefinition/EpisodeOfCare
-Id: bha-service
-Title: "Colorado BHA Service Profile"
-Description: "BHA client services profile"
+Id: bha-episode
+Title: "Colorado BHA Episode Profile"
+Description: "BHA episode profile for client admissions/services"
 
 * identifier 1..* MS
 * identifier ^slicing.discriminator.type = #pattern
@@ -19,9 +19,9 @@ Description: "BHA client services profile"
 
 * status MS
 * type MS
-* type from BHAServiceIdentifierVS
+* type from BHAEpisodeIdentifierVS
 * patient MS
-* patient ^short = "The Client who is the focus of this service"
+* patient ^short = "The Client who is the focus of this episode"
 * diagnosis MS
 * period MS
 * period.end 0..1 MS

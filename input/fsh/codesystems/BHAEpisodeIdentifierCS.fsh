@@ -1,7 +1,7 @@
-CodeSystem: BHAServiceIdentifierCS
-Id: bha-service-identifier-cs
-Title: "BHA Service Identifier Codes"
-Description: "Service identifiers for BHA admissions."
+CodeSystem: BHAEpisodeIdentifierCS
+Id: bha-episode-identifier-cs
+Title: "BHA Episode Identifier Codes"
+Description: "Episode identifiers for BHA services/admissions."
 * #00 "Differential Assessment (SUD) / Evaluation Only (MH)"
 * #01 "Ambulatory Medical Withdrawal Management"
 * #02 "Residential (non-hospital) Withdrawal Management (RDX)"
