@@ -1,8 +1,8 @@
-Profile: BHAAdmissionEncounter  
+Profile: BHAEncounter  
 Parent: http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
-Id: bha-admission-encounter
-Title: "Colorado BHA Admission Encounter Profile"
-Description: "Encounter profile for BHA client admissions and discharges"
+Id: bha-encounter
+Title: "Colorado BHA Encounter Profile"
+Description: "Encounter profile for client visits and encounters related to BHA episodes"
 // * status MS
 // * class MS
 // * subject 1..1 MS
@@ -15,7 +15,7 @@ Description: "Encounter profile for BHA client admissions and discharges"
 * period.end 1..1 MS
 
 * diagnosis MS
-* diagnosis.condition only Reference(bha-admission-diagnosis) 
+* diagnosis.condition only Reference(bha-episode-diagnosis) 
 * diagnosis.condition MS
 * diagnosis.use MS
 * diagnosis.use from BHADiagnosisTypeVS

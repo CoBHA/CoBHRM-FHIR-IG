@@ -3,17 +3,19 @@ Note that the text on this page is placeholder for now and will be updated after
 # Profiles
 The following profiles have been defined for this implementation guide.
 
-### BHA Admission Diagnosis Profile
-[BHA Admission Diagnosis Profile](StructureDefinition-bha-admission-diagnosis.html)
-
-### BHA Admission Encounter Profile
-[BHA Admission Encounter Profile](StructureDefinition-bha-admission-encounter.html)
-
-### BHA Baby Profile  
-[BHA Baby Profile](StructureDefinition-bha-baby.html)
-
 ### BHA Client Profile
 [BHA Client Profile](StructureDefinition-bha-client.html)
+
+### BHA Episode Diagnosis Profile
+[BHA Episode Diagnosis Profile](StructureDefinition-bha-episode-diagnosis.html)
+
+### BHA Encounter Profile
+[BHA Admission Encounter Profile](StructureDefinition-bha-encounter.html)
+
+<!-- 
+### BHA Baby Profile  
+[BHA Baby Profile](StructureDefinition-bha-baby.html)
+-->
 
 ### BHA Episode Profile
 [BHA Episode Profile](StructureDefinition-bha-episode.html)

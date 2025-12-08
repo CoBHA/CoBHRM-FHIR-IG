@@ -1,9 +1,9 @@
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $sct = http://snomed.info/sct
 
-Instance: BHAAdmissionEncounterExample
-InstanceOf: BHAAdmissionEncounter
-Title: "Example Admission Encounter"
+Instance: BHAEncounterExample
+InstanceOf: BHAEncounter
+Title: "Example Encounter for a BHA Episode"
 Description: "Example Encounter for a BHA Episode."
 
 Usage: #example
