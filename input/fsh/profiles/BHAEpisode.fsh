@@ -25,6 +25,7 @@ Description: "BHA episode profile for client admissions/services"
 * patient MS
 * patient ^short = "The Client who is the focus of this episode"
 * diagnosis MS
+* diagnosis.role MS
 * period MS
 * period.end 0..1 MS
 

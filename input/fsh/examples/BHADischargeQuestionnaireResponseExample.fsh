@@ -15,7 +15,7 @@ Usage: #example
 * item[=].answer.valueString = "02"
 * item[+].linkId = "ARRESTS_PAST_30_DAYS"
 * item[=].text = "Arrests in Past 30 Days"
-* item[=].answer.valueString = "3"
+* item[=].answer.valueInteger = "3"
 * item[+].linkId = "EMPLOYMENT_STATUS"
 * item[=].text = "Employment Status"
 * item[=].answer.valueString = "01"

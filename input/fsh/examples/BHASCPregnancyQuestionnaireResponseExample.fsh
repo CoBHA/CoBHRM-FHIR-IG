@@ -12,7 +12,7 @@ Usage: #example
 //* author = Reference(Practitioner/practitioner-1)
 * item[0].linkId = "EVALUATION_DATE"
 * item[=].text = "Evaluation Date"
-* item[=].answer.valueString = "2025-07-15"
+* item[=].answer.valueDate = "2025-07-15"
 * item[+].linkId = "PREGNANCY_POSTPARTUM_STATUS"
 * item[=].text = "Pregnancy/Postpartum Status"
 * item[=].answer.valueString = "03"
@@ -54,4 +54,4 @@ Usage: #example
 * item[=].answer.valueString = "03"
 * item[+].linkId = "CHILDREN_LIVING_WITH_CLIENT"
 * item[=].text = "Children Living in home with you"
-* item[=].answer.valueString = "1"
+* item[=].answer.valueInteger = "1"
