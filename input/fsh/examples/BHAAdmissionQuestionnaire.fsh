@@ -156,16 +156,16 @@ Usage: #example
 * item[=].required = true
 * item[=].enableWhen[0].question = "LEGAL_STATUS"
 * item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = BHALegalStatusCS#04
+* item[=].enableWhen[=].answerCoding = BHALegalStatusCS#04 "04 72-hour evaluation and treatment"
 * item[=].enableWhen[+].question = "LEGAL_STATUS"
 * item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = BHALegalStatusCS#05
+* item[=].enableWhen[=].answerCoding = BHALegalStatusCS#05 "05 Short-term certification"
 * item[=].enableWhen[+].question = "LEGAL_STATUS"
 * item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = BHALegalStatusCS#06
+* item[=].enableWhen[=].answerCoding = BHALegalStatusCS#06 "06 Long-term certification"
 * item[=].enableWhen[+].question = "LEGAL_STATUS"
 * item[=].enableWhen[=].operator = #=
-* item[=].enableWhen[=].answerCoding = BHALegalStatusCS#09
+* item[=].enableWhen[=].answerCoding = BHALegalStatusCS#09 "09 Emergency/Involuntary Alcohol/Drug Commitment"
 * item[=].enableBehavior = #any
 * item[=].answerValueSet = Canonical(BHAInvoluntaryReasonVS)
 
