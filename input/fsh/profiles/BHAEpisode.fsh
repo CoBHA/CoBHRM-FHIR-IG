@@ -20,12 +20,14 @@ Description: "BHA episode profile for client admissions/services"
 
 
 * status MS
-* type MS
+* type 1..1 MS
 * type from BHAEpisodeIdentifierVS
 * patient MS
 * patient ^short = "The Client who is the focus of this episode"
 * diagnosis MS
 * diagnosis.role MS
+* managingOrganization 1..1 MS
+* managingOrganization only Reference(bha-organization)
 * period MS
 * period.end 0..1 MS
 

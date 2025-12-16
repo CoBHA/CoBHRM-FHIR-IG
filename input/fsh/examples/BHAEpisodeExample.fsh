@@ -20,3 +20,4 @@ Usage: #example
 * type[=].coding.system = "http://bha.colorado.gov/fhir/test/CodeSystem/bha-episode-identifier-cs"
 * type[=].coding.code = #01
 * type[=].coding.display = "Ambulatory Medical Withdrawal Management"
+* managingOrganization = Reference(Organization/BHAOrganizationExample) "Community Health Clinic"

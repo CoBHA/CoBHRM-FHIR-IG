@@ -28,9 +28,5 @@ Usage: #example
 * item[+].linkId = "DISABILITY_CODES"
 * item[=].text = "Disability Code(s)"
 * item[=].answer.valueCoding = BHADisabilityCodesCS#07
-* item[+].linkId = "DISABILITY_CODES"
-* item[=].text = "Disability Code(s)"
 * item[=].answer.valueCoding = BHADisabilityCodesCS#08
-* item[+].linkId = "DISABILITY_CODES"
-* item[=].text = "Disability Code(s)"
 * item[=].answer.valueCoding = BHADisabilityCodesCS#16
