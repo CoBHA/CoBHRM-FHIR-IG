@@ -167,7 +167,7 @@ Usage: #example
 * item[=].enableWhen[=].operator = #=
 * item[=].enableWhen[=].answerCoding = BHALegalStatusCS#09 "09 Emergency/Involuntary Alcohol/Drug Commitment"
 * item[=].enableBehavior = #any
-* item[=].answerValueSet = Canonical(BHAInvoluntaryReasonVS)
+* item[=].answerValueSet = Canonical(BHAInvoluntaryCommitmentReasonVS)
 
 * item[+].linkId = "CRIMINAL_JUSTICE_INVOLVEMENT"
 * item[=].text = "Criminal Justice Involvement"
