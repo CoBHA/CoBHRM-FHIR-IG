@@ -22,6 +22,4 @@ Usage: #example
 
 * extension[actionType].valueCodeableConcept = BHAActionTypeCS#01 "Admission"
 
-* extension[referralSource].valueCodeableConcept = #1 "Individual"
-
 * serviceProvider = Reference(Organization/BHAOrganizationExample) "Community Health Clinic"

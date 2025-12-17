@@ -55,3 +55,6 @@ Usage: #example
 * item[+].linkId = "CHILDREN_LIVING_WITH_CLIENT"
 * item[=].text = "Children Living in home with you"
 * item[=].answer.valueInteger = 1
+* item[+].linkId = "CHILDREN_AGES_LIVING_WITH_CLIENT"
+* item[=].text = "Children Ages living in home with you"
+* item[=].answer.valueString = "01"

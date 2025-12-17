@@ -27,6 +27,6 @@ Usage: #example
 * item[=].answer.valueBoolean = false
 * item[+].linkId = "DISABILITY_CODES"
 * item[=].text = "Disability Code(s)"
-* item[=].answer.valueCoding = BHADisabilityCodesCS#07
-* item[=].answer[+].valueCoding = BHADisabilityCodesCS#08
-* item[=].answer[+].valueCoding = BHADisabilityCodesCS#16
+* item[=].answer.valueCoding = BHADisabilityCodesCS#07 "#07 Developmental delay"
+* item[=].answer[+].valueCoding = BHADisabilityCodesCS#08 "#08 Deaf/Hearing Loss"
+* item[=].answer[+].valueCoding = BHADisabilityCodesCS#16 "#16 Learning disability"
