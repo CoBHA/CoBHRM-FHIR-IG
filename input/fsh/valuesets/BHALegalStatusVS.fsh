@@ -1,5 +1,5 @@
 ValueSet: BHALegalStatusVS
-Id: bha-legal-status
+Id: bha-legal-status-vs
 Title: "BHA Legal Status"
 Description: "Value set for legal statuses used in BHA admission process"
 * ^url = "https://ratiopbc.github.io/bha-test-ig/ValueSet-bha-legal-status"

@@ -70,7 +70,10 @@ Usage: #example
 * item[=].text = "Monthly Income"
 * item[=].type = #quantity
 * item[=].required = false
-* item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/minValue"
+* item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
+* item[=].extension[=].valueCoding.system = "urn:iso:std:iso:4217"
+* item[=].extension[=].valueCoding.code = #USD
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
 * item[=].extension[=].valueQuantity.value = 0
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
 * item[=].extension[=].valueQuantity.value = 9999
@@ -149,8 +152,8 @@ Usage: #example
 * item[=].required = true
 * item[=].answerValueSet = Canonical(BHALegalStatusVS)
 
-* item[+].linkId = "INVOLUNTARY_REASON"
-* item[=].text = "Involuntary Reason"
+* item[+].linkId = "INVOLUNTARY_COMMITMENT_REASON"
+* item[=].text = "Involuntary Commitment Reason"
 * item[=].type = #choice
 // TODO: there is no way to model conditionally required in FHIR; instead, this makes it required but guides the user to only show the question in certain conditions. verify approach with BHA.
 * item[=].required = true
@@ -202,4 +205,3 @@ Usage: #example
 * item[=].text = "Communication Accommodations"
 * item[=].type = #boolean
 * item[=].required = false
-
