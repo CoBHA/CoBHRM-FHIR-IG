@@ -166,6 +166,10 @@ The US Core profiles that are used for BHA reporting without further constraint 
 - [US Core QuestionnaireResponse Profile](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html)
 <!-- - [US Core RelatedPerson Profile](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-relatedperson.html) -->
 
-Note that US Core Provenance <b>shall</b> also be suppored for the BHA Episode Profile.
+#### Profile-specific Guidance
+In some cases, the BHA implementation guide leverages US Core profiles but has additional data requirements:
+
+- US Core Provenance <b>shall</b> also be supported for the BHA Episode Profile.
+- US Core Observation Sexual Orientation <b>shall</b> be supported and populated for all BHA Clients. 
 
 See the examples listed on the [Artifacts](/bha-test-ig/artifacts.html) page for instances of how those profiles are used.
