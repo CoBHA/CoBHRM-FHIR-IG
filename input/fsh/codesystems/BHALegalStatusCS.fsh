@@ -1,7 +1,7 @@
 CodeSystem: BHALegalStatusCS
 Id: bha-legal-status
 Title: "BHA Legal Status"
-Description: "Code system for legal statuses used in BHA admission process"
+Description: "Code system for legal statuses used in BHA episodes"
 
 * #01 "Voluntary"
 * #02 "Court-directed voluntary"

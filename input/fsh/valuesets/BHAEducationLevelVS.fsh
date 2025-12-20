@@ -1,6 +1,6 @@
 ValueSet: BHAEducationLevelVS
 Id: bha-education-level-vs
 Title: "BHA Education Level"
-Description: "Value set for education levels used in BHA admission process"
+Description: "Value set for education levels used in BHA episodes"
 * ^url = "https://ratiopbc.github.io/bha-test-ig/ValueSet-bha-education-level"
 * include codes from system BHAEducationLevelCS

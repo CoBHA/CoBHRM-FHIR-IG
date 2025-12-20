@@ -1,7 +1,7 @@
 CodeSystem: BHAEducationLevelCS
 Id: bha-education-level-cs
 Title: "BHA Education Level"
-Description: "Code system for education levels used in BHA admission process"
+Description: "Code system for education levels used in BHA episodes"
 
 * #PK "The client has less than a Kindergarten education/No Formal education"
 * #00 "Kindergarten"

@@ -5,7 +5,7 @@ provider administrative burden throughout Colorado’s behavioral health ecosyst
 
 ### Overview
 
-The Colorado Behavioral Health Administration (BHA) needs to gather information related to BHA clients and their treatment. The majority of this information must be collected from clinical sites. This IG addresses the exchange of relevant information between clinical sites and Colorado Behavioral Health Administration Service Organizations (BHASOs).
+The Colorado Behavioral Health Administration (BHA) needs to gather information related to BHA clients and their treatment. The majority of this information must be collected from clinical sites. This IG addresses the exchange of relevant information between clinical sites and Colorado Behavioral Health Administrative Service Organizations (BHASOs).
 
 This IG includes:
 
@@ -14,8 +14,6 @@ This IG includes:
 - Example instances of FHIR resources demonstrating how FHIR data in the formats specified here can capture the information for example BHA client criteria
 
 ### Getting Started
- WHAT YOU NEED TO KNOW:
- 
-This implementation guide is built using [FHIR R4](https://hl7.org/fhir/R4/index.html). 
+This implementation guide is built using [FHIR R4](https://hl7.org/fhir/R4/index.html). An understanding of FHIR is important in knowing how to implement the data exchange patterns specified here.
 
 See the [Implementation Guidance](guidance.html) for further guidance.

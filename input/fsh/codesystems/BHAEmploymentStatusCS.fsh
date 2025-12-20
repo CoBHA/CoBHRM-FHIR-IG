@@ -1,7 +1,7 @@
 CodeSystem: BHAEmploymentStatusCS
 Id: bha-employment-status-cs
 Title: "BHA Employment Status"
-Description: "Code system for employment statuses used in BHA admission process"
+Description: "Code system for employment statuses used in BHA episodes"
 
 * #01 "Employed Full Time (35+ hours/week)"
 * #02 "Employed Part Time (<35 hours/week)"
