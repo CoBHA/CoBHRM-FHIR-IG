@@ -3,7 +3,7 @@ Id: bha-substance-use-route-of-administration-vs
 Title: "BHA Substance Use Routes of Administration Value Set"
 Description: "Substance use routes of administration for BHA services/admissions."
 
-* ^url = "https://ratiopbc.github.io/bha-test-ig/ValueSet-bha-episode-identifier-vs"
+* ^url = "http://bha.colorado.gov/fhir/bha-test-ig/ValueSet-bha-episode-identifier-vs"
 * ^version = "0.1"
 * ^status = #draft
 * ^date = "2025-09-27"

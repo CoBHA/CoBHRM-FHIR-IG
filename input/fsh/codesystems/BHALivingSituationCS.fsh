@@ -2,6 +2,9 @@ CodeSystem: BHALivingSituationCS
 Id: bha-living-situation
 Title: "BHA Living Situation"
 Description: "Code system for living situations used in BHA episodes"
+* ^status = #active
+* ^experimental = false
+* ^caseSensitive = true
 
 * #1 "Correctional facility / Jail"
 * #2 "Inpatient"

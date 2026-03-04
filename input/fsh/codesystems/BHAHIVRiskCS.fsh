@@ -2,6 +2,9 @@ CodeSystem: BHAHIVRiskCS
 Id: bha-hiv-risk-cs
 Title: "BHA HIV Risk"
 Description: "Code system for HIV risk used in BHA Special Connections"
+* ^status = #active
+* ^experimental = false
+* ^caseSensitive = true
 
 * #01 "No reported history of high risk behaviors"
 * #02 "Occupational exposure to HIV risk"

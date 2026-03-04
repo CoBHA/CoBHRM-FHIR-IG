@@ -1,4 +1,3 @@
-### General Guidance
 
 BHA aims to leverage data interoperability capabilities already available in certified EHRs, in order to reduce 
 the overall effort required for implementations of this IG. In cases where federal regulatory requirements for 
@@ -132,6 +131,7 @@ captured and transmitted from provider sites to Behavior Health Administrative S
 | SC Baby                 | Baby First Name                                                                                    | QuestionnaireResponse                                                                                                                         | [US Core QuestionnaireResponse](http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html)                    |
 | SC Baby                 | Baby Middle Name or Initial                                                                        | QuestionnaireResponse                                                                                                                         | [US Core QuestionnaireResponse](http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html)                    |
 | SC Baby                 | Baby Sex at Birth                                                                                  | QuestionnaireResponse                                                                                                                         | [US Core QuestionnaireResponse](http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-questionnaireresponse.html)                    |
+{: .grid}
 
 <!-- 
 ##### UDM Client File                                             |
@@ -146,10 +146,11 @@ at https://tabletomarkdown.com/convert-spreadsheet-to-markdown/
 
 The UDM incorporates elements of the CCAR and DACODS user manuals, and they may provide additional context for the 
 information being gathered and transmitted to BHA. Those user manuals are publicly available at the following sites:
- - [2025 CCAR User Manual](https://drive.google.com/file/d/123ft3adXsXXWpHKpT3G5YjTozXbcXvmv/view)
- - [Colorado Client Assessment Record (CCAR) resource page](https://bha.colorado.gov/for-service-providers/technology-and-data-systems/colorado-client-assessment-record-ccar)
- - [2025 DACODS User Manual](https://drive.google.com/file/d/1hCSoQW7Nx5XidqqcSIfTQ9cBGlsrF_hC/view) 
- - [CO BHA Treatment Management System (TMS) resource page](https://bha.colorado.gov/help/provider-support/technology-and-data-systems-support/treatment-management-system-tms)
+
+- [2025 CCAR User Manual](https://drive.google.com/file/d/123ft3adXsXXWpHKpT3G5YjTozXbcXvmv/view)
+- [Colorado Client Assessment Record (CCAR) resource page](https://bha.colorado.gov/for-service-providers/technology-and-data-systems/colorado-client-assessment-record-ccar)
+- [2025 DACODS User Manual](https://drive.google.com/file/d/1hCSoQW7Nx5XidqqcSIfTQ9cBGlsrF_hC/view) 
+- [CO BHA Treatment Management System (TMS) resource page](https://bha.colorado.gov/help/provider-support/technology-and-data-systems-support/treatment-management-system-tms)
 
 ### Key US Core Profiles
 
@@ -158,6 +159,7 @@ constraint or modification. Those profiles therefore do not have corresponding B
 will need to be aware of them in order to ensure the full set of data is transmitted.
 
 The US Core profiles that are used for BHA reporting without further constraint are:
+
 - [US Core Condition Encounter Diagnosis Profile](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-encounter-diagnosis.html)
 - [US Core Observation Pregnancy Status Profile](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-pregnancystatus.html)
 - [US Core Observation Sexual Orientation Profile](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-observation-sexual-orientation.html)
@@ -167,9 +169,10 @@ The US Core profiles that are used for BHA reporting without further constraint 
 <!-- - [US Core RelatedPerson Profile](https://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-relatedperson.html) -->
 
 #### Profile-specific Guidance
+
 In some cases, the BHA implementation guide leverages US Core profiles but has additional data requirements:
 
 - US Core Provenance <b>shall</b> also be supported for the BHA Episode Profile.
 - US Core Observation Sexual Orientation <b>shall</b> be supported and populated for all BHA Clients. 
 
-See the examples listed on the [Artifacts](/bha-test-ig/artifacts.html) page for instances of how those profiles are used.
+See the examples listed on the [Artifacts](artifacts.html) page for instances of how those profiles are used.

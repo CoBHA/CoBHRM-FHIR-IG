@@ -3,7 +3,7 @@ Id: bha-smi-sed-status-vs
 Title: "BHA SMI / SED Statuses Value Set"
 Description: "SMI / SED Statuses for BHA services/admissions."
 
-* ^url = "https://ratiopbc.github.io/bha-test-ig/ValueSet-bha-smi-sed-status-vs"
+* ^url = "http://bha.colorado.gov/fhir/bha-test-ig/ValueSet-bha-smi-sed-status-vs"
 * ^version = "0.1"
 * ^status = #draft
 * ^date = "2025-09-27"

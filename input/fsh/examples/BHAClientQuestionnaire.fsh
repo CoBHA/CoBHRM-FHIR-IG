@@ -5,7 +5,7 @@ Title: "BHA Client Questionnaire"
 Description: "Behavioral Health Administration client questionnaire for collecting patient demographic, clinical, and administrative information"
 Usage: #example
 
-* url = "https://ratiopbc.github.io/bha-test-ig/Questionnaire/BHA-client"
+* url = "http://bha.colorado.gov/fhir/bha-test-ig/Questionnaire/BHA-client"
 * version = "1.0.0"
 * name = "BHAClientQuestionnaire"
 * title = "BHA Client Questionnaire"

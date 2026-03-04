@@ -5,7 +5,7 @@ Title: "BHA Discharge Questionnaire"
 Description: "Behavioral Health Administration discharge questionnaire for collecting patient demographic, clinical, and administrative information during discharge process"
 Usage: #example
 
-* url = "https://ratiopbc.github.io/bha-test-ig/Questionnaire/BHA-discharge"
+* url = "http://bha.colorado.gov/fhir/bha-test-ig/Questionnaire/BHA-discharge"
 * version = "1.0.0"
 * name = "BHADischargeQuestionnaire"
 * title = "BHA Discharge Questionnaire"

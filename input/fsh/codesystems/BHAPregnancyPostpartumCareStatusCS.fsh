@@ -2,6 +2,9 @@ CodeSystem: BHAPregnancyPostpartumCareStatusCS
 Id: bha-pregnancy-postpartum-care-status-cs
 Title: "BHA Pregnancy/Postpartum Care Status"
 Description: "Code system for pregnancy/postpartum care status used in BHA Special Connections"
+* ^status = #active
+* ^experimental = false
+* ^caseSensitive = true
 
 * #00 "None - Did not receive any postpartum care"
 * #01 "Already receiving prenatal care routinely"

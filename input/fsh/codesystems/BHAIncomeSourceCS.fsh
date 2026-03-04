@@ -2,6 +2,9 @@ CodeSystem: BHAIncomeSourceCS
 Id: bha-income-source
 Title: "BHA Income Source"
 Description: "Code system for income sources used in BHA admission process"
+* ^status = #active
+* ^experimental = false
+* ^caseSensitive = true
 
 * #0 "None"
 * #1 "Wages"
