@@ -1,5 +1,5 @@
 Profile: BHAEncounter  
-Parent: http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+Parent: $us-core-encounter
 Id: bha-encounter
 Title: "Colorado BHA Encounter Profile"
 Description: "Encounter profile for client visits and encounters related to BHA episodes"

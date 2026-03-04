@@ -1,5 +1,5 @@
 Profile: BHAOrganization
-Parent: http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+Parent: $us-core-organization
 Id: bha-organization
 Title: "Colorado BHA Provider Organization Profile"
 Description: "Provider Organization profile for Colorado BHASO clinics"

@@ -31,23 +31,23 @@ Description: "Example Client"
 * address[=].postalCode = "80205" 
 * address[=].district = #01 "Adams" 
 * address[=].period.start = "2023-01-01"
-* maritalStatus = #M
+* maritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus#M
 
 // Required Extensions (1..1)
-* extension[race].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
-* extension[race].extension[ombCategory].valueCoding = http://hl7.org/fhir/v3/Race#2028-9 // Example OMB Category
+//* extension[race].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+* extension[race].extension[ombCategory].valueCoding = urn:oid:2.16.840.1.113883.6.238#2028-9 
 * extension[race].extension[text].valueString = "Asian"
 
 * extension[bharace].valueCodeableConcept = BHARaceCS#02 "Asian"
 
-* extension[ethnicity].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
-* extension[ethnicity].extension[ombCategory].valueCoding = http://hl7.org/fhir/v3/Ethnicity#2186-5
+//* extension[ethnicity].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+* extension[ethnicity].extension[ombCategory].valueCoding = urn:oid:2.16.840.1.113883.6.238#2186-5 
 * extension[ethnicity].extension[text].valueString = "Not Hispanic or Latino"
 
-* extension[birthsex].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
+//* extension[birthsex].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"
 * extension[birthsex].valueCode = #F // Code for Female
 
-* extension[USVeteranStatus].url = "http://hl7.org/fhir/us/military-service/StructureDefinition/military-service-veteran-status"
+//* extension[USVeteranStatus].url = "http://hl7.org/fhir/us/military-service/StructureDefinition/military-service-veteran-status"
 * extension[USVeteranStatus].valueBoolean = true
 
 
