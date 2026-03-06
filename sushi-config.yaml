@@ -1,6 +1,10 @@
+# ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 # Basic IG metadata
 id: bha-test-ig
-canonical: http://bha.colorado.gov/fhir/test
+canonical: http://bha.colorado.gov/fhir/bha-test-ig
 name: BHATestIG
 title: "Colorado BHA FHIR Implementation Guide"
 description: "A FHIR implementation guide to enable standardized behavioral health data exchange and reduce provider administrative burden throughout Colorado's behavioral health ecosystem"
@@ -8,7 +12,8 @@ status: draft
 version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2025+
-releaseLabel: STU1
+releaseLabel: ci-build
+jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#840'
 
 # Publisher information
 publisher:
@@ -18,14 +23,22 @@ publisher:
 
 # Dependencies
 dependencies:
-  hl7.fhir.us.core: 6.1.0
+  hl7.fhir.us.core: 
+    version: 6.1.0
+    id: uscore
   hl7.fhir.us.military-service: 1.0.0
   hl7.fhir.uv.sdc: 3.0.0
   
 # Global settings
-parameters:
+parameters: # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   show-inherited-invariants: false
   usage-stats-opt-out: true
+  shownav: true
+  apply-contact: 'true'
+  apply-jurisdiction: 'true'
+  apply-publisher: 'true'
+  apply-version: 'true'
+  pin-canonicals: pin-multiples
 
 # Pages structure
 pages:
@@ -37,3 +50,13 @@ pages:
     title: Profiles
   terminology.md:
     title: Terminology
+  about.md:
+    title: About
+
+menu:
+  Home: index.html
+  Guidance: guidance.html
+  Profiles: profiles.html
+  Terminology: terminology.html
+  Artifacts: artifacts.html
+  About: about.html

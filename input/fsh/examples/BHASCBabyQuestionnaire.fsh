@@ -5,7 +5,7 @@ Title: "BHA Special Connections Baby Questionnaire"
 Description: "Behavioral Health Administration Special Connections baby questionnaire for collecting information about a baby born to a person enrolled in the Special Connections program"
 Usage: #example
 
-* url = "https://ratiopbc.github.io/bha-test-ig/Questionnaire/BHA-sc-baby"
+* url = "http://bha.colorado.gov/fhir/bha-test-ig/Questionnaire/BHA-sc-baby"
 * version = "1.0.0"
 * name = "BHASCBabyQuestionnaire"
 * title = "BHA Special Connections Baby Questionnaire"

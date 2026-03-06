@@ -1,5 +1,5 @@
 Profile: BHAEpisodeDiagnosis  
-Parent: http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-encounter-diagnosis
+Parent: $us-core-diagnosis
 Id: bha-episode-diagnosis
 Title: "Colorado BHA Episode Diagnosis Profile"
 Description: "Diagnosis profile for diagnoses related to Colorado BHA episodes"

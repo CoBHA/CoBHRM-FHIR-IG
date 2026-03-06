@@ -5,7 +5,7 @@ Title: "BHA Admission Questionnaire"
 Description: "Behavioral Health Administration admission questionnaire for collecting patient demographic, clinical, and administrative information"
 Usage: #example
 
-* url = "https://ratiopbc.github.io/bha-test-ig/Questionnaire/BHA-admission"
+* url = "http://bha.colorado.gov/fhir/bha-test-ig/Questionnaire/BHA-admission"
 * version = "1.0.0"
 * name = "BHAAdmissionQuestionnaire"
 * title = "BHA Admission Questionnaire"

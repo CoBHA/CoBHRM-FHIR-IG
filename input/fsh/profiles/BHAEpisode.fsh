@@ -1,5 +1,5 @@
 Profile: BHAEpisode
-Parent: http://hl7.org/fhir/StructureDefinition/EpisodeOfCare
+Parent: EpisodeOfCare
 Id: bha-episode
 Title: "Colorado BHA Episode Profile"
 Description: "BHA episode profile for client admissions/services"

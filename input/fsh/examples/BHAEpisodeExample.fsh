@@ -17,7 +17,5 @@ Usage: #example
 * patient = Reference(Patient/BHAClientExample) "Emma Jones"
 * status = #finished
 * type[+]
-* type[=].coding.system = "http://bha.colorado.gov/fhir/test/CodeSystem/bha-episode-identifier-cs"
-* type[=].coding.code = #01
-* type[=].coding.display = "Ambulatory Medical Withdrawal Management"
+* type[=].coding = BHAEpisodeIdentifierCS#01 "Ambulatory Medical Withdrawal Management"
 * managingOrganization = Reference(Organization/BHAOrganizationExample) "Community Health Clinic"

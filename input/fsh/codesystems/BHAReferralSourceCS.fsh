@@ -2,6 +2,9 @@ CodeSystem: BHAReferralSourceCS
 Id: bha-referral-source
 Title: "BHA Referral Source"
 Description: "Code system for referral sources used in BHA admission process"
+* ^status = #active
+* ^experimental = false
+* ^caseSensitive = true
 
 * #1 "Individual (self, family, friend)"
 * #2 "Alcohol/drug use care provider"

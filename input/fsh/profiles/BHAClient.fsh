@@ -1,5 +1,5 @@
 Profile: BHAClient
-Parent: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+Parent: $us-core-patient
 Id: bha-client
 Title: "Colorado BHA Client Profile"
 Description: "Ths profile specifies the mandatory and must support data elements for capturing demographic information 

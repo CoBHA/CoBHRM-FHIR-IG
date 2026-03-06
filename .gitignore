@@ -7,3 +7,5 @@ output
 temp
 template
 .DS_Store
+*.db
+.index.json

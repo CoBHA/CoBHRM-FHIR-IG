@@ -2,6 +2,9 @@ CodeSystem: BHAASAMLevelOfCareCS
 Id: bha-asam-level-of-care-cs
 Title: "BHA ASAM Levels of Care"
 Description: "ASAM Levels of Care for BHA services/admissions."
+* ^status = #active
+* ^experimental = false
+* ^caseSensitive = true
 * #1.0 "Outpatient (OP) and EOP"
 * #2.1 "Intensive Outpatient"
 * #2.5 "Partial Hospitalization"

@@ -1,0 +1,12 @@
+﻿{
+	"name": "co-bha.template",
+	"type": "fhir.template",
+	"license": "CC-BY-1.0",
+	"description": "Colorado BHA IG Template",
+	"author": "https://github.com/RatioPBC",
+	"version": "current",
+	"base": "fhir.base.template",
+	"dependencies": {
+		"fhir.base.template": "current"
+	}
+}

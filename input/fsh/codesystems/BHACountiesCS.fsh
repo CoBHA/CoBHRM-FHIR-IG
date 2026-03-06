@@ -2,6 +2,9 @@ CodeSystem: BHACountiesCS
 Id: bha-counties-cs
 Title: "BHA County Codes"
 Description: "County codes used by BHA"
+* ^status = #active
+* ^experimental = false
+* ^caseSensitive = true
 * #01 "Adams"
 * #02 "Alamosa"
 * #03 "Arapahoe"

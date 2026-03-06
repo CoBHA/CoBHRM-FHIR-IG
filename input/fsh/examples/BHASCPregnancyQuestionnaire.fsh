@@ -5,7 +5,7 @@ Title: "BHA Special Connections Pregnancy/Postpartum Risk Screening Questionnair
 Description: "Behavioral Health Administration Special Connections Pregnancy/Postpartum Risk Screening questionnaire for collecting information about a pregnant or postpartum person's risk factors"
 Usage: #example
 
-* url = "https://ratiopbc.github.io/bha-test-ig/Questionnaire/BHA-sc-pregnant-postpartum-risk"
+* url = "http://bha.colorado.gov/fhir/bha-test-ig/Questionnaire/BHA-sc-pregnant-postpartum-risk"
 * version = "1.0.0"
 * name = "BHASCPregnantPostpartumRiskQuestionnaire"
 * title = "BHA Special Connections Pregnancy/Postpartum Risk Screening Questionnaire"

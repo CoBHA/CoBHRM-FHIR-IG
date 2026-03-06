@@ -2,6 +2,9 @@ CodeSystem: BHAEthnicityCS
 Id: bha-ethnicity-cs
 Title: "BHA Ethnicity Codes"
 Description: "Ethnicity codes used by BHA"
+* ^status = #active
+* ^experimental = false
+* ^caseSensitive = true
 * #0 "Not Hispanic/Latino"
 * #1 "Hispanic/Latino (Mexican)"  
 * #2 "Hispanic/Latino (Puerto Rican)"

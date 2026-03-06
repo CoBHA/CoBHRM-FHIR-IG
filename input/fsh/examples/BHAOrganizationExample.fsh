@@ -7,7 +7,7 @@ Description: "Example Organization record for a BHA clinic."
 
 Usage: #example
 
-* meta.profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+//* meta.profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
 * identifier[NPI].system = "http://hl7.org/fhir/sid/us-npi"
 * identifier[NPI].value = "1234567893"
 
