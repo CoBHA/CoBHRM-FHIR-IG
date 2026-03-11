@@ -8,3 +8,5 @@ Alias: $us-core-encounter = http://hl7.org/fhir/us/core/StructureDefinition/us-c
 Alias: $us-core-patient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|6.1.0
 Alias: $us-core-questionnaireresponse = http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse|6.1.0
 Alias: $sdc-questionnaire = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|3.0.0
+
+Alias: $fmm = http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm

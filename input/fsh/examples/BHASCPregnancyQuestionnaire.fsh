@@ -3,7 +3,8 @@ InstanceOf: $sdc-questionnaire
 //Id: bha-sc-pregnancy-postpartum-risk-questionnaire
 Title: "BHA Special Connections Pregnancy/Postpartum Risk Screening Questionnaire"
 Description: "Behavioral Health Administration Special Connections Pregnancy/Postpartum Risk Screening questionnaire for collecting information about a pregnant or postpartum person's risk factors"
-Usage: #example
+Usage: #definition 
+* extension[$fmm].valueInteger = 3
 
 * url = "http://bha.colorado.gov/fhir/bha-test-ig/Questionnaire/BHASCPregnancyPostpartumRiskQuestionnaire"
 * version = "1.0.0"

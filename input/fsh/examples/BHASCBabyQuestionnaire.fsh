@@ -3,7 +3,8 @@ InstanceOf: $sdc-questionnaire
 //Id: bha-sc-baby-questionnaire
 Title: "BHA Special Connections Baby Questionnaire"
 Description: "Behavioral Health Administration Special Connections baby questionnaire for collecting information about a baby born to a person enrolled in the Special Connections program"
-Usage: #example
+Usage: #definition 
+* extension[$fmm].valueInteger = 3
 
 * url = "http://bha.colorado.gov/fhir/bha-test-ig/Questionnaire/BHASCBabyQuestionnaire"
 * version = "1.0.0"

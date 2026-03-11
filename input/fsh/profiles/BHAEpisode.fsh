@@ -3,6 +3,7 @@ Parent: EpisodeOfCare
 Id: bha-episode
 Title: "Colorado BHA Episode Profile"
 Description: "BHA episode profile for client admissions/services"
+* ^extension[$fmm].valueInteger = 3
 
 // BHASO Admission Identifier -- not expected from point of care systems
 

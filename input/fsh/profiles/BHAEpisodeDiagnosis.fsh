@@ -3,6 +3,7 @@ Parent: $us-core-diagnosis
 Id: bha-episode-diagnosis
 Title: "Colorado BHA Episode Diagnosis Profile"
 Description: "Diagnosis profile for diagnoses related to Colorado BHA episodes"
+* ^extension[$fmm].valueInteger = 3
 
 // Extension for BHA diagnosis type
 * extension contains 

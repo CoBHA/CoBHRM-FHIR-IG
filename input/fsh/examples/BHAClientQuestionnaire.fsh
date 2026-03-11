@@ -3,7 +3,8 @@ InstanceOf: $sdc-questionnaire
 //Id: bha-client-questionnaire
 Title: "BHA Client Questionnaire"
 Description: "Behavioral Health Administration client questionnaire for collecting patient demographic, clinical, and administrative information"
-Usage: #example
+Usage: #definition 
+* extension[$fmm].valueInteger = 3
 
 * url = "http://bha.colorado.gov/fhir/bha-test-ig/Questionnaire/BHAClientQuestionnaire"
 * version = "1.0.0"

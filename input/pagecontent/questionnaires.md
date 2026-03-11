@@ -36,5 +36,3 @@ The following questionnaires have been defined for this implementation guide.
 
 [example BHA Substance Use Disorder Questionnaire Response](QuestionnaireResponse-BHASubstanceUseDisorderQuestionnaireResponseExample.html)
 
-
-

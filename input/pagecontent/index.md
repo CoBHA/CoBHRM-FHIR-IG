@@ -24,3 +24,7 @@ This guide is broken down into sections.
 - [Terminology](terminology.html) for the code systems and value sets defined in this IG.
 - [Artifacts](artifacts.html) for the complete list of all artifacts defined in this IG, including profiles, value sets, code systems, and examples.
 - [About](about.html) for more information about this IG, including how to download the resources and view the source code.
+
+### This IG is dependent
+
+{% include dependency-table-short.xhtml %}

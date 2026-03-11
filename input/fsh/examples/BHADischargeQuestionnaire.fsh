@@ -3,7 +3,8 @@ InstanceOf: $sdc-questionnaire
 //Id: bha-discharge-questionnaire
 Title: "BHA Discharge Questionnaire"
 Description: "Behavioral Health Administration discharge questionnaire for collecting patient demographic, clinical, and administrative information during discharge process"
-Usage: #example
+Usage: #definition 
+* extension[$fmm].valueInteger = 3
 
 * url = "http://bha.colorado.gov/fhir/bha-test-ig/Questionnaire/BHADischargeQuestionnaire"
 * version = "1.0.0"
