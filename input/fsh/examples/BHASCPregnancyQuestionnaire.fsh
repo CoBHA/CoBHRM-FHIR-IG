@@ -5,7 +5,7 @@ Title: "BHA Special Connections Pregnancy/Postpartum Risk Screening Questionnair
 Description: "Behavioral Health Administration Special Connections Pregnancy/Postpartum Risk Screening questionnaire for collecting information about a pregnant or postpartum person's risk factors"
 Usage: #definition 
 
-* url = "http://bha.colorado.gov/fhir/bha-test-ig/Questionnaire/BHASCPregnancyPostpartumRiskQuestionnaire"
+* url = "http://bha.colorado.gov/fhir/bha-ig/Questionnaire/BHASCPregnancyPostpartumRiskQuestionnaire"
 * version = "1.0.0"
 * name = "BHASCPregnancyPostpartumRiskQuestionnaire"
 * title = "BHA Special Connections Pregnancy/Postpartum Risk Screening Questionnaire"

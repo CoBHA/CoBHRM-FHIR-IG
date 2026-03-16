@@ -5,7 +5,7 @@ Title: "BHA Diagnosis Questionnaire"
 Description: "Behavioral Health Administration diagnosis questionnaire for collecting patient clinical information during a behavioral health episode of care"
 Usage: #definition 
 
-* url = "http://bha.colorado.gov/fhir/bha-test-ig/Questionnaire/BHADiagnosisQuestionnaire"
+* url = "http://bha.colorado.gov/fhir/bha-ig/Questionnaire/BHADiagnosisQuestionnaire"
 * version = "1.0.0"
 * name = "BHADiagnosisQuestionnaire"
 * title = "BHA Diagnosis Questionnaire"

@@ -3,9 +3,9 @@
 # │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 # Basic IG metadata
-id: bha-test-ig
-canonical: http://bha.colorado.gov/fhir/bha-test-ig
-name: BHATestIG
+id: bha-ig
+canonical: http://bha.colorado.gov/fhir/bha-ig
+name: BHAIG
 title: "Colorado BHA FHIR Implementation Guide"
 description: "A FHIR implementation guide to enable standardized behavioral health data exchange and reduce provider administrative burden throughout Colorado's behavioral health ecosystem"
 status: active
@@ -95,6 +95,12 @@ pages:
     extension: 
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
+  questions.md:
+    title: Questions
+    generation: markdown
+    extension: 
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
 
 menu:
   Home: index.html
@@ -106,3 +112,5 @@ menu:
   About: 
     About: about.html
     Maturity: maturity.html
+    Questions: questions.html
+    

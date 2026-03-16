@@ -4,7 +4,7 @@ Title: "BHA Episode Identifier Codes Value Set"
 Description: "Episode identifiers for BHA services/admissions"
 * ^experimental = false
 
-//* ^url = "http://bha.colorado.gov/fhir/bha-test-ig/ValueSet-bha-episode-identifier-vs"
+//* ^url = "http://bha.colorado.gov/fhir/bha-ig/ValueSet-bha-episode-identifier-vs"
 //* ^version = "0.1"
 //* ^status = #draft
 //* ^date = "2025-09-27"

@@ -4,7 +4,7 @@ Title: "BHA Episode ID Types"
 Description: "Allowed values for Episode ID types"
 * ^experimental = false
 
-//* ^url = "http://bha.colorado.gov/fhir/bha-test-ig/ValueSet-bha-episode-id-type-vs"
+//* ^url = "http://bha.colorado.gov/fhir/bha-ig/ValueSet-bha-episode-id-type-vs"
 //* ^version = "0.1"
 //* ^status = #draft
 //* ^date = "2025-09-27"

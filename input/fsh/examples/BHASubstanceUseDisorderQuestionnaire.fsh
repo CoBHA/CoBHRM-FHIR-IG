@@ -5,7 +5,7 @@ Title: "BHA Substance Use Disorder Questionnaire"
 Description: "Behavioral Health Administration substance use disorder questionnaire for collecting substance use information from a person receiving behavioral health services"
 Usage: #definition 
 
-* url = "http://bha.colorado.gov/fhir/bha-test-ig/Questionnaire/BHASubstanceUseDisorderQuestionnaire"
+* url = "http://bha.colorado.gov/fhir/bha-ig/Questionnaire/BHASubstanceUseDisorderQuestionnaire"
 * version = "1.0.0"
 * name = "BHASubstanceUseDisorderQuestionnaire"
 * title = "BHA Substance Use Disorder Questionnaire"

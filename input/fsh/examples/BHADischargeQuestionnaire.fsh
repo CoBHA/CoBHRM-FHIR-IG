@@ -5,7 +5,7 @@ Title: "BHA Discharge Questionnaire"
 Description: "Behavioral Health Administration discharge questionnaire for collecting patient demographic, clinical, and administrative information during discharge process"
 Usage: #definition 
 
-* url = "http://bha.colorado.gov/fhir/bha-test-ig/Questionnaire/BHADischargeQuestionnaire"
+* url = "http://bha.colorado.gov/fhir/bha-ig/Questionnaire/BHADischargeQuestionnaire"
 * version = "1.0.0"
 * name = "BHADischargeQuestionnaire"
 * title = "BHA Discharge Questionnaire"

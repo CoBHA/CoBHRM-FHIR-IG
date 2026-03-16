@@ -13,7 +13,7 @@ Description: "BHA episode profile for client admissions/services"
 
 
 // * identifier contains BHASOEpisodeId 0..1 MS
-// *  identifier[BHASOEpisodeId].type from https://ratiopbc.github.io/bha-test-ig/ValueSet-bha-episode-id-type-vs (required)
+// *  identifier[BHASOEpisodeId].type from https://ratiopbc.github.io/bha-ig/ValueSet-bha-episode-id-type-vs (required)
 // *  identifier[BHASOEpisodeId].type = BHAEpisodeIdTypeCS#BHASOID "BHASO Episode ID"
 // *  identifier[BHASOEpisodeId].value 1..1 MS
 // *  identifier[BHASOEpisodeId] ^short = "BHASO Admission Identifier (10 characters max)"

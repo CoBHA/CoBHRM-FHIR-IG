@@ -4,7 +4,7 @@ Title: "BHA Primary Substance Use Codes Value Set"
 Description: "Substance use codes for primary substance for BHA services/admissions"
 * ^experimental = false
 
-//* ^url = "http://bha.colorado.gov/fhir/bha-test-ig/ValueSet-bha-substance-use-primary-vs"
+//* ^url = "http://bha.colorado.gov/fhir/bha-ig/ValueSet-bha-substance-use-primary-vs"
 //* ^version = "0.1"
 //* ^status = #draft
 //* ^date = "2025-09-27"

@@ -2,6 +2,10 @@
 This is a draft FHIR implementation guide (IG) to enable standardized behavioral health data exchange and reduce
 provider administrative burden throughout Colorado’s behavioral health ecosystem.
 
+<div markdown="1" class="note-to-balloters">
+Public Comment questions are available in the [Questions](questions.html) page.
+</div>
+
 ### Overview
 
 The [Colorado Behavioral Health Administration (BHA)](https://bha.colorado.gov/) needs to gather information related to BHA clients and their treatment. The majority of this information must be collected from clinical sites. This IG addresses the exchange of relevant information between clinical sites and Colorado Behavioral Health Administrative Service Organizations (BHASOs).

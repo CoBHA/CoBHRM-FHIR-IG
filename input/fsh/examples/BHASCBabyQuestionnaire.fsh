@@ -5,7 +5,7 @@ Title: "BHA Special Connections Baby Questionnaire"
 Description: "Behavioral Health Administration Special Connections baby questionnaire for collecting information about a baby born to a person enrolled in the Special Connections program"
 Usage: #definition 
 
-* url = "http://bha.colorado.gov/fhir/bha-test-ig/Questionnaire/BHASCBabyQuestionnaire"
+* url = "http://bha.colorado.gov/fhir/bha-ig/Questionnaire/BHASCBabyQuestionnaire"
 * version = "1.0.0"
 * name = "BHASCBabyQuestionnaire"
 * title = "BHA Special Connections Baby Questionnaire"
