@@ -24,12 +24,16 @@ Usage: #definition
 * item[+].linkId = "DOB"
 * item[=].text = "Baby Date of Birth"
 * item[=].type = #date
-* item[=].required = true
+* item[=].enableWhen[0].question = "LIVE_BIRTH"
+* item[=].enableWhen[=].operator = #=
+* item[=].enableWhen[=].answerBoolean = true
 
 * item[+].linkId = "WEIGHT_LBS"
 * item[=].text = "Baby Weight Pounds"
 * item[=].type = #decimal
-* item[=].required = true
+* item[=].enableWhen[0].question = "LIVE_BIRTH"
+* item[=].enableWhen[=].operator = #=
+* item[=].enableWhen[=].answerBoolean = true
 * item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
 * item[=].extension[=].valueCoding.system = "http://unitsofmeasure.org"
 * item[=].extension[=].valueCoding.code = #[lb_av]
@@ -37,7 +41,9 @@ Usage: #definition
 * item[+].linkId = "WEIGHT_OZ"
 * item[=].text = "Baby Weight Ounces"
 * item[=].type = #decimal
-* item[=].required = true
+* item[=].enableWhen[0].question = "LIVE_BIRTH"
+* item[=].enableWhen[=].operator = #=
+* item[=].enableWhen[=].answerBoolean = true
 * item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
 * item[=].extension[=].valueCoding.system = "http://unitsofmeasure.org"
 * item[=].extension[=].valueCoding.code = #[oz_av]
@@ -45,20 +51,29 @@ Usage: #definition
 * item[+].linkId = "LAST_NAME"
 * item[=].text = "Baby Last Name"
 * item[=].type = #string
-* item[=].required = true
+* item[=].enableWhen[0].question = "LIVE_BIRTH"
+* item[=].enableWhen[=].operator = #=
+* item[=].enableWhen[=].answerBoolean = true
 
 * item[+].linkId = "FIRST_NAME"
 * item[=].text = "Baby First Name"
 * item[=].type = #string
-* item[=].required = true
+* item[=].enableWhen[0].question = "LIVE_BIRTH"
+* item[=].enableWhen[=].operator = #=
+* item[=].enableWhen[=].answerBoolean = true
 
 * item[+].linkId = "MIDDLE_NAME_INITIAL"
 * item[=].text = "Baby Middle Name or Initial"
 * item[=].type = #string
 * item[=].required = false
+* item[=].enableWhen[0].question = "LIVE_BIRTH"
+* item[=].enableWhen[=].operator = #=
+* item[=].enableWhen[=].answerBoolean = true
 
 * item[+].linkId = "SEX_AT_BIRTH"
 * item[=].text = "Baby Sex at Birth"
 * item[=].type = #choice
-* item[=].required = true
+* item[=].enableWhen[0].question = "LIVE_BIRTH"
+* item[=].enableWhen[=].operator = #=
+* item[=].enableWhen[=].answerBoolean = true
 * item[=].answerValueSet = "http://hl7.org/fhir/ValueSet/administrative-gender"
