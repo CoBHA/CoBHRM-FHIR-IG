@@ -19,7 +19,7 @@ jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#840'
 publisher:
   name: Colorado Behavioral Health Administration
   url: https://bha.colorado.gov
-  email: cdhs_bha_provider_support@state.co.us
+  email: FHIRFeedback@state.co.us
 extension: 
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: trial-use

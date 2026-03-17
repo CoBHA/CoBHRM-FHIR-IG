@@ -3,7 +3,7 @@
 	"type": "fhir.template",
 	"license": "CC-BY-1.0",
 	"description": "Colorado BHA IG Template",
-	"author": "https://github.com/RatioPBC",
+	"author": "https://bha.colorado.gov",
 	"version": "current",
 	"base": "fhir.base.template",
 	"dependencies": {
