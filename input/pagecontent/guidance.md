@@ -8,15 +8,15 @@ and to technology implementers for this and other core healthcare use cases.
 Specifically, the profiles in this IG are based on [US Core STU6]({{site.data.fhir.uscore}}/index.html) where possible. 
 A notable exception is the BHA Service profile, which is based on the [FHIR R4 EpisodeOfCare resource](https://hl7.org/fhir/R4/episodeofcare.html).
 
-### Relationship to the BHA UDM
+### Relationship to the Colorado Behavioral Health Reporting Model (Co-BHRM)
 
-The BHA Unified Data Model (UDM) specifies the full data requirements for BHA reporting. This IG does *not* 
-cover the entirety of the UDM. Instead, the specification provided here reflects the information that must be 
+The Colorado Behavioral Health Reporting Model (Co-BHRM) specifies the full data requirements for BHA reporting. This IG does *not* 
+cover the entirety of the Co-BHRM. Instead, the specification provided here reflects the information that must be 
 captured and transmitted from provider sites to Behavior Health Administrative Service Organizations (BHASOs). 
 
-#### UDM to FHIR Mapping
+#### Co-BHRM to FHIR Mapping
 
-| UDM File                | UDM Field Name                                                                                     | FHIR Path                                                                                                                                     | FHIR Profile or Resource                                                                                                                      |
+| Co-BHRM File                | Co-BHRM Field Name                                                                                     | FHIR Path                                                                                                                                     | FHIR Profile or Resource                                                                                                                      |
 | ----------------------- | -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | Client                  | Effective Date                                                                                     | Provenance.recorded                                                                                                                           | [US Core Provenance]({{site.data.fhir.uscore}}/StructureDefinition-us-core-provenance.html)                                         |
 | Client                  | Colorado PEAK State ID<br>/ Universal ID                                                           | QuestionnaireResponse                                                                                                                         | [US Core QuestionnaireResponse]({{site.data.fhir.uscore}}/StructureDefinition-us-core-questionnaireresponse.html)                    |
@@ -134,9 +134,9 @@ captured and transmitted from provider sites to Behavior Health Administrative S
 {: .grid}
 
 <!-- 
-##### UDM Client File                                             |
+##### Client File                                             |
 
-##### UDM Admission File
+##### Admission File
 
  Note to maintainers: To update or recreate the table above, I suggest using a spreadsheet-to-Markdown converter, such as the one
 at https://tabletomarkdown.com/convert-spreadsheet-to-markdown/ 
@@ -144,7 +144,7 @@ at https://tabletomarkdown.com/convert-spreadsheet-to-markdown/
 
 #### CCAR and DACODS
 
-The UDM incorporates elements of the CCAR and DACODS user manuals, and they may provide additional context for the 
+The Co-BHRM incorporates elements of the CCAR and DACODS user manuals, and they may provide additional context for the 
 information being gathered and transmitted to BHA. Those user manuals are publicly available at the following sites:
 
 - [2025 CCAR User Manual](https://drive.google.com/file/d/123ft3adXsXXWpHKpT3G5YjTozXbcXvmv/view)

@@ -15,7 +15,7 @@ Usage: #definition
 * publisher = "Colorado Behavioral Health Administration"
 * description = "Questionnaire used during a behavioral health episode of care to collect demographic and administrative information from patients receiving behavioral health services"
 
-//todo: add narrative guidance about when this is required. From UDM: "2. Must be provided if client will be paid using government dollars and has enrolled through PEAK. If crisis situation then must have Universal ID"
+//todo: add narrative guidance about when this is required. From CoBHRM: "2. Must be provided if client will be paid using government dollars and has enrolled through PEAK. If crisis situation then must have Universal ID"
 * item[0].linkId = "PEAK_ID"
 * item[=].text = "Colorado PEAK State ID / Universal ID (MEDICAID ID)"
 * item[=].type = #string

@@ -18,7 +18,7 @@ Usage: #example
 * telecom[0].system = #phone
 * telecom[=].value = "(+1) 555-555-5555"
 * telecom[+].system = #email
-* telecom[=].value = "hq@chc.org"
+* telecom[=].value = "hq@chc.example.org"
 * address.line = "100 Hope Place"
 * address.city = "Denver"
 * address.state = "CO"
