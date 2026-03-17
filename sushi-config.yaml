@@ -14,6 +14,7 @@ fhirVersion: 4.0.1
 copyrightYear: 2025+
 releaseLabel: ci-build
 jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#840'
+license: "CC-BY-4.0"
 
 # Publisher information
 publisher:
