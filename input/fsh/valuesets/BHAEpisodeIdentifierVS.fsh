@@ -1,6 +1,6 @@
 ValueSet: BHAEpisodeIdentifierVS
 Id: bha-episode-identifier-vs
-Title: "BHA Episode Identifier Codes Value Set VS"
+Title: "ValueSet for BHA Episode Identifier Codes"
 Description: "Episode identifiers for BHA services/admissions"
 * ^experimental = false
 

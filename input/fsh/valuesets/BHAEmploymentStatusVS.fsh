@@ -1,6 +1,6 @@
 ValueSet: BHAEmploymentStatusVS
 Id: bha-employment-status-vs
-Title: "BHA Employment Status VS"
+Title: "ValueSet for BHA Employment Status"
 Description: "Value set for employment statuses used in BHA episodes"
 * ^experimental = false
 //* ^url = "http://bha.colorado.gov/fhir/bha-ig/ValueSet-bha-employment-status"

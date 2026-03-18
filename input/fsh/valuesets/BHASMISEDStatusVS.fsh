@@ -1,6 +1,6 @@
 ValueSet: BHASMISEDStatusVS
 Id: bha-smi-sed-status-vs
-Title: "BHA SMI / SED Statuses Value Set"
+Title: "ValueSet for BHA SMI / SED Statuses"
 Description: "SMI / SED Statuses for BHA services/admissions."
 * ^experimental = false
 

@@ -1,6 +1,6 @@
 ValueSet: BHASubstanceUseSecondaryTertiaryVS
 Id: bha-substance-use-secondary-tertiary-vs
-Title: "BHA Secondary and Tertiary Substance Use Codes Value Set"
+Title: "ValueSet for BHA Secondary and Tertiary Substance Use"
 Description: "Substance use codes for secondary and tertiary substance for BHA services/admissions"
 * ^experimental = false
 
