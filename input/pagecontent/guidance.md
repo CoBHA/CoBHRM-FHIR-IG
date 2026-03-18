@@ -10,9 +10,11 @@ A notable exception is the BHA Service profile, which is based on the [FHIR R4 E
 
 ### Relationship to the Colorado Behavioral Health Reporting Model (Co-BHRM)
 
-The Colorado Behavioral Health Reporting Model (Co-BHRM) specifies the full data requirements for BHA reporting. This IG does *not* 
-cover the entirety of the Co-BHRM. Instead, the specification provided here reflects the information that must be 
-captured and transmitted from provider sites to Behavior Health Administrative Service Organizations (BHASOs). 
+The Colorado Behavioral Health Reporting Model (Co-BHRM) specifies the full data requirements for BHA reporting. This IG does *not*
+cover the entirety of the Co-BHRM. Instead, the specification provided here defines, in FHIR, the data elements that must be
+captured at clinical sites to support BHA and SAMHSA reporting requirements.
+
+This IG does not prescribe how data is exchanged between clinical sites and Behavioral Health Administrative Service Organizations (BHASOs) or other intermediaries. BHASOs and other organizations involved in the reporting pipeline may adopt, extend, or build upon these FHIR definitions to suit their specific integration workflows.
 
 #### Co-BHRM to FHIR Mapping
 
