@@ -9,7 +9,9 @@ Usage: #example
 * subject = Reference(Patient/example) "Mickey Mouse"
 * authored = "2025-10-28T18:30:40-07:00"
 //* author = Reference(Practitioner/practitioner-1)
-* item[0].linkId = "EVALUATION_DATE"
+* item[+].linkId = "lastUpdated"
+* item[=].answer.valueDateTime = "2025-10-28T18:30:40-07:00"
+* item[+].linkId = "EVALUATION_DATE"
 * item[=].text = "Evaluation Date"
 * item[=].answer.valueDate = "2025-07-15"
 * item[+].linkId = "PREGNANCY_POSTPARTUM_STATUS"

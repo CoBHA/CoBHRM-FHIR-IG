@@ -15,8 +15,13 @@ Usage: #definition
 * publisher = "Colorado Behavioral Health Administration"
 * description = "Questionnaire used during a behavioral health episode of care to collect severity information about a mental health or substance use diagnosis"
 
+* item[+].linkId = "lastUpdated"
+* item[=].text = "Last Updated DateTime of the data in the QuestionnaireResponse"
+* item[=].type = #dateTime
+* item[=].required = true
+
 //todo: consider how to implement restrictions for mh diagnoses only. possibly two questionnaire structures, where mh questionnaire excludes unknown and not collected from value set.
-* item[0].linkId = "SMI_SED_STATUS"
+* item[+].linkId = "SMI_SED_STATUS"
 * item[=].text = "SMI/SED Status"
 * item[=].type = #choice
 * item[=].required = true

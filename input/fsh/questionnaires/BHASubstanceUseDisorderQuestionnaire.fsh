@@ -16,7 +16,12 @@ Usage: #definition
 * description = "Behavioral Health Administration substance use disorder questionnaire for collecting substance use information from a person receiving behavioral health services"
 
 //todo: add narrative guidance somewhere of the rule that the ASAM level of care must match the provider's ASAM level of care in LADDERS
-* item[0].linkId = "ASAM_LEVEL_OF_CARE"
+* item[+].linkId = "lastUpdated"
+* item[=].text = "Last Updated DateTime of the data in the QuestionnaireResponse"
+* item[=].type = #dateTime
+* item[=].required = true
+
+* item[+].linkId = "ASAM_LEVEL_OF_CARE"
 * item[=].text = "ASAM Level of Care"
 * item[=].type = #choice
 * item[=].required = false

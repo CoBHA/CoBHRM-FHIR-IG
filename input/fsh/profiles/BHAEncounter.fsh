@@ -3,6 +3,7 @@ Parent: $us-core-encounter
 Id: bha-encounter
 Title: "Colorado BHA Encounter Profile"
 Description: "Encounter profile for client visits and encounters related to BHA episodes"
+* meta.lastUpdated MS
 // * status MS
 // * class MS
 // * subject 1..1 MS

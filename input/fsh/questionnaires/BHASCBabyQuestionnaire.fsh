@@ -16,7 +16,12 @@ Usage: #definition
 * description = "Behavioral Health Administration Special Connections baby questionnaire for collecting information about a baby born to a person enrolled in the Special Connections program"
 
 
-* item[0].linkId = "LIVE_BIRTH"
+* item[+].linkId = "lastUpdated"
+* item[=].text = "Last Updated DateTime of the data in the QuestionnaireResponse"
+* item[=].type = #dateTime
+* item[=].required = true
+
+* item[+].linkId = "LIVE_BIRTH"
 * item[=].text = "Live Birth"
 * item[=].type = #boolean
 * item[=].required = true

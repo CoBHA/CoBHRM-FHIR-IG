@@ -4,9 +4,10 @@ Id: bha-client
 Title: "Colorado BHA Client Profile"
 Description: "Ths profile specifies the mandatory and must support data elements for capturing demographic information 
 for Colorado BHA clients in order to support the BHA's annual reporting requirements."
+* meta.lastUpdated MS
 
 * identifier 1..* MS
-* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.type = #type
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
 

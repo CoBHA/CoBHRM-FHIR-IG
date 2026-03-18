@@ -15,7 +15,12 @@ Usage: #definition
 * publisher = "Colorado Behavioral Health Administration"
 * description = "Behavioral Health Administration Special Connections Pregnancy/Postpartum Risk Screening questionnaire for collecting information about a pregnant or postpartum person's risk factors"
 
-* item[0].linkId = "EVALUATION_DATE"
+* item[+].linkId = "lastUpdated"
+* item[=].text = "Last Updated DateTime of the data in the QuestionnaireResponse"
+* item[=].type = #dateTime
+* item[=].required = true
+
+* item[+].linkId = "EVALUATION_DATE"
 * item[=].text = "Evaluation Date"
 * item[=].type = #date
 * item[=].required = true

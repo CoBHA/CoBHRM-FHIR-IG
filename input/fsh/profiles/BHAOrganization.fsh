@@ -6,7 +6,7 @@ Description: "Provider Organization profile for Colorado BHASO clinics"
 
 * identifier 1..* MS
 * identifier[NPI] 1..1 MS
-//* identifier ^slicing.discriminator.type = #pattern
+//* identifier ^slicing.discriminator.type = #type
 //* identifier ^slicing.discriminator.path = "$this"
 //* identifier ^slicing.rules = #open
 

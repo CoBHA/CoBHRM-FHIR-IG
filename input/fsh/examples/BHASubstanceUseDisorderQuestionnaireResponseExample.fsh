@@ -9,7 +9,9 @@ Usage: #example
 * subject = Reference(Patient/example) "Mickey Mouse"
 * authored = "2025-10-28T18:30:40-07:00"
 //* author = Reference(Practitioner/practitioner-1)
-* item[0].linkId = "ASAM_LEVEL_OF_CARE"
+* item[+].linkId = "lastUpdated"
+* item[=].answer.valueDateTime = "2025-10-28T18:30:40-07:00"
+* item[+].linkId = "ASAM_LEVEL_OF_CARE"
 * item[=].text = "ASAM Level of Care"
 * item[=].answer.valueCoding = BHAASAMLevelOfCareCS#3.1
 * item[+].linkId = "PRIMARY_SUBSTANCE_USE"

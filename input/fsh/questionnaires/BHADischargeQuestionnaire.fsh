@@ -15,7 +15,12 @@ Usage: #definition
 * publisher = "Colorado Behavioral Health Administration"
 * description = "Questionnaire used to collect demographic and administrative information from patients being discharged from behavioral health services"
 
-* item[0].linkId = "END_OF_TREATMENT_REASON"
+* item[+].linkId = "lastUpdated"
+* item[=].text = "Last Updated DateTime of the data in the QuestionnaireResponse"
+* item[=].type = #dateTime
+* item[=].required = true
+
+* item[+].linkId = "END_OF_TREATMENT_REASON"
 * item[=].text = "End of Treatment Reason"
 * item[=].type = #choice
 * item[=].required = false
