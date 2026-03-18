@@ -26,4 +26,5 @@ There was some use of questionnaire-unit, with response using Quantity. This is 
 
 ### tooling issues
 
-- The Questionnaire rendering should have an Examples tab with the QuestionnaireResponse examples. This is not working as expected. I am trying to track this down. 
+- The Questionnaire rendering should have an Examples tab with the QuestionnaireResponse examples. This is not working as expected. I am trying to track this down. -- https://github.com/HL7/fhir-ig-publisher/issues/1271
+- Questionnaire table rendering doesn't show enableWhen properly -- https://github.com/HL7/fhir-ig-publisher/issues/1217

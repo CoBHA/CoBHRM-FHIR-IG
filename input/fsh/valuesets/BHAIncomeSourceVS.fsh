@@ -1,6 +1,6 @@
 ValueSet: BHAIncomeSourceVS
 Id: bha-income-source-vs
-Title: "BHA Income Source"
+Title: "BHA Income Source VS"
 Description: "Value set for income sources used in BHA admission process"
 * ^experimental = false
 //* ^url = "http://bha.colorado.gov/fhir/bha-ig/ValueSet-bha-income-source"

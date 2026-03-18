@@ -5,8 +5,8 @@
 	"description": "Colorado BHA IG Template",
 	"author": "https://bha.colorado.gov",
 	"version": "current",
-	"base": "fhir.base.template",
+	"base": "fhir2.base.template",
 	"dependencies": {
-		"fhir.base.template": "current"
+		"fhir2.base.template": "current"
 	}
 }

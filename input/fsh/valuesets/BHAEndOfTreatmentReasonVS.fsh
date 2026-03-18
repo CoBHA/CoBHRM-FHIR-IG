@@ -1,6 +1,6 @@
 ValueSet: BHAEndOfTreatmentReasonVS
 Id: bha-end-of-treatment-reason-vs
-Title: "BHA End of Treatment Reasons Value Set"
+Title: "BHA End of Treatment Reasons Value Set VS"
 Description: "End of Treatment Reasons for BHA services/admissions."
 * ^experimental = false
 

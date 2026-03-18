@@ -1,6 +1,6 @@
 ValueSet: BHAASAMLevelOfCareVS
 Id: bha-asam-level-of-care-vs
-Title: "BHA ASAM Levels of Care Value Set"
+Title: "BHA ASAM Levels of Care Value Set VS"
 Description: "ASAM Levels of Care for BHA services/admissions."
 * ^experimental = false
 //* ^url = "http://bha.colorado.gov/fhir/bha-ig/ValueSet-bha-asam-level-of-care-vs"

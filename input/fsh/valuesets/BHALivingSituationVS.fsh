@@ -1,6 +1,6 @@
 ValueSet: BHALivingSituationVS
 Id: bha-living-situation-vs
-Title: "BHA Living Situation"
+Title: "BHA Living Situation VS"
 Description: "Value set for living situations used in BHA episodes"
 * ^experimental = false
 //* ^url = "http://bha.colorado.gov/fhir/bha-ig/ValueSet-bha-living-situation"

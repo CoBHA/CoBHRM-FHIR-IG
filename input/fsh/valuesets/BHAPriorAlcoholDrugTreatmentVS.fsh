@@ -1,6 +1,6 @@
 ValueSet: BHAPriorAlcoholDrugTreatmentVS
 Id: bha-prior-alcohol-drug-treatment-vs
-Title: "BHA Prior Alcohol/Drug Treatment"
+Title: "BHA Prior Alcohol/Drug Treatment VS"
 Description: "Value set for prior alcohol/drug treatment used in BHA Special Connections"
 * ^experimental = false
 //* ^url = "http://bha.colorado.gov/fhir/bha-ig/ValueSet-bha-prior-alcohol-drug-treatment-vs"
