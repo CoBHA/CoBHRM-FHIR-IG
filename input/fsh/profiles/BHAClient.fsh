@@ -53,3 +53,31 @@ for Colorado BHA clients in order to support the BHA's annual reporting requirem
 * address.district from BHACountiesVS 
 * maritalStatus 1..1 MS
 * extension contains http://hl7.org/fhir/us/military-service/StructureDefinition/military-service-veteran-status named USVeteranStatus 0..1 MS
+
+Mapping: BHAClient-Mapping
+Source: BHAClient
+Target: "CoBHRM"
+Title: "Mapping from CO BHA CoBHRM to BHA Client (Patient) Profile"
+* -> "CoBHRM"
+* meta.lastUpdated -> "Client: Effective Date"
+* identifier[SSN] -> "Client: Social Security Number"
+* birthDate -> "Client: DOB"
+* name.family -> "Client: Last Name"
+* name.given -> "Client: First Name"
+* name.given -> "Client: Middle Name"
+* name.suffix -> "Client: Name Suffix"
+* address.line -> "Client: Last known address line 1"
+* address.line -> "Client: Last known address line 2"
+* address.city -> "Client: Last Known city"
+* address.postalCode -> "Client: Zip Code of Residence"
+* address.district -> "Client: County of Residence"
+* extension[bharace] -> "Client: Race Codes"
+* extension[ethnicity] -> "Client: Ethnicity"
+* extension[USVeteranStatus] -> "Client: Veteran Status"
+* communication.language -> "Client: Household Language"
+* extension[birthsex] -> "Client: Sex at Birth"
+* extension[genderIdentity] -> "Client: Gender Identity"
+
+
+
+
