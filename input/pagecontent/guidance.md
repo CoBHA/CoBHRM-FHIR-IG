@@ -16,6 +16,29 @@ captured and transmitted from provider sites to Behavior Health Administrative S
 
 #### Co-BHRM to FHIR Mapping
 
+| Co-BHRM File            | FHIR Profile or Resource                                                                                                            |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Client                  | [CO BHA Client Profile](StructureDefinition-bha-client.html)                                                                        |
+| Client                  | [BHA Client Questionnaire](Questionnaire-BHAClientQuestionnaire.html)                                                               |
+| Client                  | [US Core Observation Sexual Orientation]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-sexual-orientation.html) |
+| Admission               | [CO BHA Encounter](StructureDefinition-bha-encounter.html)                                                                          |
+| Admission               | [US Core Organization]({{site.data.fhir.uscore}}/StructureDefinition-us-core-organization.html)                                     |
+| Admission               | [CO BHA Episode Profile](StructureDefinition-bha-episode.html)                                                                      |
+| Admission               | [BHA Admission Questionnaire](Questionnaire-BHAAdmissionQuestionnaire.html)                                                         |
+| Admission               | [US Core Observation Pregnancy Status]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-pregnancystatus.html)      |
+| Discharge               | [CO BHA Encounter](StructureDefinition-bha-encounter.html)                                                                          |
+| Discharge               | [CO BHA Episode Profile](StructureDefinition-bha-episode.html)                                                                      |
+| Discharge               | [BHA Discharge Questionnaire](Questionnaire-BHAADischargeQuestionnaire.html)                                                        |
+| Diagnosis               | [CO BHA Episode Profile](StructureDefinition-bha-episode.html)                                                                      |
+| Diagnosis               | [BHA Diagnosis Questionnaire](Questionnaire-BHADiagnosisQuestionnaire.html)                                                         |
+| Substance Use Disorder  | [BHA Substance Use Disorder Questionnaire](BHASubstanceUseDisorderQuestionnaire.html)                                               |
+| SC Pregnancy/PostPartum | [BHA Special Connections Pregnancy/Postpartum Risk Screening Questionnaire](BHASCPregnanceyPostpartumRiskQuestionnaire.html)        |
+| SC Baby                 | [BHA SC Baby Questionnaire](Questionnaire-BHASCBabyQuestionnaire.html)                                                              |
+{: .grid}
+
+
+##### Full Mapping
+
 | Co-BHRM File            | Co-BHRM Field Name                                                                                 | FHIR Element shorthand                                                                                                                        | FHIR Profile or Resource                                                                                                            |
 | ----------------------- | -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Client                  | Effective Date                                                                                     | Patient.meta.lastUpdated                                                                                                                      | [CO BHA Client Profile](StructureDefinition-bha-client.html)                                                                        |

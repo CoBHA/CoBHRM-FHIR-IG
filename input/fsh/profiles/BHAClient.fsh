@@ -7,7 +7,7 @@ for Colorado BHA clients in order to support the BHA's annual reporting requirem
 * meta.lastUpdated MS
 
 * identifier 1..* MS
-* identifier ^slicing.discriminator.type = #type
+* identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
 
@@ -28,6 +28,7 @@ for Colorado BHA clients in order to support the BHA's annual reporting requirem
 * identifier[SSN].system 1..1 MS
 * identifier[SSN].system = "http://hl7.org/fhir/sid/us-ssn"
 * identifier[SSN].value 1..1 MS
+* identifier[SSN].type 1..1 MS
 * identifier[SSN].type = http://terminology.hl7.org/CodeSystem/v2-0203#SS
 * identifier[SSN] ^short = "The client's Social Security number"
 
