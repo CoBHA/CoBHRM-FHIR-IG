@@ -16,7 +16,7 @@ Description: "Encounter profile for client visits and encounters related to BHA 
 * period.end 1..1 MS
 
 * diagnosis MS
-* diagnosis.condition only Reference(bha-episode-diagnosis) 
+* diagnosis.condition only Reference(BHAEpisodeDiagnosis) 
 * diagnosis.condition MS
 * diagnosis.use MS
 * diagnosis.use from BHADiagnosisTypeVS
