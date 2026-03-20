@@ -8,13 +8,16 @@ Public Comment questions are available in the [Questions](questions.html) page.
 
 ### Overview
 
-The [Colorado Behavioral Health Administration (BHA)](https://bha.colorado.gov/) needs to gather information related to BHA clients and their treatment. The majority of this information must be collected from clinical sites. This IG addresses the exchange of relevant information between clinical sites and Colorado Behavioral Health Administrative Service Organizations (BHASOs).
+On July 1, 2026, the [Colorado Behavioral Health Administration (BHA)](https://bha.colorado.gov/) will begin collecting client-level data according to the specifications of the Colorado Behavioral Health Reporting Model (CoBHRM), replacing two legacy reporting systems:
 
-This IG includes:
+- CCAR (Colorado Client Assessment Record) -- mental health treatment data.
+- DACODS (Drug and Alcohol Coordinated Data System) -- substance use disorder (SUD) treatment data.
 
-- Profiles for BHA client demographic information, admission and discharge information, diagnosis information, and other related information
-- Terminology specifications (code systems and value sets) for BHA-specific codes
-- Example instances of FHIR resources demonstrating how FHIR data in the formats specified here can capture the information for example BHA client criteria
+This IG addresses the exchange of CoBHRM deliverables between providers, intermediaries, and the BHA. It includes the following:
+
+- Profiles for BHA client demographic information, admission and discharge information, diagnosis information, and other related information.
+- Terminology specifications (code systems and value sets) for BHA-specific codes.
+- Example instances of FHIR resources demonstrating how FHIR data in the formats specified here can capture the information for example BHA client criteria.
 
 ### Getting Started
 

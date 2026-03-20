@@ -1,5 +1,5 @@
 
-This Implementation Guide is published as part of a project funded by [Colorado Behavioral Health Administration (BHA)](https://bha.colorado.gov/). The purpose of this project is to enable standardized behavioral health data exchange and reduce provider administrative burden throughout Colorado’s behavioral health ecosystem.
+This Implementation Guide is published by [Colorado Behavioral Health Administration (BHA)](https://bha.colorado.gov/) with support from the [Office of eHealth Innovation](https://oehi.colorado.gov). The purpose of this project is to enable standardized behavioral health data exchange and reduce provider administrative burden throughout Colorado’s behavioral health ecosystem.
 
 ### Download
 
@@ -9,7 +9,7 @@ You can download:
 - the definition resources in [json](../definitions.json.zip), [xml](../definitions.xml.zip), [ttl](../definitions.ttl.zip), or [csv](../csvs.zip) format, or
 - the example resources in [json](../examples.json.zip), [xml](../examples.xml.zip) or [ttl](../examples.ttl.zip) format.
 
-The source code for this Implementation Guide can be found on [RatioPBC Github Repo](https://github.com/CoBHA/CoBHRM-FHIR-IG).
+The source code for this Implementation Guide can be found in [the BHA's GitHub Repository](https://github.com/CoBHA/CoBHRM-FHIR-IG).
 
 #### Cross Version Analysis
 
