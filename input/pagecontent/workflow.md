@@ -47,4 +47,3 @@ sequenceDiagram
         EHR-->>BHA: 200 OK — Bundle of SC Baby QuestionnaireResponse resources
     end
 ```
-
