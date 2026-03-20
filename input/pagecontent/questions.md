@@ -10,4 +10,5 @@ In addition to the IG content, here are some specific areas of concern where the
 6. How might diagnosis information be better linked to episodes of care?
 7. How does this IG align with existing EHR data structures, capabilities, and workflows?
 8. Please share details about any implementation barriers, dependencies, and timeline considerations we should consider.
+9. The workflow in the [Workflow](workflow.html) page is a generalized workflow for how CO BHA will request the needed data from the providers using the Profiles and Questionnaires defined in this IG.  Do you have any feedback on that workflow, including any concerns about the assumptions it makes?
 
