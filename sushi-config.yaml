@@ -25,7 +25,7 @@ extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: trial-use
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
-    valueInteger: 0
+    valueInteger: 1
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm-support
     valueMarkdown: |
       This is a work in progress, and not yet ready for production use.
@@ -73,19 +73,19 @@ pages:
     generation: markdown
     extension: 
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: informative
+        valueCode: normative
   questionnaires.md:
     title: Questionnaires
     generation: markdown
     extension: 
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: informative
+        valueCode: normative
   terminology.md:
     title: Terminology
     generation: markdown
     extension: 
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: informative
+        valueCode: normative
   workflow.md:
     title: Workflow
     generation: markdown

@@ -1,4 +1,4 @@
-Please see the [Artifacts](artifacts.html) page for the complete list of code systems and value sets used in this implementation guide.
+The following vocabularies SHALL be used in this Implementation Guide to represent the data that CoBHRM needs. Some of the code systems and value sets are defined in this IG, and some are from [us-core]({{site.data.fhir.uscore}}) or other standard terminologies. The code systems and value sets defined in this IG are based on the us-core code systems and value sets, and use the us-core code systems and value sets as their parent.  This allows for maximum reuse of the us-core code systems and value sets, while still allowing for the necessary customizations to meet the needs of CoBHRM.
 
 ### Code Systems defined in this IG
 

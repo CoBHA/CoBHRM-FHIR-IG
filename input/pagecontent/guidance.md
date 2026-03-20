@@ -28,7 +28,7 @@ captured and transmitted from provider sites to Behavior Health Administrative S
 | Discharge               | [CO BHA Encounter](StructureDefinition-bha-encounter.html)                                                                                |
 | Discharge               | [CO BHA Episode Profile](StructureDefinition-bha-episode.html)                                                                            |
 | Discharge               | [BHA Discharge Questionnaire](Questionnaire-BHADischargeQuestionnaire.html)                                                               |
-| Diagnosis               | [CO BHA Episode Diagnosis Profile](StructureDefinition-bha-episode-diagnosis.html)                                                            |
+| Diagnosis               | [CO BHA Episode Diagnosis Profile](StructureDefinition-BHAEpisodeDiagnosis.html)                                                            |
 | Diagnosis               | [CO BHA Encounter](StructureDefinition-bha-encounter.html)                                                                                |
 | Diagnosis               | [CO BHA Episode Profile](StructureDefinition-bha-episode.html)                                                                            |
 | Diagnosis               | [BHA Diagnosis Questionnaire](Questionnaire-BHADiagnosisQuestionnaire.html)                                                               |
@@ -175,28 +175,3 @@ information being gathered and transmitted to BHA. Those user manuals are public
 - [Colorado Client Assessment Record (CCAR) resource page](https://bha.colorado.gov/for-service-providers/technology-and-data-systems/colorado-client-assessment-record-ccar)
 - [2025 DACODS User Manual](https://drive.google.com/file/d/1hCSoQW7Nx5XidqqcSIfTQ9cBGlsrF_hC/view) 
 - [CO BHA Treatment Management System (TMS) resource page](https://bha.colorado.gov/help/provider-support/technology-and-data-systems-support/treatment-management-system-tms)
-
-### Key US Core Profiles
-
-Certain US Core profiles are necessary for capturing the information needed for BHA reporting, without any additional 
-constraint or modification. Those profiles therefore do not have corresponding BHA profiles in this IG, but implementers 
-will need to be aware of them in order to ensure the full set of data is transmitted.
-
-The US Core profiles that are used for BHA reporting without further constraint are:
-
-- [US Core Condition Encounter Diagnosis Profile]({{site.data.fhir.uscore}}/StructureDefinition-us-core-condition-encounter-diagnosis.html)
-- [US Core Observation Pregnancy Status Profile]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-pregnancystatus.html)
-- [US Core Observation Sexual Orientation Profile]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-sexual-orientation.html)
-<!-- - [US Core Organization Profile]({{site.data.fhir.uscore}}/StructureDefinition-us-core-organization.html) -->
-- [US Core Provenance Profile]({{site.data.fhir.uscore}}/StructureDefinition-us-core-provenance.html)
-- [US Core QuestionnaireResponse Profile]({{site.data.fhir.uscore}}/StructureDefinition-us-core-questionnaireresponse.html)
-<!-- - [US Core RelatedPerson Profile]({{site.data.fhir.uscore}}/StructureDefinition-us-core-relatedperson.html) -->
-
-#### Profile-specific Guidance
-
-In some cases, the BHA implementation guide leverages US Core profiles but has additional data requirements:
-
-- US Core Provenance <b>shall</b> also be supported for the BHA Episode Profile.
-- US Core Observation Sexual Orientation <b>shall</b> be supported and populated for all BHA Clients. 
-
-See the examples listed on the [Artifacts](artifacts.html) page for instances of how those profiles are used.
