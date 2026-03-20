@@ -1,6 +1,6 @@
 ValueSet: BHAEducationLevelVS
 Id: bha-education-level-vs
-Title: "BHA Education Level"
+Title: "ValueSet for BHA Education Level"
 Description: "Value set for education levels used in BHA episodes"
 * ^experimental = false
 //* ^url = "http://bha.colorado.gov/fhir/bha-ig/ValueSet-bha-education-level"

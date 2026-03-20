@@ -1,6 +1,6 @@
 ValueSet: BHASubstanceUseRouteOfAdministrationVS
 Id: bha-substance-use-route-of-administration-vs
-Title: "BHA Substance Use Routes of Administration Value Set"
+Title: "ValueSet for BHA Substance Use Routes of Administration"
 Description: "Substance use routes of administration for BHA services/admissions."
 * ^experimental = false
 

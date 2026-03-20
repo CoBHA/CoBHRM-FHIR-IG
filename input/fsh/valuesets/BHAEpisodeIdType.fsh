@@ -1,6 +1,6 @@
 ValueSet: BHAEpisodeIdTypeVS
 Id: bha-episode-id-type-vs
-Title: "BHA Episode ID Types"
+Title: "ValueSet for BHA Episode ID Types"
 Description: "Allowed values for Episode ID types"
 * ^experimental = false
 

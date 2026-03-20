@@ -1,6 +1,6 @@
 ValueSet: BHASubstanceUsePrimaryVS
 Id: bha-substance-use-primary-vs
-Title: "BHA Primary Substance Use Codes Value Set"
+Title: "ValueSet for BHA Primary Substance Use Codes"
 Description: "Substance use codes for primary substance for BHA services/admissions"
 * ^experimental = false
 

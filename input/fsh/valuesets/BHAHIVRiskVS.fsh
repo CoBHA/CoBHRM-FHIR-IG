@@ -1,6 +1,6 @@
 ValueSet: BHAHIVRiskVS
 Id: bha-hiv-risk-vs
-Title: "BHA HIV Risk"
+Title: "ValueSet for BHA HIV Risk"
 Description: "Value set for HIV risk used in BHA Special Connections"
 * ^experimental = false
 //* ^url = "http://bha.colorado.gov/fhir/bha-ig/ValueSet-bha-hiv-risk-vs"

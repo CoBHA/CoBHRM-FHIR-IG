@@ -8,15 +8,18 @@ Public Comment questions are available in the [Questions](questions.html) page.
 
 ### Overview
 
-The [Colorado Behavioral Health Administration (BHA)](https://bha.colorado.gov/) needs to gather information related to BHA clients and their treatment for state and federal (SAMHSA) reporting. The majority of this information originates at clinical sites. This IG specifies the data elements required for BHA reporting, expressed as FHIR profiles, questionnaires, and terminology.
+On July 1, 2026, the [Colorado Behavioral Health Administration (BHA)](https://bha.colorado.gov/) will begin collecting client-level data according to the specifications of the Colorado Behavioral Health Reporting Model (CoBHRM), replacing two legacy reporting systems:
 
-Data intermediaries who report into BHA — such as Behavioral Health Administrative Service Organizations (BHASOs) — are encouraged to build upon this specification to meet their own integration and operational needs. This IG as currently drafted is not intended to constrain the technical approach used between BHASOs and clinical sites; rather, it defines the common data content that must ultimately be captured and reported.
+- CCAR (Colorado Client Assessment Record) -- mental health treatment data.
+- DACODS (Drug and Alcohol Coordinated Data System) -- substance use disorder (SUD) treatment data.
 
-This IG includes:
+This IG addresses the exchange of CoBHRM deliverables between providers, intermediaries, and the BHA. It includes the following:
 
-- Profiles for BHA client demographic information, admission and discharge information, diagnosis information, and other related information
-- Terminology specifications (code systems and value sets) for BHA-specific codes
-- Example instances of FHIR resources demonstrating how FHIR data in the formats specified here can capture the information for example BHA client criteria
+- Profiles for BHA client demographic information, admission and discharge information, diagnosis information, and other related information.
+- Terminology specifications (code systems and value sets) for BHA-specific codes.
+- Example instances of FHIR resources demonstrating how FHIR data in the formats specified here can capture the information for example BHA client criteria.
+
+Data intermediaries who report into BHA — such as Behavioral Health Administrative Service Organizations (BHASOs) — are encouraged to build upon this specification to meet their own operational needs.
 
 ### Getting Started
 

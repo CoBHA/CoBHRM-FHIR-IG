@@ -13,7 +13,7 @@ version: 0.1.0-current  # using semver. The "-current" is used for CI builds.
 fhirVersion: 4.0.1
 copyrightYear: 2025+
 releaseLabel: ci-build
-jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#840'
+jurisdiction: 'urn:iso:std:iso:3166#USA'
 license: "CC-BY-4.0"
 
 # Publisher information

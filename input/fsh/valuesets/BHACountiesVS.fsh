@@ -1,6 +1,6 @@
 ValueSet: BHACountiesVS
 Id: bha-counties-vs
-Title: "BHA Counties Value Set"
+Title: "ValueSet for BHA Counties"
 Description: "Allowed client county values for BHA reporting"
 * ^experimental = false
 
