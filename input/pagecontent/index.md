@@ -10,7 +10,7 @@ Public Comment questions are available in the [Questions](questions.html) page.
 
 The [Colorado Behavioral Health Administration (BHA)](https://bha.colorado.gov/) needs to gather information related to BHA clients and their treatment for state and federal (SAMHSA) reporting. The majority of this information originates at clinical sites. This IG specifies the data elements required for BHA reporting, expressed as FHIR profiles, questionnaires, and terminology.
 
-Data intermediaries who report into BHA — such as Behavioral Health Administrative Service Organizations (BHASOs) — may build upon this specification to meet their own integration and operational needs. This IG is not intended to constrain the technical approach used between BHASOs and clinical sites; rather, it defines the common data content that must ultimately be captured and reported.
+Data intermediaries who report into BHA — such as Behavioral Health Administrative Service Organizations (BHASOs) — are encouraged to build upon this specification to meet their own integration and operational needs. This IG as currently drafted is not intended to constrain the technical approach used between BHASOs and clinical sites; rather, it defines the common data content that must ultimately be captured and reported.
 
 This IG includes:
 
