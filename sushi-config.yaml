@@ -86,6 +86,12 @@ pages:
     extension: 
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
+  workflow.md:
+    title: Workflow
+    generation: markdown
+    extension: 
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
   about.md:
     title: About
     generation: markdown
@@ -111,6 +117,7 @@ menu:
   Profiles: profiles.html
   Questionnaires: questionnaires.html
   Terminology: terminology.html
+  Workflow: workflow.html
   Artifacts: artifacts.html
   About: 
     About: about.html

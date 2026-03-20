@@ -7,4 +7,5 @@ In addition to the content of this IG, here are some questions asked of those co
 3. We are looking to use the .meta.lastUpdated field to track when a resource was last updated.  Do you have any concerns about that?
 4. The Baby Questionnaire Response requires that the QuestionnaireResponse.subject reference a Patient resource.  The expectation is that this is populated with the Mother's Patient reference. Alternative is to not use us-core QuestionnaireResponse. Do you have any concerns about that?
 
+
 -- insert questions from Sean here --

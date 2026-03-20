@@ -28,6 +28,8 @@ captured and transmitted from provider sites to Behavior Health Administrative S
 | Discharge               | [CO BHA Encounter](StructureDefinition-bha-encounter.html)                                                                                |
 | Discharge               | [CO BHA Episode Profile](StructureDefinition-bha-episode.html)                                                                            |
 | Discharge               | [BHA Discharge Questionnaire](Questionnaire-BHADischargeQuestionnaire.html)                                                               |
+| Diagnosis               | [CO BHA Episode Diagnosis Profile](StructureDefinition-bha-episode-diagnosis.html)                                                            |
+| Diagnosis               | [CO BHA Encounter](StructureDefinition-bha-encounter.html)                                                                                |
 | Diagnosis               | [CO BHA Episode Profile](StructureDefinition-bha-episode.html)                                                                            |
 | Diagnosis               | [BHA Diagnosis Questionnaire](Questionnaire-BHADiagnosisQuestionnaire.html)                                                               |
 | Substance Use Disorder  | [BHA Substance Use Disorder Questionnaire](Questionnaire-BHASubstanceUseDisorderQuestionnaire.html)                                       |
