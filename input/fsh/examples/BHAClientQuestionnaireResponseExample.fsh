@@ -10,7 +10,9 @@ Usage: #example
 * subject = Reference(Patient/example) "Mickey Mouse"
 * authored = "2025-10-28T18:30:40-07:00"
 // * author = Reference(Practitioner/practitioner-1)
-* item[0].linkId = "PEAK_ID"
+* item[+].linkId = "lastUpdated"
+* item[=].answer.valueDateTime = "2025-10-28T18:30:40-07:00"
+* item[+].linkId = "PEAK_ID"
 * item[=].text = "Colorado PEAK State ID / Universal ID (MEDICAID ID)"
 * item[=].answer.valueString = "X000001"
 * item[+].linkId = "CCAR_ID"

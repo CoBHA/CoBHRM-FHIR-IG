@@ -9,6 +9,8 @@ Usage: #example
 * subject = Reference(Patient/example) "Mickey Mouse"
 * authored = "2025-10-28T18:30:40-07:00"
 //* author = Reference(Practitioner/practitioner-1)
-* item[0].linkId = "SMI_SED_STATUS"
+* item[+].linkId = "lastUpdated"
+* item[=].answer.valueDateTime = "2025-10-28T18:30:40-07:00"
+* item[+].linkId = "SMI_SED_STATUS"
 * item[=].text = "SMI/SED Status"
 * item[=].answer.valueCoding = BHASMISEDStatusCS#1

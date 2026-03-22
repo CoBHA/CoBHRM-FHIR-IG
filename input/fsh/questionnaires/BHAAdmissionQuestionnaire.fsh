@@ -15,8 +15,13 @@ Usage: #definition
 * publisher = "Colorado Behavioral Health Administration"
 * description = "Questionnaire used during admission process to collect demographic, social, clinical, and administrative information from patients entering behavioral health services"
 
+* item[+].linkId = "lastUpdated"
+* item[=].text = "Last Updated DateTime of the data in the QuestionnaireResponse"
+* item[=].type = #dateTime
+* item[=].required = true
+
 // Contact and Appointment Information Section
-* item[0].linkId = "FIRST_CONTACT_DATE"
+* item[+].linkId = "FIRST_CONTACT_DATE"
 * item[=].text = "Date of First Contact"
 * item[=].type = #date
 * item[=].required = true

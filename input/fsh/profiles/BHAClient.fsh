@@ -4,9 +4,10 @@ Id: bha-client
 Title: "Colorado BHA Client Profile"
 Description: "Ths profile specifies the mandatory and must support data elements for capturing demographic information 
 for Colorado BHA clients in order to support the BHA's annual reporting requirements."
+* meta.lastUpdated MS
 
 * identifier 1..* MS
-* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
 
@@ -27,6 +28,7 @@ for Colorado BHA clients in order to support the BHA's annual reporting requirem
 * identifier[SSN].system 1..1 MS
 * identifier[SSN].system = "http://hl7.org/fhir/sid/us-ssn"
 * identifier[SSN].value 1..1 MS
+* identifier[SSN].type 1..1 MS
 * identifier[SSN].type = http://terminology.hl7.org/CodeSystem/v2-0203#SS
 * identifier[SSN] ^short = "The client's Social Security number"
 
@@ -51,3 +53,31 @@ for Colorado BHA clients in order to support the BHA's annual reporting requirem
 * address.district from BHACountiesVS 
 * maritalStatus 1..1 MS
 * extension contains http://hl7.org/fhir/us/military-service/StructureDefinition/military-service-veteran-status named USVeteranStatus 0..1 MS
+
+Mapping: BHAClient-Mapping
+Source: BHAClient
+Target: "CoBHRM"
+Title: "Mapping from CO BHA CoBHRM to BHA Client (Patient) Profile"
+* -> "CoBHRM"
+* meta.lastUpdated -> "Client: Effective Date"
+* identifier[SSN] -> "Client: Social Security Number"
+* birthDate -> "Client: DOB"
+* name.family -> "Client: Last Name"
+* name.given -> "Client: First Name"
+* name.given -> "Client: Middle Name"
+* name.suffix -> "Client: Name Suffix"
+* address.line -> "Client: Last known address line 1"
+* address.line -> "Client: Last known address line 2"
+* address.city -> "Client: Last Known city"
+* address.postalCode -> "Client: Zip Code of Residence"
+* address.district -> "Client: County of Residence"
+* extension[bharace] -> "Client: Race Codes"
+* extension[ethnicity] -> "Client: Ethnicity"
+* extension[USVeteranStatus] -> "Client: Veteran Status"
+* communication.language -> "Client: Household Language"
+* extension[birthsex] -> "Client: Sex at Birth"
+* extension[genderIdentity] -> "Client: Gender Identity"
+
+
+
+

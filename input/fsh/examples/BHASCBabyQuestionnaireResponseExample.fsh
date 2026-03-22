@@ -6,10 +6,12 @@ Description: "Example Responses to Special Connections Baby Questionnaire Questi
 Usage: #example
 * questionnaire = Canonical(BHASCBabyQuestionnaire)
 * status = #completed
-* subject = Reference(Patient/example) "Mickey Mouse"
+* subject = Reference(Patient/example) "Minnie Mouse"
 * authored = "2025-10-28T18:30:40-07:00"
 //* author = Reference(Practitioner/practitioner-1)
-* item[0].linkId = "LIVE_BIRTH"
+* item[+].linkId = "lastUpdated"
+* item[=].answer.valueDateTime = "2025-10-28T18:30:40-07:00"
+* item[+].linkId = "LIVE_BIRTH"
 * item[=].text = "Live Birth"
 * item[=].answer.valueBoolean = true
 * item[+].linkId = "DOB"

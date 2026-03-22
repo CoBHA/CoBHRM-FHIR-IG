@@ -7,7 +7,7 @@ Description: "BHA episode profile for client admissions/services"
 // BHASO Admission Identifier -- not expected from point of care systems
 
 // *  identifier 1..* MS
-// *  identifier ^slicing.discriminator.type = #pattern
+// *  identifier ^slicing.discriminator.type = #type
 // *  identifier ^slicing.discriminator.path = "type"
 // *  identifier ^slicing.rules = #open
 
