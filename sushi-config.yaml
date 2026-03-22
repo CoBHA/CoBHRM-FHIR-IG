@@ -9,7 +9,7 @@ name: BHAIG
 title: "Colorado BHA FHIR Implementation Guide"
 description: "A FHIR implementation guide to enable standardized behavioral health data exchange and reduce provider administrative burden throughout Colorado's behavioral health ecosystem"
 status: active
-version: 0.1.0-current  # using semver. The "-current" is used for CI builds.
+version: 0.2.0  # using semver. The "-current" is used for CI builds.
 fhirVersion: 4.0.1
 copyrightYear: 2025+
 releaseLabel: ci-build
