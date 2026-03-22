@@ -1,4 +1,6 @@
-In addition to the IG content, here are some specific areas of concern where the authors would appreciate feedback, guidance, thought partnership, and answers:
+Here are some specific areas of concern where the authors would appreciate feedback, guidance, thought partnership, and specific answers. 
+
+Please share your thoughts by emailing [FHIRFeedback@state.co.us](mailto:FHIRFeedback@state.co.us).
 
 1. What version of US core are you using, and do you see any issue with our decision to use [us-core 6.1.0]({{site.data.fhir.uscore}})?
 2. Do you have a Questionnaire / QuestionnaireResponse infrastructure? See the HL7 SDC [Population]({{site.data.fhir.sdc}}/populate.html) for discussion of the SDC [$populate operation]({{site.data.fhir.sdc}}OperationDefinition-Questionnaire-populate.html) as service endpoint an EHR system could implement that can be used by Co-BHA to request population of a [CoBHRM Questionnaire](questionnaires.html).
