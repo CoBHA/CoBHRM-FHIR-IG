@@ -19,6 +19,8 @@ This IG addresses the exchange of CoBHRM deliverables between providers, interme
 - Terminology specifications (code systems and value sets) for BHA-specific codes.
 - Example instances of FHIR resources demonstrating how FHIR data in the formats specified here can capture the information for example BHA client criteria.
 
+Data intermediaries who report into BHA — such as Behavioral Health Administrative Service Organizations (BHASOs) — are encouraged to build upon this specification to meet their own operational needs.
+
 ### Getting Started
 
 This implementation guide is built using HL7 FHIR Revision {{site.data.fhir.version}} found at [{{site.data.fhir.path}}]({{site.data.fhir.path}}). An understanding of FHIR is important in knowing how to implement the data exchange patterns specified here.
