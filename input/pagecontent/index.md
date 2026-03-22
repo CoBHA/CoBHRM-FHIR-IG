@@ -3,7 +3,7 @@ This is a draft FHIR implementation guide (IG) to enable standardized behavioral
 provider administrative burden throughout Colorado’s behavioral health ecosystem.
 
 <div markdown="1" class="note-to-balloters">
-Public Comment questions are available in the [Questions](questions.html) page.
+BHA is inviting a round of public comments on this resource until April 20, 2026. See [Questions](questions.html) for additional info.
 </div>
 
 ### Overview
