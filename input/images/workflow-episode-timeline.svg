@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="820" viewBox="0 0 1700 820" role="img" aria-labelledby="title desc">
+  <title id="title">Behavioral Health Engagement Timeline</title>
+  <desc id="desc">Left-to-right timeline showing an overall EpisodeOfCare, nested program EpisodeOfCare spans, encounter spans, and admit/discharge milestones.</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334155" />
+    </marker>
+    <style>
+      .title { font: 700 30px "Segoe UI", Arial, sans-serif; fill: #0b1324; }
+      .axis-label { font: 700 18px "Segoe UI", Arial, sans-serif; fill: #0b1324; }
+      .lane-label { font: 700 19px "Segoe UI", Arial, sans-serif; fill: #0b1324; }
+      .text-sm { font: 600 16px "Segoe UI", Arial, sans-serif; fill: #1e293b; }
+      .text-xs { font: 600 14px "Segoe UI", Arial, sans-serif; fill: #334155; }
+
+      .axis { stroke: #1e293b; stroke-width: 3; marker-end: url(#arrow); }
+      .tick { stroke: #1e293b; stroke-width: 2.2; }
+      .grid { stroke: #cbd5e1; stroke-width: 1; stroke-dasharray: 4 6; }
+
+      .overall-path { fill: none; stroke: #1e293b; stroke-width: 14; stroke-linecap: round; }
+      .program-a-path { fill: none; stroke: #0ea5e9; stroke-width: 18; stroke-linecap: round; }
+      .program-b-path { fill: none; stroke: #16a34a; stroke-width: 18; stroke-linecap: round; }
+      .program-c-path { fill: none; stroke: #7c3aed; stroke-width: 18; stroke-linecap: round; }
+
+      .enc-a1 { fill: none; stroke: #0ea5e9; stroke-width: 10; stroke-linecap: round; }
+      .enc-a2 { fill: none; stroke: #0284c7; stroke-width: 10; stroke-linecap: round; }
+      .enc-b1 { fill: none; stroke: #16a34a; stroke-width: 10; stroke-linecap: round; }
+      .enc-b2 { fill: none; stroke: #22c55e; stroke-width: 10; stroke-linecap: round; }
+      .enc-c1 { fill: none; stroke: #8b5cf6; stroke-width: 10; stroke-linecap: round; }
+      .enc-c2 { fill: none; stroke: #a78bfa; stroke-width: 10; stroke-linecap: round; }
+
+      .admit { fill: #cffafe; stroke: #0891b2; stroke-width: 1.5; }
+      .discharge { fill: #ffedd5; stroke: #c2410c; stroke-width: 1.5; }
+      .report-extra { fill: #ede9fe; stroke: #7c3aed; stroke-width: 2; }
+      .milestone-line { stroke: #64748b; stroke-width: 1.5; stroke-dasharray: 3 4; }
+      .lane-sep { stroke: #d1d9e2; stroke-width: 1.4; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1700" height="820" fill="#ffffff" />
+
+  <text x="850" y="52" text-anchor="middle" class="title">Illustrative Example: Client Engagement with Covered Provider</text>
+
+  <line x1="120" y1="96" x2="1620" y2="96" class="axis" />
+  <text x="124" y="72" class="axis-label">Time (left to right)</text>
+
+  <line x1="190" y1="86" x2="190" y2="106" class="tick" />
+  <line x1="560" y1="86" x2="560" y2="106" class="tick" />
+  <line x1="940" y1="86" x2="940" y2="106" class="tick" />
+  <line x1="1500" y1="86" x2="1500" y2="106" class="tick" />
+
+  <text x="130" y="136" class="text-sm">Overall opens</text>
+  <text x="1440" y="136" class="text-sm">Overall closes</text>
+
+  <line x1="120" y1="180" x2="1620" y2="180" class="lane-sep" />
+  <line x1="120" y1="290" x2="1620" y2="290" class="lane-sep" />
+  <line x1="120" y1="400" x2="1620" y2="400" class="lane-sep" />
+  <line x1="120" y1="510" x2="1620" y2="510" class="lane-sep" />
+
+  <text x="40" y="214" class="lane-label">Overall EpisodeOfCare</text>
+  <text x="40" y="324" class="lane-label">Program EpisodeOfCare</text>
+  <text x="40" y="434" class="lane-label">Encounter</text>
+  <text x="40" y="600" class="lane-label">Reporting</text>
+
+  <line x1="190" y1="180" x2="1500" y2="180" class="overall-path" />
+
+  <line x1="190" y1="276" x2="940" y2="276" class="program-a-path" />
+  <text x="200" y="254" class="text-sm">SUD treatment program</text>
+
+  <line x1="520" y1="304" x2="1320" y2="304" class="program-b-path" />
+  <text x="530" y="332" class="text-sm">Mental health treatment program</text>
+
+  <line x1="1020" y1="332" x2="1500" y2="332" class="program-c-path" />
+  <text x="1030" y="360" class="text-sm">Pregnancy program</text>
+
+  <line x1="190" y1="400" x2="290" y2="400" class="enc-a1" />
+  <text x="194" y="378" class="text-xs">SUD start</text>
+
+  <line x1="830" y1="400" x2="940" y2="400" class="enc-a2" />
+  <text x="834" y="378" class="text-xs">SUD end</text>
+
+  <line x1="520" y1="400" x2="630" y2="400" class="enc-b1" />
+  <text x="524" y="378" class="text-xs">MH start</text>
+
+  <line x1="1210" y1="400" x2="1320" y2="400" class="enc-b2" />
+  <text x="1214" y="378" class="text-xs">MH end</text>
+
+  <line x1="1020" y1="400" x2="1120" y2="400" class="enc-c1" />
+  <text x="1024" y="430" class="text-xs">Pregnancy Followup</text>
+
+  <line x1="1390" y1="400" x2="1500" y2="400" class="enc-c2" />
+  <text x="1394" y="430" class="text-xs">Pregnancy Birth</text>
+
+  <line x1="190" y1="400" x2="190" y2="544" class="milestone-line" />
+  <line x1="290" y1="400" x2="290" y2="654" class="milestone-line" />
+  <polygon points="190,530 202,542 190,554 178,542" class="admit" />
+  <circle cx="190" cy="596" r="11" class="report-extra" />
+  <polygon points="290,640 302,652 290,664 278,652" class="discharge" />
+
+  <line x1="830" y1="400" x2="830" y2="544" class="milestone-line" />
+  <line x1="940" y1="400" x2="940" y2="654" class="milestone-line" />
+  <polygon points="830,530 842,542 830,554 818,542" class="admit" />
+  <polygon points="940,640 952,652 940,664 928,652" class="discharge" />
+
+  <line x1="520" y1="400" x2="520" y2="544" class="milestone-line" />
+  <line x1="630" y1="400" x2="630" y2="654" class="milestone-line" />
+  <polygon points="520,530 532,542 520,554 508,542" class="admit" />
+  <polygon points="630,640 642,652 630,664 618,652" class="discharge" />
+
+  <line x1="1210" y1="400" x2="1210" y2="544" class="milestone-line" />
+  <line x1="1320" y1="400" x2="1320" y2="654" class="milestone-line" />
+  <polygon points="1210,530 1222,542 1210,554 1198,542" class="admit" />
+  <polygon points="1320,640 1332,652 1320,664 1308,652" class="discharge" />
+
+  <line x1="1020" y1="400" x2="1020" y2="544" class="milestone-line" />
+  <line x1="1120" y1="400" x2="1120" y2="654" class="milestone-line" />
+  <polygon points="1020,530 1032,542 1020,554 1008,542" class="admit" />
+  <circle cx="1020" cy="596" r="11" class="report-extra" />
+  <polygon points="1120,640 1132,652 1120,664 1108,652" class="discharge" />
+
+  <line x1="1390" y1="400" x2="1390" y2="544" class="milestone-line" />
+  <line x1="1500" y1="400" x2="1500" y2="654" class="milestone-line" />
+  <polygon points="1390,530 1402,542 1390,554 1378,542" class="admit" />
+  <circle cx="1500" cy="596" r="11" class="report-extra" />
+  <polygon points="1500,640 1512,652 1500,664 1488,652" class="discharge" />
+
+  <line x1="190" y1="96" x2="190" y2="700" class="grid" />
+  <line x1="1500" y1="96" x2="1500" y2="700" class="grid" />
+
+</svg>
