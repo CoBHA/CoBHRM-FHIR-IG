@@ -1,11 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1700" height="820" viewBox="0 0 1700 820" role="img" aria-labelledby="title desc">
   <title id="title">Behavioral Health Engagement Timeline</title>
-  <desc id="desc">Left-to-right timeline showing an overall EpisodeOfCare, nested program EpisodeOfCare spans, encounter spans, and admit/discharge milestones.</desc>
+  <desc id="desc">Left-to-right timeline showing an overall EpisodeOfCare, nested EpisodeOfCare spans, encounter spans, program open/close milestones, and optional encounter BHA reportable-event markers.</desc>
 
   <defs>
     <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
       <path d="M0,0 L10,5 L0,10 z" fill="#334155" />
     </marker>
+    <!-- Split-color gradients for encounters spanning two programs (top = first program, bottom = second) -->
+    <linearGradient id="enc-grad-sud-mh" x1="0" y1="395" x2="0" y2="405" gradientUnits="userSpaceOnUse">
+      <stop offset="50%" stop-color="#0ea5e9" />
+      <stop offset="50%" stop-color="#16a34a" />
+    </linearGradient>
+    <linearGradient id="enc-grad-mh-preg" x1="0" y1="395" x2="0" y2="405" gradientUnits="userSpaceOnUse">
+      <stop offset="50%" stop-color="#16a34a" />
+      <stop offset="50%" stop-color="#7c3aed" />
+    </linearGradient>
+    <!-- Split-color gradients for encounters that span two programs (top = first program, bottom = second) -->
+    <linearGradient id="enc-grad-sud-mh" x1="0" y1="395" x2="0" y2="405" gradientUnits="userSpaceOnUse">
+      <stop offset="50%" stop-color="#0ea5e9" />
+      <stop offset="50%" stop-color="#16a34a" />
+    </linearGradient>
+    <linearGradient id="enc-grad-mh-preg" x1="0" y1="395" x2="0" y2="405" gradientUnits="userSpaceOnUse">
+      <stop offset="50%" stop-color="#16a34a" />
+      <stop offset="50%" stop-color="#7c3aed" />
+    </linearGradient>
     <style>
       .title { font: 700 30px "Segoe UI", Arial, sans-serif; fill: #0b1324; }
       .axis-label { font: 700 18px "Segoe UI", Arial, sans-serif; fill: #0b1324; }
@@ -33,6 +51,7 @@
       .discharge { fill: #ffedd5; stroke: #c2410c; stroke-width: 1.5; }
       .report-extra { fill: #ede9fe; stroke: #7c3aed; stroke-width: 2; }
       .milestone-line { stroke: #64748b; stroke-width: 1.5; stroke-dasharray: 3 4; }
+      .enc-report-line { stroke: #7c3aed; stroke-width: 1.2; stroke-dasharray: 2 6; opacity: 0.75; }
       .lane-sep { stroke: #d1d9e2; stroke-width: 1.4; }
     </style>
   </defs>
@@ -57,10 +76,10 @@
   <line x1="120" y1="400" x2="1620" y2="400" class="lane-sep" />
   <line x1="120" y1="510" x2="1620" y2="510" class="lane-sep" />
 
-  <text x="40" y="214" class="lane-label">Overall EpisodeOfCare</text>
-  <text x="40" y="324" class="lane-label">Program EpisodeOfCare</text>
+  <text x="40" y="214" class="lane-label">Overall Engagement</text>
+  <text x="40" y="324" class="lane-label">EpisodeOfCare</text>
   <text x="40" y="434" class="lane-label">Encounter</text>
-  <text x="40" y="600" class="lane-label">Reporting</text>
+  <text x="40" y="524" class="lane-label">Reporting</text>
 
   <line x1="190" y1="180" x2="1500" y2="180" class="overall-path" />
 
@@ -73,58 +92,80 @@
   <line x1="1020" y1="332" x2="1500" y2="332" class="program-c-path" />
   <text x="1030" y="360" class="text-sm">Pregnancy program</text>
 
+  <!-- SUD only -->
   <line x1="190" y1="400" x2="290" y2="400" class="enc-a1" />
-  <text x="194" y="378" class="text-xs">SUD start</text>
+  <line x1="350" y1="400" x2="460" y2="400" class="enc-a1" />
+  <!-- SUD + MH -->
+  <line x1="830" y1="400" x2="940" y2="400" fill="none" stroke="url(#enc-grad-sud-mh)" stroke-width="10" stroke-linecap="round" />
+  <line x1="520" y1="400" x2="630" y2="400" fill="none" stroke="url(#enc-grad-sud-mh)" stroke-width="10" stroke-linecap="round" />
+  <!-- MH + Pregnancy -->
+  <line x1="1210" y1="400" x2="1320" y2="400" fill="none" stroke="url(#enc-grad-mh-preg)" stroke-width="10" stroke-linecap="round" />
+  <line x1="1020" y1="400" x2="1120" y2="400" fill="none" stroke="url(#enc-grad-mh-preg)" stroke-width="10" stroke-linecap="round" />
+  <!-- Pregnancy only -->
+  <line x1="1390" y1="400" x2="1500" y2="400" class="enc-c1" />
 
-  <line x1="830" y1="400" x2="940" y2="400" class="enc-a2" />
-  <text x="834" y="378" class="text-xs">SUD end</text>
-
-  <line x1="520" y1="400" x2="630" y2="400" class="enc-b1" />
-  <text x="524" y="378" class="text-xs">MH start</text>
-
-  <line x1="1210" y1="400" x2="1320" y2="400" class="enc-b2" />
-  <text x="1214" y="378" class="text-xs">MH end</text>
-
-  <line x1="1020" y1="400" x2="1120" y2="400" class="enc-c1" />
-  <text x="1024" y="430" class="text-xs">Pregnancy Followup</text>
-
-  <line x1="1390" y1="400" x2="1500" y2="400" class="enc-c2" />
-  <text x="1394" y="430" class="text-xs">Pregnancy Birth</text>
-
-  <line x1="190" y1="400" x2="190" y2="544" class="milestone-line" />
-  <line x1="290" y1="400" x2="290" y2="654" class="milestone-line" />
+  <!-- ── EpisodeOfCare: opens (admit) diamonds ── -->
+  <!-- Row y≈542: milestone drops from program bar to admit diamond -->
+  <line x1="190" y1="276" x2="190" y2="530" class="milestone-line" />
   <polygon points="190,530 202,542 190,554 178,542" class="admit" />
-  <circle cx="190" cy="596" r="11" class="report-extra" />
-  <polygon points="290,640 302,652 290,664 278,652" class="discharge" />
 
-  <line x1="830" y1="400" x2="830" y2="544" class="milestone-line" />
-  <line x1="940" y1="400" x2="940" y2="654" class="milestone-line" />
-  <polygon points="830,530 842,542 830,554 818,542" class="admit" />
+  <line x1="520" y1="304" x2="520" y2="530" class="milestone-line" />
+  <polygon points="520,530 532,542 520,554 508,542" class="admit" />
+
+  <line x1="1020" y1="332" x2="1020" y2="530" class="milestone-line" />
+  <polygon points="1020,530 1032,542 1020,554 1008,542" class="admit" />
+
+  <!-- ── EpisodeOfCare: closes (discharge) diamonds ── -->
+  <!-- Row y≈652: milestone drops from program bar to discharge diamond.          -->
+  <!-- Where program end == encounter end, the encounter report circle is also     -->
+  <!-- placed on the same milestone line (row y≈596).                             -->
+
+  <!-- Program A end (x=940) = enc-a2 end → discharge + optional enc. report -->
+  <line x1="940" y1="276" x2="940" y2="640" class="milestone-line" />
+  <circle cx="940" cy="596" r="11" class="report-extra" />
   <polygon points="940,640 952,652 940,664 928,652" class="discharge" />
 
-  <line x1="520" y1="400" x2="520" y2="544" class="milestone-line" />
-  <line x1="630" y1="400" x2="630" y2="654" class="milestone-line" />
-  <polygon points="520,530 532,542 520,554 508,542" class="admit" />
-  <polygon points="630,640 642,652 630,664 618,652" class="discharge" />
-
-  <line x1="1210" y1="400" x2="1210" y2="544" class="milestone-line" />
-  <line x1="1320" y1="400" x2="1320" y2="654" class="milestone-line" />
-  <polygon points="1210,530 1222,542 1210,554 1198,542" class="admit" />
+  <!-- Program B end (x=1320) = enc-b2 end → discharge + optional enc. report -->
+  <line x1="1320" y1="304" x2="1320" y2="640" class="milestone-line" />
+  <circle cx="1320" cy="596" r="11" class="report-extra" />
   <polygon points="1320,640 1332,652 1320,664 1308,652" class="discharge" />
 
-  <line x1="1020" y1="400" x2="1020" y2="544" class="milestone-line" />
-  <line x1="1120" y1="400" x2="1120" y2="654" class="milestone-line" />
-  <polygon points="1020,530 1032,542 1020,554 1008,542" class="admit" />
-  <circle cx="1020" cy="596" r="11" class="report-extra" />
-  <polygon points="1120,640 1132,652 1120,664 1108,652" class="discharge" />
-
-  <line x1="1390" y1="400" x2="1390" y2="544" class="milestone-line" />
-  <line x1="1500" y1="400" x2="1500" y2="654" class="milestone-line" />
-  <polygon points="1390,530 1402,542 1390,554 1378,542" class="admit" />
+  <!-- Program C end (x=1500) = enc-c2 end → discharge + optional enc. report -->
+  <line x1="1500" y1="332" x2="1500" y2="640" class="milestone-line" />
   <circle cx="1500" cy="596" r="11" class="report-extra" />
   <polygon points="1500,640 1512,652 1500,664 1488,652" class="discharge" />
 
+  <!-- ── Encounter ends: optional BHA reportable-event circles (enc-only x) ── -->
+  <!-- These encounters end inside a program span (not at program end).           -->
+
+  <!-- enc-a1 end: x=290 -->
+  <line x1="290" y1="400" x2="290" y2="585" class="enc-report-line" />
+  <circle cx="290" cy="596" r="11" class="report-extra" />
+
+  <!-- enc-a-mid end: x=460 -->
+  <line x1="460" y1="400" x2="460" y2="585" class="enc-report-line" />
+  <circle cx="460" cy="596" r="11" class="report-extra" />
+
+  <!-- enc-b1 end: x=630 -->
+  <line x1="630" y1="400" x2="630" y2="585" class="enc-report-line" />
+  <circle cx="630" cy="596" r="11" class="report-extra" />
+
+  <!-- enc-c1 end: x=1120 -->
+  <line x1="1120" y1="400" x2="1120" y2="585" class="enc-report-line" />
+  <circle cx="1120" cy="596" r="11" class="report-extra" />
+
+  <!-- ── Grid ── -->
   <line x1="190" y1="96" x2="190" y2="700" class="grid" />
   <line x1="1500" y1="96" x2="1500" y2="700" class="grid" />
+
+  <!-- ── Legend ── -->
+  <rect x="130" y="718" width="680" height="84" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+  <text x="148" y="740" class="text-sm">Legend:</text>
+  <polygon points="188,750 200,762 188,774 176,762" class="admit" />
+  <text x="206" y="767" class="text-xs">EpisodeOfCare Admission Reporting</text>
+  <polygon points="468,750 480,762 468,774 456,762" class="discharge" />
+  <text x="486" y="767" class="text-xs">EpisodeOfCare Discharge Reporting</text>
+  <circle cx="183" cy="791" r="9" class="report-extra" />
+  <text x="198" y="795" class="text-xs">Encounter reported (if BHA reportable event)</text>
 
 </svg>
