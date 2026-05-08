@@ -73,6 +73,8 @@ INFORMATION: Questionnaire/BHASCBabyQuestionnaire: Questionnaire.item[9].extensi
 INFORMATION: Questionnaire/BHASCBabyQuestionnaire: Questionnaire.item[9].extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|3.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 
+# This example has one matching EpisodeOfCare and one for Pregnancy
+INFORMATION: Encounter/BHAEncounterExamplePG: Encounter.episodeOfCare[1]: This element does not match any known slice defined in the profile http://bha.colorado.gov/fhir/bha-ig/StructureDefinition/bha-encounter|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 
 

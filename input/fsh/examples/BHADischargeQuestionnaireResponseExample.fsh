@@ -37,4 +37,4 @@ Usage: #example
 * item[=].answer.valueCoding = BHALegalStatusCS#02
 * item[+].linkId = "episodeOfCare"
 * item[=].text = "Episode of Care Information"
-* item[=].answer.valueReference = Reference(BHAEpisodeExampleBH) 
+* item[=].answer.valueReference = Reference(BHAEpisodeOfCareExampleBH) 

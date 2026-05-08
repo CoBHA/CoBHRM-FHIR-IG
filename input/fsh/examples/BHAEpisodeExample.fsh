@@ -1,5 +1,5 @@
 
-Instance: BHAEpisodeExampleBH 
+Instance: BHAEpisodeOfCareExampleBH 
 InstanceOf: BHAEpisodeOfCare
 Title: "Example Episode"
 Description: "Example Episode of Care record for a BHA service/admission"

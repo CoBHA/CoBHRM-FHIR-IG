@@ -8,7 +8,13 @@ Description: "Encounter profile for client visits and encounters related to BHA 
 // * class MS
 // * subject 1..1 MS
 // * subject only Reference(BHAPatient)
-* episodeOfCare MS
+// episodeOfCare is a slice that requires at least one is BHAEpisodeOfCare.
+* episodeOfCare ^slicing.discriminator.type = #profile
+* episodeOfCare ^slicing.discriminator.path = "resolve()"
+* episodeOfCare ^slicing.rules = #open
+* episodeOfCare contains BHAEpisodeOfCareSlice 1..* MS
+* episodeOfCare[BHAEpisodeOfCareSlice] only Reference(BHAEpisodeOfCare)
+* episodeOfCare 1..* MS
 
 // Admission date
 * period 1..1 MS

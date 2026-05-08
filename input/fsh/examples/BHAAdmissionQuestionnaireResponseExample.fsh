@@ -88,4 +88,4 @@ Usage: #example
 * item[=].answer.valueBoolean = true
 * item[+].linkId = "episodeOfCare"
 * item[=].text = "Episode of Care Information"
-* item[=].answer.valueReference = Reference(BHAEpisodeExampleBH) 
+* item[=].answer.valueReference = Reference(BHAEpisodeOfCareExampleBH) 

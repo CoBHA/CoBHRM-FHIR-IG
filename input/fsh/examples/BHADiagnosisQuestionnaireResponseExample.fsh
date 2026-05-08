@@ -16,4 +16,4 @@ Usage: #example
 * item[=].answer.valueCoding = BHASMISEDStatusCS#1
 * item[+].linkId = "episodeOfCare"
 * item[=].text = "Episode of Care Information"
-* item[=].answer.valueReference = Reference(BHAEpisodeExampleBH) 
+* item[=].answer.valueReference = Reference(BHAEpisodeOfCareExampleBH) 
