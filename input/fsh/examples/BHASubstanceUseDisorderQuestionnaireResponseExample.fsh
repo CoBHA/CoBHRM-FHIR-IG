@@ -50,3 +50,6 @@ Usage: #example
 * item[+].linkId = "TERTIARY_START_AGE"
 * item[=].text = "Age of First Use of Tertiary Substance"
 * item[=].answer.valueInteger = 29
+* item[+].linkId = "episodeOfCare"
+* item[=].text = "Episode of Care Information"
+* item[=].answer.valueReference = Reference(BHAEpisodeOfCareExampleSUD) 

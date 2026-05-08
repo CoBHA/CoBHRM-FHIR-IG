@@ -9,7 +9,7 @@ Description: "Example Encounter for a BHA Episode."
 Usage: #example
 
 
-* episodeOfCare = Reference(EpisodeOfCare/BHAEpisodeExample) "BHA Episode Example"
+* episodeOfCare = Reference(EpisodeOfCare/BHAEpisodeExampleBH) "BHA Episode Example"
 * period.start = "2025-11-14T10:39:52Z"
 * period.end = "2025-11-14T13:22:52Z"
 * status = #finished

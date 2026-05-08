@@ -86,3 +86,6 @@ Usage: #example
 * item[+].linkId = "COMMUNICATION_ACCOMMODATIONS"
 * item[=].text = "Communication Accommodations"
 * item[=].answer.valueBoolean = true
+* item[+].linkId = "episodeOfCare"
+* item[=].text = "Episode of Care Information"
+* item[=].answer.valueReference = Reference(BHAEpisodeExampleBH) 

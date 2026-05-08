@@ -39,6 +39,9 @@ Usage: #example
 * item[+].linkId = "Baby_Patient_Reference"
 * item[=].text = "Reference to the Baby's Patient Resource"
 * item[=].answer.valueReference = Reference(BabyPatientExample) 
+* item[+].linkId = "episodeOfCare"
+* item[=].text = "Episode of Care Information"
+* item[=].answer.valueReference = Reference(EpisodeOfCareExamplePG) 
 
 Instance: BabyPatientExample
 InstanceOf: BHAClient

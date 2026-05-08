@@ -59,3 +59,6 @@ Usage: #example
 * item[+].linkId = "CHILDREN_AGES_LIVING_WITH_CLIENT"
 * item[=].text = "Children Ages living in home with you"
 * item[=].answer.valueCoding = BHAChildrenAgesLivingInHomeCS#01
+* item[+].linkId = "episodeOfCare"
+* item[=].text = "Episode of Care Information"
+* item[=].answer.valueReference = Reference(EpisodeOfCareExamplePG) 

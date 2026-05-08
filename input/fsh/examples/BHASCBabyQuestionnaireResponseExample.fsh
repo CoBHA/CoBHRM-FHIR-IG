@@ -36,3 +36,6 @@ Usage: #example
 * item[=].text = "Baby Sex at Birth"
 * item[=].answer.valueCoding.system = "http://hl7.org/fhir/administrative-gender"
 * item[=].answer.valueCoding.code = #female
+* item[+].linkId = "episodeOfCare"
+* item[=].text = "Episode of Care Information"
+* item[=].answer.valueReference = Reference(EpisodeOfCareExamplePG) 
