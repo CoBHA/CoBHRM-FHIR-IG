@@ -86,23 +86,23 @@
   <line x1="190" y1="276" x2="940" y2="276" class="program-a-path" />
   <text x="200" y="254" class="text-sm">SUD treatment program</text>
 
-  <line x1="520" y1="304" x2="1320" y2="304" class="program-b-path" />
+  <line x1="520" y1="304" x2="1500" y2="304" class="program-b-path" />
   <text x="530" y="332" class="text-sm">Mental health treatment program</text>
 
   <line x1="1020" y1="332" x2="1500" y2="332" class="program-c-path" />
   <text x="1030" y="360" class="text-sm">Pregnancy program</text>
 
   <!-- SUD only -->
-  <line x1="190" y1="400" x2="290" y2="400" class="enc-a1" />
-  <line x1="350" y1="400" x2="460" y2="400" class="enc-a1" />
+  <line x1="220" y1="400" x2="290" y2="400" class="enc-a1" />
+  <line x1="380" y1="400" x2="460" y2="400" class="enc-a1" />
   <!-- SUD + MH -->
-  <line x1="830" y1="400" x2="940" y2="400" fill="none" stroke="url(#enc-grad-sud-mh)" stroke-width="10" stroke-linecap="round" />
-  <line x1="520" y1="400" x2="630" y2="400" fill="none" stroke="url(#enc-grad-sud-mh)" stroke-width="10" stroke-linecap="round" />
+  <line x1="860" y1="400" x2="940" y2="400" fill="none" stroke="url(#enc-grad-sud-mh)" stroke-width="10" stroke-linecap="round" />
+  <line x1="550" y1="400" x2="630" y2="400" fill="none" stroke="url(#enc-grad-sud-mh)" stroke-width="10" stroke-linecap="round" />
   <!-- MH + Pregnancy -->
-  <line x1="1210" y1="400" x2="1320" y2="400" fill="none" stroke="url(#enc-grad-mh-preg)" stroke-width="10" stroke-linecap="round" />
-  <line x1="1020" y1="400" x2="1120" y2="400" fill="none" stroke="url(#enc-grad-mh-preg)" stroke-width="10" stroke-linecap="round" />
+  <line x1="1240" y1="400" x2="1320" y2="400" fill="none" stroke="url(#enc-grad-mh-preg)" stroke-width="10" stroke-linecap="round" />
+  <line x1="1050" y1="400" x2="1120" y2="400" fill="none" stroke="url(#enc-grad-mh-preg)" stroke-width="10" stroke-linecap="round" />
   <!-- Pregnancy only -->
-  <line x1="1390" y1="400" x2="1500" y2="400" class="enc-c1" />
+  <line x1="1420" y1="400" x2="1500" y2="400" class="enc-c1" />
 
   <!-- ── EpisodeOfCare: opens (admit) diamonds ── -->
   <!-- Row y≈542: milestone drops from program bar to admit diamond -->
