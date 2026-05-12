@@ -49,6 +49,7 @@
 
       .admit { fill: #cffafe; stroke: #0891b2; stroke-width: 1.5; }
       .discharge { fill: #ffedd5; stroke: #c2410c; stroke-width: 1.5; }
+      .special-connection { fill: #f9a8d4; stroke: #be185d; stroke-width: 1.8; }
       .report-extra { fill: #ede9fe; stroke: #7c3aed; stroke-width: 2; }
       .milestone-line { stroke: #64748b; stroke-width: 1.5; stroke-dasharray: 3 4; }
       .enc-report-line { stroke: #7c3aed; stroke-width: 1.2; stroke-dasharray: 2 6; opacity: 0.75; }
@@ -89,7 +90,7 @@
   <line x1="520" y1="304" x2="1500" y2="304" class="program-b-path" />
   <text x="530" y="332" class="text-sm">Mental health treatment program</text>
 
-  <line x1="1020" y1="332" x2="1500" y2="332" class="program-c-path" />
+  <line x1="1020" y1="332" x2="1320" y2="332" class="program-c-path" />
   <text x="1030" y="360" class="text-sm">Pregnancy program</text>
 
   <!-- SUD only -->
@@ -102,7 +103,7 @@
   <line x1="1240" y1="400" x2="1320" y2="400" fill="none" stroke="url(#enc-grad-mh-preg)" stroke-width="10" stroke-linecap="round" />
   <line x1="1050" y1="400" x2="1120" y2="400" fill="none" stroke="url(#enc-grad-mh-preg)" stroke-width="10" stroke-linecap="round" />
   <!-- Pregnancy only -->
-  <line x1="1420" y1="400" x2="1500" y2="400" class="enc-c1" />
+  <line x1="1420" y1="400" x2="1500" y2="400" class="enc-b1" />
 
   <!-- ── EpisodeOfCare: opens (admit) diamonds ── -->
   <!-- Row y≈542: milestone drops from program bar to admit diamond -->
@@ -113,7 +114,7 @@
   <polygon points="520,530 532,542 520,554 508,542" class="admit" />
 
   <line x1="1020" y1="332" x2="1020" y2="530" class="milestone-line" />
-  <polygon points="1020,530 1032,542 1020,554 1008,542" class="admit" />
+  <polygon points="1020,530 1032,542 1020,554 1008,542" class="special-connection" />
 
   <!-- ── EpisodeOfCare: closes (discharge) diamonds ── -->
   <!-- Row y≈652: milestone drops from program bar to discharge diamond.          -->
@@ -128,7 +129,7 @@
   <!-- Program B end (x=1320) = enc-b2 end → discharge + optional enc. report -->
   <line x1="1320" y1="304" x2="1320" y2="640" class="milestone-line" />
   <circle cx="1320" cy="596" r="11" class="report-extra" />
-  <polygon points="1320,640 1332,652 1320,664 1308,652" class="discharge" />
+  <polygon points="1320,640 1332,652 1320,664 1308,652" class="special-connection" />
 
   <!-- Program C end (x=1500) = enc-c2 end → discharge + optional enc. report -->
   <line x1="1500" y1="332" x2="1500" y2="640" class="milestone-line" />
@@ -167,5 +168,7 @@
   <text x="486" y="767" class="text-xs">EpisodeOfCare Discharge Reporting</text>
   <circle cx="183" cy="791" r="9" class="report-extra" />
   <text x="198" y="795" class="text-xs">Encounter reported (if BHA reportable event)</text>
+  <polygon points="468,779 480,791 468,803 456,791" class="special-connection" />
+  <text x="486" y="795" class="text-xs">BHA Special Connections</text>
 
 </svg>
