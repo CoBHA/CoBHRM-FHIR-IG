@@ -14,7 +14,13 @@ The Colorado Behavioral Health Reporting Model (Co-BHRM) specifies the full data
 cover the entirety of the Co-BHRM. Instead, the specification provided here defines, in FHIR, the data elements that must be
 captured at clinical sites to support BHA and SAMHSA reporting requirements.
 
-This IG does not prescribe how data is exchanged between clinical sites and Behavioral Health Administrative Service Organizations (BHASOs) or other intermediaries. BHASOs and other organizations involved in the reporting pipeline are encouraged to adopt, extend, or build upon these FHIR definitions to suit their specific integration workflows.
+#### Illustrative Example of Workflow and Reporting Milestones
+
+<div>
+<img src="workflow-episode-timeline.svg" caption="Illustrative Example of Workflow and Reporting Milestones" width="100%"/>
+</div>
+
+This IG does not prescribe how data is exchanged between clinical sites and Behavioral Health Administrative Service Organizations (BHASOs) or other intermediaries. BHASOs and other organizations involved in the reporting pipeline are encouraged to adopt, extend, or build upon these FHIR definitions to suit their specific integration workflows. See the [workflow page](workflow.html) for an illustrative example of how data might flow from clinical sites to BHA, and for the reporting milestones that would trigger the creation of FHIR resources as specified in this IG.
 
 #### Co-BHRM to FHIR Mapping
 
