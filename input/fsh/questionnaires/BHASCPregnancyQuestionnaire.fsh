@@ -119,3 +119,13 @@ Usage: #definition
 * item[=].enableWhen[0].question = "CHILDREN_LIVING_WITH_CLIENT"
 * item[=].enableWhen[=].operator = #=
 * item[=].enableWhen[=].answerBoolean = true
+
+// require at least one EpisodeOfCare
+* item[+].linkId = "episodeOfCare"
+* item[=].text = "Episode of Care Information"
+* item[=].type = #reference
+* item[=].required = true
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource"
+* item[=].extension[=].valueCode = #EpisodeOfCare
+//* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile"
+//* item[=].extension[=].valueCanonical = Canonical(BHAEpisodeOfCare)

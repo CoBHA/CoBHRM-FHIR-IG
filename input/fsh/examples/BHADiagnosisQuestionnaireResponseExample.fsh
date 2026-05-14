@@ -14,3 +14,6 @@ Usage: #example
 * item[+].linkId = "SMI_SED_STATUS"
 * item[=].text = "SMI/SED Status"
 * item[=].answer.valueCoding = BHASMISEDStatusCS#1
+* item[+].linkId = "episodeOfCare"
+* item[=].text = "Episode of Care Information"
+* item[=].answer.valueReference = Reference(BHAEpisodeOfCareExampleBH) 

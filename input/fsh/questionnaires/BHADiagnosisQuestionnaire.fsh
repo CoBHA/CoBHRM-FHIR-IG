@@ -26,3 +26,13 @@ Usage: #definition
 * item[=].type = #choice
 * item[=].required = true
 * item[=].answerValueSet = Canonical(BHASMISEDStatusVS)
+
+// require at least one EpisodeOfCare
+* item[+].linkId = "episodeOfCare"
+* item[=].text = "Episode of Care Information"
+* item[=].type = #reference
+* item[=].required = true
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource"
+* item[=].extension[=].valueCode = #EpisodeOfCare
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile"
+* item[=].extension[=].valueCanonical = Canonical(BHAEpisodeOfCare)

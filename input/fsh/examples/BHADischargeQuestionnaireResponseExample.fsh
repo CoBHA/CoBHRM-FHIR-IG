@@ -35,3 +35,6 @@ Usage: #example
 * item[+].linkId = "LEGAL_STATUS"
 * item[=].text = "Legal Status"
 * item[=].answer.valueCoding = BHALegalStatusCS#02
+* item[+].linkId = "episodeOfCare"
+* item[=].text = "Episode of Care Information"
+* item[=].answer.valueReference = Reference(BHAEpisodeOfCareExampleBH) 

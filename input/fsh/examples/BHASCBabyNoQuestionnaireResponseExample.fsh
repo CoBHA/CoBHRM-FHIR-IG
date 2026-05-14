@@ -14,3 +14,6 @@ Usage: #example
 * item[+].linkId = "LIVE_BIRTH"
 * item[=].text = "Live Birth"
 * item[=].answer.valueBoolean = false
+* item[+].linkId = "episodeOfCare"
+* item[=].text = "Episode of Care Information"
+* item[=].answer.valueReference = Reference(EpisodeOfCareExamplePG) 

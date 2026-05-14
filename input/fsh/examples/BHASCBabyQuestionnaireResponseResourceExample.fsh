@@ -39,9 +39,12 @@ Usage: #example
 * item[+].linkId = "Baby_Patient_Reference"
 * item[=].text = "Reference to the Baby's Patient Resource"
 * item[=].answer.valueReference = Reference(BabyPatientExample) 
+* item[+].linkId = "episodeOfCare"
+* item[=].text = "Episode of Care Information"
+* item[=].answer.valueReference = Reference(EpisodeOfCareExamplePG) 
 
 Instance: BabyPatientExample
-InstanceOf: BHAClient
+InstanceOf: $us-core-patient
 Title: "Example Baby Patient Resource"
 Description: "Example Patient Resource for a Baby born to a BHA Client.  This resource is referenced in the BHASCBabyQuestionnaireResponseResourceExample."
 * meta.lastUpdated =  "2025-10-28T18:30:40-07:00"
@@ -58,4 +61,4 @@ Description: "Example Patient Resource for a Baby born to a BHA Client.  This re
 * gender = #female
 * extension[birthsex].valueCode = http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender#F 
 * maritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus#S
-* extension[bharace].valueCodeableConcept = http://bha.colorado.gov/fhir/bha-ig/CodeSystem/bha-race-cs#02 "Asian"
+//* extension[bharace].valueCodeableConcept = http://bha.colorado.gov/fhir/bha-ig/CodeSystem/bha-race-cs#02 "Asian"

@@ -98,5 +98,15 @@ Usage: #definition
 * item[=].enableWhen[=].answerBoolean = true
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource"
 * item[=].extension[=].valueCode = #Patient
-* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile"
-* item[=].extension[=].valueCanonical = Canonical(BHAClient)
+//* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile"
+//* item[=].extension[=].valueCanonical = Canonical(BHAClient)
+
+// require at least one EpisodeOfCare
+* item[+].linkId = "episodeOfCare"
+* item[=].text = "Episode of Care Information"
+* item[=].type = #reference
+* item[=].required = true
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource"
+* item[=].extension[=].valueCode = #EpisodeOfCare
+//* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile"
+//* item[=].extension[=].valueCanonical = Canonical(BHAEpisodeOfCare)

@@ -1,4 +1,4 @@
-Profile: BHAEpisode
+Profile: BHAEpisodeOfCare
 Parent: EpisodeOfCare
 Id: bha-episode
 Title: "Colorado BHA Episode Profile"
