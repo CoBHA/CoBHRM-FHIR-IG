@@ -34,27 +34,20 @@ At the top level, the overall engagement of a client (Patient) with a covered pr
   - Episode Diagnosis Condition resource (SUD diagnosis update)
   - Substance Use Disorder QuestionnaireResponse (SUD diagnosis update)
   - optional Encounter resource (SUD discharge)
-- Starts a Pregnancy program, the first encounter is a Pregnancy Followup event and the later encounter is a Pregnancy Birth event.
-  - EpisodeOfCare resource (Pregnancy program)
+- Starts a Pregnancy Special Connections, the first encounter is a Pregnancy Followup event and the later encounter is a Pregnancy Birth event.
+  - No formal BHA EpisodeOfCare resource but displayed above as if an EpisodeOfCare could be used (Pregnancy Special Connections)
   - Encounter resource (Pregnancy Followup)
   - Admission QuestionnaireResponse (Pregnancy Followup)
   - Diagnosis QuestionnaireResponse (Pregnancy diagnosis)
   - Pregnancy Status QuestionnaireResponse (update to pregnancy status)
 - The mental health program has its own first and last encounters (MH start and MH end).
   - optional Encounter resource (MH discharge)
-- Pregnancy program has a Birth event encounter with corresponding reporting milestones.
+- Pregnancy Special Connections has a Birth event encounter with corresponding reporting milestones.
   - Encounter resource (Pregnancy Birth)
-  - Admission QuestionnaireResponse
   - Birth QuestionnaireResponse
   - Client QuestionnaireResponse (for baby)
-  - Client (baby) resource
-  - Discharge QuestionnaireResponse (for pregnancy program)
+  - Client/Patient (baby) resource
   - Pregnancy Status QuestionnaireResponse (update to pregnancy status)
-- All program activity remains within the same overall EpisodeOfCare window, which closes after the latest program activity is complete.
-  - Discharge from the overall EpisodeOfCare after all program activity is complete.
-  - Encounter resource (overall discharge)
-  - Discharge QuestionnaireResponse (overall discharge)
-  - EpisodeOfCare resource (overall discharge)
 
 Note: The above illustrative does not include updates. Such as if details in the Client (Patient) demographics change, or diagnosis details are updated. These updates would be captured as updates to the relevant FHIR resources (e.g., Patient resource, Condition resource, etc.) and would also be reported to BHA according to the specifications in this IG.
 
