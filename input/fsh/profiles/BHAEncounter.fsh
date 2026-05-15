@@ -34,8 +34,6 @@ Description: "Encounter profile for client visits and encounters related to BHA 
 
 // Extensions for BHA-specific data
 * extension contains 
-    BHAActionType named actionType 1..1 MS and
-    BHAUpdateType named updateType 0..1 MS
+    BHAActionType named actionType 1..1 MS
 
 * extension[actionType] ^short = "CCAR Action Type (01=admission, 03=update, 05=discharge)"
-* extension[updateType] ^short = "Type of update when applicable"

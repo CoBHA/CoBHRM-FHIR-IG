@@ -22,6 +22,10 @@ Usage: #example
 
 * extension[actionType].valueCodeableConcept = BHAActionTypeCS#01 "Admission"
 
+* diagnosis[+].condition = Reference(Condition/BHAEpisodeDiagnosisExample) "Major depressive disorder, recurrent, moderate"
+* diagnosis[=].use = BHADiagnosisTypeCS#MH "Mental Health"
+* diagnosis[=].rank = 1
+
 * serviceProvider = Reference(Organization/BHAOrganizationExample) "Community Health Clinic"
 
 // BHA Encounter example that points at both a BH and a PG episode of care.
