@@ -24,6 +24,7 @@ Usage: #definition
 * item[=].text = "End of Treatment Reason"
 * item[=].type = #choice
 * item[=].required = false
+// Valid values sourced from ACT sheet Appendix ACT-Ascent
 * item[=].answerValueSet = Canonical(BHAEndOfTreatmentReasonVS)
 
 * item[+].linkId = "ARRESTS_PAST_30_DAYS"
@@ -60,6 +61,7 @@ Usage: #definition
 * item[=].text = "Education Level"
 * item[=].type = #choice
 * item[=].required = true
+// Valid values sourced from ACT sheet Appendix ACT-Ascent
 * item[=].answerValueSet = Canonical(BHAEducationLevelVS)
 
 * item[+].linkId = "SCHOOL_ATTENDANCE_STATUS"

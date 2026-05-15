@@ -1,4 +1,9 @@
 {
+    "git.autoRepositoryDetection": true,
+    "git.openRepositoryInParentFolders": "never",
+    "git.scanRepositories": [
+        "."
+    ],
     "cSpell.words": [
         "BHASC",
         "BHRM",

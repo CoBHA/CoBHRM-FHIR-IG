@@ -1,7 +1,7 @@
 ValueSet: BHAEducationLevelVS
 Id: bha-education-level-vs
 Title: "ValueSet for BHA Education Level"
-Description: "Value set for education levels used in BHA episodes"
+Description: "Value set for education levels used in BHA episodes. Valid values align with ACT sheet Appendix ACT-Ascent."
 * ^experimental = false
 //* ^url = "http://bha.colorado.gov/fhir/bha-ig/ValueSet-bha-education-level"
 * include codes from system BHAEducationLevelCS

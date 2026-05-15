@@ -1,7 +1,7 @@
 ValueSet: BHAEndOfTreatmentReasonVS
 Id: bha-end-of-treatment-reason-vs
 Title: "ValueSet for BHA End of Treatment Reasons"
-Description: "End of Treatment Reasons for BHA services/admissions."
+Description: "End of Treatment Reasons for BHA services/admissions. Valid values align with ACT sheet Appendix ACT-Ascent."
 * ^experimental = false
 
 //* ^url = "http://bha.colorado.gov/fhir/bha-ig/ValueSet-bha-end-of-treatment-reason-vs"
