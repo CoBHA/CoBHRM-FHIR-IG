@@ -23,8 +23,8 @@ for Colorado BHA clients in order to support the BHA's annual reporting requirem
 // * identifier[PEAKID].value 1..1 MS
 // * identifier[PEAKID] ^short = "The client's PEAK ID (X999999 format)"
 
-// Social Security number when applicable  
-* identifier contains SSN 0..1 MS
+// Social Security number
+* identifier contains SSN 1..1 MS
 * identifier[SSN].system 1..1 MS
 * identifier[SSN].system = "http://hl7.org/fhir/sid/us-ssn"
 * identifier[SSN].value 1..1 MS

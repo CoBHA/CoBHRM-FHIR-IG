@@ -20,19 +20,13 @@ Usage: #definition
 * item[=].type = #dateTime
 * item[=].required = true
 
-//todo: add narrative guidance about when this is required. From CoBHRM: "2. Must be provided if client will be paid using government dollars and has enrolled through PEAK. If crisis situation then must have Universal ID"
-* item[+].linkId = "PEAK_ID"
+* item[+].linkId = "STATE_IDENTIFIER"
 * item[=].text = "Colorado PEAK State ID / Universal ID (MEDICAID ID)"
 * item[=].type = #string
-* item[=].required = false
+* item[=].required = true
 
-* item[+].linkId = "CCAR_ID"
-* item[=].text = "CCAR Identifier (data conversion)"
-* item[=].type = #string
-* item[=].required = false
-
-* item[+].linkId = "DACODS_ID"
-* item[=].text = "DACODS Identifier (data conversion)"
+* item[+].linkId = "BHA_IDENTIFIER"
+* item[=].text = "BHA Identifier (data conversion only)"
 * item[=].type = #string
 * item[=].required = false
 
