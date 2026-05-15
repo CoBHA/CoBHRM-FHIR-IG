@@ -7,6 +7,8 @@ Usage: #definition
 
 * url = "http://bha.colorado.gov/fhir/bha-ig/Questionnaire/BHASubstanceUseDisorderQuestionnaire"
 * version = "1.0.0"
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+* extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"
 * name = "BHASubstanceUseDisorderQuestionnaire"
 * title = "BHA Substance Use Disorder Questionnaire"
 * status = #active

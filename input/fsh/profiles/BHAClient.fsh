@@ -64,9 +64,9 @@ for Colorado BHA clients in order to support the BHA's annual reporting requirem
 
 Mapping: BHAClient-Mapping
 Source: BHAClient
-Target: "CoBHRM"
+Target: "https://coloradobehavioralhealthadministration.mintlify.app/"
 Title: "Mapping from CO BHA CoBHRM to BHA Client (Patient) Profile"
-* -> "CoBHRM"
+* -> "CoBHA Client"
 * meta.lastUpdated -> "Client: Effective Date"
 * identifier[STATE_IDENTIFIER] -> "Client: Colorado PEAK State ID / Universal ID"
 * identifier[BHA_IDENTIFIER] -> "Client: BHA Identifier"
