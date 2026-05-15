@@ -8,6 +8,10 @@ Description: "Example Client"
 // * identifier[clientId].value = "C123456789"
 // * identifier[clientId].system = "http://bha.colorado.gov/identifiers/client-id" 
 
+* identifier[STATE_IDENTIFIER].type = http://terminology.hl7.org/CodeSystem/v2-0203#MA
+* identifier[STATE_IDENTIFIER].system = "https://peak.colorado.gov/identifiers/state-id"
+* identifier[STATE_IDENTIFIER].value = "9876543210"
+
 * identifier[SSN].type = http://terminology.hl7.org/CodeSystem/v2-0203#SS
 * identifier[SSN].value = "111-11-1111"
 * identifier[SSN].system = "http://hl7.org/fhir/sid/us-ssn" 
