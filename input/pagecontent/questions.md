@@ -1,3 +1,6 @@
+
+### Questions and Feedback
+
 Here are some specific areas of concern where the authors would appreciate feedback, guidance, thought partnership, and specific answers. 
 
 Please share your thoughts by emailing [FHIRFeedback@state.co.us](mailto:FHIRFeedback@state.co.us).
@@ -14,9 +17,12 @@ Please share your thoughts by emailing [FHIRFeedback@state.co.us](mailto:FHIRFee
 
 ### Changes
 
+#### Changes since March 2026 public-comment
+
 1. The IG calls for the .meta.lastUpdated field to fulfill CoBHRM's "effective date" requirement. 
 2. Encounter.episodeofcare element must have at-least one reference to a BHA EpisodeOfCare
 3. added a reference to the BHA EpisodeOfCare in the BH Admission, Discharge, and Diagnosis QuestionnnaireResponse examples.
 4. Clarify pregnancy is not a type of EpisodeOfCare for BHA, but is tracked.
 5. Clarified the workflow relative to an overall engagement, which is not tracked. EpisodeOfCare are the tracked programs for which many Encounters may happen. The Admission and Discharge are associated with the EpisodeOfCare. 
-6. 
+6. Updates for UDM changes until May 2026
+7. 

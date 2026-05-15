@@ -105,7 +105,7 @@ pages:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
   questions.md:
-    title: Questions
+    title: Changes and Questions
     generation: markdown
     extension: 
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
@@ -122,5 +122,5 @@ menu:
   About: 
     About: about.html
     Maturity: maturity.html
-    Questions: questions.html
+    Changes: questions.html
     
