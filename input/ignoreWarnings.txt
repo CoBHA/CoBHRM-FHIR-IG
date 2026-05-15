@@ -19,15 +19,6 @@ WARNING: StructureDefinition/bha-organization: StructureDefinition.snapshot: The
 # assume us-core 6.1.0 for now
 WARNING: ImplementationGuide/bha-ig: ImplementationGuide.dependsOn[2]: The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is 8.0.1. This reference is getting old and the more recent version should be considered
 
-# assume not needing Oid 
-INFORMATION: Resource: The resource Questionnaire/BHAAdmissionQuestionnaire could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
-INFORMATION: Resource: The resource Questionnaire/BHAClientQuestionnaire could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
-INFORMATION: Resource: The resource Questionnaire/BHADiagnosisQuestionnaire could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
-INFORMATION: Resource: The resource Questionnaire/BHADischargeQuestionnaire could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
-INFORMATION: Resource: The resource Questionnaire/BHASCBabyQuestionnaire could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
-INFORMATION: Resource: The resource Questionnaire/BHASCPregnancyPostpartumRiskQuestionnaire could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
-INFORMATION: Resource: The resource Questionnaire/BHASubstanceUseDisorderQuestionnaire could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
-
 # using extensions that are not profiled in SDC Questionnaire
 Details_for__matching_against_Profile_
 
