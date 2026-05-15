@@ -14,6 +14,9 @@ Please share your thoughts by emailing [FHIRFeedback@state.co.us](mailto:FHIRFee
 6. How does this IG align with existing EHR data structures, capabilities, and workflows?
 7. Please share details about any implementation barriers, dependencies, and timeline considerations we should consider.
 8. The [Workflow](workflow.html) page illustrates a hypothetical  scenario for how BHA might query CoBHRM data from licensed providers who report directly to BHA. This figure is meant as a conversation starter. Please share opportunites for improvement.
+9. No idea what a state ID should look like, so have an example using 'https://peak.colorado.gov/identifiers/state-id'
+10. Unclear where the new Service Questionnaire is used.
+11. Service Questionnaire brings in two CodeSystems with no codes.
 
 ### Changes
 
@@ -25,4 +28,6 @@ Please share your thoughts by emailing [FHIRFeedback@state.co.us](mailto:FHIRFee
 4. Clarify pregnancy is not a type of EpisodeOfCare for BHA, but is tracked.
 5. Clarified the workflow relative to an overall engagement, which is not tracked. EpisodeOfCare are the tracked programs for which many Encounters may happen. The Admission and Discharge are associated with the EpisodeOfCare. 
 6. Updates for UDM changes until May 2026
-7. 
+7. Added examples of all profiles and extensions
+8. Cleaned up mapping tables, and added FHIR mapping for the profiles
+
