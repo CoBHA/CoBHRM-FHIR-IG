@@ -17,11 +17,19 @@ for Colorado BHA clients in order to support the BHA's annual reporting requirem
 // * identifier[clientId].value 1..1 MS
 // * identifier[clientId] ^short = "The client's BHASO Client ID (10 characters max)"
 
-// Colorado PEAK state ID when applicable  
-// * identifier contains PEAKID 0..1 MS
-// * identifier[PEAKID].type = http://terminology.hl7.org/CodeSystem/v2-0203#PI
-// * identifier[PEAKID].value 1..1 MS
-// * identifier[PEAKID] ^short = "The client's PEAK ID (X999999 format)"
+// Colorado PEAK state ID / universal ID
+* identifier contains STATE_IDENTIFIER 1..1 MS
+* identifier[STATE_IDENTIFIER].type 1..1 MS
+* identifier[STATE_IDENTIFIER].type = http://terminology.hl7.org/CodeSystem/v2-0203#MA
+* identifier[STATE_IDENTIFIER].value 1..1 MS
+* identifier[STATE_IDENTIFIER] ^short = "The client's Colorado PEAK State ID / Universal ID"
+
+// BHA Identifier (data conversion only)
+* identifier contains BHA_IDENTIFIER 0..1 MS
+* identifier[BHA_IDENTIFIER].type 1..1 MS
+* identifier[BHA_IDENTIFIER].type = http://terminology.hl7.org/CodeSystem/v2-0203#AN
+* identifier[BHA_IDENTIFIER].value 1..1 MS
+* identifier[BHA_IDENTIFIER] ^short = "BHA Identifier (data conversion only)"
 
 // Social Security number
 * identifier contains SSN 1..1 MS
@@ -60,6 +68,8 @@ Target: "CoBHRM"
 Title: "Mapping from CO BHA CoBHRM to BHA Client (Patient) Profile"
 * -> "CoBHRM"
 * meta.lastUpdated -> "Client: Effective Date"
+* identifier[STATE_IDENTIFIER] -> "Client: Colorado PEAK State ID / Universal ID"
+* identifier[BHA_IDENTIFIER] -> "Client: BHA Identifier"
 * identifier[SSN] -> "Client: Social Security Number"
 * birthDate -> "Client: DOB"
 * name.family -> "Client: Last Name"
