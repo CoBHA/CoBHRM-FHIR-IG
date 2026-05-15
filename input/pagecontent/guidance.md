@@ -26,17 +26,17 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 
 | CoBHRM File             | FHIR Profile or Questionnaire                                                                                                             |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Client                  | [CO BHA Client Profile](StructureDefinition-bha-client.html)                                                                              |
+| Client                  | [CO BHA Client Profile](StructureDefinition-bha-client-mappings.html#other-mappings)                                                                              |
 | Client                  | [BHA Client Questionnaire](Questionnaire-BHAClientQuestionnaire.html)                                                                     |
 | Client                  | [US Core Observation Sexual Orientation]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-sexual-orientation.html)       |
-| Admission               | [CO BHA Episode Profile](StructureDefinition-bha-episode.html)                                                                            |
+| Admission               | [CO BHA Episode Profile](StructureDefinition-bha-episode.html#other-mappings)                                                                            |
 | Admission               | [BHA Admission Questionnaire](Questionnaire-BHAAdmissionQuestionnaire.html)                                                               |
 | Admission               | [US Core Observation Pregnancy Status]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-pregnancystatus.html)            |
 | Service                 | [BHA Service Questionnaire](Questionnaire-BHAServiceQuestionnaire.html)                                                                   |
-| Discharge               | [CO BHA Episode Profile](StructureDefinition-bha-episode.html)                                                                            |
+| Discharge               | [CO BHA Episode Profile](StructureDefinition-bha-episode.html#other-mappings)                                                                            |
 | Discharge               | [BHA Discharge Questionnaire](Questionnaire-BHADischargeQuestionnaire.html)                                                               |
-| Diagnosis               | [CO BHA Episode Diagnosis Profile](StructureDefinition-BHAEpisodeDiagnosis.html)                                                            |
-| Diagnosis               | [CO BHA Episode Profile](StructureDefinition-bha-episode.html)                                                                            |
+| Diagnosis               | [CO BHA Episode Diagnosis Profile](StructureDefinition-BHAEpisodeDiagnosis.html#other-mappings)                                                            |
+| Diagnosis               | [CO BHA Episode Profile](StructureDefinition-bha-episode.html#other-mappings)                                                                            |
 | Diagnosis               | [BHA Diagnosis Questionnaire](Questionnaire-BHADiagnosisQuestionnaire.html)                                                               |
 | Substance Use Disorder  | [BHA Substance Use Disorder Questionnaire](Questionnaire-BHASubstanceUseDisorderQuestionnaire.html)                                       |
 | SC Pregnancy/PostPartum | [BHA Special Connections Pregnancy/Postpartum Risk Screening Questionnaire](Questionnaire-BHASCPregnancyPostpartumRiskQuestionnaire.html) |
