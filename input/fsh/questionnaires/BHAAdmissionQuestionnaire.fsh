@@ -20,6 +20,16 @@ Usage: #definition
 * item[=].type = #dateTime
 * item[=].required = true
 
+* item[+].linkId = "BHA_IDENTIFIER"
+* item[=].text = "BHA Identifier (data conversion only)"
+* item[=].type = #string
+* item[=].required = false
+
+* item[+].linkId = "LEGACY_ADMISSION_IDENTIFIER"
+* item[=].text = "Admission Identifier (data conversion)"
+* item[=].type = #string
+* item[=].required = false
+
 // Contact and Appointment Information Section
 * item[+].linkId = "FIRST_CONTACT_DATE"
 * item[=].text = "Date of First Contact"
@@ -31,9 +41,14 @@ Usage: #definition
 * item[=].type = #date
 * item[=].required = true
 
+* item[+].linkId = "LOCATION_NPI"
+* item[=].text = "BHE License Number"
+* item[=].type = #string
+* item[=].required = true
+
 // Clinical Information Section
-* item[+].linkId = "MEDICATION_ASSISTED_OPIOID_THERAPY"
-* item[=].text = "Medication Assisted Opioid Therapy"
+* item[+].linkId = "MEDICATION_ASSISTED_THERAPY"
+* item[=].text = "Medication Assisted Therapy"
 * item[=].type = #boolean
 * item[=].required = true
 
