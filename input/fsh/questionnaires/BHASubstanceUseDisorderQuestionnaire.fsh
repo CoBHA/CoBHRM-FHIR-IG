@@ -24,6 +24,8 @@ Usage: #definition
 * item[+].linkId = "ASAM_LEVEL_OF_CARE"
 * item[=].text = "ASAM Level of Care"
 * item[=].type = #choice
+// UDM update (2026-05-11): conditionally required for all non-DUI services.
+// This condition references service context that is outside this questionnaire, so required stays false here.
 * item[=].required = false
 * item[=].answerValueSet = Canonical(BHAASAMLevelOfCareVS)
 
