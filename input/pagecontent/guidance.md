@@ -164,6 +164,16 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 | SC Baby                 | Baby Sex at Birth                                                                                  | QuestionnaireResponse:SEX_AT_BIRTH                                                                                                            | [BHA SC Baby Questionnaire](Questionnaire-BHASCBabyQuestionnaire.html)                                                              |
 {: .grid}
 
+##### ACT and Ascent Valid Values Reference
+
+For Co-BHRM ACT-sheet fields that reference 9(2) valid values (including Discharge Outcomes and Education-related fields), this IG aligns to **Appendix ACT-Ascent** (moved from Appendix A in the May 2026 update).
+
+In the current FHIR artifacts, this applies to the coded values used for:
+
+- Admission: Education Level
+- Discharge: End of Treatment Reason
+- Discharge: Education Level
+
 <!-- 
 ##### Client File                                             |
 
