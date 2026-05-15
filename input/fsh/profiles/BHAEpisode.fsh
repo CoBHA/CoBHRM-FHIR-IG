@@ -31,3 +31,16 @@ Description: "BHA episode profile for client admissions/services"
 * period MS
 * period.end 0..1 MS
 
+Mapping: BHAEpisodeOfCare-Mapping
+Source: BHAEpisodeOfCare
+Target: "https://coloradobehavioralhealthadministration.mintlify.app/"
+Title: "Mapping from CoBHRM Admission/Discharge to BHA Episode of Care"
+* -> "CoBHRM: EpisodeOfCare"
+* status -> "Discharge: Discharge Type / Status"
+* type -> "Admission: Service Identifier"
+* patient -> "The Client"
+* period.start -> "Admission: Admission Date"
+* period.end -> "Discharge: Discharge Date"
+* managingOrganization -> "Provider/Managing Organization"
+* diagnosis -> "Diagnosis references (MH/SUD Diagnosis Identifiers)"
+

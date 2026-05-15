@@ -17,3 +17,14 @@ Description: "Provider Organization profile for Colorado BHASO clinics"
 // * identifier[ProviderId] ^short = "BHASO Provider ID"
 
 
+Mapping: BHAOrganization-Mapping
+Source: BHAOrganization
+Target: "https://coloradobehavioralhealthadministration.mintlify.app/"
+Title: "Mapping from CoBHRM to BHA Organization"
+* -> "CoBHRM: Organization"
+* identifier[NPI] -> "Organization NPI (BHE License Number)"
+* name -> "Organization Name"
+* address -> "Organization Address"
+* telecom -> "Organization Contact Information"
+
+

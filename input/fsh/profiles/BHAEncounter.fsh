@@ -37,3 +37,15 @@ Description: "Encounter profile for client visits and encounters related to BHA 
     BHAActionType named actionType 1..1 MS
 
 * extension[actionType] ^short = "CCAR Action Type (01=admission, 03=update, 05=discharge)"
+
+Mapping: BHAEncounter-Mapping
+Source: BHAEncounter
+Target: "https://coloradobehavioralhealthadministration.mintlify.app/"
+Title: "Mapping from CoBHRM Admission/Discharge to BHA Encounter"
+* -> "CoBHRM: Admission/Discharge"
+* period.start -> "Admission: Admission Date"
+* period.end -> "Discharge: Discharge Date"
+* episodeOfCare -> "Reference to BHA Episode of Care"
+* diagnosis.condition -> "Reference to BHA Episode Diagnosis"
+* serviceProvider -> "Provider Organization"
+* extension[actionType] -> "Action Type (Admission, Update, Discharge)"
