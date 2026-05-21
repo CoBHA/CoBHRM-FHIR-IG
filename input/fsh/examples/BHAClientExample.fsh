@@ -2,13 +2,13 @@ Instance: BHAClientExample
 InstanceOf: BHAClient
 Title: "Example Colorado BHA Client"
 Description: "Example Client"
-
+* meta.lastUpdated = "2024-06-01T12:00:00Z" // Effective date for the client record, used for reporting and determining which version of the IG applies to this client
 // Optional Identifiers (1..* MS)
 // * identifier[clientId].type = http://terminology.hl7.org/CodeSystem/v2-0203#PI
 // * identifier[clientId].value = "C123456789"
 // * identifier[clientId].system = "http://bha.colorado.gov/identifiers/client-id" 
 
-* identifier[STATE_IDENTIFIER].type = http://terminology.hl7.org/CodeSystem/v2-0203#MA
+* identifier[STATE_IDENTIFIER].type = BHAClientIdentifierTypeCS#STATE_IDENTIFIER
 * identifier[STATE_IDENTIFIER].system = "https://peak.colorado.gov/identifiers/state-id"
 * identifier[STATE_IDENTIFIER].value = "9876543210"
 
@@ -18,7 +18,7 @@ Description: "Example Client"
 
 
 // Demographics
-* name[0] 
+* name[officialName] 
   * use = #official
   * family = "Jones"
   * given[0] = "Emma"
@@ -27,14 +27,14 @@ Description: "Example Client"
 
 * birthDate = "1980-05-15" 
 * gender = #female 
-* address[+]
-* address[=].line[+] = "123 Main St"
-* address[=].line[+] = "Suite 300"
-* address[=].city = "Denver"
-* address[=].state = "CO"
-* address[=].postalCode = "80205" 
-* address[=].district = #01 "Adams" 
-* address[=].period.start = "2023-01-01"
+* address[home]
+* address[home].line[+] = "123 Main St"
+* address[home].line[+] = "Suite 300"
+* address[home].city = "Denver"
+* address[home].state = "CO"
+* address[home].postalCode = "80205" 
+* address[home].district = #01 "Adams" 
+* address[home].period.start = "2023-01-01"
 * maritalStatus = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus#M
 
 // Required Extensions (1..1)
@@ -42,7 +42,7 @@ Description: "Example Client"
 * extension[race].extension[ombCategory].valueCoding = urn:oid:2.16.840.1.113883.6.238#2028-9 
 * extension[race].extension[text].valueString = "Asian"
 
-* extension[bharace].valueCodeableConcept = BHARaceCS#02 "Asian"
+//* extension[bharace].valueCodeableConcept = BHARaceCS#02 "Asian"
 
 //* extension[ethnicity].url = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
 * extension[ethnicity].extension[ombCategory].valueCoding = urn:oid:2.16.840.1.113883.6.238#2186-5 
@@ -60,21 +60,4 @@ Description: "Example Client"
 * communication.language.text = "Spanish"
 * communication.preferred = true
 
-//* identifier[clientId].value = "ABC1234567"
-//* identifier[clientId].type = http://terminology.hl7.org/CodeSystem/v2-0203#PI
 
-//* name.family = "Doe"
-//* name.given = "Jane"
-//* birthDate = "1985-06-15"
-//* birthSex = #female
-//* gender = #female
-//* ethnicity =  #2135-2
-//* race = #2028-9
-
-//* extension[ethnicity].valueCodeableConcept = BHAEthnicityCS#1 "Hispanic/Latino (Mexican)"
-
-//* address.line = "123 Main St"
-//* address.city = "Denver" 
-//* address.state = "CO"
-//* address.postalCode = "80202"
-//* address.district = "01"

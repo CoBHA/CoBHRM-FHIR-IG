@@ -8,14 +8,13 @@
 PIN_VERSION
 
 # Issues inherited from us-core. Check when change from 6.1.0
-MSG_DEPENDS_ON_DEPRECATED
 INFORMATION: StructureDefinition/BHAEpisodeDiagnosis: StructureDefinition.snapshot.element[14].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/bha-organization: StructureDefinition.snapshot.element[9].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 INFORMATION: StructureDefinition/bha-organization: StructureDefinition.snapshot.element[11].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 INFORMATION: StructureDefinition/bha-organization: StructureDefinition.snapshot.element[12].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 WARNING: StructureDefinition/bha-organization: StructureDefinition.snapshot: The slice 'CLIA' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 WARNING: StructureDefinition/bha-organization: StructureDefinition.snapshot: The slice 'NAIC' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
-INFORMATION: StructureDefinition/BHAEpisodeDiagnosis: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0-ballot-tc1 is deprecated with the note: 'Use additionalBinding extension or element instead'
+INFORMATION: StructureDefinition/BHAEpisodeDiagnosis: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
 
 # assume us-core 6.1.0 for now
 WARNING: ImplementationGuide/bha-ig: ImplementationGuide.dependsOn[2]: The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is 8.0.1. This reference is getting old and the more recent version should be considered
@@ -26,9 +25,10 @@ Details_for__matching_against_Profile_
 # This example has one matching EpisodeOfCare and one for Pregnancy
 INFORMATION: Encounter/BHAEncounterExamplePG: Encounter.episodeOfCare[1]: This element does not match any known slice defined in the profile http://bha.colorado.gov/fhir/bha-ig/StructureDefinition/bha-encounter|0.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
-
-
-
+# vocabulary warning that is accepted
+Target Code System urn:oid:2.16.840.1.113883.6.238 doesn't have all content (content = not-present), so the target codes cannot be checked
+Target Code System http://snomed.info/sct is only supported on the terminology server, so the target codes are not validated for performance reasons
+Target Code System urn:ietf:bcp:47 doesn't have all content (content = not-present), so the target codes cannot be checked
 
 
 

@@ -38,7 +38,7 @@ dependencies:
     id: uscore
   hl7.fhir.us.military-service: 1.0.0
   hl7.fhir.uv.sdc: 
-    version: current # 3.0.0
+    version: current
     id: sdc
   
 # Global settings
