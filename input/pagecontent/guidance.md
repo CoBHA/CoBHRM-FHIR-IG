@@ -29,14 +29,14 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 | Client                  | [CO BHA Client Profile](StructureDefinition-bha-client-mappings.html#other-mappings)                                                      |
 | Client                  | [BHA Client Questionnaire](Questionnaire-BHAClientQuestionnaire.html)                                                                     |
 | Client                  | [US Core Observation Sexual Orientation]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-sexual-orientation.html)       |
-| Admission               | [CO BHA Episode Profile](StructureDefinition-bha-episode-mappings.html#other-mappings)                                                    |
+| Admission               | [CO BHA Episode Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)                                                    |
 | Admission               | [BHA Admission Questionnaire](Questionnaire-BHAAdmissionQuestionnaire.html)                                                               |
 | Admission               | [US Core Observation Pregnancy Status]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-pregnancystatus.html)            |
 | Service                 | [BHA Service Questionnaire](Questionnaire-BHAServiceQuestionnaire.html)                                                                   |
-| Discharge               | [CO BHA Episode Profile](StructureDefinition-bha-episode-mappings.html#other-mappings)                                                    |
+| Discharge               | [CO BHA Episode Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)                                                    |
 | Discharge               | [BHA Discharge Questionnaire](Questionnaire-BHADischargeQuestionnaire.html)                                                               |
 | Diagnosis               | [CO BHA Episode Diagnosis Profile](StructureDefinition-BHAEpisodeDiagnosis-mappings.html#other-mappings)                                  |
-| Diagnosis               | [CO BHA Episode Profile](StructureDefinition-bha-episode-mappings.html#other-mappings)                                                    |
+| Diagnosis               | [CO BHA Episode Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)                                                    |
 | Diagnosis               | [BHA Diagnosis Questionnaire](Questionnaire-BHADiagnosisQuestionnaire.html)                                                               |
 | Substance Use Disorder  | [BHA Substance Use Disorder Questionnaire](Questionnaire-BHASubstanceUseDisorderQuestionnaire.html)                                       |
 | SC Pregnancy/PostPartum | [BHA Special Connections Pregnancy/Postpartum Risk Screening Questionnaire](Questionnaire-BHASCPregnancyPostpartumRiskQuestionnaire.html) |
@@ -47,10 +47,10 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 
 | CoBHRM File             | CoBHRM Field Name                                                            | FHIR Element shorthand
 | ----------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------------
-| Client                  | Effective Date                                                               | Patient.meta.lastUpdated<br>BHAClientQuestionnaire.meta.lastUpdated
+| Client                  | Effective Date                                                               | Patient.meta.lastUpdated<br>BHAClientQuestionnaire:`lastUpdated`
 | Client                  | Colorado PEAK State ID<br>/ Universal ID                                     | Patient.identifier[STATE_IDENTIFIER]
 | Client                  | BHA Identifier                                                               | Patient.identifier[BHA_IDENTIFIER]
-| Client                  | Trails Identifier                                                            | Patient.identifier[TRAILS_IDENTIFIER]<br>BHAClientQuestionnaire:TRAILS_IDENTIFIER
+| Client                  | Trails Identifier                                                            | Patient.identifier[TRAILS_IDENTIFIER]<br>BHAClientQuestionnaire:`TRAILS_IDENTIFIER`
 | Client                  | Verato Identifier                                                            | Patient.identifier[VERATO_IDENTIFIER]
 | Client                  | DOB                                                                          | Patient.birthDate
 | Client                  | Last Name                                                                    | Patient.name[officialName].family
@@ -66,53 +66,55 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 | Client                  | Sex at Birth                                                                 | Patient.extension[birthsex]
 | Client                  | Gender Identity                                                              | Patient.extension[genderIdentity]<br>[BHAGenderIdentityCM](ConceptMap-BHAGenderIdentityCM.html)
 | Client                  | Sexual Orientation                                                           | [US Core Observation Sexual Orientation]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-sexual-orientation.html)
-| Client                  | Child Welfare Involvement                                                    | QuestionnaireResponse:CHILD_WELFARE_INVOLVEMENT
-| Client                  | Disability Code(s)                                                           | QuestionnaireResponse:DISABILITY_CODES
+| Client                  | Child Welfare Involvement                                                    | BHAClientQuestionnaire:`CHILD_WELFARE_INVOLVEMENT`
+| Client                  | Disability Code(s)                                                           | BHAClientQuestionnaire:`DISABILITY_CODES`
 | Client                  | Veteran Status                                                               | Patient.extension[USVeteranStatus]
 | Client                  | Last known address line 1                                                    | Patient.address[home].line
 | Client                  | Last known address line 2                                                    | Patient.address[home].line
 | Client                  | Last known city                                                              | Patient.address[home].city
-| Admission               | Effective Date                                                               | EpisodeOfCare.meta.lastUpdated
-| Admission               | BHA Identifier (data conversion only)                                        | QuestionnaireResponse:BHA_IDENTIFIER
-| Admission               | Admission Identifier (data conversion)                                       | QuestionnaireResponse:LEGACY_ADMISSION_IDENTIFIER
-| Admission               | BHE License Number                                                           | QuestionnaireResponse:LOCATION_NPI
+| - - - - - - - - - - - - | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  | - - - - - - - - - - - - - - |
+| Admission               | Effective Date                                                               | EpisodeOfCare.meta.lastUpdated<br>BHAAdmissionQuestionnaire:`lastUpdated`
+| Admission               | Admission Identifier                                                         | EpisodeOfCare.identifier[ADMISSION_IDENTIFIER]<br>BHAAdmissionQuestionnaire:`ADMISSION_IDENTIFIER`
+| Admission               | NPI / BHE License Number                                                     | EpisodeOfCare.managingOrganization.identifier<br>BHAAdmissionQuestionnaire:`NPI`
 | Admission               | Admission Date                                                               | EpisodeOfCare.period.start
-| Admission               | Service Identifier                                                           | EpisodeOfCare.type
-| Service                 | Record Type                                                                  | QuestionnaireResponse:RECORD_TYPE
-| Service                 | Transaction Type                                                             | QuestionnaireResponse:TRANSACTION_TYPE
-| Service                 | BHASO ADMISSION Identifier                                                   | QuestionnaireResponse:BHASO_ADMISSION_IDENTIFIER
-| Service                 | Effective Date                                                               | QuestionnaireResponse:EFFECTIVE_DATE
-| Service                 | Evidence Based Practice                                                      | QuestionnaireResponse:EVIDENCE_BASED_PRACTICE
-| Service                 | Program                                                                      | QuestionnaireResponse:PROGRAM
+| Admission               | Service Identifier                                                           | EpisodeOfCare.diagnosis.condition
+| Admission               | Date of First Contact                                                        | BHAAdmissionQuestionnaire:`FIRST_CONTACT_DATE`
+| Admission               | Date of First Appointment Offered                                            | BHAAdmissionQuestionnaire:`FIRST_APPOINTMENT_OFFERED_DATE`
+| Admission               | Medication Assisted Therapy                                                  | BHAAdmissionQuestionnaire:`MEDICATION_ASSISTED_THERAPY`
+| Admission               | Referral Source                                                              | BHAAdmissionQuestionnaire:`REFERRAL_SOURCE`
+| Admission               | Arrests in Past 30 Days                                                      | BHAAdmissionQuestionnaire:`ARRESTS_PAST_30_DAYS`
+| Admission               | Employment Status                                                            | BHAAdmissionQuestionnaire:`EMPLOYMENT_STATUS`
+| Admission               | Marital Status                                                               | BHAAdmissionQuestionnaire:`MARITAL_STATUS`
+| Admission               | Living Situation                                                             | BHAAdmissionQuestionnaire:`LIVING_SITUATION`
+| Admission               | Monthly Income                                                               | BHAAdmissionQuestionnaire:`MONTHLY_INCOME`
+| Admission               | Primary Source of income/support for client                                  | BHAAdmissionQuestionnaire:`PRIMARY_INCOME_SOURCE`
+| Admission               | Pregnancy Status                                                             | BHAAdmissionQuestionnaire:`PREGNANCY_STATUS`
+| Admission               | Within 1 Year Postpartum Status                                              | BHAAdmissionQuestionnaire:`WITHIN_1_YEAR_POSTPARTUM_STATUS`
+| Admission               | Enrollment in Special Connections                                            | BHAAdmissionQuestionnaire:`SPECIAL_CONNECTIONS_ENROLLMENT`
+| Admission               | Enrollment in ACT?                                                           | BHAAdmissionQuestionnaire:`ACT_ENROLLMENT`
+| Admission               | Enrollment in Ascent (FEP)?                                                  | BHAAdmissionQuestionnaire:`ASCENT_ENROLLMENT`
+| Admission               | Number of Dependent Children<br>                                             | BHAAdmissionQuestionnaire:`NUMBER_DEPENDENT_CHILDREN`
+| Admission               | Self Help Attendance (Last 30 days at admission)/<br>Peer Support Attendance | BHAAdmissionQuestionnaire:`SELF_HELP_ATTENDANCE`
+| Admission               | Substance Use Prior Treatment (Total Lifetime admissions)                    | BHAAdmissionQuestionnaire:`TOTAL_SUBSTANCE_USE_PRIOR_TREATMENT`
+| Admission               | Psychiatric Hospital Admission (Last 30 days)                                | BHAAdmissionQuestionnaire:`PSYCHIATRIC_HOSPITAL_ADMISSION`
+| Admission               | Legal Status                                                                 | BHAAdmissionQuestionnaire:`LEGAL_STATUS`
+| Admission               | Involuntary Reason                                                           | BHAAdmissionQuestionnaire:`INVOLUNTARY_REASON`
+| Admission               | Criminal Justice Involvement                                                 | BHAAdmissionQuestionnaire:`CRIMINAL_JUSTICE_INVOLVEMENT`
+| Admission               | Education Level                                                              | BHAAdmissionQuestionnaire:`EDUCATION_LEVEL`
+| Admission               | School Attendance Status (in the previous 3 months)                          | BHAAdmissionQuestionnaire:`SCHOOL_ATTENDANCE_STATUS`
+| Admission               | Visit to Psychiatric ER in last 6 months                                     | BHAAdmissionQuestionnaire:`VISIT_TO_PSYCHIATRIC_ER`
+| Admission               | Communication Accomodations                                                  | BHAAdmissionQuestionnaire:`COMMUNICATION_ACCOMODATIONS`
+| - - - - - - - - - - - - | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  | - - - - - - - - - - - - - - |
+| Service                 | Record Type                                                                  | BHAAdmissionQuestionnaire:`RECORD_TYPE`
+| Service                 | Transaction Type                                                             | BHAAdmissionQuestionnaire:`TRANSACTION_TYPE`
+| Service                 | BHASO ADMISSION Identifier                                                   | BHAAdmissionQuestionnaire:`BHASO_ADMISSION_IDENTIFIER`
+| Service                 | Effective Date                                                               | BHAAdmissionQuestionnaire:`EFFECTIVE_DATE`
+| Service                 | Evidence Based Practice                                                      | BHAAdmissionQuestionnaire:`EVIDENCE_BASED_PRACTICE`
+| Service                 | Program                                                                      | BHAAdmissionQuestionnaire:`PROGRAM`
 | Service                 | Created Date                                                                 | QuestionnaireResponse:CREATED_DATE
 | Service                 | Created By                                                                   | QuestionnaireResponse:CREATED_BY
 | Service                 | Last Updated Date                                                            | QuestionnaireResponse:LAST_UPDATED_DATE
-| Admission               | Date of First Contact                                                        | QuestionnaireResponse
-| Admission               | Date of First Appointment Offered                                            | QuestionnaireResponse
-| Admission               | Medication Assisted Therapy                                                  | QuestionnaireResponse:MEDICATION_ASSISTED_THERAPY
-| Admission               | Referral Source                                                              | QuestionnaireResponse
-| Admission               | Arrests in Past 30 Days                                                      | QuestionnaireResponse
-| Admission               | Employment Status                                                            | QuestionnaireResponse
-| Admission               | Marital Status                                                               | Patient.maritalStatus
-| Admission               | Living Situation                                                             | QuestionnaireResponse
-| Admission               | Monthly Income                                                               | QuestionnaireResponse
-| Admission               | Primary Source of income/support for client                                  | QuestionnaireResponse
-| Admission               | Pregnancy Status                                                             | Observation
-| Admission               | Within 1 Year Postpartum Status                                              | QuestionnaireResponse
-| Admission               | Enrollment in Special Connections                                            | QuestionnaireResponse
-| Admission               | Enrollment in ACT?                                                           | QuestionnaireResponse
-| Admission               | Enrollment in Ascent (FEP)?                                                  | QuestionnaireResponse
-| Admission               | Number of Dependent Children<br>                                             | QuestionnaireResponse
-| Admission               | Self Help Attendance (Last 30 days at admission)/<br>Peer Support Attendance | QuestionnaireResponse
-| Admission               | Substance Use Prior Treatment (Total Lifetime admissions)                    | QuestionnaireResponse
-| Admission               | Psychiatric Hospital Admission (Last 30 days)                                | QuestionnaireResponse
-| Admission               | Legal Status                                                                 | QuestionnaireResponse
-| Admission               | Involuntary Reason                                                           | QuestionnaireResponse
-| Admission               | Criminal Justice Involvement                                                 | QuestionnaireResponse
-| Admission               | Education Level                                                              | QuestionnaireResponse
-| Admission               | School Attendance Status (in the previous 3 months)                          | QuestionnaireResponse
-| Admission               | Visit to Psychiatric ER in last 6 months                                     | QuestionnaireResponse
-| Admission               | Communication Accomodations                                                  | QuestionnaireResponse
+| - - - - - - - - - - - - | - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  | - - - - - - - - - - - - - - |
 | Discharge               | Effective Date                                                               | QuestionnaireResponse.meta.lastUpdated
 | Discharge               | Date of Last Contact                                                         | (TODO is this Encounter, or should it be a Questionnaire item? )
 | Discharge               | Discharge Date                                                               | EpisodeOfCare.period.end

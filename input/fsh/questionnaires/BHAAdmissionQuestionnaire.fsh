@@ -22,13 +22,13 @@ Usage: #definition
 * item[=].type = #dateTime
 * item[=].required = true
 
-* item[+].linkId = "BHA_IDENTIFIER"
-* item[=].text = "BHA Identifier (data conversion only)"
+* item[+].linkId = "NPI"
+* item[=].text = "NPI / BHE License Number"
 * item[=].type = #string
-* item[=].required = false
+* item[=].required = true
 
-* item[+].linkId = "LEGACY_ADMISSION_IDENTIFIER"
-* item[=].text = "Admission Identifier (data conversion)"
+* item[+].linkId = "ADMISSION_IDENTIFIER"
+* item[=].text = "Admission Identifier"
 * item[=].type = #string
 * item[=].required = false
 
@@ -41,11 +41,6 @@ Usage: #definition
 * item[+].linkId = "FIRST_APPOINTMENT_OFFERED_DATE"
 * item[=].text = "Date of First Appointment Offered"
 * item[=].type = #date
-* item[=].required = true
-
-* item[+].linkId = "LOCATION_NPI"
-* item[=].text = "BHE License Number"
-* item[=].type = #string
 * item[=].required = true
 
 // Clinical Information Section

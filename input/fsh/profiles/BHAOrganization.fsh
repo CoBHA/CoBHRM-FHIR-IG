@@ -4,17 +4,11 @@ Id: bha-organization
 Title: "Colorado BHA Provider Organization Profile"
 Description: "Provider Organization profile for Colorado BHASO clinics"
 
+// note that us-core slices Organization.identifier by $this with fixed values on system
 * identifier 1..* MS
 * identifier[NPI] 1..1 MS
-//* identifier ^slicing.discriminator.type = #type
-//* identifier ^slicing.discriminator.path = "$this"
-//* identifier ^slicing.rules = #open
+// note indicates that Troy has asked that NPI be used as assumed to be the BHE_LICENSE_NUMBER
 
-// BHASO Provider ID - originally added here to be included for BHA episodes but will not be available to the clinics
-// * identifier contains ProviderId 1..1 MS
-// * identifier[ProviderId].system = "http://example.org/ProviderIDSystem"
-// * identifier[ProviderId].value 1..1 MS
-// * identifier[ProviderId] ^short = "BHASO Provider ID"
 
 
 Mapping: BHAOrganization-Mapping

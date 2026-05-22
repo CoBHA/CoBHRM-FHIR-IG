@@ -1,34 +1,24 @@
 Profile: BHAEpisodeOfCare
 Parent: EpisodeOfCare
-Id: bha-episode
+Id: bha-episodeOfCare
 Title: "Colorado BHA Episode Profile"
 Description: "BHA episode profile for client admissions/services"
-
-// BHASO Admission Identifier -- not expected from point of care systems
-
-// *  identifier 1..* MS
-// *  identifier ^slicing.discriminator.type = #type
-// *  identifier ^slicing.discriminator.path = "type"
-// *  identifier ^slicing.rules = #open
-
-
-// * identifier contains BHASOEpisodeId 0..1 MS
-// *  identifier[BHASOEpisodeId].type from https://ratiopbc.github.io/bha-ig/ValueSet-bha-episode-id-type-vs (required)
-// *  identifier[BHASOEpisodeId].type = BHAEpisodeIdTypeCS#BHASOID "BHASO Episode ID"
-// *  identifier[BHASOEpisodeId].value 1..1 MS
-// *  identifier[BHASOEpisodeId] ^short = "BHASO Admission Identifier (10 characters max)"
-
-
+* meta.lastUpdated 1..1 MS
 * status MS
 * type 1..1 MS
-* type from BHAEpisodeIdentifierVS
-* patient MS
-* patient ^short = "The Client who is the focus of this episode"
-* diagnosis MS
+* type from BHADiagnosisTypeVS (required)
+* patient 1..1 MS
+* patient only Reference(bha-client)
+* patient ^short = "The Client who is the focus of this episode of care"
+* diagnosis 1.. MS
+* diagnosis.condition only Reference(BHAEpisodeDiagnosis)
 * diagnosis.role MS
 * managingOrganization 1..1 MS
 * managingOrganization only Reference(bha-organization)
-* period MS
+* managingOrganization.identifier 1..1 MS
+* managingOrganization.identifier ^short = "NPI / BHE License Number for the organization managing the episode of care"
+* period 1..1 MS
+* period.start 1..1 MS
 * period.end 0..1 MS
 
 Mapping: BHAEpisodeOfCare-Mapping
@@ -36,11 +26,14 @@ Source: BHAEpisodeOfCare
 Target: "https://coloradobehavioralhealthadministration.mintlify.app/"
 Title: "Mapping from CoBHRM Admission/Discharge to BHA Episode of Care"
 * -> "CoBHRM: EpisodeOfCare"
+* meta.lastUpdated -> "Episode: Effective Date"
 * status -> "Discharge: Discharge Type / Status"
-* type -> "Admission: Service Identifier"
+* type -> "Admission: Service Type"
 * patient -> "The Client"
 * period.start -> "Admission: Admission Date"
 * period.end -> "Discharge: Discharge Date"
 * managingOrganization -> "Provider/Managing Organization"
-* diagnosis -> "Diagnosis references (MH/SUD Diagnosis Identifiers)"
+* managingOrganization.identifier -> "NPI / BHE License Number"
+* diagnosis -> "Diagnosis reference"
+// todo do we need statusHistory, careManager, team, account, referralRequest?
 
