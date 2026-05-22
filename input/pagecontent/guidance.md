@@ -32,7 +32,6 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 | Admission               | [BHA EpisodeOfCare Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)                                           |
 | Admission               | [BHA Admission Questionnaire](Questionnaire-BHAAdmissionQuestionnaire.html)                                                               |
 | Admission               | [US Core Observation Pregnancy Status]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-pregnancystatus.html)            |
-| Service                 | [BHA Service Questionnaire](Questionnaire-BHAServiceQuestionnaire.html)                                                                   |
 | Discharge               | [BHA EpisodeOfCare Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)                                           |
 | Discharge               | [BHA Discharge Questionnaire](Questionnaire-BHADischargeQuestionnaire.html)                                                               |
 | Diagnosis               | [BHA Episode Diagnosis Profile](StructureDefinition-BHAEpisodeDiagnosis-mappings.html#other-mappings)                                     |
@@ -121,11 +120,8 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 | Communication Accommodations                                                 | BHAAdmissionQuestionnaireResponse:`COMMUNICATION_ACCOMMODATIONS`                                           |
 {: .grid}
 
+<!--
 #### Service
-
-<div markdown="1" class="dragon">
-Not clear this should be included in this IG
-</div>
 
 - [BHA Service Questionnaire](Questionnaire-BHAServiceQuestionnaire.html)
 
@@ -139,6 +135,7 @@ Not clear this should be included in this IG
 | Created By                 | BHAServiceQuestionnaireResponse:`CREATED_BY`                 |
 | Last Updated Date          | BHAServiceQuestionnaireResponse:`LAST_UPDATED_DATE`          |
 {: .grid}
+-->
 
 #### Discharge
 
@@ -181,83 +178,63 @@ Not clear this should be included in this IG
 
 - [BHA Substance Use Disorder Questionnaire](Questionnaire-BHASubstanceUseDisorderQuestionnaire.html)
 
-| CoBHRM Field Name                              | FHIR Element shorthand                   |
-| ---------------------------------------------- | ---------------------------------------- |
-| Effective Date                                 | BHASubstanceUseDisorderQuestionnaireResponse:`lastUpdated`   |
-| ASAM Level of Care                             | BHASubstanceUseDisorderQuestionnaireResponse:`ASAM_LEVEL_OF_CARE` |
-| Primary Substance Use                          | QuestionnaireResponse                    |
-| Times Used Primary Substance in Last 30 Days   | QuestionnaireResponse                    |
-| Route of Use of Primary Substances             | QuestionnaireResponse                    |
-| Age of First Use of Primary Substances         | QuestionnaireResponse                    |
-| Secondary Substance Use                        | QuestionnaireResponse                    |
-| Times Used Secondary Substance in Last 30 Days | QuestionnaireResponse                    |
-| Route of Use of Secondary Substances           | QuestionnaireResponse                    |
-| Age of First Use of Secondary Substances       | QuestionnaireResponse                    |
-| Tertiary Substance Use                         | QuestionnaireResponse                    |
-| Times Used Tertiary Substance in Last 30 Days  | QuestionnaireResponse                    |
-| Route of Use of Tertiary Substances            | QuestionnaireResponse                    |
-| Age of First Use of Tertiary Substances        | QuestionnaireResponse                    |
+| CoBHRM Field Name                              | FHIR Element shorthand                                                     |
+| ---------------------------------------------- | -------------------------------------------------------------------------- |
+| Effective Date                                 | BHASubstanceUseDisorderQuestionnaireResponse:`lastUpdated`                 |
+| ASAM Level of Care                             | BHASubstanceUseDisorderQuestionnaireResponse:`ASAM_LEVEL_OF_CARE`          |
+| Primary Substance Use                          | BHASubstanceUseDisorderQuestionnaireResponse:`PRIMARY_SUBSTANCE_USE`       |
+| Times Used Primary Substance in Last 30 Days   | BHASubstanceUseDisorderQuestionnaireResponse:`PRIMARY_LAST_USED_30_DAYS`   |
+| Route of Use of Primary Substances             | BHASubstanceUseDisorderQuestionnaireResponse:`PRIMARY_ROUTE_OF_USE`        |
+| Age of First Use of Primary Substances         | BHASubstanceUseDisorderQuestionnaireResponse:`PRIMARY_START_AGE`           |
+| Secondary Substance Use                        | BHASubstanceUseDisorderQuestionnaireResponse:`SECONDARY_SUBSTANCE_USE`     |
+| Times Used Secondary Substance in Last 30 Days | BHASubstanceUseDisorderQuestionnaireResponse:`SECONDARY_LAST_USED_30_DAYS` |
+| Route of Use of Secondary Substances           | BHASubstanceUseDisorderQuestionnaireResponse:`SECONDARY_ROUTE_OF_USE`      |
+| Age of First Use of Secondary Substances       | BHASubstanceUseDisorderQuestionnaireResponse:`SECONDARY_START_AGE`         |
+| Tertiary Substance Use                         | BHASubstanceUseDisorderQuestionnaireResponse:`TERTIARY_SUBSTANCE_USE`      |
+| Times Used Tertiary Substance in Last 30 Days  | BHASubstanceUseDisorderQuestionnaireResponse:`TERTIARY_LAST_USED_30_DAYS`  |
+| Route of Use of Tertiary Substances            | BHASubstanceUseDisorderQuestionnaireResponse:`TERTIARY_ROUTE_OF_USE`       |
+| Age of First Use of Tertiary Substances        | BHASubstanceUseDisorderQuestionnaireResponse:`TERTIARY_START_AGE`          |
 {: .grid}
 
 #### SC Pregnancy/PostPartum
 
 - [BHA Special Connections Pregnancy/Postpartum Risk Screening Questionnaire](Questionnaire-BHASCPregnancyPostpartumRiskQuestionnaire.html)
 
-| CoBHRM Field Name                      | FHIR Element shorthand                 |
-| -------------------------------------- | -------------------------------------- |
-| Effective Date                         | QuestionnaireResponse.meta.lastUpdated |
-| Evaluation Date                        | QuestionnaireResponse                  |
-| Pregnancy/Postpartum Status            | QuestionnaireResponse                  |
-| Pregnancy/Postpartum Care Status       | QuestionnaireResponse                  |
-| Access to other drug/alcohol treatment | QuestionnaireResponse                  |
-| Family/Social Support                  | QuestionnaireResponse                  |
-| Family substance use disorder history  | QuestionnaireResponse                  |
-| Family substance use disorder current  | QuestionnaireResponse                  |
-| Drug using partner                     | QuestionnaireResponse                  |
-| HIV Risk                               | QuestionnaireResponse                  |
-| Home Stability and Safety              | QuestionnaireResponse                  |
-| Personal Safety                        | QuestionnaireResponse                  |
-| Prior Criminal Record                  | QuestionnaireResponse                  |
-| Mental Health History                  | QuestionnaireResponse                  |
-| Prior alcohol/drug treatment           | QuestionnaireResponse                  |
-| Children Living in home with you       | QuestionnaireResponse                  |
-| Children Ages living in home with you  | QuestionnaireResponse                  |
+| CoBHRM Field Name                      | FHIR Element shorthand                                                 |
+| -------------------------------------- | ---------------------------------------------------------------------- |
+| Effective Date                         | BHASCPregnancyQuestionnaireResponse:`lastUpdated`                      |
+| Evaluation Date                        | BHASCPregnancyQuestionnaireResponse:`EVALUATION_DATE`                  |
+| Pregnancy/Postpartum Status            | BHASCPregnancyQuestionnaireResponse:`PREGNANCY_POSTPARTUM_STATUS`      |
+| Pregnancy/Postpartum Care Status       | BHASCPregnancyQuestionnaireResponse:`PREGNANCY_POSTPARTUM_CARE_STATUS` |
+| Access to other drug/alcohol treatment | BHASCPregnancyQuestionnaireResponse:`DRUG_ALCOHOL_TREATMENT_ACCESS`    |
+| Family/Social Support                  | BHASCPregnancyQuestionnaireResponse:`FAMILY_SOCIAL_SUPPORT`            |
+| Family substance use disorder history  | BHASCPregnancyQuestionnaireResponse:`FAMILY_SUD_HISTORY`               |
+| Family substance use disorder current  | BHASCPregnancyQuestionnaireResponse:`FAMILY_SUD_CURRENT`               |
+| Drug using partner                     | BHASCPregnancyQuestionnaireResponse:`DRUG_USING_PARTNER`               |
+| HIV Risk                               | BHASCPregnancyQuestionnaireResponse:`HIV_RISK`                         |
+| Home Stability and Safety              | BHASCPregnancyQuestionnaireResponse:`HOME_STABILITY_SAFETY`            |
+| Personal Safety                        | BHASCPregnancyQuestionnaireResponse:`PERSONAL_SAFETY`                  |
+| Prior Criminal Record                  | BHASCPregnancyQuestionnaireResponse:`PRIOR_CRIMINAL_RECORD`            |
+| Mental Health History                  | BHASCPregnancyQuestionnaireResponse:`MENTAL_HEALTH_HISTORY`            |
+| Prior alcohol/drug treatment           | BHASCPregnancyQuestionnaireResponse:`PRIOR_ALCOHOL_DRUG_TREATMENT`     |
+| Children Living in home with you       | BHASCPregnancyQuestionnaireResponse:`CHILDREN_LIVING_WITH_CLIENT`      |
+| Children Ages living in home with you  | BHASCPregnancyQuestionnaireResponse:`CHILDREN_AGES_LIVING_WITH_CLIENT` |
 {: .grid}
 
 #### SC Baby
 
 - [BHA SC Baby Questionnaire](Questionnaire-BHASCBabyQuestionnaire.html)
 
-| CoBHRM Field Name           | FHIR Element shorthand                     |
-| --------------------------- | ------------------------------------------ |
-| Effective Date              | BHASCBabyQuestionnaire:lastUpdated         |
-| Live Birth                  | BHASCBabyQuestionnaire:LIVE_BIRTH          |
-| Baby Date of Birth          | BHASCBabyQuestionnaire:DOB                 |
-| Baby Weight Pounds          | BHASCBabyQuestionnaire:WEIGHT_LBS          |
-| Baby Weight Ounces          | BHASCBabyQuestionnaire:WEIGHT_OZ           |
-| Baby Last Name              | BHASCBabyQuestionnaire:LAST_NAME           |
-| Baby First Name             | BHASCBabyQuestionnaire:FIRST_NAME          |
-| Baby Middle Name or Initial | BHASCBabyQuestionnaire:MIDDLE_NAME_INITIAL |
-| Baby Sex at Birth           | BHASCBabyQuestionnaire:SEX_AT_BIRTH        |
+| CoBHRM Field Name           | FHIR Element shorthand                               |
+| --------------------------- | ---------------------------------------------------- |
+| Effective Date              | BHASCBabyQuestionnaireResponse:`lastUpdated`         |
+| Live Birth                  | BHASCBabyQuestionnaireResponse:`LIVE_BIRTH`          |
+| Baby Date of Birth          | BHASCBabyQuestionnaireResponse:`DOB`                 |
+| Baby Weight Pounds          | BHASCBabyQuestionnaireResponse:`WEIGHT_LBS`          |
+| Baby Weight Ounces          | BHASCBabyQuestionnaireResponse:`WEIGHT_OZ`           |
+| Baby Last Name              | BHASCBabyQuestionnaireResponse:`LAST_NAME`           |
+| Baby First Name             | BHASCBabyQuestionnaireResponse:`FIRST_NAME`          |
+| Baby Middle Name or Initial | BHASCBabyQuestionnaireResponse:`MIDDLE_NAME_INITIAL` |
+| Baby Sex at Birth           | BHASCBabyQuestionnaireResponse:`SEX_AT_BIRTH`        |
 {: .grid}
-
-#### ACT and Ascent Valid Values Reference
-
-For CoBHRM ACT-sheet fields that reference 9(2) valid values (including Discharge Outcomes and Education-related fields), this IG aligns to **Appendix ACT-Ascent** (moved from Appendix A in the May 2026 update).
-
-In the current FHIR artifacts, this applies to the coded values used for:
-
-- Admission: Education Level
-- Discharge: End of Treatment Reason
-- Discharge: Education Level
-
-<!-- 
-##### Client File                                             |
-
-##### Admission File
-
- Note to maintainers: To update or recreate the table above, I suggest using a spreadsheet-to-Markdown converter, such as the one
-at https://tabletomarkdown.com/convert-spreadsheet-to-markdown/ 
--->
-
 

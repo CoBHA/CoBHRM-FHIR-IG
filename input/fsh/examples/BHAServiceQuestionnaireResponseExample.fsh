@@ -1,3 +1,4 @@
+/*
 Instance: BHAServiceQuestionnaireResponseExample
 InstanceOf: $us-core-questionnaireresponse
 Title: "Example BHA Service Questionnaire Responses"
@@ -25,3 +26,4 @@ Usage: #example
 * item[+].linkId = "LAST_UPDATED_DATE"
 * item[=].text = "Last Updated Date"
 * item[=].answer.valueDateTime = "2026-05-15T09:45:00-07:00"
+*/

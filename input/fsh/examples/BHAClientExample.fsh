@@ -9,7 +9,7 @@ Description: "Example Client"
 // * identifier[clientId].system = "http://bha.colorado.gov/identifiers/client-id" 
 
 * identifier[STATE_IDENTIFIER].type = BHAClientIdentifierTypeCS#STATE_IDENTIFIER
-* identifier[STATE_IDENTIFIER].system = "https://peak.colorado.gov/identifiers/state-id"
+* identifier[STATE_IDENTIFIER].system = "urn:oid:2.16.840.1.113883.4.3.8" // https://terminology.hl7.org/7.1.0/en/NamingSystem-ColoradoDLN.html
 * identifier[STATE_IDENTIFIER].value = "9876543210"
 
 * identifier[SSN].type = http://terminology.hl7.org/CodeSystem/v2-0203#SS

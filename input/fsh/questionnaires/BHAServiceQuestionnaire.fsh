@@ -1,3 +1,4 @@
+/*
 Instance: BHAServiceQuestionnaire
 InstanceOf: $sdc-questionnaire
 //Id: bha-service-questionnaire
@@ -58,3 +59,4 @@ Usage: #definition
 * item[=].text = "Last Updated Date"
 * item[=].type = #dateTime
 * item[=].required = true
+*/
