@@ -103,8 +103,19 @@ Usage: #definition
 * item[=].text = "Episode of Care Information"
 * item[=].type = #reference
 * item[=].required = true
+* item[=].repeats = true
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource"
 * item[=].extension[=].valueCode = #EpisodeOfCare
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile"
 * item[=].extension[=].valueCanonical = Canonical(BHAEpisodeOfCare)
 
+// require at least one diagnosis condition with MH or SUD code
+* item[+].linkId = "diagnosis"
+* item[=].text = "Diagnosis Information"
+* item[=].type = #reference
+* item[=].required = true
+* item[=].repeats = true
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource"
+* item[=].extension[=].valueCode = #Condition
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile"
+* item[=].extension[=].valueCanonical = Canonical(BHAEpisodeDiagnosis)

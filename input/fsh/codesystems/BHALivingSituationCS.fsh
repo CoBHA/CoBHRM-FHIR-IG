@@ -1,7 +1,7 @@
 CodeSystem: BHALivingSituationCS
 Id: bha-living-situation
 Title: "BHA Living Situation"
-Description: "Code system for living situations used in BHA episodes"
+Description: "Code system for living situations used in BHA EpisodeOfCare"
 * ^experimental = false
 * ^caseSensitive = true
 

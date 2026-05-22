@@ -9,8 +9,23 @@ Usage: #example
 * category[us-core] = http://terminology.hl7.org/CodeSystem/condition-category#encounter-diagnosis
 * category[diagnosisType] = BHADiagnosisTypeCS#MH
 //* code = http://hl7.org/fhir/sid/icd-10-cm#F33.1 "Major depressive disorder, recurrent, moderate"
-* code = http://snomed.info/sct#74732009 "Mental disorder"
+* code = BHAServiceIdentifierCS#17 "Mental Health Outpatient"
 * subject = Reference(Patient/BHAClientExample) "Emma Jones"
+
+// second Mental Health diagnosis for the episode, to illustrate multiple MH diagnoses per episode
+Instance: BHAEpisodeDiagnosisExample2
+InstanceOf: BHAEpisodeDiagnosis
+Title: "Example BHA Episode Diagnosis 2 — Mental Health"
+Description: "Second example Condition (encounter-diagnosis) for a BHA Episode with a Mental Health diagnosis type, illustrating multiple MH diagnoses for one episode."
+Usage: #example
+// Required by US Core Condition (encounter-diagnosis)
+* clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active "Active"
+* verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed "Confirmed"
+* category[us-core] = http://terminology.hl7.org/CodeSystem/condition-category#encounter-diagnosis
+* category[diagnosisType] = BHADiagnosisTypeCS#MH   
+* code = BHAServiceIdentifierCS#20 "Crisis Stabilization"
+* subject = Reference(Patient/BHAClientExample) "Emma Jones"
+
 
 Instance: BHAEpisodeDiagnosisExampleSUD
 InstanceOf: BHAEpisodeDiagnosis
@@ -22,5 +37,5 @@ Usage: #example
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed "Confirmed"
 * category[us-core] = http://terminology.hl7.org/CodeSystem/condition-category#encounter-diagnosis
 * category[diagnosisType] = BHADiagnosisTypeCS#SUD
-* code = http://snomed.info/sct#66214007 "Substance abuse (disorder)"
+* code = BHAServiceIdentifierCS#09 "SUD Intensive Outpatient (IOP)"
 * subject = Reference(Patient/BHAClientExample) "Emma Jones"

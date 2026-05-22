@@ -1,8 +1,8 @@
 Profile: BHAOrganization
 Parent: $us-core-organization
 Id: bha-organization
-Title: "Colorado BHA Provider Organization Profile"
-Description: "Provider Organization profile for Colorado BHASO clinics"
+Title: "BHA Provider Organization Profile"
+Description: "Provider Organization profile for BHASO clinics"
 
 // note that us-core slices Organization.identifier by $this with fixed values on system
 * identifier 1..* MS

@@ -26,17 +26,17 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 
 | CoBHRM File             | FHIR Profile or Questionnaire                                                                                                             |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| Client                  | [CO BHA Client Profile](StructureDefinition-bha-client-mappings.html#other-mappings)                                                      |
+| Client                  | [BHA Client Profile](StructureDefinition-bha-client-mappings.html#other-mappings)                                                         |
 | Client                  | [BHA Client Questionnaire](Questionnaire-BHAClientQuestionnaire.html)                                                                     |
 | Client                  | [US Core Observation Sexual Orientation]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-sexual-orientation.html)       |
-| Admission               | [CO BHA Episode Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)                                              |
+| Admission               | [BHA EpisodeOfCare Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)                                           |
 | Admission               | [BHA Admission Questionnaire](Questionnaire-BHAAdmissionQuestionnaire.html)                                                               |
 | Admission               | [US Core Observation Pregnancy Status]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-pregnancystatus.html)            |
 | Service                 | [BHA Service Questionnaire](Questionnaire-BHAServiceQuestionnaire.html)                                                                   |
-| Discharge               | [CO BHA Episode Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)                                              |
+| Discharge               | [BHA EpisodeOfCare Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)                                           |
 | Discharge               | [BHA Discharge Questionnaire](Questionnaire-BHADischargeQuestionnaire.html)                                                               |
-| Diagnosis               | [CO BHA Episode Diagnosis Profile](StructureDefinition-BHAEpisodeDiagnosis-mappings.html#other-mappings)                                  |
-| Diagnosis               | [CO BHA Episode Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)                                              |
+| Diagnosis               | [BHA Episode Diagnosis Profile](StructureDefinition-BHAEpisodeDiagnosis-mappings.html#other-mappings)                                     |
+| Diagnosis               | [BHA EpisodeOfCare Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)                                           |
 | Diagnosis               | [BHA Diagnosis Questionnaire](Questionnaire-BHADiagnosisQuestionnaire.html)                                                               |
 | Substance Use Disorder  | [BHA Substance Use Disorder Questionnaire](Questionnaire-BHASubstanceUseDisorderQuestionnaire.html)                                       |
 | SC Pregnancy/PostPartum | [BHA Special Connections Pregnancy/Postpartum Risk Screening Questionnaire](Questionnaire-BHASCPregnancyPostpartumRiskQuestionnaire.html) |
@@ -45,7 +45,7 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 
 #### Client
 
-- [CO BHA Client Profile](StructureDefinition-bha-client-mappings.html#other-mappings)
+- [BHA Client Profile](StructureDefinition-bha-client-mappings.html#other-mappings)
 - [BHA Client Questionnaire](Questionnaire-BHAClientQuestionnaire.html)
 - [US Core Observation Sexual Orientation]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-sexual-orientation.html)
 
@@ -80,10 +80,11 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 
 #### Admission
 
-- [CO BHA Episode Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)
+- [BHA EpisodeOfCare Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)
 - [BHA Admission Questionnaire](Questionnaire-BHAAdmissionQuestionnaire.html)
+- [BHA Episode Diagnosis Profile](StructureDefinition-BHAEpisodeDiagnosis-mappings.html#other-mappings)
 - [US Core Observation Pregnancy Status]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-pregnancystatus.html)
-- [CO BHA Client Profile](StructureDefinition-bha-client-mappings.html#other-mappings)
+- [BHA Client Profile](StructureDefinition-bha-client-mappings.html#other-mappings)
 
 | CoBHRM Field Name                                                            | FHIR Element shorthand                                                                                     |
 | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -91,7 +92,7 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 | Admission Identifier                                                         | EpisodeOfCare.identifier[ADMISSION_IDENTIFIER]<br>BHAAdmissionQuestionnaireResponse:`ADMISSION_IDENTIFIER` |
 | NPI / BHE License Number                                                     | EpisodeOfCare.managingOrganization.identifier<br>BHAAdmissionQuestionnaireResponse:`NPI`                   |
 | Admission Date                                                               | EpisodeOfCare.period.start                                                                                 |
-| Service Identifier                                                           | EpisodeOfCare.diagnosis.condition                                                                          |
+| Service Identifier                                                           | Condition.code                                                                                             |
 | Date of First Contact                                                        | BHAAdmissionQuestionnaireResponse:`FIRST_CONTACT_DATE`                                                     |
 | Date of First Appointment Offered                                            | BHAAdmissionQuestionnaireResponse:`FIRST_APPOINTMENT_OFFERED_DATE`                                         |
 | Medication Assisted Therapy                                                  | BHAAdmissionQuestionnaireResponse:`MEDICATION_ASSISTED_THERAPY`                                            |
@@ -141,7 +142,7 @@ Not clear this should be included in this IG
 
 #### Discharge
 
-- [CO BHA Episode Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)
+- [BHA EpisodeOfCare Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)
 - [BHA Discharge Questionnaire](Questionnaire-BHADischargeQuestionnaire.html)
 
 | CoBHRM Field Name                                                         | FHIR Element shorthand                                                           |
@@ -162,19 +163,18 @@ Not clear this should be included in this IG
 
 #### Diagnosis
 
-- [CO BHA Episode Diagnosis Profile](StructureDefinition-BHAEpisodeDiagnosis-mappings.html#other-mappings)                                  
-- [CO BHA Episode Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)                                                    
-- [BHA Diagnosis Questionnaire](Questionnaire-BHADiagnosisQuestionnaire.html)                                                               
+- [BHA Episode Diagnosis Profile](StructureDefinition-BHAEpisodeDiagnosis-mappings.html#other-mappings)
+- [BHA EpisodeOfCare Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)
+- [BHA Diagnosis Questionnaire](Questionnaire-BHADiagnosisQuestionnaire.html)
 
-
-| CoBHRM Field Name         | FHIR Element shorthand                                                                                                                        |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Effective Date            | QuestionnaireResponse.meta.lastUpdated                                                                                                        |
-| MH Diagnosis Identifier 1 | EpisodeOfCare.diagnosis + EpisodeOfCare.diagnosis.role<br>OR EpisodeOfCare.diagnosis +<br>Condition.code + Condition.extension[diagnosisType] |
-| MH Diagnosis Identifier 2 | EpisodeOfCare.diagnosis + EpisodeOfCare.diagnosis.role<br>OR EpisodeOfCare.diagnosis +<br>Condition.code + Condition.extension[diagnosisType] |
-| MH Diagnosis Identifier 3 | EpisodeOfCare.diagnosis + EpisodeOfCare.diagnosis.role<br>OR EpisodeOfCare.diagnosis +<br>Condition.code + Condition.extension[diagnosisType] |
-| SUD Diagnosis Identifier  | EpisodeOfCare.diagnosis + EpisodeOfCare.diagnosis.role<br>OR EpisodeOfCare.diagnosis +<br>Condition.code + Condition.extension[diagnosisType] |
-| SMI/SED Status            | QuestionnaireResponse                                                                                                                         |
+| CoBHRM Field Name         | FHIR Element shorthand                               |
+| ------------------------- | ---------------------------------------------------- |
+| Effective Date            | BHADiagnosisQuestionnaireResponse:`lastUpdated`      |
+| MH Diagnosis Identifier 1 | Condition.code                                       |
+| MH Diagnosis Identifier 2 | Condition.code if multiple Condition resources exist |
+| MH Diagnosis Identifier 3 | Condition.code if multiple Condition resources exist |
+| SUD Diagnosis Identifier  | Condition.code                                       |
+| SMI/SED Status            | BHADiagnosisQuestionnaireResponse:`SMI_SED_STATUS`   |
 {: .grid}
 
 #### Substance Use Disorder
@@ -183,8 +183,8 @@ Not clear this should be included in this IG
 
 | CoBHRM Field Name                              | FHIR Element shorthand                   |
 | ---------------------------------------------- | ---------------------------------------- |
-| Effective Date                                 | QuestionnaireResponse.meta.lastUpdated   |
-| ASAM Level of Care                             | QuestionnaireResponse:ASAM_LEVEL_OF_CARE |
+| Effective Date                                 | BHASubstanceUseDisorderQuestionnaireResponse:`lastUpdated`   |
+| ASAM Level of Care                             | BHASubstanceUseDisorderQuestionnaireResponse:`ASAM_LEVEL_OF_CARE` |
 | Primary Substance Use                          | QuestionnaireResponse                    |
 | Times Used Primary Substance in Last 30 Days   | QuestionnaireResponse                    |
 | Route of Use of Primary Substances             | QuestionnaireResponse                    |

@@ -1,16 +1,17 @@
 Profile: BHAEpisodeOfCare
 Parent: EpisodeOfCare
 Id: bha-episodeOfCare
-Title: "Colorado BHA Episode Profile"
-Description: "BHA episode profile for client admissions/services"
+Title: "BHA EpisodeOfCare Profile"
+Description: "BHA EpisodeOfCare Profile for client admissions/services"
 * meta.lastUpdated 1..1 MS
 * status MS
 * type 1..1 MS
-* type from BHADiagnosisTypeVS (required)
+* type from BHADiagnosisTypeVS (required)  // MH vs SUD
 * patient 1..1 MS
 * patient only Reference(bha-client)
 * patient ^short = "The Client who is the focus of this episode of care"
 * diagnosis 1.. MS
+* diagnosis.condition 1..1 MS
 * diagnosis.condition only Reference(BHAEpisodeDiagnosis)
 * diagnosis.role MS
 * managingOrganization 1..1 MS
@@ -28,7 +29,7 @@ Title: "Mapping from CoBHRM Admission/Discharge to BHA Episode of Care"
 * -> "CoBHRM: EpisodeOfCare"
 * meta.lastUpdated -> "Episode: Effective Date"
 * status -> "Discharge: Discharge Type / Status"
-* type -> "Admission: Service Type"
+* type -> "Admission: Service Type (MD vs SUD)"
 * patient -> "The Client"
 * period.start -> "Admission: Admission Date"
 * period.end -> "Discharge: Discharge Date"

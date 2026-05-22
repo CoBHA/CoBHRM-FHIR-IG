@@ -1,2 +1,2 @@
-- The BHA Episode Identifiers concepts maps to SNOMED-CT in [BHAEpisodeIdentifierCM](ConceptMap-BHAEpisodeIdentifierCM.html).
+- The BHA Service Identifier codes are used. There are concepts maps to SNOMED-CT in [BHAServiceIdentifierCM](ConceptMap-BHAServiceIdentifierCM.html).
   

@@ -1,6 +1,6 @@
 Instance: BHAClientExample
 InstanceOf: BHAClient
-Title: "Example Colorado BHA Client"
+Title: "Example BHA Client"
 Description: "Example Client"
 * meta.lastUpdated = "2024-06-01T12:00:00Z" // Effective date for the client record, used for reporting and determining which version of the IG applies to this client
 // Optional Identifiers (1..* MS)

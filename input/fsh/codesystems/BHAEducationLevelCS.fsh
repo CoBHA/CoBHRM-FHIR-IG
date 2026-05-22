@@ -1,7 +1,7 @@
 CodeSystem: BHAEducationLevelCS
 Id: bha-education-level-cs
 Title: "BHA Education Level"
-Description: "Code system for education levels used in BHA episodes. Valid values align with ACT sheet Appendix ACT-Ascent."
+Description: "Code system for education levels used in BHA EpisodeOfCare. Valid values align with ACT sheet Appendix ACT-Ascent."
 * ^experimental = false
 * ^caseSensitive = true
 

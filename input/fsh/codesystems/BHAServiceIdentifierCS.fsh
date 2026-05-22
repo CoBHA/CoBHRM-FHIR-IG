@@ -1,7 +1,7 @@
-CodeSystem: BHAEpisodeIdentifierCS
-Id: bha-episode-identifier-cs
-Title: "BHA Episode Identifier Codes"
-Description: "Episode identifiers for BHA services/admissions."
+CodeSystem: BHAServiceIdentifierCS
+Id: bha-service-identifier-cs
+Title: "BHA Service Identifier Codes"
+Description: "Service identifiers for BHA services/admissions."
 * ^experimental = false
 * ^caseSensitive = true
 * #00 "Differential Assessment (SUD) / Evaluation Only (MH)"
@@ -29,18 +29,18 @@ Description: "Episode identifiers for BHA services/admissions."
 * #22 "Psychiatric Hospitalization"
 * #23 "Co-Occurring (CIRCLE)"
 
-Instance: BHAEpisodeIdentifierCM
+Instance: BHAServiceIdentifierCM
 InstanceOf: ConceptMap
-Title: "BHA Episode Identifier to US Core Condition Code ConceptMap"
-Description: "Maps BHA episode identifier codes to condition concepts from the US Core condition code value set."
+Title: "BHA Service Identifier to US Core Condition Code ConceptMap"
+Description: "Maps BHA service identifier codes to condition concepts from the US Core condition code value set."
 Usage: #definition
 * status = #active
 * experimental = false
-* name = "BHAEpisodeIdentifierCM"
-* sourceUri = Canonical(BHAEpisodeIdentifierVS)
+* name = "BHAServiceIdentifierCM"
+* sourceUri = Canonical(BHAServiceIdentifierVS)
 * targetUri = "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code"
 
-* group[0].source = "http://bha.colorado.gov/fhir/bha-ig/CodeSystem/bha-episode-identifier-cs"
+* group[0].source = "http://bha.colorado.gov/fhir/bha-ig/CodeSystem/bha-service-identifier-cs"
 * group[0].target = "http://snomed.info/sct"
 
 * group[0].element[+].code = #00

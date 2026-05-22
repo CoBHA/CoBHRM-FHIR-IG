@@ -47,3 +47,7 @@ Usage: #example
 * item[+].linkId = "episodeOfCare"
 * item[=].text = "Episode of Care Information"
 * item[=].answer.valueReference = Reference(BHAEpisodeOfCareExampleBH) 
+* item[+].linkId = "diagnosis"
+* item[=].text = "Diagnosis Information"
+* item[=].answer[+].valueReference = Reference(BHAEpisodeDiagnosisExample) "Major depressive disorder, recurrent, moderate"
+* item[=].answer[+].valueReference = Reference(BHAEpisodeDiagnosisExample2) "Anxiety disorder"
