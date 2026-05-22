@@ -71,12 +71,6 @@ Usage: #definition
 * item[=].required = true
 * item[=].answerValueSet = Canonical(BHAEmploymentStatusVS)
 
-* item[+].linkId = "MARITAL_STATUS"
-* item[=].text = "Marital Status"
-* item[=].type = #choice
-* item[=].required = true
-* item[=].answerValueSet = Canonical(BHAMaritalStatusVS)
-
 * item[+].linkId = "LIVING_SITUATION"
 * item[=].text = "Living Situation"
 * item[=].type = #choice
@@ -171,8 +165,7 @@ Usage: #definition
 * item[+].linkId = "INVOLUNTARY_COMMITMENT_REASON"
 * item[=].text = "Involuntary Commitment Reason"
 * item[=].type = #choice
-// TODO: there is no way to model conditionally required in FHIR; instead, this makes it required but guides the user to only show the question in certain conditions. verify approach with BHA.
-* item[=].required = true
+//* item[=].required = true
 * item[=].enableWhen[0].question = "LEGAL_STATUS"
 * item[=].enableWhen[=].operator = #=
 * item[=].enableWhen[=].answerCoding = BHALegalStatusCS#04 "72-hour evaluation and treatment"

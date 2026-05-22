@@ -6,7 +6,7 @@ Description: "Example Responses to Substance Use Disorder Questionnaire Question
 Usage: #example
 * questionnaire = Canonical(BHASubstanceUseDisorderQuestionnaire)
 * status = #completed
-* subject = Reference(Patient/example) "Mickey Mouse"
+* subject = Reference(Patient/BHAClientExample) "Emma Jones"
 * authored = "2025-10-28T18:30:40-07:00"
 //* author = Reference(Practitioner/practitioner-1)
 * item[+].linkId = "lastUpdated"

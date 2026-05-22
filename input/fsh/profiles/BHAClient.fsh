@@ -128,6 +128,7 @@ Title: "Mapping from CO BHA CoBHRM to BHA Client (Patient) Profile"
 * communication.language -> "Client: Household Language"
 * extension[birthsex] -> "Client: Sex at Birth"
 * extension[genderIdentity] -> "Client: Gender Identity"
+* maritalStatus -> "Admission: Marital Status"
 
 
 

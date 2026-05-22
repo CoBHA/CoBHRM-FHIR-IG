@@ -22,12 +22,32 @@ Usage: #definition
 * item[=].type = #dateTime
 * item[=].required = true
 
+* item[+].linkId = "DATE_OF_LAST_CONTACT"
+* item[=].text = "Date of Last Contact"
+* item[=].type = #dateTime
+* item[=].required = true
+
+* item[+].linkId = "DISCHARGE_DATE"
+* item[=].text = "Discharge Date"
+* item[=].type = #dateTime
+* item[=].required = true
+
+* item[+].linkId = "DISCHARGE_TYPE"
+* item[=].text = "Discharge Type"
+* item[=].type = #choice
+* item[=].required = true
+* item[=].answerValueSet = Canonical(BHADischargeTypeVS)
+
 * item[+].linkId = "END_OF_TREATMENT_REASON"
 * item[=].text = "End of Treatment Reason"
 * item[=].type = #choice
 * item[=].required = false
+//* item[=].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-requiredExpression"
+//* item[=].extension[=].valueExpression.language = #text/fhirpath
+//* item[=].extension[=].valueExpression.expression = "%resource.repeat(item).where(linkId='DISCHARGE_TYPE').answer.value.ofType(Coding).where(code='03').exists()"
 // Valid values sourced from ACT sheet Appendix ACT-Ascent
 * item[=].answerValueSet = Canonical(BHAEndOfTreatmentReasonVS)
+
 
 * item[+].linkId = "ARRESTS_PAST_30_DAYS"
 * item[=].text = "Arrests in Past 30 Days"
@@ -87,3 +107,4 @@ Usage: #definition
 * item[=].extension[=].valueCode = #EpisodeOfCare
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile"
 * item[=].extension[=].valueCanonical = Canonical(BHAEpisodeOfCare)
+

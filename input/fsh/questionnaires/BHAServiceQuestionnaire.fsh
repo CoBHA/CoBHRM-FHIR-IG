@@ -22,22 +22,6 @@ Usage: #definition
 * item[=].type = #dateTime
 * item[=].required = true
 
-* item[+].linkId = "RECORD_TYPE"
-* item[=].text = "Record Type"
-* item[=].type = #string
-* item[=].required = true
-// Must always be the exact, case-sensitive value "SER" (x(3))
-* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/regex"
-* item[=].extension[=].valueString = "^SER$"
-
-* item[+].linkId = "TRANSACTION_TYPE"
-* item[=].text = "Transaction Type"
-* item[=].type = #string
-* item[=].required = true
-// Must be one of: A (Add), U (Update), R (Replace) — case-sensitive (x(1))
-* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/regex"
-* item[=].extension[=].valueString = "^[AUR]$"
-
 * item[+].linkId = "BHASO_ADMISSION_IDENTIFIER"
 * item[=].text = "BHASO ADMISSION Identifier"
 * item[=].type = #string

@@ -6,13 +6,13 @@ Description: "Example Responses to BHA Admission Questionnaire Questions"
 Usage: #example
 * questionnaire = Canonical(BHAAdmissionQuestionnaire)
 * status = #completed
-* subject = Reference(Patient/example) "Mickey Mouse"
+* subject = Reference(Patient/BHAClientExample) "Emma Jones"
 * authored = "2025-10-28T18:30:40-07:00"
 // * author = Reference(Practitioner/practitioner-1)
 * item[+].linkId = "lastUpdated"
 * item[=].answer.valueDateTime = "2025-10-28T18:30:40-07:00"
 * item[+].linkId = "NPI"
-* item[=].text = "BHE License Number"
+* item[=].text = "NPI / BHE License Number"
 * item[=].answer.valueString = "1234567890"
 * item[+].linkId = "FIRST_CONTACT_DATE"
 * item[=].text = "Date of First Contact"
@@ -32,9 +32,6 @@ Usage: #example
 * item[+].linkId = "EMPLOYMENT_STATUS"
 * item[=].text = "Employment Status"
 * item[=].answer.valueCoding = BHAEmploymentStatusCS#01
-* item[+].linkId = "MARITAL_STATUS"
-* item[=].text = "Marital Status"
-* item[=].answer.valueCoding = BHAMaritalStatusCS#01
 * item[+].linkId = "LIVING_SITUATION"
 * item[=].text = "Living Situation"
 * item[=].answer.valueCoding = BHALivingSituationCS#1

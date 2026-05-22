@@ -6,7 +6,7 @@ Description: "Example Responses to Diagnosis Questionnaire Questions"
 Usage: #example
 * questionnaire = Canonical(BHADiagnosisQuestionnaire)
 * status = #completed
-* subject = Reference(Patient/example) "Mickey Mouse"
+* subject = Reference(Patient/BHAClientExample) "Emma Jones"
 * authored = "2025-10-28T18:30:40-07:00"
 //* author = Reference(Practitioner/practitioner-1)
 * item[+].linkId = "lastUpdated"

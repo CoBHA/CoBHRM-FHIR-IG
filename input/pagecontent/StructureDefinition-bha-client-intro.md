@@ -4,3 +4,4 @@
 - Household language concepts mapped to us-core language codes in [BHAHouseholdLanguageCM](ConceptMap-BHAHouseholdLanguageCM.html)
 - Sexual Orientation is recorded in [US Core Observation Sexual Orientation]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-sexual-orientation.html) with mapping to BHA sexual orientation codes in [BHASexualOrientationCM](ConceptMap-BHASexualOrientationCM.html)
 - Gender Identity is recorded in a Patient extension with mapping to us-core gender identity codes in [BHAGenderIdentityCM](ConceptMap-BHAGenderIdentityCM.html)
+- Marital Status concepts mapped to us-core marital status codes in [BHAMaritalStatusCM](ConceptMap-BHAMaritalStatusCM.html)

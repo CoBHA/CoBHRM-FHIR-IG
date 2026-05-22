@@ -6,11 +6,20 @@ Description: "Example Responses to Discharge Questionnaire Questions"
 Usage: #example
 * questionnaire = Canonical(BHADischargeQuestionnaire)
 * status = #completed
-* subject = Reference(Patient/example) "Mickey Mouse"
+* subject = Reference(Patient/BHAClientExample) "Emma Jones"
 * authored = "2025-10-28T18:30:40-07:00"
 //* author = Reference(Practitioner/practitioner-1)
 * item[+].linkId = "lastUpdated"
 * item[=].answer.valueDateTime = "2025-10-28T18:30:40-07:00"
+* item[+].linkId = "DATE_OF_LAST_CONTACT"
+* item[=].text = "Date of Last Contact"
+* item[=].answer.valueDateTime = "2025-10-27T17:00:00-07:00"
+* item[+].linkId = "DISCHARGE_DATE"
+* item[=].text = "Discharge Date"
+* item[=].answer.valueDateTime = "2025-10-28T18:30:40-07:00"
+* item[+].linkId = "DISCHARGE_TYPE"
+* item[=].text = "Discharge Type"
+* item[=].answer.valueCoding = BHADischargeTypeCS#01
 * item[+].linkId = "END_OF_TREATMENT_REASON"
 * item[=].text = "End of Treatment Reason"
 * item[=].answer.valueCoding = BHAEndOfTreatmentReasonCS#2

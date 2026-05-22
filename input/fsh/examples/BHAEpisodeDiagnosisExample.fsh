@@ -7,7 +7,7 @@ Usage: #example
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active "Active"
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed "Confirmed"
 * category[us-core] = http://terminology.hl7.org/CodeSystem/condition-category#encounter-diagnosis
-* category[diagnosisType] = BHADiagnosisTypeCS#MH "Mental Health"
+* category[diagnosisType] = BHADiagnosisTypeCS#MH
 //* code = http://hl7.org/fhir/sid/icd-10-cm#F33.1 "Major depressive disorder, recurrent, moderate"
 * code = http://snomed.info/sct#74732009 "Mental disorder"
 * subject = Reference(Patient/BHAClientExample) "Emma Jones"
@@ -21,6 +21,6 @@ Usage: #example
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active "Active"
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed "Confirmed"
 * category[us-core] = http://terminology.hl7.org/CodeSystem/condition-category#encounter-diagnosis
-* category[diagnosisType] = BHADiagnosisTypeCS#SUD "Substance Use Disorder"
+* category[diagnosisType] = BHADiagnosisTypeCS#SUD
 * code = http://snomed.info/sct#66214007 "Substance abuse (disorder)"
 * subject = Reference(Patient/BHAClientExample) "Emma Jones"
