@@ -8,10 +8,10 @@ and to technology implementers for this and other core healthcare use cases.
 Specifically, the profiles in this IG are based on [US Core STU6]({{site.data.fhir.uscore}}/index.html) where possible. 
 A notable exception is the BHA Service profile, which is based on the [FHIR R4 EpisodeOfCare resource](https://hl7.org/fhir/R4/episodeofcare.html).
 
-### Relationship to the Colorado Behavioral Health Reporting Model (Co-BHRM)
+### Relationship to the Colorado Behavioral Health Reporting Model (CoBHRM)
 
-The Colorado Behavioral Health Reporting Model (Co-BHRM) specifies the full data requirements for BHA reporting. This IG does *not*
-cover the entirety of the Co-BHRM. Instead, the specification provided here defines, in FHIR, the data elements that must be
+The Colorado Behavioral Health Reporting Model (CoBHRM) specifies the full data requirements for BHA reporting. This IG does *not*
+cover the entirety of the CoBHRM. Instead, the specification provided here defines, in FHIR, the data elements that must be
 captured at clinical sites to support BHA and SAMHSA reporting requirements.
 
 #### Illustrative Example of Workflow and Reporting Milestones
@@ -22,9 +22,9 @@ captured at clinical sites to support BHA and SAMHSA reporting requirements.
 
 This IG does not prescribe how data is exchanged between clinical sites and Behavioral Health Administrative Service Organizations (BHASOs) or other intermediaries. BHASOs and other organizations involved in the reporting pipeline are encouraged to adopt, extend, or build upon these FHIR definitions to suit their specific integration workflows. See the [workflow page](workflow.html) for an illustrative example of how data might flow from clinical sites to BHA, and for the reporting milestones that would trigger the creation of FHIR resources as specified in this IG.
 
-#### Co-BHRM to FHIR Mapping
+#### CoBHRM to FHIR Mapping
 
-| Co-BHRM File            | FHIR Profile or Questionnaire                                                                                                             |
+| CoBHRM File            | FHIR Profile or Questionnaire                                                                                                             |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | Client                  | [CO BHA Client Profile](StructureDefinition-bha-client.html)                                                                              |
 | Client                  | [BHA Client Questionnaire](Questionnaire-BHAClientQuestionnaire.html)                                                                     |
@@ -45,7 +45,7 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 
 ##### Full Mapping
 
-| Co-BHRM File            | Co-BHRM Field Name                                                                                 | FHIR Element shorthand                                                                                                                        | FHIR Profile or Resource                                                                                                            |
+| CoBHRM File            | CoBHRM Field Name                                                                                 | FHIR Element shorthand                                                                                                                        | FHIR Profile or Resource                                                                                                            |
 | ----------------------- | -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Client                  | Effective Date                                                                                     | Patient.meta.lastUpdated                                                                                                                      | [CO BHA Client Profile](StructureDefinition-bha-client.html)                                                                        |
 | Client                  | Colorado PEAK State ID<br>/ Universal ID                                                           | QuestionnaireResponse:PEAK_ID                                                                                                                 | [BHA Client Questionnaire](Questionnaire-BHAClientQuestionnaire.html)                                                               |
@@ -173,7 +173,7 @@ at https://tabletomarkdown.com/convert-spreadsheet-to-markdown/
 
 #### CCAR and DACODS
 
-The Co-BHRM incorporates elements of the CCAR and DACODS user manuals, and they may provide additional context for the 
+The CoBHRM incorporates elements of the CCAR and DACODS user manuals, and they may provide additional context for the 
 information being gathered and transmitted to BHA. Those user manuals are publicly available at the following sites:
 
 - [2025 CCAR User Manual](https://drive.google.com/file/d/123ft3adXsXXWpHKpT3G5YjTozXbcXvmv/view)
