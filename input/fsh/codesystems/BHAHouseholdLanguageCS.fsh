@@ -40,7 +40,7 @@ Description: "ValueSet for BHA household language codes"
 Instance: BHAHouseholdLanguageCM
 InstanceOf: ConceptMap
 Title: "BHA Household Language ConceptMap"
-Description: "Maps BHA household language codes to the US Core Primary Language value set which is BCP-47."
+Description: "Required: Maps BHA household language codes to the US Core Primary Language value set which is BCP-47."
 Usage: #definition
 * status = #active
 * experimental = false

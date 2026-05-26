@@ -100,6 +100,8 @@ for BHA clients in order to support the BHA's annual reporting requirements."
 
 * maritalStatus 1..1 MS
 * extension contains http://hl7.org/fhir/us/military-service/StructureDefinition/military-service-veteran-status named USVeteranStatus 0..1 MS
+* communication 0..* MS
+* communication.language 1..1 MS
 
 Mapping: BHAClient-Mapping
 Source: BHAClient

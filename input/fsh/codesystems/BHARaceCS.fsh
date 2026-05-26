@@ -14,7 +14,7 @@ Description: "Race codes used by BHA"
 Instance: BHAClientRaceCM
 InstanceOf: ConceptMap
 Title: "BHA Client Race ConceptMap"
-Description: "Maps BHA race codes to the US Core OMB race category value set."
+Description: "Required: Maps BHA race codes to the US Core OMB race category value set."
 Usage: #definition
 * status = #active
 * experimental = false

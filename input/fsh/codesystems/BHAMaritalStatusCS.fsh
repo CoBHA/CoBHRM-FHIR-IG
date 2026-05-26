@@ -15,7 +15,7 @@ Description: "Code system for marital statuses used in BHA admission process"
 Instance: BHAMaritalStatusCM
 InstanceOf: ConceptMap
 Title: "BHA Marital Status ConceptMap"
-Description: "Maps BHA marital status codes to the FHIR marital status value set."
+Description: "Required: Maps BHA marital status codes to the FHIR marital status value set."
 Usage: #definition
 * status = #active
 * experimental = false

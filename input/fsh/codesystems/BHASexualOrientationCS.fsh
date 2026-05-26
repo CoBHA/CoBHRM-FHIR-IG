@@ -24,7 +24,7 @@ Description: "ValueSet for BHA sexual orientation codes"
 Instance: BHASexualOrientationCM
 InstanceOf: ConceptMap
 Title: "BHA Sexual Orientation ConceptMap"
-Description: "Maps BHA sexual orientation codes to the US Core Sexual Orientation value set."
+Description: "Required: Maps BHA sexual orientation codes to the US Core Sexual Orientation value set."
 Usage: #definition
 * status = #active
 * experimental = false

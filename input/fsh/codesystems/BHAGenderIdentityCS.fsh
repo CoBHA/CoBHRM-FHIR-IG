@@ -23,7 +23,7 @@ Description: "ValueSet for BHA gender identity codes"
 Instance: BHAGenderIdentityCM
 InstanceOf: ConceptMap
 Title: "BHA Gender Identity ConceptMap"
-Description: "Maps BHA gender identity codes to the FHIR Gender Identity value set."
+Description: "Required: Maps BHA gender identity codes to the FHIR Gender Identity value set."
 Usage: #definition
 * status = #active
 * experimental = false

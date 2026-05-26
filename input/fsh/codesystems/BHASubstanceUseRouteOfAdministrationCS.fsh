@@ -13,7 +13,7 @@ Description: "Substance use routes of administration for BHA services/admissions
 Instance: BHASubstanceUseRouteOfAdministrationCM
 InstanceOf: ConceptMap
 Title: "BHA Substance Use Route of Administration ConceptMap"
-Description: "Maps BHA substance use routes of administration to HL7 v3 RouteOfAdministration."
+Description: "Informative: Maps BHA substance use routes of administration to HL7 v3 RouteOfAdministration."
 Usage: #definition
 * status = #active
 * experimental = false

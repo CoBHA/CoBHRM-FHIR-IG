@@ -14,7 +14,7 @@ Description: "Ethnicity codes used by BHA"
 Instance: BHAClientEthnicityCM
 InstanceOf: ConceptMap
 Title: "BHA Ethnicity ConceptMap"
-Description: "Maps BHA ethnicity codes to the US Core OMB ethnicity category value set."
+Description: "Required: Maps BHA ethnicity codes to the US Core OMB ethnicity category value set."
 Usage: #definition
 * status = #active
 * experimental = false
@@ -53,7 +53,7 @@ Usage: #definition
 Instance: BHAClientEthnicityDetailedCM
 InstanceOf: ConceptMap
 Title: "BHA Ethnicity Detailed ConceptMap"
-Description: "Maps BHA ethnicity codes to the US Core detailed ethnicity value set."
+Description: "Required: Maps BHA ethnicity codes to the US Core detailed ethnicity value set."
 Usage: #definition
 * status = #active
 * experimental = false

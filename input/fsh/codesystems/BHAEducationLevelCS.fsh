@@ -27,7 +27,7 @@ Description: "Code system for education levels used in BHA EpisodeOfCare. Valid 
 Instance: BHAEducationLevelCM
 InstanceOf: ConceptMap
 Title: "BHA Education Level ConceptMap"
-Description: "Maps BHA education levels to HL7 v3 EducationLevel."
+Description: "Informative: Maps BHA education levels to HL7 v3 EducationLevel."
 Usage: #definition
 * status = #active
 * experimental = false

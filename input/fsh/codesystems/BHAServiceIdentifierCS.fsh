@@ -32,7 +32,7 @@ Description: "Service identifiers for BHA services/admissions."
 Instance: BHAServiceIdentifierCM
 InstanceOf: ConceptMap
 Title: "BHA Service Identifier to US Core Condition Code ConceptMap"
-Description: "Maps BHA service identifier codes to condition concepts from the US Core condition code value set."
+Description: "Informative: Maps BHA service identifier codes to condition concepts from the US Core condition code value set."
 Usage: #definition
 * status = #active
 * experimental = false
