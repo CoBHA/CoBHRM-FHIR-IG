@@ -44,7 +44,7 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 
 #### Client
 
-- [BHA Client Profile](StructureDefinition-bha-client-mappings.html#other-mappings)
+- [BHA Client Profile](StructureDefinition-bha-client.html)
 - [BHA Client Questionnaire](Questionnaire-BHAClientQuestionnaire.html)
 - [US Core Observation Sexual Orientation]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-sexual-orientation.html)
 
@@ -54,7 +54,6 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 | Colorado PEAK State ID<br>/ Universal ID | Patient.identifier[STATE_IDENTIFIER]                                                                                                |
 | BHA Identifier                           | Patient.identifier[BHA_IDENTIFIER]                                                                                                  |
 | Trails Identifier                        | Patient.identifier[TRAILS_IDENTIFIER]<br>BHAClientQuestionnaireResponse:`TRAILS_IDENTIFIER`                                         |
-| Verato Identifier                        | Patient.identifier[VERATO_IDENTIFIER]                                                                                               |
 | DOB                                      | Patient.birthDate                                                                                                                   |
 | Last Name                                | Patient.name[officialName].family                                                                                                   |
 | First Name                               | Patient.name[officialName].given                                                                                                    |
@@ -63,11 +62,11 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 | Social Security Number                   | Patient.identifier[SSN]                                                                                                             |
 | County of Residence                      | Patient.address[home].district                                                                                                      |
 | Zip Code of Residence                    | Patient.address[home].postalCode                                                                                                    |
-| Race Codes                               | Patient.extension[race]<br>[BHAClientRaceCM](ConceptMap-BHAClientRaceCM.html)                                                       |
-| Ethnicity                                | Patient.extension[ethnicity]<br>[BHAEthnicityCM](ConceptMap-BHAClientEthnicityCM.html)                                              |
-| Household Language                       | Patient.communication.language<br>[BHAHouseholdLanguageCM](ConceptMap-BHAHouseholdLanguageCM.html)                                  |
+| Race Codes                               | Patient.extension[race]                                                                                                             |
+| Ethnicity                                | Patient.extension[ethnicity]                                                                                                        |
+| Household Language                       | Patient.communication.language                                                                                                      |
 | Sex at Birth                             | Patient.extension[birthsex]                                                                                                         |
-| Gender Identity                          | Patient.extension[genderIdentity]<br>[BHAGenderIdentityCM](ConceptMap-BHAGenderIdentityCM.html)                                     |
+| Gender Identity                          | Patient.extension[genderIdentity]                                                                                                   |
 | Sexual Orientation                       | [US Core Observation Sexual Orientation]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-sexual-orientation.html) |
 | Child Welfare Involvement                | BHAClientQuestionnaireResponse:`CHILD_WELFARE_INVOLVEMENT`                                                                          |
 | Disability Code(s)                       | BHAClientQuestionnaireResponse:`DISABILITY_CODES`                                                                                   |
@@ -79,11 +78,11 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 
 #### Admission
 
-- [BHA EpisodeOfCare Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)
+- [BHA EpisodeOfCare Profile](StructureDefinition-bha-episodeOfCare.html)
 - [BHA Admission Questionnaire](Questionnaire-BHAAdmissionQuestionnaire.html)
-- [BHA Episode Diagnosis Profile](StructureDefinition-BHAEpisodeDiagnosis-mappings.html#other-mappings)
+- [BHA Episode Diagnosis Profile](StructureDefinition-BHAEpisodeDiagnosis.html)
 - [US Core Observation Pregnancy Status]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-pregnancystatus.html)
-- [BHA Client Profile](StructureDefinition-bha-client-mappings.html#other-mappings)
+- [BHA Client Profile](StructureDefinition-bha-client.html)
 
 | CoBHRM Field Name                                                            | FHIR Element shorthand                                                                                     |
 | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -91,7 +90,7 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 | Admission Identifier                                                         | EpisodeOfCare.identifier[ADMISSION_IDENTIFIER]<br>BHAAdmissionQuestionnaireResponse:`ADMISSION_IDENTIFIER` |
 | NPI / BHE License Number                                                     | EpisodeOfCare.managingOrganization.identifier<br>BHAAdmissionQuestionnaireResponse:`NPI`                   |
 | Admission Date                                                               | EpisodeOfCare.period.start                                                                                 |
-| Service Identifier                                                           | Condition.code                                                                                             |
+| Service Identifier                                                           | BHAAdmissionQuestionnaireResponse:`SERVICE_IDENTIFIER`                                                     |
 | Date of First Contact                                                        | BHAAdmissionQuestionnaireResponse:`FIRST_CONTACT_DATE`                                                     |
 | Date of First Appointment Offered                                            | BHAAdmissionQuestionnaireResponse:`FIRST_APPOINTMENT_OFFERED_DATE`                                         |
 | Medication Assisted Therapy                                                  | BHAAdmissionQuestionnaireResponse:`MEDICATION_ASSISTED_THERAPY`                                            |
@@ -139,7 +138,7 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 
 #### Discharge
 
-- [BHA EpisodeOfCare Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)
+- [BHA EpisodeOfCare Profile](StructureDefinition-bha-episodeOfCare.html)
 - [BHA Discharge Questionnaire](Questionnaire-BHADischargeQuestionnaire.html)
 
 | CoBHRM Field Name                                                         | FHIR Element shorthand                                                           |
@@ -160,8 +159,8 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 
 #### Diagnosis
 
-- [BHA Episode Diagnosis Profile](StructureDefinition-BHAEpisodeDiagnosis-mappings.html#other-mappings)
-- [BHA EpisodeOfCare Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)
+- [BHA Episode Diagnosis Profile](StructureDefinition-BHAEpisodeDiagnosis.html)
+- [BHA EpisodeOfCare Profile](StructureDefinition-bha-episodeOfCare.html)
 - [BHA Diagnosis Questionnaire](Questionnaire-BHADiagnosisQuestionnaire.html)
 
 | CoBHRM Field Name         | FHIR Element shorthand                               |

@@ -2,7 +2,7 @@ Profile: BHAClient
 Parent: $us-core-patient
 Id: bha-client
 Title: "BHA Client Profile"
-Description: "Ths profile specifies the mandatory and must support data elements for capturing demographic information 
+Description: "This profile specifies the mandatory and must support data elements for capturing demographic information 
 for BHA clients in order to support the BHA's annual reporting requirements."
 * meta.lastUpdated 1..1 MS
 
@@ -39,11 +39,13 @@ for BHA clients in order to support the BHA's annual reporting requirements."
 * identifier[TRAILS_IDENTIFIER] ^short = "The client's TRAILS ID"
 
 // VERATO ID
+/* not applicable to FHIR IG
 * identifier contains VERATO_IDENTIFIER 0..1 MS
 * identifier[VERATO_IDENTIFIER].type 1..1 MS
 * identifier[VERATO_IDENTIFIER].type = BHAClientIdentifierTypeCS#VERATO_IDENTIFIER
 * identifier[VERATO_IDENTIFIER].value 1..1 MS
 * identifier[VERATO_IDENTIFIER] ^short = "The client's VERATO ID"
+*/
 
 // Social Security number
 * identifier contains SSN 1..1 MS
@@ -112,7 +114,7 @@ Title: "Mapping from CO BHA CoBHRM to BHA Client (Patient) Profile"
 * identifier[STATE_IDENTIFIER] -> "Client: Colorado PEAK State ID / Universal ID"
 * identifier[BHA_IDENTIFIER] -> "Client: BHA Identifier"
 * identifier[TRAILS_IDENTIFIER] -> "Client: TRAILS Identifier"
-* identifier[VERATO_IDENTIFIER] -> "Client: VERATO Identifier"
+//* identifier[VERATO_IDENTIFIER] -> "Client: VERATO Identifier"
 * identifier[SSN] -> "Client: Social Security Number"
 * birthDate -> "Client: DOB"
 * name.family -> "Client: Last Name"

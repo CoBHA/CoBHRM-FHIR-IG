@@ -28,9 +28,10 @@ INFORMATION: Encounter/BHAEncounterExamplePG: Encounter.episodeOfCare[1]: This e
 Target Code System urn:oid:2.16.840.1.113883.6.238 doesn't have all content (content = not-present), so the target codes cannot be checked
 Target Code System http://snomed.info/sct is only supported on the terminology server, so the target codes are not validated for performance reasons
 Target Code System urn:ietf:bcp:47 doesn't have all content (content = not-present), so the target codes cannot be checked
-
-
-
+WARNING: ConceptMap/BHAServiceIdentifierICD10CM: ConceptMap.group[0].target: Target Code System http://hl7.org/fhir/sid/icd-10-cm doesn't have all content (content = not-present), so the target codes cannot be checked
+WARNING: ConceptMap/BHAServiceIdentifierProcedureCM: ConceptMap.group[0].target: Target Code System http://www.ama-assn.org/go/cpt doesn't have all content (content = not-present), so the target codes cannot be checked
+WARNING: ConceptMap/BHAServiceIdentifierProcedureCM: ConceptMap.group[1].target: Target Code System http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets doesn't have all content (content = not-present), so the target codes cannot be checked
+MSG_DRAFT
 
 
 

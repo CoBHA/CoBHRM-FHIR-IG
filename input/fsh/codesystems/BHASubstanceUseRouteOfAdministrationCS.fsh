@@ -32,13 +32,13 @@ Usage: #definition
 
 * group[0].element[+].code = #2
 * group[0].element[=].display = "Smoking (pipe/cigarette)"
-* group[0].element[=].target[+].code = #ORINHL
+* group[0].element[=].target[+].code = #IPINHL
 * group[0].element[=].target[=].display = "Inhalation, respiratory"
 * group[0].element[=].target[=].equivalence = #relatedto
 
 * group[0].element[+].code = #3
 * group[0].element[=].display = "Inhalation (nose/mouth)"
-* group[0].element[=].target[+].code = #ORINHL
+* group[0].element[=].target[+].code = #IPINHL
 * group[0].element[=].target[=].display = "Inhalation, respiratory"
 * group[0].element[=].target[=].equivalence = #relatedto
 * group[0].element[=].target[+].code = #NASINHL

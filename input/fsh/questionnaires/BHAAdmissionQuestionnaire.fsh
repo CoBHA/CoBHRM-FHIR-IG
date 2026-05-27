@@ -27,6 +27,12 @@ Usage: #definition
 * item[=].type = #string
 * item[=].required = true
 
+* item[+].linkId = "SERVICE_IDENTIFIER"
+* item[=].text = "Service Identifier"
+* item[=].type = #choice
+* item[=].required = true
+* item[=].answerValueSet = Canonical(BHAServiceIdentifierVS)
+
 * item[+].linkId = "ADMISSION_IDENTIFIER"
 * item[=].text = "Admission Identifier"
 * item[=].type = #string
