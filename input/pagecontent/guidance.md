@@ -163,14 +163,14 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 - [BHA EpisodeOfCare Profile](StructureDefinition-bha-episodeOfCare.html)
 - [BHA Diagnosis Questionnaire](Questionnaire-BHADiagnosisQuestionnaire.html)
 
-| CoBHRM Field Name         | FHIR Element shorthand                               |
-| ------------------------- | ---------------------------------------------------- |
-| Effective Date            | BHADiagnosisQuestionnaireResponse:`lastUpdated`      |
-| MH Diagnosis Identifier 1 | Condition.code                                       |
-| MH Diagnosis Identifier 2 | Condition.code if multiple Condition resources exist |
-| MH Diagnosis Identifier 3 | Condition.code if multiple Condition resources exist |
-| SUD Diagnosis Identifier  | Condition.code                                       |
-| SMI/SED Status            | BHADiagnosisQuestionnaireResponse:`SMI_SED_STATUS`   |
+| CoBHRM Field Name         | FHIR Element shorthand                                        |
+| ------------------------- | ------------------------------------------------------------- |
+| Effective Date            | BHADiagnosisQuestionnaireResponse:`lastUpdated`               |
+| MH Diagnosis Identifier 1 | Condition.code[billing]                                       |
+| MH Diagnosis Identifier 2 | Condition.code[billing] if multiple Condition resources exist |
+| MH Diagnosis Identifier 3 | Condition.code[billing] if multiple Condition resources exist |
+| SUD Diagnosis Identifier  | Condition.code[billing]                                       |
+| SMI/SED Status            | BHADiagnosisQuestionnaireResponse:`SMI_SED_STATUS`            |
 {: .grid}
 
 #### Substance Use Disorder

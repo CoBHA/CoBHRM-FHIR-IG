@@ -8,7 +8,7 @@ Description: "Diagnosis profile for diagnoses related to BHA episodeOfCare"
 * category[diagnosisType] from BHADiagnosisTypeVS (required) // MH vs SUD
 * code 1..1 MS // Service-Identifier (not mapped to SNOMED-CT code for the diagnosis as there is not a good mapping)
 // slicing code.coding for BHA Service Identifier, HCPCS / ICD10 codes by the ValueSets
-
+* code.coding 1..* MS
 * code.coding ^slicing.discriminator.type = #value
 * code.coding ^slicing.discriminator.path = "$this"
 * code.coding ^slicing.rules = #open
@@ -28,6 +28,7 @@ Target: "https://coloradobehavioralhealthadministration.mintlify.app/"
 Title: "Mapping from CoBHRM Diagnosis to BHA Episode Diagnosis"
 * -> "CoBHRM: Diagnosis"
 * category[diagnosisType] -> "Diagnosis: Diagnosis Type (MH vs SUD)"
-* code -> "Diagnosis: Service Identifier code for the diagnosis"
+* code.coding[BHAServiceIdentifier] -> "Diagnosis: Service Identifier code for the diagnosis"
+* code.coding[billing] -> "Diagnosis: Service Identifier equivilant from ICD10"
 * encounter -> "Reference to associated Encounter"
 * subject -> "The Client associated with the diagnosis"
