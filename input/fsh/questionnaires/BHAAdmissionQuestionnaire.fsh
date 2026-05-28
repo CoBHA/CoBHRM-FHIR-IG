@@ -33,10 +33,12 @@ Usage: #definition
 * item[=].required = true
 * item[=].answerValueSet = Canonical(BHAServiceIdentifierVS)
 
+/* Not applicable to FHIR IG 
 * item[+].linkId = "ADMISSION_IDENTIFIER"
 * item[=].text = "Admission Identifier"
 * item[=].type = #string
 * item[=].required = false
+*/
 
 // Contact and Appointment Information Section
 * item[+].linkId = "FIRST_CONTACT_DATE"

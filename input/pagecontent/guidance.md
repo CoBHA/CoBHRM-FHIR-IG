@@ -86,7 +86,6 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 | CoBHRM Field Name                                                            | FHIR Element shorthand                                                                                     |
 | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | Effective Date                                                               | EpisodeOfCare.meta.lastUpdated<br>BHAAdmissionQuestionnaireResponse:`lastUpdated`                          |
-| Admission Identifier                                                         | EpisodeOfCare.identifier[ADMISSION_IDENTIFIER]<br>BHAAdmissionQuestionnaireResponse:`ADMISSION_IDENTIFIER` |
 | NPI / BHE License Number                                                     | EpisodeOfCare.managingOrganization.identifier<br>BHAAdmissionQuestionnaireResponse:`NPI`                   |
 | Admission Date                                                               | EpisodeOfCare.period.start                                                                                 |
 | Service Identifier                                                           | BHAAdmissionQuestionnaireResponse:`SERVICE_IDENTIFIER`                                                     |
