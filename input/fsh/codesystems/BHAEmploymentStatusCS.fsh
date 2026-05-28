@@ -1,7 +1,7 @@
 CodeSystem: BHAEmploymentStatusCS
 Id: bha-employment-status-cs
 Title: "BHA Employment Status"
-Description: "Code system for employment statuses used in BHA episodes"
+Description: "Code system for employment statuses used in BHA EpisodeOfCare"
 * ^experimental = false
 * ^caseSensitive = true
 

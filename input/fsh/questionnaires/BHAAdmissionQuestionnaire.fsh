@@ -7,6 +7,8 @@ Usage: #definition
 
 * url = "http://bha.colorado.gov/fhir/bha-ig/Questionnaire/BHAAdmissionQuestionnaire"
 * version = "1.0.0"
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+* extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"
 * name = "BHAAdmissionQuestionnaire"
 * title = "BHA Admission Questionnaire"
 * status = #active
@@ -20,6 +22,19 @@ Usage: #definition
 * item[=].type = #dateTime
 * item[=].required = true
 
+* item[+].linkId = "SERVICE_IDENTIFIER"
+* item[=].text = "Service Identifier"
+* item[=].type = #choice
+* item[=].required = true
+* item[=].answerValueSet = Canonical(BHAServiceIdentifierVS)
+
+/* Not applicable to FHIR IG 
+* item[+].linkId = "ADMISSION_IDENTIFIER"
+* item[=].text = "Admission Identifier"
+* item[=].type = #string
+* item[=].required = false
+*/
+
 // Contact and Appointment Information Section
 * item[+].linkId = "FIRST_CONTACT_DATE"
 * item[=].text = "Date of First Contact"
@@ -32,8 +47,8 @@ Usage: #definition
 * item[=].required = true
 
 // Clinical Information Section
-* item[+].linkId = "MEDICATION_ASSISTED_OPIOID_THERAPY"
-* item[=].text = "Medication Assisted Opioid Therapy"
+* item[+].linkId = "MEDICATION_ASSISTED_THERAPY"
+* item[=].text = "Medication Assisted Therapy"
 * item[=].type = #boolean
 * item[=].required = true
 
@@ -58,12 +73,6 @@ Usage: #definition
 * item[=].type = #choice
 * item[=].required = true
 * item[=].answerValueSet = Canonical(BHAEmploymentStatusVS)
-
-* item[+].linkId = "MARITAL_STATUS"
-* item[=].text = "Marital Status"
-* item[=].type = #choice
-* item[=].required = true
-* item[=].answerValueSet = Canonical(BHAMaritalStatusVS)
 
 * item[+].linkId = "LIVING_SITUATION"
 * item[=].text = "Living Situation"
@@ -159,8 +168,7 @@ Usage: #definition
 * item[+].linkId = "INVOLUNTARY_COMMITMENT_REASON"
 * item[=].text = "Involuntary Commitment Reason"
 * item[=].type = #choice
-// TODO: there is no way to model conditionally required in FHIR; instead, this makes it required but guides the user to only show the question in certain conditions. verify approach with BHA.
-* item[=].required = true
+//* item[=].required = true
 * item[=].enableWhen[0].question = "LEGAL_STATUS"
 * item[=].enableWhen[=].operator = #=
 * item[=].enableWhen[=].answerCoding = BHALegalStatusCS#04 "72-hour evaluation and treatment"
@@ -186,6 +194,7 @@ Usage: #definition
 * item[=].text = "Education Level"
 * item[=].type = #choice
 * item[=].required = true
+// Valid values sourced from ACT sheet Appendix ACT-Ascent
 * item[=].answerValueSet = Canonical(BHAEducationLevelVS)
 
 * item[+].linkId = "SCHOOL_ATTENDANCE_STATUS"
@@ -215,8 +224,19 @@ Usage: #definition
 * item[=].text = "Episode of Care Information"
 * item[=].type = #reference
 * item[=].required = true
+* item[=].repeats = true
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource"
 * item[=].extension[=].valueCode = #EpisodeOfCare
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile"
 * item[=].extension[=].valueCanonical = Canonical(BHAEpisodeOfCare)
 
+// require at least one diagnosis condition with MH or SUD code
+* item[+].linkId = "diagnosis"
+* item[=].text = "Diagnosis Information"
+* item[=].type = #reference
+* item[=].required = true
+* item[=].repeats = true
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource"
+* item[=].extension[=].valueCode = #Condition
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile"
+* item[=].extension[=].valueCanonical = Canonical(BHAEpisodeDiagnosis)

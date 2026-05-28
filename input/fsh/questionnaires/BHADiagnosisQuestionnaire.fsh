@@ -7,6 +7,8 @@ Usage: #definition
 
 * url = "http://bha.colorado.gov/fhir/bha-ig/Questionnaire/BHADiagnosisQuestionnaire"
 * version = "1.0.0"
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+* extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"
 * name = "BHADiagnosisQuestionnaire"
 * title = "BHA Diagnosis Questionnaire"
 * status = #active
@@ -32,7 +34,19 @@ Usage: #definition
 * item[=].text = "Episode of Care Information"
 * item[=].type = #reference
 * item[=].required = true
+* item[=].repeats = true
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource"
 * item[=].extension[=].valueCode = #EpisodeOfCare
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile"
 * item[=].extension[=].valueCanonical = Canonical(BHAEpisodeOfCare)
+
+// require at least one diagnosis condition with MH or SUD code
+* item[+].linkId = "diagnosis"
+* item[=].text = "Diagnosis Information"
+* item[=].type = #reference
+* item[=].required = true
+* item[=].repeats = true
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource"
+* item[=].extension[=].valueCode = #Condition
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile"
+* item[=].extension[=].valueCanonical = Canonical(BHAEpisodeDiagnosis)

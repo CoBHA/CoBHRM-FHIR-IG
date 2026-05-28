@@ -1,8 +1,8 @@
 Profile: BHAEncounter  
 Parent: $us-core-encounter
 Id: bha-encounter
-Title: "Colorado BHA Encounter Profile"
-Description: "Encounter profile for client visits and encounters related to BHA episodes"
+Title: "BHA Encounter Profile"
+Description: "Encounter profile for client visits and encounters related to BHA EpisodeOfCare"
 * meta.lastUpdated MS
 // * status MS
 // * class MS
@@ -34,8 +34,18 @@ Description: "Encounter profile for client visits and encounters related to BHA 
 
 // Extensions for BHA-specific data
 * extension contains 
-    BHAActionType named actionType 1..1 MS and
-    BHAUpdateType named updateType 0..1 MS
+    BHAActionType named actionType 1..1 MS
 
 * extension[actionType] ^short = "CCAR Action Type (01=admission, 03=update, 05=discharge)"
-* extension[updateType] ^short = "Type of update when applicable"
+
+Mapping: BHAEncounter-Mapping
+Source: BHAEncounter
+Target: "https://coloradobehavioralhealthadministration.mintlify.app/"
+Title: "Mapping from CoBHRM Admission/Discharge to BHA Encounter"
+* -> "CoBHRM: Admission/Discharge"
+* period.start -> "Admission: Admission Date"
+* period.end -> "Discharge: Discharge Date"
+* episodeOfCare -> "Reference to BHA Episode of Care"
+* diagnosis.condition -> "Reference to BHA Episode Diagnosis"
+* serviceProvider -> "Provider Organization"
+* extension[actionType] -> "Action Type (Admission, Update, Discharge)"

@@ -7,6 +7,8 @@ Usage: #definition
 
 * url = "http://bha.colorado.gov/fhir/bha-ig/Questionnaire/BHASubstanceUseDisorderQuestionnaire"
 * version = "1.0.0"
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+* extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"
 * name = "BHASubstanceUseDisorderQuestionnaire"
 * title = "BHA Substance Use Disorder Questionnaire"
 * status = #active
@@ -15,15 +17,16 @@ Usage: #definition
 * publisher = "Colorado Behavioral Health Administration"
 * description = "Behavioral Health Administration substance use disorder questionnaire for collecting substance use information from a person receiving behavioral health services"
 
-//todo: add narrative guidance somewhere of the rule that the ASAM level of care must match the provider's ASAM level of care in LADDERS
 * item[+].linkId = "lastUpdated"
 * item[=].text = "Last Updated DateTime of the data in the QuestionnaireResponse"
 * item[=].type = #dateTime
 * item[=].required = true
 
 * item[+].linkId = "ASAM_LEVEL_OF_CARE"
-* item[=].text = "ASAM Level of Care"
+* item[=].text = "ASAM Level of Care: the ASAM Level of Care must match the LADDERS Provider/Clinic's ASAM Level of Care"
 * item[=].type = #choice
+// UDM update (2026-05-11): conditionally required for all non-DUI services.
+// This condition references service context that is outside this questionnaire, so required stays false here.
 * item[=].required = false
 * item[=].answerValueSet = Canonical(BHAASAMLevelOfCareVS)
 
@@ -146,6 +149,7 @@ Usage: #definition
 * item[=].text = "Episode of Care Information"
 * item[=].type = #reference
 * item[=].required = true
+* item[=].repeats = true
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource"
 * item[=].extension[=].valueCode = #EpisodeOfCare
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile"

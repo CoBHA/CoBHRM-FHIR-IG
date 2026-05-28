@@ -6,19 +6,22 @@ Description: "Example Responses to BHA Admission Questionnaire Questions"
 Usage: #example
 * questionnaire = Canonical(BHAAdmissionQuestionnaire)
 * status = #completed
-* subject = Reference(Patient/example) "Mickey Mouse"
+* subject = Reference(Patient/BHAClientExample) "Emma Jones"
 * authored = "2025-10-28T18:30:40-07:00"
 // * author = Reference(Practitioner/practitioner-1)
 * item[+].linkId = "lastUpdated"
 * item[=].answer.valueDateTime = "2025-10-28T18:30:40-07:00"
+* item[+].linkId = "SERVICE_IDENTIFIER"
+* item[=].text = "Service Identifier"
+* item[=].answer.valueCoding = BHAServiceIdentifierCS#17 "Mental Health Outpatient"
 * item[+].linkId = "FIRST_CONTACT_DATE"
 * item[=].text = "Date of First Contact"
 * item[=].answer.valueDate = "2025-07-01"
 * item[+].linkId = "FIRST_APPOINTMENT_OFFERED_DATE"
 * item[=].text = "Date of First Appointment Offered"
 * item[=].answer.valueDate = "2025-07-15"
-* item[+].linkId = "MEDICATION_ASSISTED_OPIOID_THERAPY"
-* item[=].text = "Medication Assisted Opioid Therapy"
+* item[+].linkId = "MEDICATION_ASSISTED_THERAPY"
+* item[=].text = "Medication Assisted Therapy"
 * item[=].answer.valueBoolean = true
 * item[+].linkId = "REFERRAL_SOURCE"
 * item[=].text = "Referral Source"
@@ -29,9 +32,6 @@ Usage: #example
 * item[+].linkId = "EMPLOYMENT_STATUS"
 * item[=].text = "Employment Status"
 * item[=].answer.valueCoding = BHAEmploymentStatusCS#01
-* item[+].linkId = "MARITAL_STATUS"
-* item[=].text = "Marital Status"
-* item[=].answer.valueCoding = BHAMaritalStatusCS#01
 * item[+].linkId = "LIVING_SITUATION"
 * item[=].text = "Living Situation"
 * item[=].answer.valueCoding = BHALivingSituationCS#1
@@ -89,3 +89,8 @@ Usage: #example
 * item[+].linkId = "episodeOfCare"
 * item[=].text = "Episode of Care Information"
 * item[=].answer.valueReference = Reference(BHAEpisodeOfCareExampleBH) 
+* item[+].linkId = "diagnosis"
+* item[=].text = "Diagnosis Information"
+* item[=].answer[+].valueReference = Reference(BHAEpisodeDiagnosisExample) "Major depressive disorder, recurrent, moderate"
+* item[=].answer[+].valueReference = Reference(BHAEpisodeDiagnosisExample2) "Anxiety disorder"
+

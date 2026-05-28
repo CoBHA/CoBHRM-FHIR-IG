@@ -6,7 +6,7 @@ Description: "Example Responses to Special Connections Baby Questionnaire Questi
 Usage: #example
 * questionnaire = Canonical(BHASCBabyQuestionnaire)
 * status = #completed
-* subject = Reference(Patient/example) "Minnie Mouse"
+* subject = Reference(Patient/BHAClientExample) "Emma Jones"
 * authored = "2025-10-28T18:30:40-07:00"
 //* author = Reference(Practitioner/practitioner-1)
 * item[+].linkId = "lastUpdated"

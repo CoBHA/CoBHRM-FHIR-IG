@@ -1,7 +1,7 @@
 CodeSystem: BHAASAMLevelOfCareCS
 Id: bha-asam-level-of-care-cs
 Title: "BHA ASAM Levels of Care"
-Description: "ASAM Levels of Care for BHA services/admissions."
+Description: "ASAM Levels of Care for BHA services/admissions (UDM format X(12))."
 * ^experimental = false
 * ^caseSensitive = true
 * #0.5 "ASAM Level 0.5 - Early Intervention"

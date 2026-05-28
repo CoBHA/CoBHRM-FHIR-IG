@@ -7,6 +7,8 @@ Usage: #definition
 
 * url = "http://bha.colorado.gov/fhir/bha-ig/Questionnaire/BHADischargeQuestionnaire"
 * version = "1.0.0"
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm"
+* extension[=].valueCoding = http://hl7.org/fhir/version-algorithm#semver "SemVer"
 * name = "BHADischargeQuestionnaire"
 * title = "BHA Discharge Questionnaire"
 * status = #active
@@ -20,11 +22,32 @@ Usage: #definition
 * item[=].type = #dateTime
 * item[=].required = true
 
+* item[+].linkId = "DATE_OF_LAST_CONTACT"
+* item[=].text = "Date of Last Contact"
+* item[=].type = #dateTime
+* item[=].required = true
+
+* item[+].linkId = "DISCHARGE_DATE"
+* item[=].text = "Discharge Date"
+* item[=].type = #dateTime
+* item[=].required = true
+
+* item[+].linkId = "DISCHARGE_TYPE"
+* item[=].text = "Discharge Type"
+* item[=].type = #choice
+* item[=].required = true
+* item[=].answerValueSet = Canonical(BHADischargeTypeVS)
+
 * item[+].linkId = "END_OF_TREATMENT_REASON"
 * item[=].text = "End of Treatment Reason"
 * item[=].type = #choice
 * item[=].required = false
+//* item[=].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-requiredExpression"
+//* item[=].extension[=].valueExpression.language = #text/fhirpath
+//* item[=].extension[=].valueExpression.expression = "%resource.repeat(item).where(linkId='DISCHARGE_TYPE').answer.value.ofType(Coding).where(code='03').exists()"
+// Valid values sourced from ACT sheet Appendix ACT-Ascent
 * item[=].answerValueSet = Canonical(BHAEndOfTreatmentReasonVS)
+
 
 * item[+].linkId = "ARRESTS_PAST_30_DAYS"
 * item[=].text = "Arrests in Past 30 Days"
@@ -60,6 +83,7 @@ Usage: #definition
 * item[=].text = "Education Level"
 * item[=].type = #choice
 * item[=].required = true
+// Valid values sourced from ACT sheet Appendix ACT-Ascent
 * item[=].answerValueSet = Canonical(BHAEducationLevelVS)
 
 * item[+].linkId = "SCHOOL_ATTENDANCE_STATUS"
@@ -79,7 +103,19 @@ Usage: #definition
 * item[=].text = "Episode of Care Information"
 * item[=].type = #reference
 * item[=].required = true
+* item[=].repeats = true
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource"
 * item[=].extension[=].valueCode = #EpisodeOfCare
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile"
 * item[=].extension[=].valueCanonical = Canonical(BHAEpisodeOfCare)
+
+// require at least one diagnosis condition with MH or SUD code
+* item[+].linkId = "diagnosis"
+* item[=].text = "Diagnosis Information"
+* item[=].type = #reference
+* item[=].required = true
+* item[=].repeats = true
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource"
+* item[=].extension[=].valueCode = #Condition
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile"
+* item[=].extension[=].valueCanonical = Canonical(BHAEpisodeDiagnosis)

@@ -6,13 +6,13 @@ Description: "Example Responses to Substance Use Disorder Questionnaire Question
 Usage: #example
 * questionnaire = Canonical(BHASubstanceUseDisorderQuestionnaire)
 * status = #completed
-* subject = Reference(Patient/example) "Mickey Mouse"
+* subject = Reference(Patient/BHAClientExample) "Emma Jones"
 * authored = "2025-10-28T18:30:40-07:00"
 //* author = Reference(Practitioner/practitioner-1)
 * item[+].linkId = "lastUpdated"
 * item[=].answer.valueDateTime = "2025-10-28T18:30:40-07:00"
 * item[+].linkId = "ASAM_LEVEL_OF_CARE"
-* item[=].text = "ASAM Level of Care"
+* item[=].text = "ASAM Level of Care: the ASAM Level of Care must match the LADDERS Provider/Clinic's ASAM Level of Care"
 * item[=].answer.valueCoding = BHAASAMLevelOfCareCS#3.1
 * item[+].linkId = "PRIMARY_SUBSTANCE_USE"
 * item[=].text = "Primary Substance Use"
