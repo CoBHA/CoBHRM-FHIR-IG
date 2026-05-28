@@ -11,9 +11,6 @@ Usage: #example
 // * author = Reference(Practitioner/practitioner-1)
 * item[+].linkId = "lastUpdated"
 * item[=].answer.valueDateTime = "2025-10-28T18:30:40-07:00"
-* item[+].linkId = "NPI"
-* item[=].text = "NPI / BHE License Number"
-* item[=].answer.valueString = "1234567890"
 * item[+].linkId = "SERVICE_IDENTIFIER"
 * item[=].text = "Service Identifier"
 * item[=].answer.valueCoding = BHAServiceIdentifierCS#17 "Mental Health Outpatient"

@@ -22,11 +22,6 @@ Usage: #definition
 * item[=].type = #dateTime
 * item[=].required = true
 
-* item[+].linkId = "NPI"
-* item[=].text = "NPI / BHE License Number"
-* item[=].type = #string
-* item[=].required = true
-
 * item[+].linkId = "SERVICE_IDENTIFIER"
 * item[=].text = "Service Identifier"
 * item[=].type = #choice

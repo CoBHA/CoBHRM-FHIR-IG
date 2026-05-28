@@ -83,38 +83,38 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 - [US Core Observation Pregnancy Status]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-pregnancystatus.html)
 - [BHA Client Profile](StructureDefinition-bha-client.html)
 
-| CoBHRM Field Name                                                            | FHIR Element shorthand                                                                                     |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| Effective Date                                                               | EpisodeOfCare.meta.lastUpdated<br>BHAAdmissionQuestionnaireResponse:`lastUpdated`                          |
-| NPI / BHE License Number                                                     | EpisodeOfCare.managingOrganization.identifier<br>BHAAdmissionQuestionnaireResponse:`NPI`                   |
-| Admission Date                                                               | EpisodeOfCare.period.start                                                                                 |
-| Service Identifier                                                           | BHAAdmissionQuestionnaireResponse:`SERVICE_IDENTIFIER`                                                     |
-| Date of First Contact                                                        | BHAAdmissionQuestionnaireResponse:`FIRST_CONTACT_DATE`                                                     |
-| Date of First Appointment Offered                                            | BHAAdmissionQuestionnaireResponse:`FIRST_APPOINTMENT_OFFERED_DATE`                                         |
-| Medication Assisted Therapy                                                  | BHAAdmissionQuestionnaireResponse:`MEDICATION_ASSISTED_THERAPY`                                            |
-| Referral Source                                                              | BHAAdmissionQuestionnaireResponse:`REFERRAL_SOURCE`                                                        |
-| Arrests in Past 30 Days                                                      | BHAAdmissionQuestionnaireResponse:`ARRESTS_PAST_30_DAYS`                                                   |
-| Employment Status                                                            | BHAAdmissionQuestionnaireResponse:`EMPLOYMENT_STATUS`                                                      |
-| Marital Status                                                               | Patient.maritalStatus                                                                                      |
-| Living Situation                                                             | BHAAdmissionQuestionnaireResponse:`LIVING_SITUATION`                                                       |
-| Monthly Income                                                               | BHAAdmissionQuestionnaireResponse:`MONTHLY_INCOME`                                                         |
-| Primary Source of income/support for client                                  | BHAAdmissionQuestionnaireResponse:`PRIMARY_INCOME_SOURCE`                                                  |
-| Pregnancy Status                                                             | BHAAdmissionQuestionnaireResponse:`PREGNANCY_STATUS`                                                       |
-| Within 1 Year Postpartum Status                                              | BHAAdmissionQuestionnaireResponse:`WITHIN_1_YEAR_POSTPARTUM_STATUS`                                        |
-| Enrollment in Special Connections                                            | BHAAdmissionQuestionnaireResponse:`SPECIAL_CONNECTIONS_ENROLLMENT`                                         |
-| Enrollment in ACT?                                                           | BHAAdmissionQuestionnaireResponse:`ACT_ENROLLMENT`                                                         |
-| Enrollment in Ascent (FEP)?                                                  | BHAAdmissionQuestionnaireResponse:`ASCENT_ENROLLMENT`                                                      |
-| Number of Dependent Children<br>                                             | BHAAdmissionQuestionnaireResponse:`NUMBER_DEPENDENT_CHILDREN`                                              |
-| Self Help Attendance (Last 30 days at admission)/<br>Peer Support Attendance | BHAAdmissionQuestionnaireResponse:`SELF_HELP_ATTENDANCE`                                                   |
-| Substance Use Prior Treatment (Total Lifetime admissions)                    | BHAAdmissionQuestionnaireResponse:`TOTAL_SUBSTANCE_USE_PRIOR_TREATMENT`                                    |
-| Psychiatric Hospital Admission (Last 30 days)                                | BHAAdmissionQuestionnaireResponse:`PSYCHIATRIC_HOSPITAL_ADMISSION`                                         |
-| Legal Status                                                                 | BHAAdmissionQuestionnaireResponse:`LEGAL_STATUS`                                                           |
-| Involuntary Reason                                                           | BHAAdmissionQuestionnaireResponse:`INVOLUNTARY_REASON`                                                     |
-| Criminal Justice Involvement                                                 | BHAAdmissionQuestionnaireResponse:`CRIMINAL_JUSTICE_INVOLVEMENT`                                           |
-| Education Level                                                              | BHAAdmissionQuestionnaireResponse:`EDUCATION_LEVEL`                                                        |
-| School Attendance Status (in the previous 3 months)                          | BHAAdmissionQuestionnaireResponse:`SCHOOL_ATTENDANCE_STATUS`                                               |
-| Visit to Psychiatric ER in last 6 months                                     | BHAAdmissionQuestionnaireResponse:`VISIT_TO_PSYCHIATRIC_ER`                                                |
-| Communication Accommodations                                                 | BHAAdmissionQuestionnaireResponse:`COMMUNICATION_ACCOMMODATIONS`                                           |
+| CoBHRM Field Name                                                            | FHIR Element shorthand                                                            |
+| ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Effective Date                                                               | EpisodeOfCare.meta.lastUpdated<br>BHAAdmissionQuestionnaireResponse:`lastUpdated` |
+| NPI / BHE License Number                                                     | EpisodeOfCare.managingOrganization.identifier                                     |
+| Admission Date                                                               | EpisodeOfCare.period.start                                                        |
+| Service Identifier                                                           | BHAAdmissionQuestionnaireResponse:`SERVICE_IDENTIFIER`                            |
+| Date of First Contact                                                        | BHAAdmissionQuestionnaireResponse:`FIRST_CONTACT_DATE`                            |
+| Date of First Appointment Offered                                            | BHAAdmissionQuestionnaireResponse:`FIRST_APPOINTMENT_OFFERED_DATE`                |
+| Medication Assisted Therapy                                                  | BHAAdmissionQuestionnaireResponse:`MEDICATION_ASSISTED_THERAPY`                   |
+| Referral Source                                                              | BHAAdmissionQuestionnaireResponse:`REFERRAL_SOURCE`                               |
+| Arrests in Past 30 Days                                                      | BHAAdmissionQuestionnaireResponse:`ARRESTS_PAST_30_DAYS`                          |
+| Employment Status                                                            | BHAAdmissionQuestionnaireResponse:`EMPLOYMENT_STATUS`                             |
+| Marital Status                                                               | Patient.maritalStatus                                                             |
+| Living Situation                                                             | BHAAdmissionQuestionnaireResponse:`LIVING_SITUATION`                              |
+| Monthly Income                                                               | BHAAdmissionQuestionnaireResponse:`MONTHLY_INCOME`                                |
+| Primary Source of income/support for client                                  | BHAAdmissionQuestionnaireResponse:`PRIMARY_INCOME_SOURCE`                         |
+| Pregnancy Status                                                             | BHAAdmissionQuestionnaireResponse:`PREGNANCY_STATUS`                              |
+| Within 1 Year Postpartum Status                                              | BHAAdmissionQuestionnaireResponse:`WITHIN_1_YEAR_POSTPARTUM_STATUS`               |
+| Enrollment in Special Connections                                            | BHAAdmissionQuestionnaireResponse:`SPECIAL_CONNECTIONS_ENROLLMENT`                |
+| Enrollment in ACT?                                                           | BHAAdmissionQuestionnaireResponse:`ACT_ENROLLMENT`                                |
+| Enrollment in Ascent (FEP)?                                                  | BHAAdmissionQuestionnaireResponse:`ASCENT_ENROLLMENT`                             |
+| Number of Dependent Children<br>                                             | BHAAdmissionQuestionnaireResponse:`NUMBER_DEPENDENT_CHILDREN`                     |
+| Self Help Attendance (Last 30 days at admission)/<br>Peer Support Attendance | BHAAdmissionQuestionnaireResponse:`SELF_HELP_ATTENDANCE`                          |
+| Substance Use Prior Treatment (Total Lifetime admissions)                    | BHAAdmissionQuestionnaireResponse:`TOTAL_SUBSTANCE_USE_PRIOR_TREATMENT`           |
+| Psychiatric Hospital Admission (Last 30 days)                                | BHAAdmissionQuestionnaireResponse:`PSYCHIATRIC_HOSPITAL_ADMISSION`                |
+| Legal Status                                                                 | BHAAdmissionQuestionnaireResponse:`LEGAL_STATUS`                                  |
+| Involuntary Reason                                                           | BHAAdmissionQuestionnaireResponse:`INVOLUNTARY_REASON`                            |
+| Criminal Justice Involvement                                                 | BHAAdmissionQuestionnaireResponse:`CRIMINAL_JUSTICE_INVOLVEMENT`                  |
+| Education Level                                                              | BHAAdmissionQuestionnaireResponse:`EDUCATION_LEVEL`                               |
+| School Attendance Status (in the previous 3 months)                          | BHAAdmissionQuestionnaireResponse:`SCHOOL_ATTENDANCE_STATUS`                      |
+| Visit to Psychiatric ER in last 6 months                                     | BHAAdmissionQuestionnaireResponse:`VISIT_TO_PSYCHIATRIC_ER`                       |
+| Communication Accommodations                                                 | BHAAdmissionQuestionnaireResponse:`COMMUNICATION_ACCOMMODATIONS`                  |
 {: .grid}
 
 <!--
