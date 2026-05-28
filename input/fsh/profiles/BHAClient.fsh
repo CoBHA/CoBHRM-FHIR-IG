@@ -25,11 +25,13 @@ for BHA clients in order to support the BHA's annual reporting requirements."
 * identifier[STATE_IDENTIFIER] ^short = "The client's Colorado PEAK State ID / Universal ID"
 
 // BHA Identifier (data conversion only)
+/* Not applicable to FHIR IG
 * identifier contains BHA_IDENTIFIER 0..1 MS
 * identifier[BHA_IDENTIFIER].type 1..1 MS
 * identifier[BHA_IDENTIFIER].type = BHAClientIdentifierTypeCS#BHA_IDENTIFIER
 * identifier[BHA_IDENTIFIER].value 1..1 MS
 * identifier[BHA_IDENTIFIER] ^short = "BHA Identifier (data conversion only)"
+*/
 
 // TRAILS ID - required if child welfare is 1
 * identifier contains TRAILS_IDENTIFIER 0..1 MS

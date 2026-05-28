@@ -52,7 +52,6 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Effective Date                           | Patient.meta.lastUpdated<br>BHAClientQuestionnaireResponse:`lastUpdated`                                                            |
 | Colorado PEAK State ID<br>/ Universal ID | Patient.identifier[STATE_IDENTIFIER]                                                                                                |
-| BHA Identifier                           | Patient.identifier[BHA_IDENTIFIER]                                                                                                  |
 | Trails Identifier                        | Patient.identifier[TRAILS_IDENTIFIER]<br>BHAClientQuestionnaireResponse:`TRAILS_IDENTIFIER`                                         |
 | DOB                                      | Patient.birthDate                                                                                                                   |
 | Last Name                                | Patient.name[officialName].family                                                                                                   |

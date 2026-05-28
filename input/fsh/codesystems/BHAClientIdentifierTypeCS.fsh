@@ -5,6 +5,6 @@ Description: "Identifier types used for BHA client identifiers"
 * ^experimental = false
 * ^caseSensitive = true
 * #STATE_IDENTIFIER "State Identifier"
-* #BHA_IDENTIFIER "BHA Identifier"
+// not applicable to FHIR IG * #BHA_IDENTIFIER "BHA Identifier"
 * #TRAILS_IDENTIFIER "TRAILS Identifier"
 // not applicable to FHIR IG * #VERATO_IDENTIFIER "Verato Identifier"
