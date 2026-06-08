@@ -18,7 +18,7 @@ for BHA clients in order to support the BHA's annual reporting requirements."
 // * identifier[clientId] ^short = "The client's BHASO Client ID (10 characters max)"
 
 // Colorado PEAK state ID / universal ID
-* identifier contains STATE_IDENTIFIER 1..1 MS
+* identifier contains STATE_IDENTIFIER 0..1 MS
 * identifier[STATE_IDENTIFIER].type 1..1 MS
 * identifier[STATE_IDENTIFIER].type = BHAClientIdentifierTypeCS#STATE_IDENTIFIER
 * identifier[STATE_IDENTIFIER].value 1..1 MS
