@@ -1,4 +1,4 @@
-# Colorado BHA FHIR Implementation Guide
+# Colorado Behavioral Health Reporting Model (CoBHRM) FHIR Implementation Guide
 
 [![FHIR R4](https://img.shields.io/badge/FHIR-R4%20(4.0.1)-orange)](https://hl7.org/fhir/R4/)
 [![Status](https://img.shields.io/badge/status-draft%20%C2%B7%20trial--use-yellow)](https://build.fhir.org/ig/CoBHA/CoBHRM-FHIR-IG/branches/main/index.html)
