@@ -29,8 +29,7 @@ begins collecting client-level data under the CoBHRM, replacing two legacy repor
 
 This IG expresses the data elements those programs require as FHIR resources, so the information can
 be captured once in certified EHRs and exchanged in a standard format between providers,
-intermediaries, and the BHA. It does **not** cover the entire CoBHRM — it defines the FHIR pieces
-needed to support BHA and SAMHSA reporting.
+intermediaries, and the BHA. 
 
 For program background, see the [CoBHRM documentation](https://coloradobehavioralhealthadministration.mintlify.app/).
 
