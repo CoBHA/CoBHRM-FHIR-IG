@@ -89,7 +89,13 @@ pages:
   workflow.md:
     title: Workflow
     generation: markdown
-    extension: 
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
+  testing.md:
+    title: Validation & Testing
+    generation: markdown
+    extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
   about.md:
@@ -118,6 +124,7 @@ menu:
   Questionnaires: questionnaires.html
   Terminology: terminology.html
   Workflow: workflow.html
+  Validation & Testing: testing.html
   Artifacts: artifacts.html
   About: 
     About: about.html
