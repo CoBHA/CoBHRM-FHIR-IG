@@ -13,3 +13,5 @@ template
 /package-lock.json
 /package.json
 spreadsheets
+/tests
+/factories/log

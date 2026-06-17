@@ -1,0 +1,4 @@
+organization_npi,name,phone,email,line,city,state,postal_code
+1234567893,Community Health Clinic,(+1) 555-555-5555,hq@chc.example.org,100 Hope Place,Denver,CO,11111
+9876543210,Front Range Behavioral Health,(+1) 555-0100,contact@frbh.example.org,200 Aspen Ave,Boulder,CO,80302
+1112223334,Mountain View Recovery,(+1) 555-0199,info@mvr.example.org,300 River Rd,Colorado Springs,CO,80903

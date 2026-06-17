@@ -1,0 +1,4 @@
+patient,encounter,diagnosis_type,service_identifier,billing_code
+Patient/BHAClientExample,Encounter/BHAEncounterExample,MH,17,F99
+Patient/BHAClientExample,Encounter/BHAEncounterExample2,MH,20,H2011
+Patient/BHAClientExample,Encounter/BHAEncounterExamplePG,SUD,09,F19.20

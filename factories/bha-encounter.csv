@@ -1,0 +1,4 @@
+patient,episode_of_care,service_provider,action_type,start_date,end_date,diagnosis_condition,diagnosis_type,rank
+Patient/BHAClientExample,EpisodeOfCare/BHAEpisodeOfCareExampleBH,Organization/BHAOrganizationExample,Admission,2025-11-14T10:39:52Z,2025-11-14T13:22:52Z,Condition/BHAEpisodeDiagnosisExample,MH,1
+Patient/BHAClientExample,EpisodeOfCare/BHAEpisodeOfCareExampleSUD,Organization/BHAOrganizationExample,Admission,2024-01-05T10:39:52Z,2024-01-05T13:22:52Z,Condition/BHAEpisodeDiagnosisExampleSUD,SUD,1
+Patient/BHAClientExample,EpisodeOfCare/BHAEpisodeOfCareExampleBH,Organization/BHAOrganizationExample,Evaluation Only,2024-02-14T10:39:52Z,2024-02-14T13:22:52Z,Condition/BHAEpisodeDiagnosisExample2,MH,2

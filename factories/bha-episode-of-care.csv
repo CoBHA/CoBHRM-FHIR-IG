@@ -1,0 +1,4 @@
+patient,organization_npi,type,status,admission_date,discharge_date,diagnosis_condition
+Patient/BHAClientExample,1234567893,MH,finished,2024-01-01,2024-01-15,Condition/BHAEpisodeDiagnosisExample
+Patient/BHAClientExample,1234567893,SUD,finished,2024-01-01,2024-01-15,Condition/BHAEpisodeDiagnosisExampleSUD
+Patient/BHAClientExample,9876543210,MH,active,2024-02-01,,Condition/BHAEpisodeDiagnosisExample2

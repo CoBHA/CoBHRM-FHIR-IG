@@ -1,0 +1,60 @@
+{
+  "factories-version": 1,
+  "factories": [
+    {
+      "name": "BHAClientFactory",
+      "details": "Profile-based patient generation for CoBHRM test data",
+      "mode": "profile",
+      "profile": "http://bha.colorado.gov/fhir/bha-ig/StructureDefinition/bha-client",
+      "data": "factories/bha-client.csv",
+      "format": "json",
+      "filename": "tests/generated/Patient-BHAFactory-$counter$.json",
+      "bundle": false,
+      "mark-profile": true
+    },
+    {
+      "name": "BHAOrganizationFactory",
+      "details": "Profile-based organization generation for CoBHRM test data",
+      "mode": "profile",
+      "profile": "http://bha.colorado.gov/fhir/bha-ig/StructureDefinition/bha-organization",
+      "data": "factories/bha-organization.csv",
+      "format": "json",
+      "filename": "tests/generated/Organization-BHAFactory-$counter$.json",
+      "bundle": false,
+      "mark-profile": true
+    },
+    {
+      "name": "BHAEpisodeOfCareFactory",
+      "details": "Profile-based episode generation for CoBHRM test data",
+      "mode": "profile",
+      "profile": "http://bha.colorado.gov/fhir/bha-ig/StructureDefinition/bha-episodeOfCare",
+      "data": "factories/bha-episode-of-care.csv",
+      "format": "json",
+      "filename": "tests/generated/EpisodeOfCare-BHAFactory-$counter$.json",
+      "bundle": false,
+      "mark-profile": true
+    },
+    {
+      "name": "BHAEncounterFactory",
+      "details": "Profile-based encounter generation for CoBHRM test data",
+      "mode": "profile",
+      "profile": "http://bha.colorado.gov/fhir/bha-ig/StructureDefinition/bha-encounter",
+      "data": "factories/bha-encounter.csv",
+      "format": "json",
+      "filename": "tests/generated/Encounter-BHAFactory-$counter$.json",
+      "bundle": false,
+      "mark-profile": true
+    },
+    {
+      "name": "BHAEpisodeDiagnosisFactory",
+      "details": "Profile-based diagnosis generation for CoBHRM test data",
+      "mode": "profile",
+      "profile": "http://bha.colorado.gov/fhir/bha-ig/StructureDefinition/BHAEpisodeDiagnosis",
+      "data": "factories/bha-episode-diagnosis.csv",
+      "format": "json",
+      "filename": "tests/generated/Condition-BHAFactory-$counter$.json",
+      "bundle": false,
+      "mark-profile": true
+    }
+  ]
+}
