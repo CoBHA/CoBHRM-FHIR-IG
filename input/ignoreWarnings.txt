@@ -16,7 +16,7 @@ WARNING: StructureDefinition/bha-organization: StructureDefinition.snapshot: The
 INFORMATION: StructureDefinition/BHAEpisodeDiagnosis: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
 
 # assume us-core 6.1.0 for now
-WARNING: ImplementationGuide/bha-ig: ImplementationGuide.dependsOn[2]: The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is 8.0.1. This reference is getting old and the more recent version should be considered
+The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is 9.0.0. This reference is getting old and the more recent version should be considered
 
 # using extensions that are not profiled in SDC Questionnaire
 Details_for__matching_against_Profile_
