@@ -45,10 +45,10 @@ if [ ! -f "$VALIDATOR_JAR" ]; then
   fi
 fi
 
-IG_PACKAGE="us.co.bha-ig#dev"
+IG_PACKAGE="us.co.bha-ig#current"
 IG_SOURCE="$IG_PACKAGE"
 
-if [ ! -f "$HOME/.fhir/packages/us.co.bha-ig#dev/package/package.json" ]; then
+if [ ! -f "$HOME/.fhir/packages/us.co.bha-ig#current/package/package.json" ]; then
   IG_SOURCE="$ROOT_DIR/output/package.tgz"
   if [ ! -f "$IG_SOURCE" ]; then
     IG_SOURCE="$ROOT_DIR/fsh-generated/resources"
@@ -59,4 +59,22 @@ echo "Using validator: $VALIDATOR_JAR"
 echo "Validating: $EXAMPLE_PATH"
 echo "Using IG source: $IG_SOURCE"
 
-java -jar "$VALIDATOR_JAR" "$EXAMPLE_PATH" -version 4.0.1 -ig "$IG_SOURCE" "$@"
+ADVISOR_FILE="$ROOT_DIR/input/ignoreWarnings.txt"
+ADVISOR_ARGS=()
+if [ -f "$ADVISOR_FILE" ]; then
+  HAS_ADVISOR_ARG=false
+  for ARG in "$@"; do
+    case "$ARG" in
+      -advisor-file|-advisor-file=*|--advisor-file|--advisor-file=*)
+        HAS_ADVISOR_ARG=true
+        break
+        ;;
+    esac
+  done
+  if [ "$HAS_ADVISOR_ARG" = false ]; then
+    ADVISOR_ARGS=(-advisor-file "$ADVISOR_FILE")
+    echo "Using advisor file: $ADVISOR_FILE"
+  fi
+fi
+
+java -jar "$VALIDATOR_JAR" "$EXAMPLE_PATH" -version 4.0.1 -ig "$IG_SOURCE" "${ADVISOR_ARGS[@]}" "$@"

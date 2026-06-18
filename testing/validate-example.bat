@@ -33,23 +33,31 @@ if not exist "%VALIDATOR_JAR%" (
   )
 )
 
-set "IG_PACKAGE=us.co.bha-ig#dev"
+set "IG_PACKAGE=us.co.bha-ig#current"
 set "IG_SOURCE=%IG_PACKAGE%"
 set "IG_FALLBACK=%ROOT_DIR%\output\package.tgz"
 if not exist "%IG_FALLBACK%" set "IG_FALLBACK=%ROOT_DIR%\fsh-generated\resources"
+
+set "ADVISOR_FILE=%ROOT_DIR%\input\ignoreWarnings.txt"
+set "ADVISOR_ARG="
+if exist "%ADVISOR_FILE%" (
+  set "ADVISOR_ARG=-advisor-file ""%ADVISOR_FILE%"""
+  echo %* | findstr /I /C:"-advisor-file" >nul && set "ADVISOR_ARG="
+)
 
 echo Using validator: %VALIDATOR_JAR%
 echo Validating: %EXAMPLE_PATH%
 echo Primary IG source: %IG_SOURCE%
 echo Fallback IG source: %IG_FALLBACK%
+if defined ADVISOR_ARG echo Using advisor file: %ADVISOR_FILE%
 
 shift
-java -jar "%VALIDATOR_JAR%" "%EXAMPLE_PATH%" -version 4.0.1 -ig "%IG_SOURCE%" %*
+java -jar "%VALIDATOR_JAR%" "%EXAMPLE_PATH%" -version 4.0.1 -ig "%IG_SOURCE%" %ADVISOR_ARG% %*
 if not errorlevel 1 exit /b 0
 
 echo.
 echo Primary IG source failed; retrying with fallback.
-java -jar "%VALIDATOR_JAR%" "%EXAMPLE_PATH%" -version 4.0.1 -ig "%IG_FALLBACK%" %*
+java -jar "%VALIDATOR_JAR%" "%EXAMPLE_PATH%" -version 4.0.1 -ig "%IG_FALLBACK%" %ADVISOR_ARG% %*
 exit /b %ERRORLEVEL%
 
 :usage
