@@ -2,16 +2,28 @@
 set -euo pipefail
 
 if [ $# -lt 1 ]; then
-  echo "Usage: $(basename "$0") <path-to-example.json> [additional validator args]"
+  echo "Usage: $(basename "$0") <path-to-example.json> [path-to-ignorewarnings.txt] [additional validator args]"
   echo
-  echo "Example: $(basename "$0") ../input/fsh/examples/Patient-example.json -tx n/a"
+  echo "Example: $(basename "$0") ../output/Bundle-AllOfExampleCentral.json ../input/ignoreWarnings.txt -tx n/a"
   exit 2
 fi
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 EXAMPLE_PATH="$1"
-shift
+ADVISOR_ARGS=()
+
+if [ $# -ge 2 ] && [[ "$2" != -* ]]; then
+  ADVISOR_FILE="$2"
+  if [ ! -f "$ADVISOR_FILE" ]; then
+    echo "ERROR: Advisor file not found: $ADVISOR_FILE"
+    exit 1
+  fi
+  ADVISOR_ARGS=(-advisor-file "$ADVISOR_FILE")
+  shift 2
+else
+  shift
+fi
 
 if [ ! -f "$EXAMPLE_PATH" ]; then
   echo "ERROR: Example file not found: $EXAMPLE_PATH"
@@ -58,23 +70,23 @@ fi
 echo "Using validator: $VALIDATOR_JAR"
 echo "Validating: $EXAMPLE_PATH"
 echo "Using IG source: $IG_SOURCE"
-
-ADVISOR_FILE="$ROOT_DIR/input/ignoreWarnings.txt"
-ADVISOR_ARGS=()
-if [ -f "$ADVISOR_FILE" ]; then
-  HAS_ADVISOR_ARG=false
-  for ARG in "$@"; do
-    case "$ARG" in
-      -advisor-file|-advisor-file=*|--advisor-file|--advisor-file=*)
-        HAS_ADVISOR_ARG=true
-        break
-        ;;
-    esac
-  done
-  if [ "$HAS_ADVISOR_ARG" = false ]; then
-    ADVISOR_ARGS=(-advisor-file "$ADVISOR_FILE")
-    echo "Using advisor file: $ADVISOR_FILE"
-  fi
+if [ ${#ADVISOR_ARGS[@]} -gt 0 ]; then
+  echo "Using advisor file: $ADVISOR_FILE"
 fi
 
-java -jar "$VALIDATOR_JAR" "$EXAMPLE_PATH" -version 4.0.1 -ig "$IG_SOURCE" "${ADVISOR_ARGS[@]}" "$@"
+HAS_TX=false
+for ARG in "$@"; do
+  case "$ARG" in
+    -tx|-tx=*)
+      HAS_TX=true
+      break
+      ;;
+  esac
+done
+
+TX_ARGS=(-tx http://tx.fhir.org)
+if [ "$HAS_TX" = true ]; then
+  TX_ARGS=()
+fi
+
+java -jar "$VALIDATOR_JAR" "$EXAMPLE_PATH" -version 4.0.1 -ig "$IG_SOURCE" "${ADVISOR_ARGS[@]}" "${TX_ARGS[@]}" "$@"

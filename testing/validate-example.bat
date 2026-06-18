@@ -12,6 +12,22 @@ if not exist "%EXAMPLE_PATH%" (
   exit /b 1
 )
 
+set "ADVISOR_FILE="
+set "ADVISOR_ARG="
+set "ARG2=%~2"
+if not "%ARG2%"=="" (
+  if not "%ARG2:~0,1%"=="-" (
+    for %%I in ("%~2") do set "ADVISOR_FILE=%%~fI"
+  )
+)
+if not "%ADVISOR_FILE%"=="" (
+  if not exist "%ADVISOR_FILE%" (
+    echo ERROR: Advisor file not found: %ADVISOR_FILE%
+    exit /b 1
+  )
+  set "ADVISOR_ARG=-advisor-file ""%ADVISOR_FILE%"""
+)
+
 where java >nul 2>&1
 if errorlevel 1 (
   echo ERROR: Java is required but was not found on PATH.
@@ -38,32 +54,39 @@ set "IG_SOURCE=%IG_PACKAGE%"
 set "IG_FALLBACK=%ROOT_DIR%\output\package.tgz"
 if not exist "%IG_FALLBACK%" set "IG_FALLBACK=%ROOT_DIR%\fsh-generated\resources"
 
-set "ADVISOR_FILE=%ROOT_DIR%\input\ignoreWarnings.txt"
-set "ADVISOR_ARG="
-if exist "%ADVISOR_FILE%" (
-  set "ADVISOR_ARG=-advisor-file ""%ADVISOR_FILE%"""
-  echo %* | findstr /I /C:"-advisor-file" >nul && set "ADVISOR_ARG="
-)
-
 echo Using validator: %VALIDATOR_JAR%
 echo Validating: %EXAMPLE_PATH%
 echo Primary IG source: %IG_SOURCE%
 echo Fallback IG source: %IG_FALLBACK%
 if defined ADVISOR_ARG echo Using advisor file: %ADVISOR_FILE%
 
+set "FORWARD_ARGS="
+set "HAS_TX="
 shift
-java -jar "%VALIDATOR_JAR%" "%EXAMPLE_PATH%" -version 4.0.1 -ig "%IG_SOURCE%" %ADVISOR_ARG% %*
+if defined ADVISOR_ARG shift
+:collectArgs
+if "%~1"=="" goto :runPrimary
+if /I "%~1"=="-tx" set "HAS_TX=1"
+if /I "%~1:~0,4%"=="-tx=" set "HAS_TX=1"
+set "FORWARD_ARGS=%FORWARD_ARGS% %1"
+shift
+goto :collectArgs
+
+:runPrimary
+set "TX_ARGS=-tx http://tx.fhir.org"
+if defined HAS_TX set "TX_ARGS="
+java -jar "%VALIDATOR_JAR%" "%EXAMPLE_PATH%" -version 4.0.1 -ig "%IG_SOURCE%" %ADVISOR_ARG% %TX_ARGS% %FORWARD_ARGS%
 if not errorlevel 1 exit /b 0
 
 echo.
 echo Primary IG source failed; retrying with fallback.
-java -jar "%VALIDATOR_JAR%" "%EXAMPLE_PATH%" -version 4.0.1 -ig "%IG_FALLBACK%" %ADVISOR_ARG% %*
+java -jar "%VALIDATOR_JAR%" "%EXAMPLE_PATH%" -version 4.0.1 -ig "%IG_FALLBACK%" %ADVISOR_ARG% %TX_ARGS% %FORWARD_ARGS%
 exit /b %ERRORLEVEL%
 
 :usage
 echo Usage:
-echo   %~nx0 ^<path-to-example.json^> [additional validator args]
+echo   %~nx0 ^<path-to-example.json^> [path-to-ignorewarnings.txt] [additional validator args]
 echo.
 echo Example:
-echo   %~nx0 ..\input\fsh\examples\Patient-example.json -tx n/a
+echo   %~nx0 ..\output\Bundle-AllOfExampleCentral.json ..\input\ignoreWarnings.txt -tx n/a
 exit /b 2
