@@ -219,7 +219,7 @@ Usage: #definition
 * group[1].element[+].code = #02
 * group[1].element[=].display = "Residential (non-hospital) Withdrawal Management (RDX)"
 * group[1].element[=].target[+].code = #H0012
-* group[1].element[=].target[=].display = "Alcohol and/or drug services; sub-acute detoxification (residential addiction program inpatient)"
+* group[1].element[=].target[=].display = "Alcohol and/or drug services; sub-acute detoxification (residential addiction program outpatient)"
 * group[1].element[=].target[=].equivalence = #relatedto
 * group[1].element[+].code = #03
 * group[1].element[=].display = "Therapeutic Community (TC)"
@@ -229,17 +229,17 @@ Usage: #definition
 * group[1].element[+].code = #04
 * group[1].element[=].display = "Intensive Residential (IRT)"
 * group[1].element[=].target[+].code = #H0019
-* group[1].element[=].target[=].display = "Behavioral health; long-term residential"
+* group[1].element[=].target[=].display = "Behavioral health; long-term residential (non-medical, non-acute care in a residential treatment program where stay is typically longer than 30 days), without room and board, per diem"
 * group[1].element[=].target[=].equivalence = #relatedto
 * group[1].element[+].code = #05
 * group[1].element[=].display = "Transitional Residential (TRT"
 * group[1].element[=].target[+].code = #H2034
-* group[1].element[=].target[=].display = "Alcohol and/or drug halfway house services, per diem"
+* group[1].element[=].target[=].display = "Alcohol and/or drug abuse halfway house services, per diem"
 * group[1].element[=].target[=].equivalence = #relatedto
 * group[1].element[+].code = #06
 * group[1].element[=].display = "Opioid Treatment Program (ORT/OTP)"
 * group[1].element[=].target[+].code = #H0020
-* group[1].element[=].target[=].display = "Alcohol and/or drug services; methadone administration and/or service"
+* group[1].element[=].target[=].display = "Alcohol and/or drug services; methadone administration and/or service (provision of the drug by a licensed program)"
 * group[1].element[=].target[=].equivalence = #relatedto
 * group[1].element[+].code = #07
 * group[1].element[=].display = "SUD Traditional Outpatient (OP and EOP))"
@@ -254,7 +254,7 @@ Usage: #definition
 * group[1].element[+].code = #09
 * group[1].element[=].display = "SUD Intensive Outpatient (IOP)"
 * group[1].element[=].target[+].code = #H0015
-* group[1].element[=].target[=].display = "Alcohol and/or drug services; intensive outpatient treatment"
+* group[1].element[=].target[=].display = "Alcohol and/or drug services; intensive outpatient (treatment program that operates at least 3 hours/day and at least 3 days/week and is based on an individualized treatment plan), including assessment, counseling; crisis intervention, and activity therapies or education"
 * group[1].element[=].target[=].equivalence = #relatedto
 * group[1].element[+].code = #10
 * group[1].element[=].display = "Day Treatment (DAY)"
@@ -264,22 +264,22 @@ Usage: #definition
 * group[1].element[+].code = #11
 * group[1].element[=].display = "Medically Managed Inpatient Other Than WM"
 * group[1].element[=].target[+].code = #H0011
-* group[1].element[=].target[=].display = "Alcohol and/or drug services; acute detoxification (hospital inpatient)"
+* group[1].element[=].target[=].display = "Alcohol and/or drug services; acute detoxification (residential addiction program inpatient)"
 * group[1].element[=].target[=].equivalence = #relatedto
 * group[1].element[+].code = #12
 * group[1].element[=].display = "Medically Managed Inpatient Withdrawal Management"
 * group[1].element[=].target[+].code = #H0011
-* group[1].element[=].target[=].display = "Alcohol and/or drug services; acute detoxification (hospital inpatient)"
+* group[1].element[=].target[=].display = "Alcohol and/or drug services; acute detoxification (residential addiction program inpatient)"
 * group[1].element[=].target[=].equivalence = #relatedto
 * group[1].element[+].code = #13
 * group[1].element[=].display = "DUI Level I Education"
 * group[1].element[=].target[+].code = #H0025
-* group[1].element[=].target[=].display = "Behavioral health prevention education service"
+* group[1].element[=].target[=].display = "Behavioral health prevention education service (delivery of services with target population to affect knowledge, attitude and/or behavior)"
 * group[1].element[=].target[=].equivalence = #relatedto
 * group[1].element[+].code = #14
 * group[1].element[=].display = "DUI Level II Education Only"
 * group[1].element[=].target[+].code = #H0025
-* group[1].element[=].target[=].display = "Behavioral health prevention education service"
+* group[1].element[=].target[=].display = "Behavioral health prevention education service (delivery of services with target population to affect knowledge, attitude and/or behavior)"
 * group[1].element[=].target[=].equivalence = #relatedto
 * group[1].element[+].code = #15
 * group[1].element[=].display = "DUI Level II Therapy and Education"
@@ -304,7 +304,7 @@ Usage: #definition
 * group[1].element[+].code = #21
 * group[1].element[=].display = "Crisis Respite"
 * group[1].element[=].target[+].code = #S9484
-* group[1].element[=].target[=].display = "Crisis intervention mental health services, per diem"
+* group[1].element[=].target[=].display = "Crisis intervention mental health services, per hour"
 * group[1].element[=].target[=].equivalence = #relatedto
 * group[1].element[+].code = #23
 * group[1].element[=].display = "Co-Occurring (CIRCLE)"
