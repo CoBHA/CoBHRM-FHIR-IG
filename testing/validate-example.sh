@@ -2,9 +2,10 @@
 set -euo pipefail
 
 if [ $# -lt 1 ]; then
-  echo "Usage: $(basename "$0") <path-to-example.json> [path-to-ignorewarnings.txt] [additional validator args]"
+  echo "Usage: $(basename "$0") <path-to-example.json> [path-to-ignorewarnings.txt] [--operationoutcome|-oo] [additional validator args]"
   echo
   echo "Example: $(basename "$0") ../output/Bundle-AllOfExampleCentral.json ../input/ignoreWarnings.txt -tx n/a"
+  echo "Example: $(basename "$0") ../output/Bundle-AllOfExampleCentral.json ../input/ignoreWarnings.txt --operationoutcome"
   exit 2
 fi
 
@@ -75,13 +76,23 @@ if [ ${#ADVISOR_ARGS[@]} -gt 0 ]; then
 fi
 
 HAS_TX=false
+HAS_OUTPUT=false
+OO_REQUEST=false
+FORWARD_ARGS=()
 for ARG in "$@"; do
   case "$ARG" in
+    --operationoutcome|-oo)
+      OO_REQUEST=true
+      continue
+      ;;
     -tx|-tx=*)
       HAS_TX=true
-      break
+      ;;
+    -output|-output=*)
+      HAS_OUTPUT=true
       ;;
   esac
+  FORWARD_ARGS+=("$ARG")
 done
 
 TX_ARGS=(-tx http://tx.fhir.org)
@@ -89,4 +100,11 @@ if [ "$HAS_TX" = true ]; then
   TX_ARGS=()
 fi
 
-java -jar "$VALIDATOR_JAR" "$EXAMPLE_PATH" -version 4.0.1 -ig "$IG_SOURCE" "${ADVISOR_ARGS[@]}" "${TX_ARGS[@]}" "$@"
+OO_ARGS=()
+if [ "$OO_REQUEST" = true ] && [ "$HAS_OUTPUT" = false ]; then
+  OO_OUTPUT="validation-operationoutcome.json"
+  OO_ARGS=(-output "$OO_OUTPUT")
+  echo "Writing OperationOutcome output: $(pwd)/$OO_OUTPUT"
+fi
+
+java -jar "$VALIDATOR_JAR" "$EXAMPLE_PATH" -version 4.0.1 -ig "$IG_SOURCE" "${ADVISOR_ARGS[@]}" "${TX_ARGS[@]}" "${OO_ARGS[@]}" "${FORWARD_ARGS[@]}"

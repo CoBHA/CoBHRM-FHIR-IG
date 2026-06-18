@@ -59,7 +59,29 @@ From repo root in Bash:
 General syntax:
 
 ```text
-validate-example.<bat|sh> <path-to-example.json> [path-to-ignorewarnings.txt] [additional validator args]
+validate-example.<bat|sh> <path-to-example.json> [path-to-ignorewarnings.txt] [--operationoutcome|-oo] [additional validator args]
+```
+
+## OperationOutcome output flag
+
+Both scripts support a convenience flag to request OperationOutcome output:
+
+- `--operationoutcome` (alias: `-oo`)
+
+When this flag is present, the script adds validator `-output` automatically and writes to:
+
+- `validation-operationoutcome.json` (in the current working directory)
+
+If you already pass `-output <file>` yourself, your explicit `-output` is used and the script does not override it.
+
+Examples:
+
+```powershell
+cmd /c testing\validate-example.bat output\Bundle-AllOfExampleCentral.json input\ignoreWarnings.txt --operationoutcome
+```
+
+```bash
+./testing/validate-example.sh output/Bundle-AllOfExampleCentral.json input/ignoreWarnings.txt --operationoutcome
 ```
 
 ## Ignore warnings behavior

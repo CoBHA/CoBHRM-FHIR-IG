@@ -62,12 +62,26 @@ if defined ADVISOR_ARG echo Using advisor file: %ADVISOR_FILE%
 
 set "FORWARD_ARGS="
 set "HAS_TX="
+set "HAS_OUTPUT="
+set "OO_REQUEST="
 shift
 if defined ADVISOR_ARG shift
 :collectArgs
 if "%~1"=="" goto :runPrimary
+if /I "%~1"=="--operationoutcome" (
+  set "OO_REQUEST=1"
+  shift
+  goto :collectArgs
+)
+if /I "%~1"=="-oo" (
+  set "OO_REQUEST=1"
+  shift
+  goto :collectArgs
+)
 if /I "%~1"=="-tx" set "HAS_TX=1"
 if /I "%~1:~0,4%"=="-tx=" set "HAS_TX=1"
+if /I "%~1"=="-output" set "HAS_OUTPUT=1"
+if /I "%~1:~0,8%"=="-output=" set "HAS_OUTPUT=1"
 set "FORWARD_ARGS=%FORWARD_ARGS% %1"
 shift
 goto :collectArgs
@@ -75,18 +89,24 @@ goto :collectArgs
 :runPrimary
 set "TX_ARGS=-tx http://tx.fhir.org"
 if defined HAS_TX set "TX_ARGS="
-java -jar "%VALIDATOR_JAR%" "%EXAMPLE_PATH%" -version 4.0.1 -ig "%IG_SOURCE%" %ADVISOR_ARG% %TX_ARGS% %FORWARD_ARGS%
+set "OO_ARGS="
+if defined OO_REQUEST if not defined HAS_OUTPUT (
+  set "OO_ARGS=-output ""validation-operationoutcome.json"""
+  echo Writing OperationOutcome output: %CD%\validation-operationoutcome.json
+)
+java -jar "%VALIDATOR_JAR%" "%EXAMPLE_PATH%" -version 4.0.1 -ig "%IG_SOURCE%" %ADVISOR_ARG% %TX_ARGS% %OO_ARGS% %FORWARD_ARGS%
 if not errorlevel 1 exit /b 0
 
 echo.
 echo Primary IG source failed; retrying with fallback.
-java -jar "%VALIDATOR_JAR%" "%EXAMPLE_PATH%" -version 4.0.1 -ig "%IG_FALLBACK%" %ADVISOR_ARG% %TX_ARGS% %FORWARD_ARGS%
+java -jar "%VALIDATOR_JAR%" "%EXAMPLE_PATH%" -version 4.0.1 -ig "%IG_FALLBACK%" %ADVISOR_ARG% %TX_ARGS% %OO_ARGS% %FORWARD_ARGS%
 exit /b %ERRORLEVEL%
 
 :usage
 echo Usage:
-echo   %~nx0 ^<path-to-example.json^> [path-to-ignorewarnings.txt] [additional validator args]
+echo   %~nx0 ^<path-to-example.json^> [path-to-ignorewarnings.txt] [--operationoutcome ^| -oo] [additional validator args]
 echo.
 echo Example:
 echo   %~nx0 ..\output\Bundle-AllOfExampleCentral.json ..\input\ignoreWarnings.txt -tx n/a
+echo   %~nx0 ..\output\Bundle-AllOfExampleCentral.json ..\input\ignoreWarnings.txt --operationoutcome
 exit /b 2
