@@ -30,6 +30,7 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 | Client                  | [BHA Client Questionnaire](Questionnaire-BHAClientQuestionnaire.html)                                                                     |
 | Client                  | [US Core Observation Sexual Orientation]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-sexual-orientation.html)       |
 | Admission               | [BHA EpisodeOfCare Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)                                           |
+| Admission               | [BHA Provider Organization Profile](StructureDefinition-bha-organization-mappings.html#other-mappings)                                           |
 | Admission               | [BHA Admission Questionnaire](Questionnaire-BHAAdmissionQuestionnaire.html)                                                               |
 | Admission               | [US Core Observation Pregnancy Status]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-pregnancystatus.html)            |
 | Discharge               | [BHA EpisodeOfCare Profile](StructureDefinition-bha-episodeOfCare-mappings.html#other-mappings)                                           |
@@ -78,6 +79,7 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 #### Admission
 
 - [BHA EpisodeOfCare Profile](StructureDefinition-bha-episodeOfCare.html)
+- [BHA Provider Organization Profile](StructureDefinition-bha-organization.html)
 - [BHA Admission Questionnaire](Questionnaire-BHAAdmissionQuestionnaire.html)
 - [BHA Episode Diagnosis Profile](StructureDefinition-BHAEpisodeDiagnosis.html)
 - [US Core Observation Pregnancy Status]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-pregnancystatus.html)
@@ -137,6 +139,7 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 #### Discharge
 
 - [BHA EpisodeOfCare Profile](StructureDefinition-bha-episodeOfCare.html)
+- [BHA Provider Organization Profile](StructureDefinition-bha-organization.html)
 - [BHA Discharge Questionnaire](Questionnaire-BHADischargeQuestionnaire.html)
 
 | CoBHRM Field Name                                                         | FHIR Element shorthand                                                           |
@@ -159,6 +162,7 @@ This IG does not prescribe how data is exchanged between clinical sites and Beha
 
 - [BHA Episode Diagnosis Profile](StructureDefinition-BHAEpisodeDiagnosis.html)
 - [BHA EpisodeOfCare Profile](StructureDefinition-bha-episodeOfCare.html)
+- [BHA Provider Organization Profile](StructureDefinition-bha-organization.html)
 - [BHA Diagnosis Questionnaire](Questionnaire-BHADiagnosisQuestionnaire.html)
 
 | CoBHRM Field Name         | FHIR Element shorthand                                        |

@@ -15,3 +15,7 @@ The following vocabularies SHALL be used in this Implementation Guide to represe
 {% include valueset-ref-list.xhtml %} <!-- also those referenced in this IGs -->
 
 <!-- {% include valueset-ref-all-list.xhtml %} Also those referenced in core and dependency IGs -->
+
+### ConceptMaps defined by this IG
+
+{% include list-conceptmaps.xhtml %} 

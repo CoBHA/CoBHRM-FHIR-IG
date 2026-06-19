@@ -2,72 +2,59 @@
 **Draft for review.** This page describes a practical validation and testing approach for implementations of the CoBHRM FHIR Implementation Guide.
 </div>
 
-### Purpose
+This section describes a practical validation and testing approach for implementations of the CoBHRM FHIR Implementation Guide. The goal is to help providers, intermediaries, vendors, and BHA confirm that CoBHRM reporting data is represented consistently in FHIR before it is submitted, piloted, or used for production reporting.
 
-This guidance describes a practical validation and testing approach for implementations of the CoBHRM FHIR Implementation Guide. The goal is to help providers, intermediaries, vendors, and BHA confirm that CoBHRM reporting data is represented consistently in FHIR before it is submitted, piloted, or used for production reporting.
-
-Implementers should be able to demonstrate the following:
+Implementers SHALL be able to demonstrate the following:
 
 1. required CoBHRM reporting data can be represented using the profiles, questionnaires, terminology, and examples in the IG;
-2. generated FHIR resources are valid FHIR R4 resources and conform to the applicable CoBHRM and dependency profiles;
+2. generated FHIR resources are valid HL7 FHIR Revision {{site.data.fhir.version}} resources and conform to the applicable CoBHRM and dependency profiles;
 3. codes used in CoBHRM reporting are drawn from the required value sets or clearly mapped where a ConceptMap is supplied;
-4. admissions, discharges, diagnosis updates, substance-use reporting, Special Connections reporting, and client demographic updates can be represented in realistic test scenarios; and
+4. questionnaire response reporting of admissions, discharges, diagnosis updates, substance-use reporting, Special Connections reporting, and client demographic updates can be represented in realistic test scenarios; and
 5. validation failures are reported clearly enough for a provider or vendor to correct the source data or mapping.
 
 ### Validation Scope
 
-Implementers should validate CoBHRM FHIR content at four levels:
+Implementers SHALL validate CoBHRM FHIR content at five levels:
 
 #### FHIR syntax and base-resource validation
 
-Each resource should be valid FHIR R4 JSON or XML and should conform to the base FHIR resource rules for its resource type.
+Each resource SHALL be valid HL7 FHIR Revision {{site.data.fhir.version}} JSON or XML and SHALL conform to the base FHIR resource rules for its resource type:
 
-Examples:
+- `Patient` resources SHALL be valid FHIR [Patient]({{site.data.fhir.path}}patient.html) resources.
+- `EpisodeOfCare` resources SHALL be valid FHIR [EpisodeOfCare]({{site.data.fhir.path}}episodeofcare.html) resources.
+- `Encounter` resources SHALL be valid FHIR [Encounter]({{site.data.fhir.path}}encounter.html) resources.
+- `Condition` resources SHALL be valid FHIR [Condition]({{site.data.fhir.path}}condition.html) resources.
+- `Organization` resources SHALL be valid FHIR [Organization]({{site.data.fhir.path}}organization.html) resources.
+- `QuestionnaireResponse` resources SHALL be valid FHIR [QuestionnaireResponse]({{site.data.fhir.path}}questionnaireresponse.html) resources.
 
-- `Patient` resources should be valid FHIR R4 Patient resources.
-- `EpisodeOfCare` resources should be valid FHIR R4 EpisodeOfCare resources.
-- `Encounter`, `Condition`, `Organization`, `Questionnaire`, and `QuestionnaireResponse` resources should conform to their base FHIR R4 definitions.
+#### US-Core base profiles
+
+Where US Core profiles are used, resources SHALL validate against the applicable US Core 6.1.0 profiles. 
+
+Most CoBHRM profiles are based on US Core 6.1.0 profiles, and will be checked when testing against the CoBHRM profiles.
+
+The [US Core Observation Pregnancy Status]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-pregnancystatus.html)  profile, and [US Core Observation Sexual Orientation]({{site.data.fhir.uscore}}/StructureDefinition-us-core-observation-sexual-orientation.html) profiles are used directly.
 
 #### CoBHRM profile validation
 
-Resources that claim conformance to a CoBHRM profile should validate against that profile.
+The CoBHRM profiles are based on US Core 6.1.0 profiles wherever possible, and the Questionnaire are based on [SDC]({{site.data.fhir.sdc}}) profiles where possible. Resources that claim conformance to a CoBHRM profile SHALL validate against that profile, which will include validation of the dependency profile. See [Profiles](profiles.html) for details on the CoBHRM profiles:
 
-The current IG defines the following principal profiles:
+Implementers SHALL validate required elements, cardinality, fixed values, required identifiers, supported references, and any profile-specific constraints.
 
-- BHA Client Profile
-- BHA Encounter Profile
-- BHA Episode Diagnosis Profile
-- BHA EpisodeOfCare Profile
-- BHA Provider Organization Profile
-- BHA Action Type extension
+#### QuestionnaireResponse
 
-Implementers should validate required elements, cardinality, fixed values, required identifiers, supported references, and any profile-specific constraints.
-
-#### Dependency-profile validation
-
-Where the CoBHRM IG relies on an external profile, implementers should validate against that dependency profile as well. The current IG identifies dependencies including:
-
-- FHIR R4 / R4B-compatible resources;
-- US Core 6.1.0;
-- Structured Data Capture (SDC);
-- Military Service History and Status, where applicable;
-- HL7 terminology dependencies.
-
-Examples:
-
-- If pregnancy status is represented using US Core Observation Pregnancy Status, validate against that US Core profile.
-- If CoBHRM data is collected through a Questionnaire and submitted as QuestionnaireResponse, validate the QuestionnaireResponse according to the applicable Questionnaire and SDC expectations.
+Where CoBHRM data is collected through a Questionnaire and submitted as QuestionnaireResponse, implementers SHALL validate the QuestionnaireResponse according to the applicable Questionnaire and SDC expectations. See [Questionnaires](questionnaires.html) for details.
 
 #### Terminology validation
 
-Coded elements should use the value sets required by the IG. Implementers should verify that:
+Coded elements SHALL use the value sets required by the IG. Implementers SHALL verify that:
 
 - local source-system codes are transformed into the required CoBHRM code systems or other specified standard terminologies;
 - values are selected from the applicable value set;
 - required coding systems, codes, and displays are preserved accurately;
 - ConceptMaps supplied by the IG are used consistently when mapping CoBHRM values to standard terminology such as SNOMED CT, ICD-10-CM, CPT/HCPCS, or other referenced systems.
 
-Terminology validation should include both successful examples and negative tests with invalid, missing, deprecated, or unmapped codes.
+See [Terminology](terminology.html) for details on the required code systems, value sets, and ConceptMaps.
 
 ### Validation Versus Data Quality Review
 
@@ -93,11 +80,13 @@ Examples:
 - Is the diagnosis appropriate for the reported episode?
 - Does the source system contain all fields required for a complete CoBHRM submission?
 
-A resource can be technically valid but still contain inaccurate or incomplete real-world information. Implementers should not treat FHIR validation as a substitute for ordinary reporting-data quality controls.
+A resource can be technically valid but still contain inaccurate or incomplete real-world information. Implementers should not treat FHIR validation as a substitute for ordinary reporting-data quality controls. Data quality review is not part of the testing against the IG.
 
 ### Minimum Test Scenarios
 
-Each implementation should test a small set of realistic scenarios before pilot or production use. The scenarios should use semi-realistic data and should include both valid and invalid examples.
+Each implementation should test a small set of realistic scenarios before pilot or production use. The scenarios should use semi-realistic data.
+
+The CoBHRM service must be tested with both valid and invalid data to assure that it returns success and failure responses appropriately. When failure is returned, an OperationOutcome resource SHALL be returned that contains details about the failure. The OperationOutcome resource SHALL be used to provide feedback to the submitter about what caused the failure to enable fixing it.
 
 #### Client demographic reporting
 
@@ -113,7 +102,8 @@ Include at least:
 - sex at birth, gender identity, and sexual orientation where required or collected;
 - household language;
 - veteran status where applicable;
-- disability codes where applicable.
+- disability codes where applicable;
+- least data populated.
 
 Expected result: the client resource and associated questionnaire data validate against the IG and required terminology.
 
@@ -205,9 +195,9 @@ Expected result: the implementation can distinguish an ordinary update from a co
 
 ### Negative Tests
 
-Implementers should include negative tests. These are intentionally invalid or incomplete examples used to confirm that validation catches errors before submission or at the receiving endpoint.
+Implementers should include negative tests, so as to test that the Server catches these errors. These are intentionally invalid or incomplete examples used to confirm that validation catches errors before submission or at the receiving endpoint.
 
-Minimum negative tests should include:
+Minimum negative tests include:
 
 1. missing required client identifier;
 2. missing required admission or discharge date;
@@ -218,11 +208,11 @@ Minimum negative tests should include:
 7. resource claiming a CoBHRM profile but missing a required profile element;
 8. duplicate or conflicting identifiers for the same logical client or episode.
 
-Negative tests should produce clear validation feedback and should not be silently accepted.
+Negative tests SHALL produce clear validation feedback and should not be silently accepted.
 
 ### Error Reporting
 
-Validation errors should be reported in a way that allows the submitting organization to fix the source data or mapping.
+The server validation errors SHALL be reported in a way that allows the submitting organization to fix the source data or mapping.
 
 When validation fails, the validating system should return or record an error response that includes:
 
@@ -234,7 +224,7 @@ When validation fails, the validating system should return or record an error re
 - expected value set or profile, where applicable;
 - submitted value that caused the failure, where safe to include.
 
-FHIR `OperationOutcome` is the recommended format for machine-readable validation feedback. In less technical workflows, the same information may also be presented in a tabular validation report.
+FHIR `OperationOutcome` is the format for machine-readable validation feedback. 
 
 #### Technical validation errors
 
@@ -250,20 +240,6 @@ Examples:
 - QuestionnaireResponse inconsistent with the Questionnaire.
 
 Technical validation errors should be corrected before the data is accepted as conformant CoBHRM FHIR content.
-
-#### Reporting-data quality issues
-
-Some issues may not make the FHIR invalid but may still require review.
-
-Examples:
-
-- suspicious date sequence, such as discharge before admission;
-- unusually old or future date of birth;
-- missing optional but operationally important fields;
-- local code mapped to a broad "other" value;
-- client demographic data that appears inconsistent across submissions.
-
-These should be reported as warnings or data-quality findings unless BHA policy or implementation rules make them hard validation failures.
 
 ### Pilot Testing Expectations
 
@@ -286,7 +262,6 @@ Each implementation should maintain a small validation package containing:
 - the IG version or commit tested;
 - validator version and terminology package versions used;
 - sample valid resources or bundles;
-- sample invalid resources or bundles;
 - a test-scenario checklist;
 - validation output for each scenario;
 - mapping notes from local source-system fields to CoBHRM/FHIR elements;
