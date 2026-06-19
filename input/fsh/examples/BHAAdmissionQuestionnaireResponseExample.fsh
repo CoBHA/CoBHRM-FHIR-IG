@@ -13,7 +13,7 @@ Usage: #example
 * item[=].answer.valueDateTime = "2025-10-28T18:30:40-07:00"
 * item[+].linkId = "SERVICE_IDENTIFIER"
 * item[=].text = "Service Identifier"
-* item[=].answer.valueCoding = BHAServiceIdentifierCS#17 "Mental Health Outpatient"
+* item[=].answer.valueCoding = BHAServiceIdentifierCS#30 "Mental Health Outpatient"
 * item[+].linkId = "FIRST_CONTACT_DATE"
 * item[=].text = "Date of First Contact"
 * item[=].answer.valueDate = "2025-07-01"
