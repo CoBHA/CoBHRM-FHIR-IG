@@ -5,7 +5,7 @@ Title: "BHA EpisodeOfCare Profile"
 Description: "BHA EpisodeOfCare Profile for client admissions/services"
 * meta.lastUpdated 1..1 MS
 * status MS
-* type 1..* MS
+* type 1..1 MS
 * type from BHADiagnosisTypeVS (required)  // MH vs SUD
 * patient 1..1 MS
 * patient only Reference(bha-client)
