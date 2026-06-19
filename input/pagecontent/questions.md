@@ -27,5 +27,5 @@ Please share your thoughts by emailing [FHIRFeedback@state.co.us](mailto:FHIRFee
 12. May need to bring in Procedure for the Service Identifier, but for now am using a Questionnaire item
 13. Added Informative ConceptMaps for Service Identifier to SNOMED-CT, ICD-10-CM, and HCPCS (CPT).
 14. Updated CodeSystem BHAServiceIdentifierCS to align with updated CoBHRM data model; added more codes and made hierarchy clearer. Old codes are included but marked as retired.
-15. Allow EpisodeOfCare.type to be 0..*. More than one type is allowed for outpatient SUD and MH care only, corresponding to ASAM-1.0, ASAM-2.1, or ASAM-2.5 level of care for the outpatient SUD treatment.
+
 
