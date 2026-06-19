@@ -25,5 +25,7 @@ Please share your thoughts by emailing [FHIRFeedback@state.co.us](mailto:FHIRFee
 10. Added more dynamic rules to the Questionnaire(s) to align with the CoBHRM rules and to require more complete data capture.
 11. For CoBHRM ACT-sheet fields that reference 9(2) valid values (including Discharge Outcomes and Education-related fields), this IG aligns to **Appendix ACT-Ascent** (moved from Appendix A in the May 2026 update).
 12. May need to bring in Procedure for the Service Identifier, but for now am using a Questionnaire item
-13. Added Informative ConceptMaps for Service Identifier to SNOMED-CT, ICD-10-CM, and HCPCS (CPT). 
+13. Added Informative ConceptMaps for Service Identifier to SNOMED-CT, ICD-10-CM, and HCPCS (CPT).
+14. Updated CodeSystem BHAServiceIdentifierCS to align with updated CoBHRM data model; added more codes and made hierarchy clearer. Old codes are included but marked as retired.
+
 

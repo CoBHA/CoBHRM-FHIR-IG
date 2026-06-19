@@ -1,33 +1,160 @@
-CodeSystem: BHAServiceIdentifierCS
-Id: bha-service-identifier-cs
+Instance: BHAServiceIdentifierCS
+InstanceOf: CodeSystem
 Title: "BHA Service Identifier Codes"
 Description: "Service identifiers for BHA services/admissions."
-* ^experimental = false
-* ^caseSensitive = true
-* #00 "Differential Assessment (SUD) / Evaluation Only (MH)"
-* #01 "Ambulatory Medical Withdrawal Management"
-* #02 "Residential (non-hospital) Withdrawal Management (RDX)"
-* #03 "Therapeutic Community (TC)"
-* #04 "Intensive Residential (IRT)"
-* #05 "Transitional Residential (TRT"
-* #06 "Opioid Treatment Program (ORT/OTP)"
-* #07 "SUD Traditional Outpatient (OP and EOP))"
-* #08 "STIRT"
-* #09 "SUD Intensive Outpatient (IOP)"
-* #10 "Day Treatment (DAY)"
-* #11 "Medically Managed Inpatient Other Than WM"
-* #12 "Medically Managed Inpatient Withdrawal Management"
-* #13 "DUI Level I Education"
-* #14 "DUI Level II Education Only"
-* #15 "DUI Level II Therapy and Education"
-* #16 "Minors in Possession Treatment (MIP)"
-* #17 "Mental Health Outpatient"
-* #18 "Mental Health Residential"
-* #19 "Mental Health Inpatient"
-* #20 "Crisis Stabilization"
-* #21 "Crisis Respite"
-* #22 "Psychiatric Hospitalization"
-* #23 "Co-Occurring (CIRCLE)"
+Usage: #definition
+* id = "bha-service-identifier-cs"
+* url = "http://bha.colorado.gov/fhir/bha-ig/CodeSystem/bha-service-identifier-cs"
+* name = "BHAServiceIdentifierCS"
+* title = "BHA Service Identifier Codes"
+* description = "Service identifiers for BHA services/admissions."
+* status = #active
+* experimental = false
+* caseSensitive = true
+* content = #complete
+* hierarchyMeaning = #grouped-by
+* property[+].code = #notSelectable
+* property[=].uri = "http://hl7.org/fhir/concept-properties#notSelectable"
+* property[=].description = "Indicates that the concept is abstract and not intended for direct selection."
+* property[=].type = #boolean
+* property[+].code = #status
+* property[=].uri = "http://hl7.org/fhir/concept-properties#status"
+* property[=].description = "A property that indicates the status of the concept. One of active, experimental, deprecated, retired."
+* property[=].type = #code
+
+* concept[+].code = #SUD-MH
+* concept[=].display = "SUD / MH"
+* concept[=].property[+].code = #notSelectable
+* concept[=].property[=].valueBoolean = true
+* concept[=].concept[+].code = #00
+* concept[=].concept[=].display = "Differential Assessment (SUD) / Evaluation Only (MH)"
+
+* concept[+].code = #WM
+* concept[=].display = "WM"
+* concept[=].property[+].code = #notSelectable
+* concept[=].property[=].valueBoolean = true
+* concept[=].concept[+].code = #01
+* concept[=].concept[=].display = "Ambulatory Medical Withdrawal Management"
+* concept[=].concept[+].code = #02
+* concept[=].concept[=].display = "Residential (non-hospital) Withdrawal Management (RDX)"
+* concept[=].concept[+].code = #12
+* concept[=].concept[=].display = "Medically Managed Inpatient Withdrawal Management"
+* concept[=].concept[+].code = #20
+* concept[=].concept[=].display = "Ambulatory Medical Withdrawal Management without Monitoring"
+* concept[=].concept[+].code = #21
+* concept[=].concept[=].display = "Ambulatory Medical Withdrawal Management with Monitoring"
+
+* concept[+].code = #SUD
+* concept[=].display = "SUD"
+* concept[=].property[+].code = #notSelectable
+* concept[=].property[=].valueBoolean = true
+* concept[=].concept[+].code = #03
+* concept[=].concept[=].display = "Therapeutic Community (TC)"
+* concept[=].concept[+].code = #04
+* concept[=].concept[=].display = "Intensive Residential (IRT)"
+* concept[=].concept[+].code = #05
+* concept[=].concept[=].display = "Transitional Residential (TRT)"
+* concept[=].concept[+].code = #06
+* concept[=].concept[=].display = "Opioid Treatment Program (ORT/OTP)"
+* concept[=].concept[+].code = #07
+* concept[=].concept[=].display = "SUD Traditional Outpatient (OP and EOP)"
+* concept[=].concept[+].code = #08
+* concept[=].concept[=].display = "STIRT"
+* concept[=].concept[+].code = #09
+* concept[=].concept[=].display = "SUD Intensive Outpatient (IOP)"
+* concept[=].concept[+].code = #10
+* concept[=].concept[=].display = "Day Treatment (DAY)"
+* concept[=].concept[+].code = #11
+* concept[=].concept[=].display = "Medically Managed Inpatient Other Than WM (Partial Hospital Program)"
+* concept[=].concept[+].code = #54
+* concept[=].concept[=].display = "CJS SUD Treatment"
+
+* concept[+].code = #MH
+* concept[=].display = "MH"
+* concept[=].property[+].code = #notSelectable
+* concept[=].property[=].valueBoolean = true
+* concept[=].concept[+].code = #30
+* concept[=].concept[=].display = "Mental Health Outpatient"
+* concept[=].concept[+].code = #31
+* concept[=].concept[=].display = "Mental Health Residential"
+* concept[=].concept[+].code = #32
+* concept[=].concept[=].display = "Mental Health Inpatient"
+* concept[=].concept[+].code = #33
+* concept[=].concept[=].display = "Psychiatric Hospitalization"
+
+* concept[+].code = #Crisis
+* concept[=].display = "Crisis"
+* concept[=].property[+].code = #notSelectable
+* concept[=].property[=].valueBoolean = true
+* concept[=].concept[+].code = #40
+* concept[=].concept[=].display = "Crisis Mobile"
+* concept[=].concept[+].code = #41
+* concept[=].concept[=].display = "Crisis Walk in"
+* concept[=].concept[+].code = #42
+* concept[=].concept[=].display = "Crisis Stabilization"
+* concept[=].concept[+].code = #43
+* concept[=].concept[=].display = "Crisis Respite"
+
+* concept[+].code = #DUI
+* concept[=].display = "DUI"
+* concept[=].property[+].code = #notSelectable
+* concept[=].property[=].valueBoolean = true
+* concept[=].concept[+].code = #50
+* concept[=].concept[=].display = "DUI Level I Education"
+* concept[=].concept[+].code = #51
+* concept[=].concept[=].display = "DUI Level II Education Only"
+* concept[=].concept[+].code = #52
+* concept[=].concept[=].display = "DUI Level II Therapy and Education"
+* concept[=].concept[+].code = #53
+* concept[=].concept[=].display = "Minors in Possession Treatment (MIP)"
+
+* concept[+].code = #Co-Occurring
+* concept[=].display = "Co-Occurring"
+* concept[=].property[+].code = #notSelectable
+* concept[=].property[=].valueBoolean = true
+* concept[=].concept[+].code = #80
+* concept[=].concept[=].display = "Co-Occurring (CIRCLE)"
+
+* concept[+].code = #Retired
+* concept[=].display = "Retired"
+* concept[=].property[+].code = #notSelectable
+* concept[=].property[=].valueBoolean = true
+* concept[=].concept[+].code = #13
+* concept[=].concept[=].display = "DUI Level I Education"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #retired
+* concept[=].concept[+].code = #14
+* concept[=].concept[=].display = "DUI Level II Education Only"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #retired
+* concept[=].concept[+].code = #15
+* concept[=].concept[=].display = "DUI Level II Therapy and Education"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #retired
+* concept[=].concept[+].code = #16
+* concept[=].concept[=].display = "Minors in Possession Treatment (MIP)"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #retired
+* concept[=].concept[+].code = #17
+* concept[=].concept[=].display = "Mental Health Outpatient"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #retired
+* concept[=].concept[+].code = #18
+* concept[=].concept[=].display = "Mental Health Residential"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #retired
+* concept[=].concept[+].code = #19
+* concept[=].concept[=].display = "Mental Health Inpatient"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #retired
+* concept[=].concept[+].code = #22
+* concept[=].concept[=].display = "Psychiatric Hospitalization"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #retired
+* concept[=].concept[+].code = #23
+* concept[=].concept[=].display = "Co-Occurring (CIRCLE)"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #retired
 
 Instance: BHAServiceIdentifierSnomedCTCM
 InstanceOf: ConceptMap
@@ -73,7 +200,7 @@ Usage: #definition
 * group[0].element[=].target[=].display = "Substance abuse (disorder)"
 * group[0].element[=].target[=].equivalence = #relatedto
 * group[0].element[+].code = #05
-* group[0].element[=].display = "Transitional Residential (TRT"
+* group[0].element[=].display = "Transitional Residential (TRT)"
 * group[0].element[=].target[+].code = #66214007
 * group[0].element[=].target[=].display = "Substance abuse (disorder)"
 * group[0].element[=].target[=].equivalence = #relatedto
@@ -83,7 +210,7 @@ Usage: #definition
 * group[0].element[=].target[=].display = "Substance abuse (disorder)"
 * group[0].element[=].target[=].equivalence = #relatedto
 * group[0].element[+].code = #07
-* group[0].element[=].display = "SUD Traditional Outpatient (OP and EOP))"
+* group[0].element[=].display = "SUD Traditional Outpatient (OP and EOP)"
 * group[0].element[=].target[+].code = #66214007
 * group[0].element[=].target[=].display = "Substance abuse (disorder)"
 * group[0].element[=].target[=].equivalence = #relatedto
@@ -103,7 +230,7 @@ Usage: #definition
 * group[0].element[=].target[=].display = "Substance abuse (disorder)"
 * group[0].element[=].target[=].equivalence = #relatedto
 * group[0].element[+].code = #11
-* group[0].element[=].display = "Medically Managed Inpatient Other Than WM"
+* group[0].element[=].display = "Medically Managed Inpatient Other Than WM (Partial Hospital Program)"
 * group[0].element[=].target[+].code = #66214007
 * group[0].element[=].target[=].display = "Substance abuse (disorder)"
 * group[0].element[=].target[=].equivalence = #relatedto
@@ -112,57 +239,57 @@ Usage: #definition
 * group[0].element[=].target[+].code = #66214007
 * group[0].element[=].target[=].display = "Substance abuse (disorder)"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #13
+* group[0].element[+].code = #50
 * group[0].element[=].display = "DUI Level I Education"
 * group[0].element[=].target[+].code = #66214007
 * group[0].element[=].target[=].display = "Substance abuse (disorder)"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #14
+* group[0].element[+].code = #51
 * group[0].element[=].display = "DUI Level II Education Only"
 * group[0].element[=].target[+].code = #66214007
 * group[0].element[=].target[=].display = "Substance abuse (disorder)"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #15
+* group[0].element[+].code = #52
 * group[0].element[=].display = "DUI Level II Therapy and Education"
 * group[0].element[=].target[+].code = #66214007
 * group[0].element[=].target[=].display = "Substance abuse (disorder)"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #16
+* group[0].element[+].code = #53
 * group[0].element[=].display = "Minors in Possession Treatment (MIP)"
 * group[0].element[=].target[+].code = #66214007
 * group[0].element[=].target[=].display = "Substance abuse (disorder)"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #17
+* group[0].element[+].code = #30
 * group[0].element[=].display = "Mental Health Outpatient"
 * group[0].element[=].target[+].code = #74732009
 * group[0].element[=].target[=].display = "Mental disorder"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #18
+* group[0].element[+].code = #31
 * group[0].element[=].display = "Mental Health Residential"
 * group[0].element[=].target[+].code = #74732009
 * group[0].element[=].target[=].display = "Mental disorder"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #19
+* group[0].element[+].code = #32
 * group[0].element[=].display = "Mental Health Inpatient"
 * group[0].element[=].target[+].code = #74732009
 * group[0].element[=].target[=].display = "Mental disorder"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #20
+* group[0].element[+].code = #42
 * group[0].element[=].display = "Crisis Stabilization"
 * group[0].element[=].target[+].code = #74732009
 * group[0].element[=].target[=].display = "Mental disorder"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #21
+* group[0].element[+].code = #43
 * group[0].element[=].display = "Crisis Respite"
 * group[0].element[=].target[+].code = #74732009
 * group[0].element[=].target[=].display = "Mental disorder"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #22
+* group[0].element[+].code = #33
 * group[0].element[=].display = "Psychiatric Hospitalization"
 * group[0].element[=].target[+].code = #74732009
 * group[0].element[=].target[=].display = "Mental disorder"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #23
+* group[0].element[+].code = #80
 * group[0].element[=].display = "Co-Occurring (CIRCLE)"
 * group[0].element[=].target[+].code = #66214007
 * group[0].element[=].target[=].display = "Substance abuse (disorder)"
@@ -190,19 +317,19 @@ Usage: #definition
 * group[0].element[=].target[=].display = "Psychiatric diagnostic evaluation"
 * group[0].element[=].target[=].equivalence = #relatedto
 
-* group[0].element[+].code = #17
+* group[0].element[+].code = #30
 * group[0].element[=].display = "Mental Health Outpatient"
 * group[0].element[=].target[+].code = #90837
 * group[0].element[=].target[=].display = "Psychotherapy, 60 minutes with patient"
 * group[0].element[=].target[=].equivalence = #relatedto
 
-* group[0].element[+].code = #19
+* group[0].element[+].code = #32
 * group[0].element[=].display = "Mental Health Inpatient"
 * group[0].element[=].target[+].code = #99223
 * group[0].element[=].target[=].display = "Initial hospital inpatient care, high complexity"
 * group[0].element[=].target[=].equivalence = #relatedto
 
-* group[0].element[+].code = #22
+* group[0].element[+].code = #33
 * group[0].element[=].display = "Psychiatric Hospitalization"
 * group[0].element[=].target[+].code = #99223
 * group[0].element[=].target[=].display = "Initial hospital inpatient care, high complexity"
@@ -232,7 +359,7 @@ Usage: #definition
 * group[1].element[=].target[=].display = "Behavioral health; long-term residential (non-medical, non-acute care in a residential treatment program where stay is typically longer than 30 days), without room and board, per diem"
 * group[1].element[=].target[=].equivalence = #relatedto
 * group[1].element[+].code = #05
-* group[1].element[=].display = "Transitional Residential (TRT"
+* group[1].element[=].display = "Transitional Residential (TRT)"
 * group[1].element[=].target[+].code = #H2034
 * group[1].element[=].target[=].display = "Alcohol and/or drug abuse halfway house services, per diem"
 * group[1].element[=].target[=].equivalence = #relatedto
@@ -242,7 +369,7 @@ Usage: #definition
 * group[1].element[=].target[=].display = "Alcohol and/or drug services; methadone administration and/or service (provision of the drug by a licensed program)"
 * group[1].element[=].target[=].equivalence = #relatedto
 * group[1].element[+].code = #07
-* group[1].element[=].display = "SUD Traditional Outpatient (OP and EOP))"
+* group[1].element[=].display = "SUD Traditional Outpatient (OP and EOP)"
 * group[1].element[=].target[+].code = #H0004
 * group[1].element[=].target[=].display = "Behavioral health counseling and therapy, per 15 minutes"
 * group[1].element[=].target[=].equivalence = #relatedto
@@ -262,7 +389,7 @@ Usage: #definition
 * group[1].element[=].target[=].display = "Behavioral health day treatment, per hour"
 * group[1].element[=].target[=].equivalence = #relatedto
 * group[1].element[+].code = #11
-* group[1].element[=].display = "Medically Managed Inpatient Other Than WM"
+* group[1].element[=].display = "Medically Managed Inpatient Other Than WM (Partial Hospital Program)"
 * group[1].element[=].target[+].code = #H0011
 * group[1].element[=].target[=].display = "Alcohol and/or drug services; acute detoxification (residential addiction program inpatient)"
 * group[1].element[=].target[=].equivalence = #relatedto
@@ -271,42 +398,42 @@ Usage: #definition
 * group[1].element[=].target[+].code = #H0011
 * group[1].element[=].target[=].display = "Alcohol and/or drug services; acute detoxification (residential addiction program inpatient)"
 * group[1].element[=].target[=].equivalence = #relatedto
-* group[1].element[+].code = #13
+* group[1].element[+].code = #50
 * group[1].element[=].display = "DUI Level I Education"
 * group[1].element[=].target[+].code = #H0025
 * group[1].element[=].target[=].display = "Behavioral health prevention education service (delivery of services with target population to affect knowledge, attitude and/or behavior)"
 * group[1].element[=].target[=].equivalence = #relatedto
-* group[1].element[+].code = #14
+* group[1].element[+].code = #51
 * group[1].element[=].display = "DUI Level II Education Only"
 * group[1].element[=].target[+].code = #H0025
 * group[1].element[=].target[=].display = "Behavioral health prevention education service (delivery of services with target population to affect knowledge, attitude and/or behavior)"
 * group[1].element[=].target[=].equivalence = #relatedto
-* group[1].element[+].code = #15
+* group[1].element[+].code = #52
 * group[1].element[=].display = "DUI Level II Therapy and Education"
 * group[1].element[=].target[+].code = #H0005
 * group[1].element[=].target[=].display = "Alcohol and/or drug services; group counseling by a clinician"
 * group[1].element[=].target[=].equivalence = #relatedto
-* group[1].element[+].code = #16
+* group[1].element[+].code = #53
 * group[1].element[=].display = "Minors in Possession Treatment (MIP)"
 * group[1].element[=].target[+].code = #H0004
 * group[1].element[=].target[=].display = "Behavioral health counseling and therapy, per 15 minutes"
 * group[1].element[=].target[=].equivalence = #relatedto
-* group[1].element[+].code = #18
+* group[1].element[+].code = #31
 * group[1].element[=].display = "Mental Health Residential"
 * group[1].element[=].target[+].code = #H2013
 * group[1].element[=].target[=].display = "Psychiatric health facility service, per diem"
 * group[1].element[=].target[=].equivalence = #relatedto
-* group[1].element[+].code = #20
+* group[1].element[+].code = #42
 * group[1].element[=].display = "Crisis Stabilization"
 * group[1].element[=].target[+].code = #H2011
 * group[1].element[=].target[=].display = "Crisis intervention service, per 15 minutes"
 * group[1].element[=].target[=].equivalence = #relatedto
-* group[1].element[+].code = #21
+* group[1].element[+].code = #43
 * group[1].element[=].display = "Crisis Respite"
 * group[1].element[=].target[+].code = #S9484
 * group[1].element[=].target[=].display = "Crisis intervention mental health services, per hour"
 * group[1].element[=].target[=].equivalence = #relatedto
-* group[1].element[+].code = #23
+* group[1].element[+].code = #80
 * group[1].element[=].display = "Co-Occurring (CIRCLE)"
 * group[1].element[=].target[+].code = #H0004
 * group[1].element[=].target[=].display = "Behavioral health counseling and therapy, per 15 minutes"
@@ -359,7 +486,7 @@ Usage: #definition
 * group[0].element[=].target[=].display = "Other psychoactive substance dependence, uncomplicated"
 * group[0].element[=].target[=].equivalence = #relatedto
 * group[0].element[+].code = #05
-* group[0].element[=].display = "Transitional Residential (TRT"
+* group[0].element[=].display = "Transitional Residential (TRT)"
 * group[0].element[=].target[+].code = #F19.20
 * group[0].element[=].target[=].display = "Other psychoactive substance dependence, uncomplicated"
 * group[0].element[=].target[=].equivalence = #relatedto
@@ -369,7 +496,7 @@ Usage: #definition
 * group[0].element[=].target[=].display = "Opioid dependence, uncomplicated"
 * group[0].element[=].target[=].equivalence = #relatedto
 * group[0].element[+].code = #07
-* group[0].element[=].display = "SUD Traditional Outpatient (OP and EOP))"
+* group[0].element[=].display = "SUD Traditional Outpatient (OP and EOP)"
 * group[0].element[=].target[+].code = #F19.20
 * group[0].element[=].target[=].display = "Other psychoactive substance dependence, uncomplicated"
 * group[0].element[=].target[=].equivalence = #relatedto
@@ -389,7 +516,7 @@ Usage: #definition
 * group[0].element[=].target[=].display = "Other psychoactive substance dependence, uncomplicated"
 * group[0].element[=].target[=].equivalence = #relatedto
 * group[0].element[+].code = #11
-* group[0].element[=].display = "Medically Managed Inpatient Other Than WM"
+* group[0].element[=].display = "Medically Managed Inpatient Other Than WM (Partial Hospital Program)"
 * group[0].element[=].target[+].code = #F19.20
 * group[0].element[=].target[=].display = "Other psychoactive substance dependence, uncomplicated"
 * group[0].element[=].target[=].equivalence = #relatedto
@@ -398,57 +525,57 @@ Usage: #definition
 * group[0].element[=].target[+].code = #F19.239
 * group[0].element[=].target[=].display = "Other psychoactive substance dependence with withdrawal, unspecified"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #13
+* group[0].element[+].code = #50
 * group[0].element[=].display = "DUI Level I Education"
 * group[0].element[=].target[+].code = #Z71.41
 * group[0].element[=].target[=].display = "Alcohol abuse counseling and surveillance of alcoholic"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #14
+* group[0].element[+].code = #51
 * group[0].element[=].display = "DUI Level II Education Only"
 * group[0].element[=].target[+].code = #Z71.41
 * group[0].element[=].target[=].display = "Alcohol abuse counseling and surveillance of alcoholic"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #15
+* group[0].element[+].code = #52
 * group[0].element[=].display = "DUI Level II Therapy and Education"
 * group[0].element[=].target[+].code = #Z71.41
 * group[0].element[=].target[=].display = "Alcohol abuse counseling and surveillance of alcoholic"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #16
+* group[0].element[+].code = #53
 * group[0].element[=].display = "Minors in Possession Treatment (MIP)"
 * group[0].element[=].target[+].code = #Z71.41
 * group[0].element[=].target[=].display = "Alcohol abuse counseling and surveillance of alcoholic"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #17
+* group[0].element[+].code = #30
 * group[0].element[=].display = "Mental Health Outpatient"
 * group[0].element[=].target[+].code = #F99
 * group[0].element[=].target[=].display = "Mental disorder, not otherwise specified"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #18
+* group[0].element[+].code = #31
 * group[0].element[=].display = "Mental Health Residential"
 * group[0].element[=].target[+].code = #F99
 * group[0].element[=].target[=].display = "Mental disorder, not otherwise specified"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #19
+* group[0].element[+].code = #32
 * group[0].element[=].display = "Mental Health Inpatient"
 * group[0].element[=].target[+].code = #F99
 * group[0].element[=].target[=].display = "Mental disorder, not otherwise specified"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #20
+* group[0].element[+].code = #42
 * group[0].element[=].display = "Crisis Stabilization"
 * group[0].element[=].target[+].code = #F99
 * group[0].element[=].target[=].display = "Mental disorder, not otherwise specified"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #21
+* group[0].element[+].code = #43
 * group[0].element[=].display = "Crisis Respite"
 * group[0].element[=].target[+].code = #F99
 * group[0].element[=].target[=].display = "Mental disorder, not otherwise specified"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #22
+* group[0].element[+].code = #33
 * group[0].element[=].display = "Psychiatric Hospitalization"
 * group[0].element[=].target[+].code = #F99
 * group[0].element[=].target[=].display = "Mental disorder, not otherwise specified"
 * group[0].element[=].target[=].equivalence = #relatedto
-* group[0].element[+].code = #23
+* group[0].element[+].code = #80
 * group[0].element[=].display = "Co-Occurring (CIRCLE)"
 * group[0].element[=].target[+].code = #F19.20
 * group[0].element[=].target[=].display = "Other psychoactive substance dependence, uncomplicated"
