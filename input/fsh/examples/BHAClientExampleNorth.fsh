@@ -171,7 +171,7 @@ Usage: #example
 * item[=].answer.valueDateTime = "2025-02-18T10:15:00Z"
 * item[+].linkId = "ASAM_LEVEL_OF_CARE"
 * item[=].text = "ASAM Level of Care: the ASAM Level of Care must match the LADDERS Provider/Clinic's ASAM Level of Care"
-* item[=].answer.valueCoding = BHAASAMLevelOfCareCS#3.1
+* item[=].answer.valueCoding = BHAASAMLevelOfCareCS#2.1
 * item[+].linkId = "PRIMARY_SUBSTANCE_USE"
 * item[=].text = "Primary Substance Use"
 * item[=].answer.valueCoding = BHASubstanceUseCS#1

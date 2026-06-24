@@ -3,11 +3,7 @@ Here are some specific areas of concern where the authors would appreciate feedb
 
 Please share your thoughts by emailing [FHIRFeedback@state.co.us](mailto:FHIRFeedback@state.co.us).
 
-1. What version of US core are you using, and do you see any issue with our decision to use [us-core 6.1.0]({{site.data.fhir.uscore}})?
-2. Where would you like to see more alignment between BHA-specific value sets and those from emerging national standards (e.g., Gravity Project, USCDI+)?
-3. How does this IG align with existing EHR data structures, capabilities, and workflows?
-4. Please share details about any implementation barriers, dependencies, and timeline considerations we should consider.
-5. The [Workflow](workflow.html) page illustrates a hypothetical  scenario for how BHA might query CoBHRM data from licensed providers who report directly to BHA. This figure is meant as a conversation starter. Please share opportunities for improvement.
+1. The [Workflow](workflow.html) page illustrates a hypothetical  scenario for how BHA might query CoBHRM data from licensed providers who report directly to BHA. This figure is meant as a conversation starter. Please share opportunities for improvement.
 
 ### Changes
 
