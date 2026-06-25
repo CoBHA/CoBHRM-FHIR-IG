@@ -1,0 +1,5 @@
+# Ignore generated outputs from standalone fail-project SUSHI runs
+fsh-generated/
+
+# Optional local cache that may appear during tooling runs
+.fhir/

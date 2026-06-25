@@ -288,3 +288,46 @@ This document does not define:
 - certification requirements for vendors or providers.
 
 Those items should be handled in implementation agreements, pilot protocols, reporting policy, or future versions of the IG.
+
+### Example Patient Scenarios
+
+The IG includes per-patient examples. Implementers can use these examples to test the representation of realistic scenarios and to confirm that the profiles, questionnaires, and terminology in the IG can support the required reporting information.
+
+**All example patients are fictional. Any resemblance to real persons, living or dead, is purely coincidental.**
+
+- [Arjun Patel](Patient-BHAClientExampleCentral.html)
+  - [Arjun Patel Mental health EpisodeOfCare](EpisodeOfCare-BHAEpisodeOfCareExampleCentralBH.html)
+  - [Arjun Patel Mental health Episode Diagnosis](Condition-BHAEpisodeDiagnosisExampleCentralBH.html)
+  - [Arjun Patel BHA Admission QuestionnaireResponse](QuestionnaireResponse-BHAAdmissionQuestionnaireResponseExampleCentral.html)
+  - [Arjun Patel BHA Discharge QuestionnaireResponse](QuestionnaireResponse-BHADischargeQuestionnaireResponseExampleCentral.html)
+  - [Arjun Patel All Bundle](Bundle-AllOfExampleCentral.html)
+- [Sofia Martinez](Patient-BHAClientExampleNorth.html)
+  - [Sofia Martinez Substance use disorder EpisodeOfCare](EpisodeOfCare-BHAEpisodeOfCareExampleNorthSUD.html)
+  - [Sofia Martinez Substance use disorder Episode Diagnosis](Condition-BHAEpisodeDiagnosisExampleNorthSUD.html)
+  - [Sofia Martinez BHA Admission QuestionnaireResponse](QuestionnaireResponse-BHAAdmissionQuestionnaireResponseExampleNorth.html)
+  - [Sofia Martinez BHA Substance Use Disorder QuestionnaireResponse](QuestionnaireResponse-BHASubstanceUseDisorderQuestionnaireResponseExampleNorth.html)
+  - [Sofia Martinez BHA Discharge QuestionnaireResponse](QuestionnaireResponse-BHADischargeQuestionnaireResponseExampleNorth.html)
+  - [Sofia Martinez All Bundle](Bundle-AllOfExampleNorth.html)
+- [Gabriela Torres](Patient-BHAClientExampleSouth.html)
+  - [Gabriela Torres Mental health EpisodeOfCare](EpisodeOfCare-BHAEpisodeOfCareExampleSouthBH.html)
+  - [Gabriela Torres Mental health Episode Diagnosis](Condition-BHAEpisodeDiagnosisExampleSouthBH.html)
+  - [Gabriela Torres BHA Admission QuestionnaireResponse](QuestionnaireResponse-BHAAdmissionQuestionnaireResponseExampleSouth.html)
+  - [Gabriela Torres BHA Discharge QuestionnaireResponse](QuestionnaireResponse-BHADischargeQuestionnaireResponseExampleSouth.html)
+  - [Gabriela Torres BHA Special Connections Pregnancy/Postpartum Risk Screening QuestionnaireResponse](QuestionnaireResponse-BHASCPregnancyQuestionnaireResponseExampleSouth.html)
+  - [Gabriela Torres BHA SC Baby QuestionnaireResponse](QuestionnaireResponse-BHASCBabyQuestionnaireResponseExampleSouth.html)
+  - [Gabriela Torres Baby Patient Resource](Patient-BabyPatientExampleSouth.html)
+  - [Gabriela Torres All Bundle](Bundle-AllOfExampleSouth.html)
+- [Emma Jones](Patient-BHAClientExample.html)
+  - [Emma Jones BHA Client QuestionnaireResponse](QuestionnaireResponse-BHAClientQuestionnaireResponseExample.html)
+  - [Emma Jones Mental health EpisodeOfCare](EpisodeOfCare-BHAEpisodeOfCareExampleBH.html)
+  - [Emma Jones Mental health Episode Diagnosis](Condition-BHAEpisodeDiagnosisExample.html)
+  - [Emma Jones BHA Admission QuestionnaireResponse](QuestionnaireResponse-BHAAdmissionQuestionnaireResponseExample.html)
+  - [Emma Jones BHA Diagnosis QuestionnaireResponse](QuestionnaireResponse-BHADiagnosisQuestionnaireResponseExample.html)
+  - [Emma Jones BHA Discharge QuestionnaireResponse](QuestionnaireResponse-BHADischargeQuestionnaireResponseExample.html)
+  - [Emma Jones BHA Substance Use Disorder QuestionnaireResponse](QuestionnaireResponse-BHASubstanceUseDisorderQuestionnaireResponseExample.html)
+  - [Emma Jones BHA Special Connections Pregnancy/Postpartum Risk Screening QuestionnaireResponse](QuestionnaireResponse-BHASCPregnancyQuestionnaireResponseExample.html)
+  - [Emma Jones BHA SC Baby QuestionnaireResponse](QuestionnaireResponse-BHASCBabyQuestionnaireResponseExample.html)
+  - [Emma Jones BHA SC Baby QuestionnaireResponse Resource Example](QuestionnaireResponse-BHASCBabyQuestionnaireResponseResourceExample.html)
+  - [Emma Jones BHA SC Baby No QuestionnaireResponse](QuestionnaireResponse-BHASCBabyNoQuestionnaireResponseExample.html)
+  - [Emma Jones BHA Observation Pregnancy Status](Observation-BHAObservationPregnancyStatusExample.html)
+  - [Emma Jones All Bundle](Bundle-AllOfExampleEmma.html)

@@ -60,4 +60,87 @@ Description: "Example Client"
 * communication.language.text = "Spanish"
 * communication.preferred = true
 
+Instance: AllOfExampleEmma
+InstanceOf: Bundle
+Title: "All of Emma data"
+Description: "This bundle contains all of the FHIR Resources for Patient Emma (Emma Jones)."
+Usage: #example
+* type = #batch
+* entry[+].resource = BHAClientExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Patient/BHAClientExample"
+* entry[=].fullUrl = "http://example.org/fhir/Patient/BHAClientExample"
+* entry[+].resource = BHAClientQuestionnaireResponseExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "QuestionnaireResponse/BHAClientQuestionnaireResponseExample"
+* entry[=].fullUrl = "http://example.org/fhir/QuestionnaireResponse/BHAClientQuestionnaireResponseExample"
+* entry[+].resource = BHAEpisodeOfCareExampleBH
+* entry[=].request.method = #PUT
+* entry[=].request.url = "EpisodeOfCare/BHAEpisodeOfCareExampleBH"
+* entry[=].fullUrl = "http://example.org/fhir/EpisodeOfCare/BHAEpisodeOfCareExampleBH"
+* entry[+].resource = BHAEpisodeDiagnosisExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Condition/BHAEpisodeDiagnosisExample"
+* entry[=].fullUrl = "http://example.org/fhir/Condition/BHAEpisodeDiagnosisExample"
+* entry[+].resource = BHAEpisodeDiagnosisExample2
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Condition/BHAEpisodeDiagnosisExample2"
+* entry[=].fullUrl = "http://example.org/fhir/Condition/BHAEpisodeDiagnosisExample2"
+* entry[+].resource = BHAAdmissionQuestionnaireResponseExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "QuestionnaireResponse/BHAAdmissionQuestionnaireResponseExample"
+* entry[=].fullUrl = "http://example.org/fhir/QuestionnaireResponse/BHAAdmissionQuestionnaireResponseExample"
+* entry[+].resource = BHADiagnosisQuestionnaireResponseExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "QuestionnaireResponse/BHADiagnosisQuestionnaireResponseExample"
+* entry[=].fullUrl = "http://example.org/fhir/QuestionnaireResponse/BHADiagnosisQuestionnaireResponseExample"
+* entry[+].resource = BHADischargeQuestionnaireResponseExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "QuestionnaireResponse/BHADischargeQuestionnaireResponseExample"
+* entry[=].fullUrl = "http://example.org/fhir/QuestionnaireResponse/BHADischargeQuestionnaireResponseExample"
+* entry[+].resource = BHAEpisodeOfCareExampleSUD
+* entry[=].request.method = #PUT
+* entry[=].request.url = "EpisodeOfCare/BHAEpisodeOfCareExampleSUD"
+* entry[=].fullUrl = "http://example.org/fhir/EpisodeOfCare/BHAEpisodeOfCareExampleSUD"
+* entry[+].resource = BHAEpisodeDiagnosisExampleSUD
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Condition/BHAEpisodeDiagnosisExampleSUD"
+* entry[=].fullUrl = "http://example.org/fhir/Condition/BHAEpisodeDiagnosisExampleSUD"
+* entry[+].resource = BHASubstanceUseDisorderQuestionnaireResponseExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "QuestionnaireResponse/BHASubstanceUseDisorderQuestionnaireResponseExample"
+* entry[=].fullUrl = "http://example.org/fhir/QuestionnaireResponse/BHASubstanceUseDisorderQuestionnaireResponseExample"
+* entry[+].resource = EpisodeOfCareExamplePG
+* entry[=].request.method = #PUT
+* entry[=].request.url = "EpisodeOfCare/EpisodeOfCareExamplePG"
+* entry[=].fullUrl = "http://example.org/fhir/EpisodeOfCare/EpisodeOfCareExamplePG"
+* entry[+].resource = PregnancyConditionExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Condition/PregnancyConditionExample"
+* entry[=].fullUrl = "http://example.org/fhir/Condition/PregnancyConditionExample"
+* entry[+].resource = BHASCPregnancyQuestionnaireResponseExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "QuestionnaireResponse/BHASCPregnancyQuestionnaireResponseExample"
+* entry[=].fullUrl = "http://example.org/fhir/QuestionnaireResponse/BHASCPregnancyQuestionnaireResponseExample"
+* entry[+].resource = BHASCBabyQuestionnaireResponseExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "QuestionnaireResponse/BHASCBabyQuestionnaireResponseExample"
+* entry[=].fullUrl = "http://example.org/fhir/QuestionnaireResponse/BHASCBabyQuestionnaireResponseExample"
+* entry[+].resource = BHASCBabyQuestionnaireResponseResourceExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "QuestionnaireResponse/BHASCBabyQuestionnaireResponseResourceExample"
+* entry[=].fullUrl = "http://example.org/fhir/QuestionnaireResponse/BHASCBabyQuestionnaireResponseResourceExample"
+* entry[+].resource = BabyPatientExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Patient/BabyPatientExample"
+* entry[=].fullUrl = "http://example.org/fhir/Patient/BabyPatientExample"
+* entry[+].resource = BHASCBabyNoQuestionnaireResponseExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "QuestionnaireResponse/BHASCBabyNoQuestionnaireResponseExample"
+* entry[=].fullUrl = "http://example.org/fhir/QuestionnaireResponse/BHASCBabyNoQuestionnaireResponseExample"
+* entry[+].resource = BHAObservationPregnancyStatusExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Observation/BHAObservationPregnancyStatusExample"
+* entry[=].fullUrl = "http://example.org/fhir/Observation/BHAObservationPregnancyStatusExample"
+
 
