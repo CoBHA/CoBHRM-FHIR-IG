@@ -28,6 +28,8 @@ Usage: #definition
 * concept[=].property[=].valueBoolean = true
 * concept[=].concept[+].code = #00
 * concept[=].concept[=].display = "Differential Assessment (SUD) / Evaluation Only (MH)"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 
 * concept[+].code = #WM
 * concept[=].display = "WM"
@@ -35,14 +37,24 @@ Usage: #definition
 * concept[=].property[=].valueBoolean = true
 * concept[=].concept[+].code = #01
 * concept[=].concept[=].display = "Ambulatory Medical Withdrawal Management"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #02
 * concept[=].concept[=].display = "Residential (non-hospital) Withdrawal Management (RDX)"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #12
 * concept[=].concept[=].display = "Medically Managed Inpatient Withdrawal Management"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #20
 * concept[=].concept[=].display = "Ambulatory Medical Withdrawal Management without Monitoring"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #21
 * concept[=].concept[=].display = "Ambulatory Medical Withdrawal Management with Monitoring"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 
 * concept[+].code = #SUD
 * concept[=].display = "SUD"
@@ -50,24 +62,44 @@ Usage: #definition
 * concept[=].property[=].valueBoolean = true
 * concept[=].concept[+].code = #03
 * concept[=].concept[=].display = "Therapeutic Community (TC)"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #04
 * concept[=].concept[=].display = "Intensive Residential (IRT)"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #05
 * concept[=].concept[=].display = "Transitional Residential (TRT)"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #06
 * concept[=].concept[=].display = "Opioid Treatment Program (ORT/OTP)"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #07
 * concept[=].concept[=].display = "SUD Traditional Outpatient (OP and EOP)"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #08
 * concept[=].concept[=].display = "STIRT"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #09
 * concept[=].concept[=].display = "SUD Intensive Outpatient (IOP)"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #10
 * concept[=].concept[=].display = "Day Treatment (DAY)"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #11
 * concept[=].concept[=].display = "Medically Managed Inpatient Other Than WM (Partial Hospital Program)"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #54
 * concept[=].concept[=].display = "CJS SUD Treatment"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 
 * concept[+].code = #MH
 * concept[=].display = "MH"
@@ -75,12 +107,20 @@ Usage: #definition
 * concept[=].property[=].valueBoolean = true
 * concept[=].concept[+].code = #30
 * concept[=].concept[=].display = "Mental Health Outpatient"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #31
 * concept[=].concept[=].display = "Mental Health Residential"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #32
 * concept[=].concept[=].display = "Mental Health Inpatient"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #33
 * concept[=].concept[=].display = "Psychiatric Hospitalization"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 
 * concept[+].code = #Crisis
 * concept[=].display = "Crisis"
@@ -88,12 +128,20 @@ Usage: #definition
 * concept[=].property[=].valueBoolean = true
 * concept[=].concept[+].code = #40
 * concept[=].concept[=].display = "Crisis Mobile"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #41
 * concept[=].concept[=].display = "Crisis Walk in"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #42
 * concept[=].concept[=].display = "Crisis Stabilization"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #43
 * concept[=].concept[=].display = "Crisis Respite"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 
 * concept[+].code = #DUI
 * concept[=].display = "DUI"
@@ -101,12 +149,20 @@ Usage: #definition
 * concept[=].property[=].valueBoolean = true
 * concept[=].concept[+].code = #50
 * concept[=].concept[=].display = "DUI Level I Education"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #51
 * concept[=].concept[=].display = "DUI Level II Education Only"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #52
 * concept[=].concept[=].display = "DUI Level II Therapy and Education"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 * concept[=].concept[+].code = #53
 * concept[=].concept[=].display = "Minors in Possession Treatment (MIP)"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 
 * concept[+].code = #Co-Occurring
 * concept[=].display = "Co-Occurring"
@@ -114,6 +170,8 @@ Usage: #definition
 * concept[=].property[=].valueBoolean = true
 * concept[=].concept[+].code = #80
 * concept[=].concept[=].display = "Co-Occurring (CIRCLE)"
+* concept[=].concept[=].property[+].code = #status
+* concept[=].concept[=].property[=].valueCode = #active
 
 * concept[+].code = #Retired
 * concept[=].display = "Retired"
