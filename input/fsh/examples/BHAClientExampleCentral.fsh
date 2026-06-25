@@ -58,7 +58,7 @@ Usage: #example
 * verificationStatus = http://terminology.hl7.org/CodeSystem/condition-ver-status#confirmed "Confirmed"
 * category[us-core] = http://terminology.hl7.org/CodeSystem/condition-category#encounter-diagnosis
 * category[diagnosisType] = BHADiagnosisTypeCS#MH
-* code.coding[BHAServiceIdentifier] = BHAServiceIdentifierCS#17 "Mental Health Outpatient"
+* code.coding[BHAServiceIdentifier] = BHAServiceIdentifierCS#30 "Mental Health Outpatient"
 * code.coding[billing][+] = http://hl7.org/fhir/sid/icd-10-cm#F99 "Mental disorder, not otherwise specified"
 * code.coding[billing][+] = http://www.ama-assn.org/go/cpt#90837
 * subject = Reference(Patient/BHAClientExampleCentral) "Arjun Patel"
@@ -76,7 +76,7 @@ Usage: #example
 * item[=].answer.valueDateTime = "2025-03-03T09:30:00Z"
 * item[+].linkId = "SERVICE_IDENTIFIER"
 * item[=].text = "Service Identifier"
-* item[=].answer.valueCoding = BHAServiceIdentifierCS#17 "Mental Health Outpatient"
+* item[=].answer.valueCoding = BHAServiceIdentifierCS#30 "Mental Health Outpatient"
 * item[+].linkId = "FIRST_CONTACT_DATE"
 * item[=].text = "Date of First Contact"
 * item[=].answer.valueDate = "2023-01-15"
