@@ -337,6 +337,10 @@ Title: "All of South data"
 Description: "This bundle contains all of the FHIR Resources for Patient South (Gabriela Torres)."
 Usage: #example
 * type = #batch
+* entry[+].resource = BHAOrganizationExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Organization/BHAOrganizationExample"
+* entry[=].fullUrl = "http://example.org/fhir/Organization/BHAOrganizationExample"
 * entry[+].resource = BHAClientExampleSouth
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Patient/BHAClientExampleSouth"

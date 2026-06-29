@@ -1,0 +1,16 @@
+services:
+  hapi:
+    image: hapiproject/hapi:latest
+    container_name: cobhrm-hapi
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./application.yaml:/data/hapi/application.yaml:ro
+      - ../output:/data/hapi/ig-output:ro
+      - hapi-data:/data/hapi/db
+    environment:
+      SPRING_CONFIG_ADDITIONAL_LOCATION: file:///data/hapi/application.yaml
+    restart: unless-stopped
+
+volumes:
+  hapi-data:

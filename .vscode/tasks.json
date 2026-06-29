@@ -1,0 +1,185 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "hapi-diag-status",
+			"type": "shell",
+			"command": "docker compose -f hapi-testing/docker-compose.yml ps; docker inspect cobhrm-hapi --format \"RestartCount={{.RestartCount}} Status={{.State.Status}} ExitCode={{.State.ExitCode}}\"; docker compose -f hapi-testing/docker-compose.yml logs --tail=120 hapi",
+			"problemMatcher": []
+		},
+		{
+			"label": "hapi-probe-endpoints",
+			"type": "shell",
+			"command": "curl.exe -s -o NUL -w \"metadata=%{http_code}\\n\" http://localhost:8080/fhir/metadata; curl.exe -s -o NUL -w \"root=%{http_code}\\n\" http://localhost:8080/; curl.exe -s -o NUL -w \"health=%{http_code}\\n\" http://localhost:8080/actuator/health",
+			"problemMatcher": []
+		},
+		{
+			"label": "hapi-log-finish-check",
+			"type": "shell",
+			"command": "docker compose -f hapi-testing/docker-compose.yml logs --tail=80 hapi | findstr /I \"Started Application Tomcat started ERROR Exception\"",
+			"problemMatcher": []
+		},
+		{
+			"label": "hapi-probe-powershell",
+			"type": "shell",
+			"command": "try { $m = Invoke-WebRequest -UseBasicParsing -Uri 'http://localhost:8080/fhir/metadata' -Method GET -TimeoutSec 10; Write-Output \"metadata=$($m.StatusCode)\" } catch { Write-Output \"metadata=ERR $($_.Exception.Message)\" }; try { $h = Invoke-WebRequest -UseBasicParsing -Uri 'http://localhost:8080/actuator/health' -Method GET -TimeoutSec 10; Write-Output \"health=$($h.StatusCode)\" } catch { Write-Output \"health=ERR $($_.Exception.Message)\" }",
+			"problemMatcher": []
+		},
+		{
+			"label": "hapi-log-markers",
+			"type": "shell",
+			"command": "$logs = docker compose -f hapi-testing/docker-compose.yml logs --tail=120 hapi; $logs | Select-String -Pattern 'Started Application|Tomcat started|ERROR|Exception|HAPI-1298'",
+			"problemMatcher": []
+		},
+		{
+			"label": "hapi-restart-check",
+			"type": "shell",
+			"command": "docker inspect cobhrm-hapi --format '{{.RestartCount}} {{.State.Status}} {{.State.ExitCode}} {{.State.StartedAt}} {{.State.FinishedAt}}'",
+			"problemMatcher": []
+		},
+		{
+			"label": "hapi-failure-search",
+			"type": "shell",
+			"command": "$logs = docker compose -f hapi-testing/docker-compose.yml logs hapi; $logs | Select-String -Pattern 'Application run failed|Unable to start web server|HAPI-1298|Package ID|Caused by' | Select-Object -Last 40",
+			"problemMatcher": []
+		},
+		{
+			"label": "hapi-restart-after-name-fix",
+			"type": "shell",
+			"command": "docker compose -f hapi-testing/docker-compose.yml down --remove-orphans; docker compose -f hapi-testing/docker-compose.yml up -d; docker inspect cobhrm-hapi --format '{{.RestartCount}} {{.State.Status}} {{.State.ExitCode}}'; Start-Sleep -Seconds 12; docker inspect cobhrm-hapi --format '{{.RestartCount}} {{.State.Status}} {{.State.ExitCode}}'; $logs = docker compose -f hapi-testing/docker-compose.yml logs --tail=120 hapi; $logs | Select-String -Pattern 'HAPI-1298|thePackageId must not be blank|Application run failed|Unable to start web server|Started Application'",
+			"problemMatcher": []
+		},
+		{
+			"label": "hapi-readiness-probe-loop",
+			"type": "shell",
+			"command": "$ok=$false; for($i=0;$i -lt 90;$i++){ try { $r=Invoke-WebRequest -UseBasicParsing -Uri 'http://localhost:8080/fhir/metadata' -Method GET -TimeoutSec 5; Write-Output \"ready status=$($r.StatusCode) attempt=$i\"; $ok=$true; break } catch { if($i % 10 -eq 0){ Write-Output \"waiting attempt=$i err=$($_.Exception.Message)\" }; Start-Sleep -Seconds 2 } }; if(-not $ok){ Write-Output 'not-ready-within-timeout'; exit 1 }",
+			"problemMatcher": []
+		},
+		{
+			"label": "hapi-current-phase",
+			"type": "shell",
+			"command": "docker inspect cobhrm-hapi --format '{{.RestartCount}} {{.State.Status}} {{.State.ExitCode}}'; docker compose -f hapi-testing/docker-compose.yml logs --tail=200 hapi",
+			"problemMatcher": []
+		},
+		{
+			"label": "hapi-read-package-version",
+			"type": "shell",
+			"command": "tar -xOf output/package.tgz package/package.json",
+			"problemMatcher": []
+		},
+		{
+			"label": "hapi-final-restart-verify",
+			"type": "shell",
+			"command": "docker compose -f hapi-testing/docker-compose.yml down --remove-orphans; docker compose -f hapi-testing/docker-compose.yml up -d; Start-Sleep -Seconds 15; docker inspect cobhrm-hapi --format '{{.RestartCount}} {{.State.Status}} {{.State.ExitCode}}'; $logs = docker compose -f hapi-testing/docker-compose.yml logs --tail=160 hapi; $logs | Select-String -Pattern 'HAPI-1298|thePackageId must not be blank|thePackageVersion must not be blank|Application run failed|Unable to start web server|Started Application'",
+			"problemMatcher": []
+		},
+		{
+			"label": "hapi-metadata-ready-check",
+			"type": "shell",
+			"command": "$ok=$false; for($i=0;$i -lt 120;$i++){ try { $r=Invoke-WebRequest -UseBasicParsing -Uri 'http://localhost:8080/fhir/metadata' -Method GET -TimeoutSec 6; Write-Output \"ready status=$($r.StatusCode) attempt=$i\"; $ok=$true; break } catch { if($i % 15 -eq 0){ Write-Output \"waiting attempt=$i\" }; Start-Sleep -Seconds 2 } }; if(-not $ok){ Write-Output 'not-ready-within-240s'; exit 1 }",
+			"problemMatcher": []
+		},
+		{
+			"label": "hapi-metadata-once",
+			"type": "shell",
+			"command": "$ProgressPreference='SilentlyContinue'; try { $r = Invoke-WebRequest -UseBasicParsing -Uri 'http://localhost:8080/fhir/metadata' -Method GET -TimeoutSec 10; Write-Output \"status=$($r.StatusCode) len=$($r.Content.Length)\" } catch { Write-Output \"err=$($_.Exception.Message)\"; exit 1 }",
+			"problemMatcher": []
+		},
+		{
+			"label": "hapi-verify-autoversion-start",
+			"type": "shell",
+			"command": "cmd /c hapi-testing\\stop-hapi.bat; cmd /c hapi-testing\\start-hapi.bat; powershell -NoProfile -Command \"$ProgressPreference='SilentlyContinue'; $r=Invoke-WebRequest -UseBasicParsing -Uri 'http://localhost:8080/fhir/metadata' -TimeoutSec 20; Write-Output ('status=' + $r.StatusCode)\"",
+			"problemMatcher": []
+		},
+		{
+			"label": "hapi-post-all-examples-check",
+			"type": "shell",
+			"command": "cmd /c hapi-testing\\post-all-examples.bat",
+			"problemMatcher": []
+		},
+		{
+			"label": "hapi-restart-status-check",
+			"type": "shell",
+			"command": "docker inspect cobhrm-hapi --format '{{.RestartCount}} {{.State.Status}} {{.State.ExitCode}}'",
+			"problemMatcher": []
+		},
+		{
+			"label": "rebuild-and-repost-hapi",
+			"type": "shell",
+			"command": "cmd /c _build.bat; cmd /c hapi-testing\\post-all-examples.bat",
+			"problemMatcher": []
+		},
+		{
+			"label": "rebuild-noninteractive",
+			"type": "shell",
+			"command": "cmd /c \"echo 2| _build.bat\"",
+			"problemMatcher": []
+		},
+		{
+			"label": "hapi-repost-after-build",
+			"type": "shell",
+			"command": "cmd /c hapi-testing\\post-all-examples.bat",
+			"problemMatcher": []
+		},
+		{
+			"label": "rebuild-ig-build-arg",
+			"type": "shell",
+			"command": "cmd /c _build.bat build",
+			"problemMatcher": []
+		},
+		{
+			"label": "repost-after-real-build",
+			"type": "shell",
+			"command": "cmd /c hapi-testing\\post-all-examples.bat",
+			"problemMatcher": []
+		},
+		{
+			"label": "rebuild-serial",
+			"type": "shell",
+			"command": "_build.bat build",
+			"problemMatcher": []
+		},
+		{
+			"label": "rebuild-serial-dot",
+			"type": "shell",
+			"command": ".\\_build.bat build",
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-testing-validate-fail",
+			"type": "shell",
+			"command": "cmd /c testing\\validate-fail.bat testing\\fail\\fsh-generated\\resources",
+			"problemMatcher": []
+		},
+		{
+			"label": "verify-hapi-testing-validate-fail",
+			"type": "shell",
+			"command": "cmd /c hapi-testing\\validate-fail-on-hapi.bat http://localhost:8080/fhir testing\\fail\\fsh-generated\\resources",
+			"problemMatcher": []
+		},
+		{
+			"label": "smoke-verbose-testing-fail",
+			"type": "shell",
+			"command": "cmd /c testing\\validate-fail.bat testing\\fail\\fsh-generated\\resources",
+			"problemMatcher": []
+		},
+		{
+			"label": "smoke-verbose-hapi-fail",
+			"type": "shell",
+			"command": "cmd /c hapi-testing\\validate-fail-on-hapi.bat http://localhost:8080/fhir testing\\fail\\fsh-generated\\resources",
+			"problemMatcher": []
+		},
+		{
+			"label": "smoke-quiet-validate-fail",
+			"type": "shell",
+			"command": "cmd /c testing\\validate-fail.bat testing\\fail\\fsh-generated\\resources",
+			"problemMatcher": []
+		},
+		{
+			"label": "smoke-verbose-validate-fail-hapi",
+			"type": "shell",
+			"command": "cmd /c hapi-testing\\validate-fail-on-hapi.bat --verbose http://localhost:8080/fhir testing\\fail\\fsh-generated\\resources",
+			"problemMatcher": []
+		}
+	]
+}

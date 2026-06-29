@@ -6,6 +6,8 @@ This folder contains helper scripts for validating example FHIR JSON files again
 
 - `validate-example.bat` for Windows (`cmd`/PowerShell)
 - `validate-example.sh` for Bash (Git Bash, Linux, macOS)
+- `validate-fail.bat` for Windows (`cmd`/PowerShell)
+- `validate-fail.sh` for Bash (Git Bash, Linux, macOS)
 
 Both scripts perform the same workflow:
 
@@ -21,6 +23,51 @@ Both scripts perform the same workflow:
 7. If the package cannot be resolved, retry with fallback IG sources:
    - `output/package.tgz`
    - `fsh-generated/resources`
+
+## Negative fail-fixture checks with validator CLI
+
+The `validate-fail` scripts iterate generated fail fixtures and run the existing validator CLI helper (`validate-example`) for each file, asserting that validator output contains at least one `OperationOutcome.issue.severity` of `error` or `fatal`.
+
+Default fail fixture directory:
+
+- `testing/fail/fsh-generated/resources`
+
+Run SUSHI in `testing/fail` first so those JSON resources exist.
+
+Windows example:
+
+```powershell
+cmd /c testing\validate-fail.bat
+```
+
+Bash example:
+
+```bash
+./testing/validate-fail.sh
+```
+
+Optional arguments:
+
+```text
+validate-fail.<bat|sh> [--verbose|-v] [fail-resources-dir] [path-to-ignorewarnings.txt]
+```
+
+Example with explicit fail-resource directory:
+
+```powershell
+cmd /c testing\validate-fail.bat testing\fail\fsh-generated\resources
+```
+
+Verbose example:
+
+```powershell
+cmd /c testing\validate-fail.bat --verbose testing\fail\fsh-generated\resources
+```
+
+The HAPI server-based fail checks are intentionally separate and live in:
+
+- `hapi-testing/validate-fail-on-hapi.bat`
+- `hapi-testing/validate-fail-on-hapi.sh`
 
 ## IG package version handling
 

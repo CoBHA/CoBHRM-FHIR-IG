@@ -213,6 +213,10 @@ Title: "All of Central data"
 Description: "This bundle contains all of the FHIR Resources for Patient Central (Arjun Patel)."
 Usage: #example
 * type = #batch
+* entry[+].resource = BHAOrganizationExample
+* entry[=].request.method = #PUT
+* entry[=].request.url = "Organization/BHAOrganizationExample"
+* entry[=].fullUrl = "http://example.org/fhir/Organization/BHAOrganizationExample"
 * entry[+].resource = BHAClientExampleCentral
 * entry[=].request.method = #PUT
 * entry[=].request.url = "Patient/BHAClientExampleCentral"

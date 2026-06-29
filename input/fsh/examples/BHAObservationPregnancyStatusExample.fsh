@@ -15,7 +15,7 @@ Usage: #example
 * code = $loinc#82810-3 "Pregnancy status"
 * code.text = "Pregnancy Status"
 * subject = Reference(Patient/BHAClientExample) "Emma Jones"
-* performer.reference = "http://example.org/fhir/Practitioner/BHAPractitionerExample" // just an example not important to the example purpose
+* performer = Reference(Organization/BHAOrganizationExample) "Community Health Clinic"
 * effectiveDateTime = "2025-08-24T10:39:52Z"
 * valueCodeableConcept.coding.version = "http://snomed.info/sct/731000124108"
 * valueCodeableConcept.coding = $sct#77386006 "Pregnant"

@@ -128,6 +128,7 @@ Description: "Declares bha-encounter profile and includes required elements, but
 * extension[=].valueCodeableConcept.coding[=].code = #01
 * extension[=].valueCodeableConcept.coding[=].display = "Admission"
 
+/* although this is a failure, the failure is not one that validation can find. This must be found in business logic.
 Instance: FailDuplicateClientA
 InstanceOf: Patient
 Title: "Fail duplicate logical client A"
@@ -159,3 +160,5 @@ Description: "Bundle contains two Patient resources with the same identifier but
 * type = #collection
 * entry[+].resource = FailDuplicateClientA
 * entry[+].resource = FailDuplicateClientB
+
+*/
