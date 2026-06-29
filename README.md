@@ -73,12 +73,13 @@ The authored source lives in `input/fsh/` ([FHIR Shorthand](https://fshschool.or
 You only need a local build if you're contributing changes — to just read the guide, use the
 [published CI build](https://build.fhir.org/ig/CoBHA/CoBHRM-FHIR-IG/branches/main/index.html) above.
 
-**Prerequisites:** [Java 11+](https://adoptium.net/), [SUSHI](https://fshschool.org/docs/sushi/installation/)
-(`npm install -g fsh-sushi`), [Ruby + Jekyll](https://jekyllrb.com/docs/installation/).
+Install [mise](https://mise.en.dev/installing-mise.html) and then run the following commands:
 
 ```bash
 # from the repository root
-./_build.sh        # macOS / Linux  (use _build.bat on Windows)
+mise install
+mise setup
+mise build
 ```
 
 The script downloads the latest [HL7 IG Publisher](https://github.com/HL7/fhir-ig-publisher),

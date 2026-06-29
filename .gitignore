@@ -9,7 +9,6 @@ template
 .DS_Store
 *.db
 .index.json
-/mise.toml
 /package-lock.json
 /package.json
 spreadsheets

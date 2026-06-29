@@ -1,0 +1,17 @@
+[tools]
+java = "26.0.1"
+node = "26.3.1"
+ruby = "4.0.5"
+
+[env]
+_.path = { path = ["{{ config_root }}/node_modules/.bin"], tools = true }
+
+[tasks.build]
+run = "./_build.sh"
+run_windows = "_build.bat"
+
+[tasks.setup]
+run = """
+npm install fsh-sushi
+bundle install
+"""
