@@ -36,10 +36,15 @@ dependencies:
   hl7.fhir.us.core: 
     version: 6.1.0
     id: uscore
-  hl7.fhir.us.military-service: 1.0.0
+    reason: "This IG uses the US Core profiles to ensure interoperability with other US Core compliant systems."
+  hl7.fhir.us.military-service: 
+    version: 1.0.0
+    id: military-service
+    reason: "This IG uses the Military Service extension to capture military service information for patients."
   hl7.fhir.uv.sdc: 
     version: current
     id: sdc
+    reason: "This IG uses the SDC Questionnaire resource to capture structured data from patients and providers."
   
 # Global settings
 parameters: # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters

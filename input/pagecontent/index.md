@@ -23,7 +23,7 @@ Data intermediaries who report into BHA — such as Behavioral Health Administra
 
 ### Getting Started
 
-This implementation guide is built using HL7 FHIR Revision {{site.data.fhir.version}} found at [{{site.data.fhir.path}}]({{site.data.fhir.path}}). An understanding of FHIR is important in knowing how to implement the data exchange patterns specified here.
+This implementation guide is built using HL7 FHIR Revision {{site.data.fhir.version}} found at [{{site.data.fhir.path}}]({{site.data.fhir.path}}). All profiles are based on FHIR US Core 6.1.0 at [{{site.data.fhir.uscore}}]({{site.data.fhir.uscore}}). An understanding of FHIR is important in knowing how to implement the data exchange patterns specified here.
 
 This guide is broken down into sections.
 
