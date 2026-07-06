@@ -29,7 +29,7 @@ begins collecting client-level data under the CoBHRM, replacing two legacy repor
 
 This IG expresses the data elements those programs require as FHIR resources, so the information can
 be captured once in certified EHRs and exchanged in a standard format between providers,
-intermediaries, and the BHA. 
+intermediaries, and the BHA.
 
 For program background, see the [CoBHRM documentation](https://coloradobehavioralhealthadministration.mintlify.app/).
 
@@ -55,7 +55,7 @@ The guide is built on [US Core STU6](https://hl7.org/fhir/us/core/) where possib
 
 ## Repository structure
 
-```
+```text
 input/
   fsh/             FHIR Shorthand (FSH) source — profiles, questionnaires, terminology, examples
   pagecontent/     Narrative pages (index, guidance, workflow, terminology, …)
@@ -73,12 +73,13 @@ The authored source lives in `input/fsh/` ([FHIR Shorthand](https://fshschool.or
 You only need a local build if you're contributing changes — to just read the guide, use the
 [published CI build](https://build.fhir.org/ig/CoBHA/CoBHRM-FHIR-IG/branches/main/index.html) above.
 
-**Prerequisites:** [Java 11+](https://adoptium.net/), [SUSHI](https://fshschool.org/docs/sushi/installation/)
-(`npm install -g fsh-sushi`), [Ruby + Jekyll](https://jekyllrb.com/docs/installation/).
+Install [mise](https://mise.en.dev/installing-mise.html) and then run the following commands:
 
 ```bash
 # from the repository root
-./_build.sh        # macOS / Linux  (use _build.bat on Windows)
+mise install
+mise setup
+mise build
 ```
 
 The script downloads the latest [HL7 IG Publisher](https://github.com/HL7/fhir-ig-publisher),
@@ -88,7 +89,7 @@ runs SUSHI, and generates the guide. Open `output/index.html` when it finishes.
 
 Questions, corrections, and suggestions are welcome:
 
-- 📧 Email the BHA at **FHIRFeedback@state.co.us**
+- 📧 Email the BHA at **<FHIRFeedback@state.co.us>**
 - 🐛 [Open an issue](https://github.com/CoBHA/CoBHRM-FHIR-IG/issues) on this repository
 
 ## License
