@@ -22,7 +22,7 @@ The human-readable guide is the best place to start. It's rebuilt automatically 
 ## Why this exists
 
 On **July 1, 2026**, the [Colorado Behavioral Health Administration (BHA)](https://bha.colorado.gov/)
-begins collecting client-level data under the CoBHRM, replacing two legacy reporting systems:
+began collecting client-level data under the CoBHRM, replacing two legacy reporting systems:
 
 - **CCAR** (Colorado Client Assessment Record) — mental health treatment data
 - **DACODS** (Drug and Alcohol Coordinated Data System) — substance use disorder treatment data
