@@ -8,7 +8,7 @@ This version is based on the CoBHRM from May 2026.
 
 ### Overview
 
-On July 1, 2026, the [Colorado Behavioral Health Administration (BHA)](https://bha.colorado.gov/) will begin collecting client-level data according to the specifications of the Colorado Behavioral Health Reporting Model (CoBHRM), replacing two legacy reporting systems:
+On July 1, 2026, the [Colorado Behavioral Health Administration (BHA)](https://bha.colorado.gov/) began collecting client-level data according to the specifications of the Colorado Behavioral Health Reporting Model (CoBHRM), replacing two legacy reporting systems:
 
 - CCAR (Colorado Client Assessment Record) -- mental health treatment data.
 - DACODS (Drug and Alcohol Coordinated Data System) -- substance use disorder (SUD) treatment data.
