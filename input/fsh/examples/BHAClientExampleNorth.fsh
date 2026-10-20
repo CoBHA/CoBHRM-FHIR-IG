@@ -158,7 +158,7 @@ Usage: #example
 * item[=].text = "Diagnosis Information"
 * item[=].answer[+].valueReference = Reference(BHAEpisodeDiagnosisExampleNorthSUD) "Other psychoactive substance dependence, uncomplicated"
 
-Instance: BHASubstanceUseDisorderQuestionnaireResponseExampleNorth
+Instance: BHASUDResponseExampleNorth
 InstanceOf: $us-core-questionnaireresponse
 Title: "Example Substance Use Disorder Questionnaire Responses North"
 Description: "Example responses to the Substance Use Disorder Questionnaire for the north client example"
@@ -289,10 +289,10 @@ Usage: #example
 * entry[=].request.method = #PUT
 * entry[=].request.url = "QuestionnaireResponse/BHAAdmissionQuestionnaireResponseExampleNorth"
 * entry[=].fullUrl = "http://example.org/fhir/QuestionnaireResponse/BHAAdmissionQuestionnaireResponseExampleNorth"
-* entry[+].resource = BHASubstanceUseDisorderQuestionnaireResponseExampleNorth
+* entry[+].resource = BHASUDResponseExampleNorth
 * entry[=].request.method = #PUT
-* entry[=].request.url = "QuestionnaireResponse/BHASubstanceUseDisorderQuestionnaireResponseExampleNorth"
-* entry[=].fullUrl = "http://example.org/fhir/QuestionnaireResponse/BHASubstanceUseDisorderQuestionnaireResponseExampleNorth"
+* entry[=].request.url = "QuestionnaireResponse/BHASUDResponseExampleNorth"
+* entry[=].fullUrl = "http://example.org/fhir/QuestionnaireResponse/BHASUDResponseExampleNorth"
 * entry[+].resource = BHADischargeQuestionnaireResponseExampleNorth
 * entry[=].request.method = #PUT
 * entry[=].request.url = "QuestionnaireResponse/BHADischargeQuestionnaireResponseExampleNorth"

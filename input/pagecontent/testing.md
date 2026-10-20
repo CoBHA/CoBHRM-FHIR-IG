@@ -305,7 +305,7 @@ The IG includes per-patient examples. Implementers can use these examples to tes
   - [Sofia Martinez Substance use disorder EpisodeOfCare](EpisodeOfCare-BHAEpisodeOfCareExampleNorthSUD.html)
   - [Sofia Martinez Substance use disorder Episode Diagnosis](Condition-BHAEpisodeDiagnosisExampleNorthSUD.html)
   - [Sofia Martinez BHA Admission QuestionnaireResponse](QuestionnaireResponse-BHAAdmissionQuestionnaireResponseExampleNorth.html)
-  - [Sofia Martinez BHA Substance Use Disorder QuestionnaireResponse](QuestionnaireResponse-BHASubstanceUseDisorderQuestionnaireResponseExampleNorth.html)
+  - [Sofia Martinez BHA Substance Use Disorder QuestionnaireResponse](QuestionnaireResponse-BHASUDResponseExampleNorth.html)
   - [Sofia Martinez BHA Discharge QuestionnaireResponse](QuestionnaireResponse-BHADischargeQuestionnaireResponseExampleNorth.html)
   - [Sofia Martinez All Bundle](Bundle-AllOfExampleNorth.html)
 - [Gabriela Torres](Patient-BHAClientExampleSouth.html)
